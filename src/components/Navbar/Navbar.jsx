@@ -1,7 +1,6 @@
 /* eslint-disable */
-import React from 'react';
 import { Menubar } from 'primereact/menubar';
-import './Navbar.css'
+import './Navbar.scss'
         
 
 
@@ -13,14 +12,16 @@ function Navbar(){
             icon: 'pi pi-home'
         },
         {
-            label: 'Features',
-            icon: 'pi pi-star'
+            label: 'About',
+            icon: 'pi pi-user'
         },
         {
             label: 'Projects',
-            icon: 'pi pi-search',
-            
-            
+            icon: 'pi pi-folder',
+        },
+         {
+            label: 'Game',
+            icon: 'pi pi-box'
         },
         {
             label: 'Contact',
@@ -31,11 +32,11 @@ function Navbar(){
 
 
     return(
-        <div style={{height:'1400px'}} >
+        
         <div className="navbar" >
             <Menubar model={items} />
         </div>
-        </div>
+        
     )
 
 
