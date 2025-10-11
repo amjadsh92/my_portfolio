@@ -30,11 +30,19 @@ function Navbar(){
     ];
 
 
+    const navbarName = (
+        
+            
+            <span className="navbar-name">Amjad Sharafeddine</span>
+        
+    );
+
+
 
     return(
         
         <div className="navbar" >
-            <Menubar model={items} />
+            <Menubar model={items} start={navbarName} />
         </div>
         
     )
