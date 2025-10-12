@@ -5,6 +5,87 @@
   font-style: normal;
 }
 
+// .navbar {
+//   position: sticky;
+//   top: 0;
+//   z-index: 1000;
+
+//   .p-menubar {
+//     justify-content: space-between;
+//     border: none;
+//     border-radius: 0;
+//     padding: 1rem 0.5rem;
+//   }
+
+//   .p-menuitem-content {
+//     &:hover {
+//       background: rgb(59, 130, 246);
+//       color: #4b5563;
+
+//       .p-menuitem-text {
+//         color: white;
+//       }
+
+//       .p-menuitem-icon {
+//         color: white;
+//       }
+//     }
+//   }
+
+//   .p-menuitem-content .p-menuitem-link {
+//     padding: 0.75rem 0.75rem;
+//   }
+
+//   .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+//     top: 100%;
+//     z-index: 1;
+//   }
+
+//   .p-menubar > ul > li {
+//     margin-right: 20px;
+
+//     &:last-child {
+//       margin-right: 0 !important;
+//     }
+//   }
+// }
+
+// .navbar-name {
+//   font-family: "Dotmatrix" !important;
+//   font-size: 19px;
+//   padding-left: 10px;
+// }
+
+// .navbar-leftside {
+//   display: flex;
+//   gap: 15px;
+//   align-items: center;
+// }
+
+// @media screen and (max-width: 960px) {
+//   .navbar {
+//     .p-menubar .p-menubar-root-list {
+//       right: 10px !important;
+//       width: 180px !important;
+//       left: auto;
+//     }
+
+//     .p-menubar > ul > li {
+//       margin-right: 0;
+
+//       &:last-child {
+//         margin-right: 0;
+//       }
+//     }
+
+//     .p-icon {
+//       width: 2rem;
+//       height: 1.2rem;
+//     }
+//   }
+// }
+
+
 .navbar {
   position: sticky;
   top: 0;
@@ -17,6 +98,12 @@
   padding-left: 10px;
 }
 
+.navbar-leftside {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
 .navbar {
   .p-menubar {
     justify-content: space-between;
@@ -25,19 +112,30 @@
     padding: 1rem 0.5rem;
   }
 
-  .p-menuitem-content {
-    &:hover {
-      background: rgb(59 130 246);
-      color: #4b5563;
+  
+  .p-menubar > ul > li:not(:last-child) .p-menuitem-content:hover {
+    background: rgb(59 130 246);
+    color: #fff;
 
-      .p-menuitem-text {
-        color: white;
-      }
-
-      .p-menuitem-icon {
-        color: white;
-      }
+    .p-menuitem-text,
+    .p-menuitem-icon {
+      color: white;
     }
+  }
+
+
+  .p-menubar > ul > li:last-child .p-menuitem-content:hover {
+    background: transparent !important; 
+    .p-menuitem-icon {
+      color: #23262b !important; 
+      transition: color 0.3s ease;
+    }
+  }
+
+
+  .p-menubar > ul > li:last-child .p-menuitem-icon {
+    color: #6b7280; 
+    transition: color 0.3s ease;
   }
 
   .p-menuitem-content .p-menuitem-link {
@@ -75,8 +173,8 @@
     }
 
     .p-icon {
-    width: 2rem;
-    height: 1.2rem
-   }
+      width: 2rem;
+      height: 1.2rem;
+    }
   }
 }
