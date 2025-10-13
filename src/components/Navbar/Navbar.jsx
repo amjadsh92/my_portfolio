@@ -2,8 +2,13 @@
 import { Menubar } from "primereact/menubar";
 import "./Navbar.scss";
 import contrastIcon from "../../assets/images/contrast.png"; 
+import { useState } from "react";
 
 function Navbar() {
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  
   const items = [
     {
       label: "Home",
@@ -25,9 +30,28 @@ function Navbar() {
       label: "Contact",
       icon: "pi pi-envelope",
     },
-    {
-    icon: "pi pi-sun"
+    
+      {
+
+    template: (item, options) => {
+      const handleClick = (e) => {
+        e.stopPropagation();            
+        e.preventDefault();
+        setIsDarkMode(prev => !prev);   
+      };
+
+      return (
+        <button
+          className="p-link theme-toggle-btn"
+          onClick={handleClick}
+          type="button"
+          aria-label="Toggle theme"
+        >
+          <i className={`pi ${isDarkMode ? "pi-moon" : "pi-sun"}`} />
+        </button>
+      );
     }
+  }
   ];
 
   const navbarName =<div className="navbar-leftside">
