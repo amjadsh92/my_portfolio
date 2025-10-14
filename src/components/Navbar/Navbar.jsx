@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Menubar } from "primereact/menubar";
+import { ToggleButton } from 'primereact/togglebutton';
 import "./Navbar.scss";
 import contrastIcon from "../../assets/images/contrast.png"; 
 import { useState } from "react";
@@ -7,6 +8,7 @@ import { useState } from "react";
 function Navbar() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [checked, setChecked] = useState(false);
   
   
   const items = [
@@ -32,25 +34,34 @@ function Navbar() {
     },
     
       {
+        
+        template: <ToggleButton onLabel="" offLabel="" onIcon="pi pi-sun" offIcon="pi pi-moon" checked={checked} onChange={(e) => setChecked(e.value)}  className="lightmode" />
 
-    template: (item, options) => {
-      const handleClick = (e) => {
-        e.stopPropagation();            
-        e.preventDefault();
-        setIsDarkMode(prev => !prev);   
-      };
+        // icon: isDarkMode ? "pi pi-moon" : "pi pi-sun",
+        // command: () => {
 
-      return (
-        <button
-          className="p-link theme-toggle-btn"
-          onClick={handleClick}
-          type="button"
-          aria-label="Toggle theme"
-        >
-          <i className={`pi ${isDarkMode ? "pi-moon" : "pi-sun"}`} />
-        </button>
-      );
-    }
+        //     setIsDarkMode((prev)=>!prev)
+
+
+        // }
+    // template: (item, options) => {
+    //   const handleClick = (e) => {
+    //     e.stopPropagation();            
+    //     e.preventDefault();
+    //     setIsDarkMode(prev => !prev);   
+    //   };
+
+    //   return (
+    //     <button
+    //       className="p-link theme-toggle-btn"
+    //       onClick={handleClick}
+    //       type="button"
+    //       aria-label="Toggle theme"
+    //     >
+    //       <i className={`pi ${isDarkMode ? "pi-moon" : "pi-sun"}`} />
+    //     </button>
+    //   );
+    // }
   }
   ];
 

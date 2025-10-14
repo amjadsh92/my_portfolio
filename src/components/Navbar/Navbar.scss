@@ -5,85 +5,41 @@
   font-style: normal;
 }
 
-// .navbar {
-//   position: sticky;
-//   top: 0;
-//   z-index: 1000;
 
-//   .p-menubar {
-//     justify-content: space-between;
-//     border: none;
-//     border-radius: 0;
-//     padding: 1rem 0.5rem;
-//   }
 
-//   .p-menuitem-content {
-//     &:hover {
-//       background: rgb(59, 130, 246);
-//       color: #4b5563;
 
-//       .p-menuitem-text {
-//         color: white;
-//       }
 
-//       .p-menuitem-icon {
-//         color: white;
-//       }
-//     }
-//   }
+.lightmode{
+    
+    background:none !important;
+    border:none !important;
+}
 
-//   .p-menuitem-content .p-menuitem-link {
-//     padding: 0.75rem 0.75rem;
-//   }
+.lightmode.p-button.p-button-icon-only {
+    width: 2.5rem; 
+    padding: 0.75rem 0.75rem;
+}
 
-//   .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
-//     top: 100%;
-//     z-index: 1;
-//   }
+// .p-button-icon-left{
 
-//   .p-menubar > ul > li {
-//     margin-right: 20px;
-
-//     &:last-child {
-//       margin-right: 0 !important;
-//     }
-//   }
+//     color: #6b7280;
 // }
 
-// .navbar-name {
-//   font-family: "Dotmatrix" !important;
-//   font-size: 19px;
-//   padding-left: 10px;
+// .p-togglebutton .p-button .p-button-icon-left, .p-togglebutton .p-button .p-button-icon-right {
+//     color: #6b7280;
 // }
 
-// .navbar-leftside {
-//   display: flex;
-//   gap: 15px;
-//   align-items: center;
+.lightmode.p-togglebutton.p-highlight .p-button .p-button-icon-left, .lightmode.p-togglebutton.p-highlight .p-button .p-button-icon-right {
+    color: #6b7280 !important;
+}
+
+// .p-togglebutton .p-button:hover {
+//   color:#4b5563;
 // }
 
-// @media screen and (max-width: 960px) {
-//   .navbar {
-//     .p-menubar .p-menubar-root-list {
-//       right: 10px !important;
-//       width: 180px !important;
-//       left: auto;
-//     }
-
-//     .p-menubar > ul > li {
-//       margin-right: 0;
-
-//       &:last-child {
-//         margin-right: 0;
-//       }
-//     }
-
-//     .p-icon {
-//       width: 2rem;
-//       height: 1.2rem;
-//     }
-//   }
-// }
+.lightmode.p-togglebutton:hover .p-button .p-button-icon-left, .lightmode.p-togglebutton:hover .p-button .p-button-icon-right {
+    color: #4b5563 !important;
+}
 
 
 .navbar {
