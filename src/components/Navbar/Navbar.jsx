@@ -2,12 +2,12 @@
 import { Menubar } from "primereact/menubar";
 import "./Navbar.scss";
 import contrastIcon from "../../assets/images/contrast.png"; 
-import { useState } from "react";
+import {useRef,  useState } from "react";
 
 function Navbar() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-  
+  const menubarRef = useRef(null);
   
   const items = [
     {
@@ -40,6 +40,16 @@ function Navbar() {
         setIsDarkMode(prev => !prev);   
       };
 
+
+      //  if (window.innerWidth < 960 && menubarRef.current?.hide) {
+      //       menubarRef.current.hide();
+      //     }
+
+      if (options && typeof options.onClick === "function") {
+        options.onClick(e);
+      }
+        
+
       return (
         <button
           className="p-link theme-toggle-btn"
@@ -47,8 +57,11 @@ function Navbar() {
           type="button"
           aria-label="Toggle theme"
         >
-          <i className={`pi ${isDarkMode ? "pi-moon" : "pi-sun"}`} />
+          <div className="lightmode-block"> 
+          <i className={`lightmode-icon pi ${isDarkMode ? "pi-moon" : "pi-sun"}`} /> <span className="lightmode-text">{isDarkMode ? "Dark mode" : "Light mode"}</span>
+          </div> 
         </button>
+       
       );
     }
   }
@@ -63,7 +76,7 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <Menubar model={items} start={navbarName}  />
+      <Menubar model={items} start={navbarName} ref={menubarRef}  />
     </div>
   );
 }
