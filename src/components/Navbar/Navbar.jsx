@@ -2,12 +2,12 @@
 import { Menubar } from "primereact/menubar";
 import "./Navbar.scss";
 import contrastIcon from "../../assets/images/contrast.png"; 
-import {useRef,  useState } from "react";
+import {useState } from "react";
 
 function Navbar() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const menubarRef = useRef(null);
+  
   
   const items = [
     {
@@ -41,14 +41,9 @@ function Navbar() {
       };
 
 
-      //  if (window.innerWidth < 960 && menubarRef.current?.hide) {
-      //       menubarRef.current.hide();
-      //     }
+      
 
-      if (options && typeof options.onClick === "function") {
-        options.onClick(e);
-      }
-        
+      
 
       return (
         <button
@@ -76,7 +71,7 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <Menubar model={items} start={navbarName} ref={menubarRef}  />
+      <Menubar model={items} start={navbarName}   />
     </div>
   );
 }
