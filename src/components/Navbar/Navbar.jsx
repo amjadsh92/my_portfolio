@@ -7,28 +7,71 @@ import {useState } from "react";
 function Navbar() {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isClicked, setIsClicked] = useState(
+    { home:false,
+      about:false,
+      projects:false,
+      game:false,
+      contact:false
+
+  })
   
   
   const items = [
     {
       label: "Home",
       icon: "pi pi-home",
+      command: () => setIsClicked({
+      about:false,
+      projects:false,
+      game:false,
+      contact:false,
+      home:true }),
+      className: `${isClicked.home ? "menuitem-clicked" : ""}`
     },
     {
       label: "About",
       icon: "pi pi-user",
+      command: () => setIsClicked({
+      about:true,
+      projects:false,
+      game:false,
+      contact:false,
+      home:false }),
+      className: `${isClicked.about ? "menuitem-clicked" : ""}`
     },
     {
       label: "Projects",
       icon: "pi pi-folder",
+      command: () => setIsClicked({
+      about:false,
+      projects:true,
+      game:false,
+      contact:false,
+      home:false }),
+      className: `${isClicked.projects ? "menuitem-clicked" : ""}`
     },
     {
       label: "Game",
       icon: "pi pi-box",
+      command: () => setIsClicked({
+      about:false,
+      projects:false,
+      game:true,
+      contact:false,
+      home:false }),
+      className: `${isClicked.game ? "menuitem-clicked" : ""}`
     },
     {
       label: "Contact",
       icon: "pi pi-envelope",
+      command: () => setIsClicked({
+      about:false,
+      projects:false,
+      game:false,
+      contact:true,
+      home:false }),
+      className: `${isClicked.contact ? "menuitem-clicked" : ""}`
     },
     
       {
@@ -40,8 +83,6 @@ function Navbar() {
         setIsDarkMode(prev => !prev);   
       };
 
-
-      
 
       
 

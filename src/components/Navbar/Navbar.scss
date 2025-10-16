@@ -7,17 +7,28 @@
 
 
 
-.lightmode-text{
-  display:none;
-  font-size:15px;
-}
+// .lightmode-text{
+//   display:none;
+//   color:#4b5563 !important;
+//   font-size:15px;
+// }
 
-.lightmode-block{
-  display:flex;
-  justify-content:left;
-  align-items: center;
-  gap:0.5rem;
-}
+// .lightmode-icon{
+//   color:#6b7280;
+// }
+
+// .lightmode-icon:hover{
+//   color:#23262b;
+// }
+
+
+
+// .lightmode-block{
+//   display:flex;
+//   justify-content:left;
+//   align-items: center;
+//   gap:0.5rem;
+// }
 
 .navbar {
   position: sticky;
@@ -38,6 +49,42 @@
 }
 
 .navbar {
+  
+
+  .lightmode-text{
+    display:none;
+    color:#4b5563 !important;
+    font-size:15px;
+  }
+
+  .lightmode-icon{
+    color:#6b7280;
+  }
+
+  .lightmode-icon:hover{
+    color:#23262b;
+  }
+
+  .lightmode-block{
+  display:flex;
+  justify-content:left;
+  align-items: center;
+  gap:0.5rem;
+}
+
+
+  .menuitem-clicked{
+    
+    border-radius: 6px;
+     background: rgb(59 130 246) !important;
+     color: #fff;
+
+    .p-menuitem-text,
+    .p-menuitem-icon {
+      color: white;
+    }
+  }
+
   .p-menubar {
     justify-content: space-between;
     border: none;
@@ -45,14 +92,22 @@
     padding: 1rem 0.5rem;
   }
 
+  .p-menubar > ul > li:not(:last-child) .p-menuitem-content {
+    background: transparent !important;
+    
+
+    
+  }
+
+
   
   .p-menubar > ul > li:not(:last-child) .p-menuitem-content:hover {
-    background: rgb(59 130 246);
+    background: rgb(59 130 246)!important ;
     color: #fff;
 
     .p-menuitem-text,
     .p-menuitem-icon {
-      color: white;
+      color: white !important;
     }
   }
 
@@ -108,11 +163,15 @@
 }
 
 @media screen and (max-width: 960px) {
-  .lightmode-text{
-    display:block;
-  }
+  // .lightmode-text{
+  //   display:block;
+  // }
  
   .navbar {
+
+    .lightmode-text{
+    display:block;
+  }
     .p-menubar .p-menubar-root-list {
       right: 10px !important;
       width: 180px !important;
@@ -148,7 +207,7 @@
     color: #fff;
     .lightmode-icon,
     .lightmode-text{
-      color: white;
+      color: white !important;
 
     }
     
