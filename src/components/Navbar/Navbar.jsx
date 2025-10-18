@@ -3,6 +3,8 @@ import { Menubar } from "primereact/menubar";
 import "./Navbar.scss";
 import contrastIcon from "../../assets/images/contrast.png"; 
 import {useState } from "react";
+import { useContext } from "react";
+import { PrimeReactContext } from "primereact/api";
 
 function Navbar() {
 
@@ -15,6 +17,14 @@ function Navbar() {
       contact:false
 
   })
+
+  const { changeTheme } = useContext(PrimeReactContext);
+
+  
+        
+  
+  
+          
   
   
   const items = [
@@ -77,10 +87,22 @@ function Navbar() {
       {
 
     template: (item, options) => {
+      
+      
+
       const handleClick = (e) => {
         e.stopPropagation();            
         e.preventDefault();
-        setIsDarkMode(prev => !prev);   
+
+        
+       
+        changeTheme(
+          isDarkMode ? "lara-dark-indigo" : "lara-light-indigo", 
+          isDarkMode ? "lara-light-indigo" : "lara-dark-indigo",                                        
+          "theme-link"                                       
+        );
+        setIsDarkMode(prev => !prev); 
+        
       };
 
 
@@ -94,7 +116,9 @@ function Navbar() {
           aria-label="Toggle theme"
         >
           <div className="lightmode-block"> 
-          <i className={`lightmode-icon pi ${isDarkMode ? "pi-moon" : "pi-sun"}`} /> <span className="lightmode-text">{isDarkMode ? "Dark mode" : "Light mode"}</span>
+          {/* <i className={`lightmode-icon pi ${isDarkMode ? "pi-moon" : "pi-sun"}`} /> <span className="lightmode-text">
+            {isDarkMode ? "Dark mode" : "Light mode"}</span> */}
+          <i className={`${isDarkMode ? "darkmode-icon pi pi-moon" : "lightmode-icon pi pi-sun"}`} /> <span className={`${isDarkMode ? "darkmode-text" : "lightmode-text"}`}>{isDarkMode ? "Dark mode" : "Light mode"}</span>   
           </div> 
         </button>
        
@@ -111,7 +135,7 @@ function Navbar() {
   
 
   return (
-    <div className = {`${isDarkMode ?  "navbar-dark" : "navbar"}`}>
+    <div className = "navbar">
       <Menubar model={items} start={navbarName}   />
     </div>
   );
