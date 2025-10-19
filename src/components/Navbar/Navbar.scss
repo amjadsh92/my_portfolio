@@ -16,6 +16,10 @@
 
 
 .navbar {
+
+  .p-menuitem-icon {
+     pointer-events:none; /* Let the parent <a> handle the click */
+}
   .navbar-name {
     font-family: "Dotmatrix" !important;
     font-size: 19px;
@@ -86,6 +90,7 @@
 
   .p-menubar > ul > li:not(:last-child) .p-menuitem-content {
     background: transparent !important;
+     
   }
 
   .p-menubar > ul > li:not(:last-child) .p-menuitem-content:hover {
@@ -100,6 +105,7 @@
 
   .p-menubar > ul > li:last-child .p-menuitem-content {
     background: transparent !important;
+    // pointer-events:fill;
   }
 
   .p-menuitem-content .p-menuitem-link {
