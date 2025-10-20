@@ -6,8 +6,8 @@ import { useState } from "react";
 import { useContext } from "react";
 import { PrimeReactContext } from "primereact/api";
 
-function Navbar() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+function Navbar({isDarkMode, setIsDarkMode}) {
+  // const [isDarkMode, setIsDarkMode] = useState(false);
 
   const [isClicked, setIsClicked] = useState({
     home: false,
