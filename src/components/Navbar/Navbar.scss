@@ -5,22 +5,23 @@
   font-style: normal;
 }
 
-
-
-
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+.p-menubar-light{
 
+    background:white !important;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2) !important;
+
+  }
 
 .navbar {
-
   .p-menuitem-icon {
-     pointer-events:none; /* Let the parent <a> handle the click */
-}
+    pointer-events: none;
+  }
   .navbar-name {
     font-family: "Dotmatrix" !important;
     font-size: 19px;
@@ -48,21 +49,17 @@
   .lightmode-icon {
     color: #6b7280;
   }
-  .darkmode-icon{
-    color:rgba(255, 255, 255, 0.6);
+  .darkmode-icon {
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .lightmode-icon:hover {
     color: #23262b;
   }
 
-   .darkmode-icon:hover{
-    color:rgba(255, 255, 255, 1);
+  .darkmode-icon:hover {
+    color: rgba(255, 255, 255, 1);
   }
-  
-
-  
-  
 
   .lightmode-block {
     display: flex;
@@ -87,15 +84,18 @@
     border: none;
     border-radius: 0px;
     padding: 1rem 0.5rem;
+    // background:white;
+    // box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
   }
+
+  
 
   .p-menubar > ul > li:not(:last-child) .p-menuitem-content {
     background: transparent !important;
-     
   }
 
   .p-menubar > ul > li:not(:last-child) .p-menuitem-content:hover {
-    background:  rgb(59, 130, 246, 0.9) !important ;
+    background: rgb(59, 130, 246, 0.9) !important ;
     color: #fff;
 
     .p-menuitem-text,
@@ -106,13 +106,11 @@
 
   .p-menubar > ul > li:last-child .p-menuitem-content {
     background: transparent !important;
-    // pointer-events:fill;
   }
 
   .p-menuitem-content .p-menuitem-link {
     padding: 0.75rem 0.75rem;
     font-size: 15px;
-    // margin:1px;
   }
 
   .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
@@ -134,9 +132,8 @@
     background: transparent;
     border: none;
     padding: 0.675rem 0.75rem;
-    // margin-top: 1px;
     cursor: pointer;
-    
+
     &:hover {
       color: #23262b !important;
       transition: color 0.3s ease;
@@ -148,22 +145,32 @@
   }
 }
 
+.navbar-light{
+
+    .p-menubar {
+    justify-content: space-between;
+    border: none;
+    border-radius: 0px;
+    padding: 1rem 0.5rem;
+    background:white;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  }
+
+
+}
 
 @media screen and (max-width: 960px) {
-  
-
   .navbar {
     .lightmode-text {
       display: block;
     }
-    .darkmode-text{
-      display:block;
+    .darkmode-text {
+      display: block;
     }
     .p-menubar .p-menubar-root-list {
       right: 10px !important;
       width: 180px !important;
       left: auto;
-      
     }
 
     .p-menubar > ul > li {
@@ -183,21 +190,20 @@
       background: transparent;
       border: none;
       padding: 0.675rem 0.75rem;
-  
+
       width: 100%;
       cursor: pointer;
 
       &:hover {
-        // color: #4b5563 !important;
-        background: rgb(59, 130, 246, 0.9) ;
+        background: rgb(59, 130, 246, 0.9);
         color: #fff;
         .lightmode-icon,
-        .lightmode-text,.darkmode-icon, .darkmode-text {
+        .lightmode-text,
+        .darkmode-icon,
+        .darkmode-text {
           color: white !important;
         }
       }
     }
   }
-
-  
 }

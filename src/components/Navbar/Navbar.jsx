@@ -131,7 +131,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
   );
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${isDarkMode ? "" : "navbar-light"}`}>
       <Menubar model={items} start={navbarName} />
     </div>
   );
