@@ -10,7 +10,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
   // const [isDarkMode, setIsDarkMode] = useState(false);
 
   const [isClicked, setIsClicked] = useState({
-    home: false,
+    home: true,
     about: false,
     projects: false,
     game: false,
@@ -97,6 +97,12 @@ function Navbar({isDarkMode, setIsDarkMode}) {
             isDarkMode ? "lara-light-indigo" : "lara-dark-indigo",
             "theme-link"
           );
+          // changeTheme(
+          //   isDarkMode ? "lara-dark-cyan" : "lara-light-cyan",
+          //   isDarkMode ? "lara-light-cyan" : "lara-dark-cyan",
+          //   "theme-link"
+          // );
+          
           setIsDarkMode((prev) => !prev);
         };
 

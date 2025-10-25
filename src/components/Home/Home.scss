@@ -1,10 +1,41 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DotMatrix";
+  src: url("../../assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "cabin";
+  src: url("../../assets/fonts/Cabin-VariableFont_wdth,wght.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nexa";
+  src: url("../../assets/fonts/Nexa-Heavy.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 .home-light{
-
+   display:flex;
+   justify-content:center;
+   align-items:center;
    background-image: url("../../assets/images/home-light.jpg");
    background-size: cover;
    height:677px;
+   // height:90.5vh;
    
 
    
@@ -13,6 +44,166 @@
 .home-dark{
    background-image: url("../../assets/images/home-dark.jpg");
    background-size: cover;
-   height:677px;
+   // height:677px;
+   height:100vh;
+
 
 }
+
+.home-image{
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-content:center;
+}
+
+
+.badges{
+   display:flex;
+   gap:40px;
+   justify-content:center;
+   align-items:center;
+   
+}
+
+.home-react{
+
+     background-image: url("../../assets/images/reactBadge1.png");
+     width:50px;
+     height:50px;
+     background-size:cover;
+}
+
+.home-express{
+
+     background-image: url("../../assets/images/expressjsBadge1.png");
+     width:50px;
+     height:50px;
+     background-size:cover;
+
+}
+
+.home-postgres{
+
+     background-image: url("../../assets/images/postgreSQLBadge1.png");
+     width:50px;
+     height:50px;
+     background-size:cover;
+
+}
+
+.home-developer{
+
+    background-image: url("../../assets/images/home-developer6.png");
+    background-size:contain;
+    height:470px;
+    width:470px;
+   //  margin-top:150px;
+    align-content: center;
+    background-repeat: no-repeat;
+
+}
+
+.home-content{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   gap:0px;
+   // margin-top:-200px
+
+}
+
+.home-description{
+   display:flex;
+   flex-direction: column;
+   gap:10px;
+   padding-left: 20px;
+   align-items: center;
+   
+   // margin-top:-300px;   
+
+   .home-title{
+   color:var(--bluegray-600);
+   font-size:3.2rem;
+   font-weight: 700;
+   // font-family:'montserrat', sans-serif;
+   // font-family:'cabin', sans-serif;
+   font-family:'nexa', sans-serif;
+   text-align: center;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+   // font-family: "DotMatrix";
+   // margin-top: -200px;
+}
+
+.home-subtitle{
+   font-size:3.2rem;
+   // font-family:'montserrat', sans-serif;
+   font-family:'nexa';
+   color:var(--bluegray-600);
+   // color:rgb(59, 130, 246);
+   // color:var(--cyan-600);
+   text-align: center;
+   font-weight: bolder;
+   line-height: 1.2;
+   // width: 80%;
+   width: 92%;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.home-paragraph{
+
+   font-size:1.4rem;
+   // font-family:'montserrat', sans-serif;
+   font-family:'montserrat';
+   // color:var(--bluegray-600);
+   color:black;
+   // color:rgb(59, 130, 246);
+   // color:var(--cyan-600);
+   text-align: center;
+   width:80%;
+   padding-top: 20px;
+   padding-bottom: 10px;
+   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+   
+   
+  
+
+}
+.home-name{
+   color:rgb(59, 130, 246);
+}
+
+
+.p-button{
+      background-color:rgb(59, 130, 246);
+      border:none;
+      // width:50%;
+      margin:20px;
+     padding-left: 60px;
+     padding-right: 60px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+
+   }
+
+.p-button-label{
+   padding:0px;
+}   
+
+.p-button:not(:disabled):hover {
+    
+    background:rgb(35, 119, 255) ;
+    color: #ffffff;
+}  
+
+// .p-button:not(:disabled):active {
+//     background: rgb(35, 119, 255) ;
+//     color: #ffffff;
+   
+
+// }
+
+}
+// .test{
+//    height:50px;
+// }
