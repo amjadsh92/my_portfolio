@@ -1,5 +1,4 @@
 /* eslint-disable */
-import React from "react";
 import "./Home.scss";
 import { Button } from "primereact/button";
 import { PrimeReactContext } from "primereact/api";
@@ -20,9 +19,15 @@ function Home({ isDarkMode }) {
             I am a full stack web developer with a background in physics. I am
             proficient in React and ExpressJS.{" "}
           </div>
+
+          <div className="home-mid-image"></div>
           {/* <Button label="Primary" className="" /> */}
-          <MyButton />
-          <div className="test"></div>
+          <div className="button-section">
+             <MyButton />
+            <div className="home-small-image"></div>
+          </div>
+         
+          {/* <div className="test"></div> */}
         </div>
         <div className="home-image">
           {/* <div className="badges">
