@@ -132,7 +132,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
   const navbarName = (
     <div className="navbar-leftside">
       <span className="navbar-name">Amjad Sharafeddine</span>
-      <img src={contrastIcon} width="30" height="30" />
+      <img  className="navbar-avatar" src={contrastIcon} width="30" height="30" />
     </div>
   );
 
