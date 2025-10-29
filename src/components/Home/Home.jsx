@@ -9,10 +9,10 @@ import { Image } from "primereact/image";
 function Home({ isDarkMode }) {
 
   const [isMoved, setIsMoved] = useState(false)
-
+  const [paragraphIsMoved, setParagraphIsMoved] = useState(false)
   useEffect(() => {
     setIsMoved(true)
-    
+    setTimeout(() =>  setParagraphIsMoved(true),300)
     
   }, []);
 
@@ -24,7 +24,7 @@ function Home({ isDarkMode }) {
             Hello, I am <span className="home-name">Amjad</span>.{" "}
           </div>
           <div className={`home-subtitle ${isMoved ? "moved" : ""}`}>Full Stack Web Developer</div>
-          <div className="home-paragraph">
+          <div className={`home-paragraph ${paragraphIsMoved ? "moved" : ""}`}>
             {" "}
             I am a full stack web developer with a background in physics. I am
             proficient in React and ExpressJS.{" "}

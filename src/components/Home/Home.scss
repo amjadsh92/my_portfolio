@@ -153,18 +153,27 @@
     padding-top: 20px;
     padding-bottom: 10px;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    opacity:0;
+    transition:
+    opacity 0.6s ease-out;
+  }
 
-    .home-small-image {
+  .home-paragraph.moved{
+
+    opacity:1;
+
+  }
+   .home-small-image {
       display: none;
       background-image: url("../../assets/images/home-developer6.png");
       height: 270px;
       width: 270px;
     }
 
-    .home-mid-image {
+   .home-mid-image {
       display: none;
     }
-  }
+  
 
   .button-section {
     display: flex;
@@ -205,16 +214,17 @@
   .home-developer {
     display: none;
   }
-  .home-small-image {
+  
+
+  .home-description {
+    margin-top: 80px;
+    .home-small-image {
     display: block;
     background-image: url("../../assets/images/home-developer6.png");
     height: 350px;
     width: 350px;
     background-size: cover;
   }
-
-  .home-description {
-    margin-top: 80px;
   }
 }
 
