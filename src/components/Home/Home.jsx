@@ -3,17 +3,27 @@ import "./Home.scss";
 import { Button } from "primereact/button";
 import { PrimeReactContext } from "primereact/api";
 import { useContext } from "react";
+import { useEffect, useState } from "react";
 import { Image } from "primereact/image";
 
 function Home({ isDarkMode }) {
+
+  const [isMoved, setIsMoved] = useState(false)
+
+  useEffect(() => {
+    setIsMoved(true)
+    
+    
+  }, []);
+
   return (
     <div className={`${isDarkMode ? "home-dark" : "home-light"} `}>
       <div className="home-content">
         <div className="home-description">
-          <div className="home-title">
+          <div className={`home-title ${isMoved ? "moved" : ""}`}>
             Hello, I am <span className="home-name">Amjad</span>.{" "}
           </div>
-          <div className="home-subtitle">Full Stack Web Developer</div>
+          <div className={`home-subtitle ${isMoved ? "moved" : ""}`}>Full Stack Web Developer</div>
           <div className="home-paragraph">
             {" "}
             I am a full stack web developer with a background in physics. I am
@@ -21,20 +31,13 @@ function Home({ isDarkMode }) {
           </div>
 
           <div className="home-mid-image"></div>
-          {/* <Button label="Primary" className="" /> */}
+
           <div className="button-section">
-             <MyButton />
+            <MyButton />
             <div className="home-small-image"></div>
           </div>
-         
-          {/* <div className="test"></div> */}
         </div>
         <div className="home-image">
-          {/* <div className="badges">
-            <Image className="home-react" />
-            <Image className="home-express" />
-            <Image className="home-postgres" />
-          </div> */}
           <Image className="home-developer" />
         </div>
       </div>
