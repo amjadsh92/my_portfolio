@@ -10,11 +10,22 @@ function Home({ isDarkMode }) {
 
   const [isMoved, setIsMoved] = useState(false)
   const [paragraphIsMoved, setParagraphIsMoved] = useState(false)
+  const [buttonMoved, setButtonMoved] = useState(false)
+  const [imageMoved, setImageMoved] = useState(false)
+
   useEffect(() => {
     setIsMoved(true)
-    setTimeout(() =>  setParagraphIsMoved(true),300)
-    
-  }, []);
+    setTimeout(() =>  
+      
+      setParagraphIsMoved(true),500)
+
+    setTimeout(
+      
+      () => setButtonMoved(true),800)
+      
+      setImageMoved(true)
+      }, []);
+
 
   return (
     <div className={`${isDarkMode ? "home-dark" : "home-light"} `}>
@@ -32,13 +43,13 @@ function Home({ isDarkMode }) {
 
           <div className="home-mid-image"></div>
 
-          <div className="button-section">
+          <div className={`button-section ${buttonMoved ? "moved" : ""}`}>
             <MyButton />
             <div className="home-small-image"></div>
           </div>
         </div>
         <div className="home-image">
-          <Image className="home-developer" />
+          <Image className={`home-developer ${imageMoved ? "moved" : ""}`} />
         </div>
       </div>
     </div>
