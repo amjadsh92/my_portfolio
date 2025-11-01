@@ -56,9 +56,14 @@
 }
 
 .home-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../../assets/images/home-dark.jpg");
   background-size: cover;
-  height: 100vh;
+  min-height: 677px !important;
+  height: 60vh; 
+  
 }
 
 .home-image {

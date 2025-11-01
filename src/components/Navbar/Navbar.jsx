@@ -104,6 +104,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
           // );
           
           setIsDarkMode((prev) => !prev);
+          localStorage.setItem("isDarkMode", !isDarkMode);
         };
 
         return (
