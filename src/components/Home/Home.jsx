@@ -42,7 +42,7 @@ function Home({ isDarkMode }) {
           <div className={`home-paragraph ${paragraphIsMoved ? "moved" : ""}`}>
             {" "}
             I am a full stack web developer with a background in physics. I am
-            proficient in React and ExpressJS.{" "}
+            proficient in <span className="react">React</span> and <span className="express"> ExpressJS.</span>{" "}
           </div>
 
           <div className={`home-mid-image  ${midImageMoved ? "moved" : ""}`}></div>

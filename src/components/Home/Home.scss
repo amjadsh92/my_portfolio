@@ -59,10 +59,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/images/home-dark.jpg");
+  background-image: url("../../assets/images/home-dark1.png");
   background-size: cover;
   min-height: 677px !important;
   height: 60vh; 
+  .home-description {
+  
+
+  .home-title {
+    color: var(--surface-600);
+    
+  }
+
+  .home-title.moved {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .home-subtitle {
+    
+    color: var(--surface-600);
+    
+  }
+
+  .home-subtitle.moved {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  .home-paragraph {
+    
+    color: var(--surface-900);;
+   
+  }
+
+  .home-paragraph.moved {
+    opacity: 1;
+  }
+  .p-button{
+     color: #ffffff;;
+  }
+}
   
 }
 
@@ -189,6 +226,20 @@
     opacity: 0;
 
     transition: opacity 1.2s ease-out;
+    .react{
+      color: rgb(59, 130, 246);
+      // font-family: "DotMatrix";
+      font-style:italic;
+      font-weight:bolder;
+    }
+
+    .express{
+     color: rgb(59, 130, 246);
+      // font-family:"DotMatrix"
+      font-style: italic;
+      font-weight:bolder;
+      
+    }
   }
 
   .home-paragraph.moved {
@@ -229,6 +280,7 @@
     border: none;
 
     margin: 20px;
+    margin-top:30px;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 15px;
@@ -334,9 +386,10 @@
 }
 
 @media screen and (max-width: 615px) {
-  .home-light {
+  .home-light, .home-dark {
     height: 900px;
   }
+
 
   .home-description {
     margin-top: -50px;
@@ -348,8 +401,8 @@
     }
 
     .p-button {
-      padding-left: 80px;
-      padding-right: 80px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
 
     .home-small-image {
@@ -413,8 +466,8 @@
     }
 
     .p-button {
-      padding-left: 70px;
-      padding-right: 70px;
+      padding-left: 50px;
+      padding-right: 50px;
       font-size: 14px;
 
       .p-button-icon-right {
@@ -444,6 +497,9 @@
 
 @media screen and (max-width: 400px) {
   .home-light {
+    height: 750px;
+  }
+  .home-dark{
     height: 750px;
   }
 
