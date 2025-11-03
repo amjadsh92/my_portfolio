@@ -71,10 +71,10 @@
     
   }
 
-  .home-title.moved {
-    transform: translateX(0px);
-    opacity: 1;
-  }
+  // .home-title.moved {
+  //   transform: translateX(0px);
+  //   opacity: 1;
+  // }
 
   .home-subtitle {
     
@@ -82,10 +82,10 @@
     
   }
 
-  .home-subtitle.moved {
-    transform: translateX(0px);
-    opacity: 1;
-  }
+  // .home-subtitle.moved {
+  //   transform: translateX(0px);
+  //   opacity: 1;
+  // }
 
   .home-paragraph {
     
@@ -93,9 +93,9 @@
    
   }
 
-  .home-paragraph.moved {
-    opacity: 1;
-  }
+  // .home-paragraph.moved {
+  //   opacity: 1;
+  // }
   .p-button{
      color: #ffffff;
      background:rgb(59, 130, 246) !important;
@@ -126,36 +126,36 @@
   align-content: center;
 }
 
-.badges {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-}
+// .badges {
+//   display: flex;
+//   gap: 40px;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-.home-react {
-  background-image: url("../../assets/images/reactBadge1.png");
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-}
+// .home-react {
+//   background-image: url("../../assets/images/reactBadge1.png");
+//   width: 50px;
+//   height: 50px;
+//   background-size: cover;
+// }
 
-.home-express {
-  background-image: url("../../assets/images/expressjsBadge1.png");
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-}
+// .home-express {
+//   background-image: url("../../assets/images/expressjsBadge1.png");
+//   width: 50px;
+//   height: 50px;
+//   background-size: cover;
+// }
 
-.home-postgres {
-  background-image: url("../../assets/images/postgreSQLBadge1.png");
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-}
+// .home-postgres {
+//   background-image: url("../../assets/images/postgreSQLBadge1.png");
+//   width: 50px;
+//   height: 50px;
+//   background-size: cover;
+// }
 
 .home-developer {
-  background-image: url("../../assets/images/home-developer9.png");
+  // background-image: url("../../assets/images/home-developer9.png");
   background-size: contain;
   height: 340px;
   width: 340px;
@@ -354,6 +354,10 @@
     .home-small-image.moved {
       transform: translateX(0px);
       opacity: 1;
+    }
+
+    .p-button{
+      margin-top:30px
     }
 
     .button-section {
