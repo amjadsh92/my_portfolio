@@ -1,0 +1,65 @@
+// #ccfeff
+// #b7f3fd
+// #47e3fa
+// #d4fdff
+//#01d7f9
+
+.about-light{
+
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  align-items: center;
+  background-size: cover;
+  padding-left:60px;
+  padding-right:60px;
+  //background-color:#d4fdff;
+  background: linear-gradient(130deg, #d2feff 60%, #01d7f9);
+  min-height: 677px !important;
+  height: 60vh;
+
+}
+
+.avatar-border{
+    width:260px;
+    height:340px;
+    border:3px solid #4b5563;
+    border-radius:5px;
+}
+
+.avatar-image{
+    width:260px;
+    height:340px;
+    border:3px solid #4b5563;
+    border-radius:5px;
+    transform:translateX(30px) translateY(-30px) ;
+    
+
+}
+
+
+.avatar-text{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap:150px;
+}
+
+.text{
+  width:55%;
+  .text-title{
+    font-size:40px;
+    margin-top: 0px;
+    display:inline-block;
+    border-bottom: 5px solid rgb(59, 130, 246);;
+
+  }
+  .text-description{
+  
+    text-align:left;
+    font-family: "montserrat";
+    color: #617d98;
+    line-height: 24px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}

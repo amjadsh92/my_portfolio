@@ -2,6 +2,7 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Home from  './components/Home/Home'
+import About from './components/About/About'
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
     <>
    <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
    <Home isDarkMode={isDarkMode} />
+   <About isDarkMode={isDarkMode} />
    
    </>
   
