@@ -1,13 +1,20 @@
 /* eslint-disable */
 import "./About.scss"
-
+import htmlLogo from "../../assets/images/html2.png";
+import javascriptLogo from "../../assets/images/javascript.png";
+import cssLogo from "../../assets/images/css.png";
+import reactLogo from "../../assets/images/react.png";
+import expressLogo from "../../assets/images/express.png";
+import scssLogo from "../../assets/images/scss.png";
+import gitLogo from "../../assets/images/git.png";
+import postgreLogo from "../../assets/images/postgre3.png";
 
 function About({isDarkMode}){
 
     return(
 
         <div className="about-light">
-            <div className="avatar-text">
+            <div className="header">
 
                 <div className="avatar">
                     <div className="avatar-border">
@@ -24,11 +31,58 @@ function About({isDarkMode}){
 
                 
 
+               </div>
+            </div>
+            <div className="skills">
+                <div className="skill">
+                    <img src={htmlLogo} className="html" />
+                    <p className="skill-title">HTML</p>
+                     
                 </div>
-          </div>
+                 <div className="skill">
+                    <img src={javascriptLogo} className="html" />
+                    <p className="skill-title">Javascript</p>
+                    
+                </div>
+                 <div className="skill">
+                    <img src={cssLogo} className="html" />
+                    <p className="skill-title">CSS</p>
+                    
+                    
+                </div>
+                 <div className="skill">
+                    <img src={reactLogo} className="html" />
+                    <p className="skill-title">REACT</p>
+                
+                </div>
+                 <div className="skill">
+                     <img src={expressLogo} className="html" />
+                    <p className="skill-title">EXPRESS.JS</p>
+
+                    
+                </div>
+                 <div className="skill">
+                    <img src={scssLogo} className="html" />
+                    <p className="skill-title">SCSS</p>
+                    
+                </div>
+                 <div className="skill">
+                    <img src={gitLogo} className="html" />
+                    <p className="skill-title">GIT</p>
+                    
+                </div>
+                 <div className="skill">
+                     <img src={postgreLogo} className="html" />
+                    <p className="skill-title">POSTGRES</p>
+                    
+                </div>
+
+
+                
+                
+            </div>            
             
-            
-    </div>
+        </div>
     )
 
 
