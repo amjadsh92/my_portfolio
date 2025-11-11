@@ -34,11 +34,13 @@ function About({isDarkMode}){
                </div>
             </div>
             <div className="skills">
-                <div className="skill">
-                    <img src={htmlLogo} className="html" />
-                    <p className="skill-title">HTML</p>
-                     
-                </div>
+               <div className="skill-wrapper">
+                    <div className="skill">
+                        <img src={htmlLogo} className="html" />
+                        <p className="skill-title">HTML</p>
+                        
+                    </div>
+               </div>  
                  <div className="skill">
                     <img src={javascriptLogo} className="html" />
                     <p className="skill-title">Javascript</p>
