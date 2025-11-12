@@ -8,6 +8,9 @@ import expressLogo from "../../assets/images/express.png";
 import scssLogo from "../../assets/images/scss.png";
 import gitLogo from "../../assets/images/git.png";
 import postgreLogo from "../../assets/images/postgre3.png";
+import prismaLogo from  "../../assets/images/prismaORM.png";
+import primeReactLogo from  "../../assets/images/primereact.png";
+
 
 function About({isDarkMode}){
 
@@ -26,7 +29,9 @@ function About({isDarkMode}){
                 <div className="text">
                     
                         <p className="text-title">About</p>
-                        <p className="text-description">I am a developer by curiosity with a keen interest in technology. Beside challenging myself, I love learning new technologies and languages.Starting as a full-time software developer, I have a strong foundation in web development and a genuine passion for creating scalable and maintainable solutions. I possess a product-oriented mindset and empathy for customers and have extensive experience working with both front-end and back-end technologies. Throughout my carrear have looked towards automating manual tasks like testing, deployment and monitoring. I am currently working in Amsterdam, Netherlands specializes in full-stack development.</p>
+                        <p className="text-description">With a background in physics, I’ve always been drawn to deep thinking and problem-solving. Over time, I discovered that software engineering perfectly combines these interests.<br /> <br/>Through bootcamps like freeCodeCamp and by connecting with experienced developers, I’ve self-taught my way through the full web development stack — from front-end development to back-end development and deployment.<br /> <br/>
+
+I’ve built several front-end and full-stack projects, and I’m now eager to bring my skills, curiosity, and persistence into a professional software engineering environment.</p>
 
 
                 
@@ -43,7 +48,7 @@ function About({isDarkMode}){
                </div>  
                  <div className="skill">
                     <img src={javascriptLogo} className="html" />
-                    <p className="skill-title">Javascript</p>
+                    <p className="skill-title">JAVASCRIPT</p>
                     
                 </div>
                  <div className="skill">
@@ -76,6 +81,16 @@ function About({isDarkMode}){
                  <div className="skill">
                      <img src={postgreLogo} className="html" />
                     <p className="skill-title">POSTGRES</p>
+                    
+                </div>
+                <div className="skill">
+                     <img src={prismaLogo} className="html" />
+                    <p className="skill-title">PRISMA</p>
+                    
+                </div>
+                <div className="skill">
+                     <img src={primeReactLogo} className="html" />
+                    <p className="skill-title">PRIME REACT</p>
                     
                 </div>
 

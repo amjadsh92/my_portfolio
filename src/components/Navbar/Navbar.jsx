@@ -59,19 +59,19 @@ function Navbar({isDarkMode, setIsDarkMode}) {
         }),
       className: `${isClicked.projects ? "menuitem-clicked" : ""}`,
     },
-    {
-      label: "Game",
-      icon: "pi pi-box",
-      command: () =>
-        setIsClicked({
-          about: false,
-          projects: false,
-          game: true,
-          contact: false,
-          home: false,
-        }),
-      className: `${isClicked.game ? "menuitem-clicked" : ""}`,
-    },
+    // {
+    //   label: "Game",
+    //   icon: "pi pi-box",
+    //   command: () =>
+    //     setIsClicked({
+    //       about: false,
+    //       projects: false,
+    //       game: true,
+    //       contact: false,
+    //       home: false,
+    //     }),
+    //   className: `${isClicked.game ? "menuitem-clicked" : ""}`,
+    // },
     {
       label: "Contact",
       icon: "pi pi-envelope",
