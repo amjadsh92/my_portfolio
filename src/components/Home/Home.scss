@@ -208,13 +208,13 @@
   min-height: 677px !important;
   height: 60vh;
 
-  .home-content{
+  // .home-content{
     .home-image{
     .home-developer{
       background-image: url("../../assets/images/home-developer9.png");
     }
   }
-}
+// }
 }
 
 .home-dark {
@@ -256,7 +256,7 @@
 
  
 }
-.home-content{
+// .home-content{
  .home-image{
     .home-developer {
     background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
@@ -264,16 +264,16 @@
     width: 343.5px;
     }
 }
-}
+// }
   
 }
 
 
 
 @media screen and (max-width: 960px) {
-  .home-light {
+  .home-light,.home-dark {
     min-height: unset !important;
-    height: 677px;
+    height: 727px;
   }
   .home-developer {
     display: none;
@@ -281,6 +281,7 @@
 
   .home-description {
     margin-top: 0px;
+    margin-bottom:50px;
     .home-small-image {
       display: block;
       background-image: url("../../assets/images/home-developer9.png");
@@ -376,12 +377,16 @@
 
 @media screen and (max-width: 615px) {
   .home-light, .home-dark {
-    height: 900px;
+    height: 930px;
+    align-items:unset;
   }
 
+// .home-light, .home-dark {
+//         height: 850px;
+//     }
 
   .home-description {
-    margin-top: -50px;
+    margin-top: 70px;
     .home-title {
       transform: translateX(-20px);
     }
@@ -443,13 +448,19 @@
     }
   }
 @media screen and (max-width: 500px) {
-  .home-content {
-    //  padding-right: 20px;
-    margin-top: -40px;
+  // .home-content {
+  //   //  padding-right: 20px;
+  //   margin-top: -40px;
+  // }
+
+  .home-light,.home-dark{
+    height:850px;
+    align-items: unset;
   }
 
   .home-description {
     margin-top: 0px;
+    margin-top: 50px;
     .home-title {
       transform: translateY(-30px);
     }
@@ -496,16 +507,20 @@
 }
 
 @media screen and (max-width: 400px) {
-  .home-light {
-    height: 677px;
-  }
-  .home-dark{
-    height: 677px;
-  }
+  // .home-light {
+  //   height: 677px;
+  // }
+  // .home-dark{
+  //   height: 677px;
+  // }
 
-  .home-content {
-    padding-right: 0px;
-    margin-top: -40px;
+  // .home-content {
+  //   padding-right: 0px;
+  //   margin-top: -40px;
+  // }
+
+  .home-light,.home-dark{
+    height:750px;
   }
 
   .home-description {

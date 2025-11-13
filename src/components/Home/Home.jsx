@@ -31,7 +31,7 @@ function Home({ isDarkMode }) {
 
   return (
     <div className={`${isDarkMode ? "home-dark" : "home-light"} `}>
-      <div className="home-content">
+      
         <div className="home-description">
           <div className={`home-title ${isMoved ? "moved" : ""}`}>
             Hello, I am <span className="home-name">Amjad</span>.{" "}
@@ -59,7 +59,7 @@ function Home({ isDarkMode }) {
         <div className="home-image">
           <Image className={`home-developer ${imageMoved ? "moved" : ""}`} />
         </div>
-      </div>
+      
     </div>
   );
 }
