@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { PrimeReactContext } from "primereact/api";
 
 function Navbar({isDarkMode, setIsDarkMode}) {
-  // const [isDarkMode, setIsDarkMode] = useState(false);
+  
 
   const [isClicked, setIsClicked] = useState({
     home: true,
@@ -59,19 +59,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
         }),
       className: `${isClicked.projects ? "menuitem-clicked" : ""}`,
     },
-    // {
-    //   label: "Game",
-    //   icon: "pi pi-box",
-    //   command: () =>
-    //     setIsClicked({
-    //       about: false,
-    //       projects: false,
-    //       game: true,
-    //       contact: false,
-    //       home: false,
-    //     }),
-    //   className: `${isClicked.game ? "menuitem-clicked" : ""}`,
-    // },
+   
     {
       label: "Contact",
       icon: "pi pi-envelope",
@@ -97,11 +85,7 @@ function Navbar({isDarkMode, setIsDarkMode}) {
             isDarkMode ? "lara-light-indigo" : "lara-dark-indigo",
             "theme-link"
           );
-          // changeTheme(
-          //   isDarkMode ? "lara-dark-cyan" : "lara-light-cyan",
-          //   isDarkMode ? "lara-light-cyan" : "lara-dark-cyan",
-          //   "theme-link"
-          // );
+          
           
           setIsDarkMode((prev) => !prev);
           localStorage.setItem("isDarkMode", !isDarkMode);

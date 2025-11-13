@@ -35,9 +35,7 @@
   align-content: center;
 }
 
-
 .home-developer {
-  
   background-size: contain;
   height: 340px;
   width: 340px;
@@ -53,9 +51,7 @@
 .home-developer.moved {
   opacity: 1;
   transform: translateY(0px);
-  
 }
-
 
 .home-content {
   display: flex;
@@ -72,7 +68,7 @@
   align-items: center;
 
   .home-title {
-    color: var(--surface-600);;
+    color: var(--surface-600);
     font-size: 3.2rem;
     font-weight: 700;
     font-family: "nexa", sans-serif;
@@ -125,19 +121,18 @@
     opacity: 0;
 
     transition: opacity 1.2s ease-out;
-    .react{
+    .react {
       color: rgb(59, 130, 246);
-      
-      font-style:italic;
-      font-weight:bolder;
+
+      font-style: italic;
+      font-weight: bolder;
     }
 
-    .express{
-     color: rgb(59, 130, 246);
-    
+    .express {
+      color: rgb(59, 130, 246);
+
       font-style: italic;
-      font-weight:bolder;
-      
+      font-weight: bolder;
     }
   }
 
@@ -176,11 +171,11 @@
 
   .p-button {
     background-color: rgb(59, 130, 246);
-    color:white;
+    color: white;
     border: none;
     background: rgb(59, 130, 246);
     margin: 20px;
-    margin-top:70px;
+    margin-top: 70px;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 15px;
@@ -198,7 +193,6 @@
   }
 }
 
-
 .home-light {
   display: flex;
   justify-content: center;
@@ -208,13 +202,11 @@
   min-height: 677px !important;
   height: 60vh;
 
-  // .home-content{
-    .home-image{
-    .home-developer{
+  .home-image {
+    .home-developer {
       background-image: url("../../assets/images/home-developer9.png");
     }
   }
-// }
 }
 
 .home-dark {
@@ -224,54 +216,41 @@
   background-image: url("../../assets/images/home-dark1.png");
   background-size: cover;
   min-height: 677px !important;
-  height: 60vh; 
+  height: 60vh;
   .home-description {
-  
-
-  .home-title {
-    color: var(--surface-600);
-    
-  }
-
-  .home-subtitle {
-    
-    color: var(--surface-600);
-    
-  }
-
-  .home-paragraph {
-    
-    color: var(--surface-900);;
-   
-  }
-
-  .p-button{
-     color: #ffffff;
-     background:rgb(59, 130, 246);
-     .p-button-icon{
-       color: #ffffff;
-     }
-  }
-
-
- 
-}
-// .home-content{
- .home-image{
-    .home-developer {
-    background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-    height: 348px;
-    width: 343.5px;
+    .home-title {
+      color: var(--surface-600);
     }
-}
-// }
-  
-}
 
+    .home-subtitle {
+      color: var(--surface-600);
+    }
 
+    .home-paragraph {
+      color: var(--surface-900);
+    }
+
+    .p-button {
+      color: #ffffff;
+      background: rgb(59, 130, 246);
+      .p-button-icon {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .home-image {
+    .home-developer {
+      background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
+      height: 348px;
+      width: 343.5px;
+    }
+  }
+}
 
 @media screen and (max-width: 960px) {
-  .home-light,.home-dark {
+  .home-light,
+  .home-dark {
     min-height: unset !important;
     height: 727px;
   }
@@ -281,7 +260,7 @@
 
   .home-description {
     margin-top: 0px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     .home-small-image {
       display: block;
       background-image: url("../../assets/images/home-developer9.png");
@@ -299,8 +278,8 @@
       opacity: 1;
     }
 
-    .p-button{
-      margin-top:30px
+    .p-button {
+      margin-top: 30px;
     }
 
     .button-section {
@@ -324,14 +303,13 @@
     }
   }
 
-  .home-dark{
-    .home-description{
-      .home-small-image{
+  .home-dark {
+    .home-description {
+      .home-small-image {
         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-        height:250px;
-        width:205px
+        height: 250px;
+        width: 205px;
       }
-
     }
   }
 }
@@ -371,19 +349,14 @@
       }
     }
   }
-
-  
 }
 
 @media screen and (max-width: 615px) {
-  .home-light, .home-dark {
+  .home-light,
+  .home-dark {
     height: 930px;
-    align-items:unset;
+    align-items: unset;
   }
-
-// .home-light, .home-dark {
-//         height: 850px;
-//     }
 
   .home-description {
     margin-top: 70px;
@@ -408,17 +381,17 @@
       background-image: url("../../assets/images/home-developer9.png");
       height: 245px;
       width: 200px;
-      transform:translateX(20px);
-      opacity:0;
+      transform: translateX(20px);
+      opacity: 0;
       margin-top: 50px;
       background-size: cover;
-      transition:transform 0.6s ease-out,
-      opacity 0.6s ease-out
+      transition:
+        transform 0.6s ease-out,
+        opacity 0.6s ease-out;
     }
-    .home-mid-image.moved{
-      transform:translateX(0px);
-      opacity:1;
-
+    .home-mid-image.moved {
+      transform: translateX(0px);
+      opacity: 1;
     }
 
     .button {
@@ -434,27 +407,20 @@
       transform: translateY(0px);
     }
   }
-
-
 }
-.home-dark{
-    .home-description{
-      .home-mid-image{
-        background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-        height:250px;
-        width:205px;
-      }
-
+.home-dark {
+  .home-description {
+    .home-mid-image {
+      background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
+      height: 250px;
+      width: 205px;
     }
   }
+}
 @media screen and (max-width: 500px) {
-  // .home-content {
-  //   //  padding-right: 20px;
-  //   margin-top: -40px;
-  // }
-
-  .home-light,.home-dark{
-    height:850px;
+  .home-light,
+  .home-dark {
+    height: 850px;
     align-items: unset;
   }
 
@@ -507,25 +473,14 @@
 }
 
 @media screen and (max-width: 400px) {
-  // .home-light {
-  //   height: 677px;
-  // }
-  // .home-dark{
-  //   height: 677px;
-  // }
-
-  // .home-content {
-  //   padding-right: 0px;
-  //   margin-top: -40px;
-  // }
-
-  .home-light,.home-dark{
-    height:750px;
+  .home-light,
+  .home-dark {
+    height: 750px;
   }
 
   .home-description {
     padding-left: 0px;
-    margin-top:60px;
+    margin-top: 60px;
     .home-title {
       transform: translateY(-20px);
     }
@@ -570,14 +525,13 @@
     }
   }
 
- .home-dark{
-    .home-description{
-      .home-mid-image{
+  .home-dark {
+    .home-description {
+      .home-mid-image {
         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
         height: 225px;
         width: 165px;
       }
-
     }
-  } 
+  }
 }
