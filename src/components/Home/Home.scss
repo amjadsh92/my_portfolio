@@ -154,17 +154,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(50px);
-    opacity: 0;
-    transition:
-      transform 0.6s ease-out,
-      opacity 0.6s ease-out;
-  }
+  //   transform: translateY(50px);
+  //   opacity: 0;
+  //   transition:
+  //     transform 0.6s ease-out,
+  //     opacity 0.6s ease-out;
+   }
 
-  .button-section.moved {
-    transform: translateX(0px);
-    opacity: 1;
-  }
+  // .button-section.moved {
+  //   transform: translateX(0px);
+  //   opacity: 1;
+  // }
   .home-name {
     color: rgb(59, 130, 246);
   }
@@ -264,8 +264,8 @@
     .home-small-image {
       display: block;
       background-image: url("../../assets/images/home-developer9.png");
-      height: 245px;
-      width: 200px;
+      height: 255px;
+      width: 210px;
       transform: translateX(50px);
       opacity: 0;
       transition:
@@ -280,35 +280,41 @@
 
     .p-button {
       margin-top: 30px;
+      font-size:14px;
+      height:43px;
+      padding-left:30px;
+      padding-right:30px;
     }
 
     .button-section {
       margin-top: 40px;
       gap: 40px;
-      transform: translateY(0px);
-      opacity: 1;
+      // transform: translateY(0px);
+      // opacity: 1;
     }
 
-    .button {
-      opacity: 0;
-      transform: translateX(-50px);
-      transition:
-        transform 0.6s ease-out,
-        opacity 0.6s ease-out;
-    }
+    // .button {
+    //   opacity: 0;
+    //   transform: translateX(-50px);
+    //   transition:
+    //     transform 0.6s ease-out,
+    //     opacity 0.6s ease-out;
+    // }
 
-    .button.moved {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+    // .button.moved {
+    //   opacity: 1;
+    //   transform: translateX(0px);
+    // }
   }
 
   .home-dark {
     .home-description {
       .home-small-image {
         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-        height: 250px;
-        width: 205px;
+        // height: 250px;
+        // width: 205px;
+        height: 260px;
+        width: 212px;
       }
     }
   }
@@ -335,17 +341,17 @@
       width: 200px;
     }
 
-    .button-section {
-      transform: translateY(0px);
-      opacity: 1;
-    }
+    // .button-section {
+    //   transform: translateY(0px);
+    //   opacity: 1;
+    // }
 
     .p-button {
-      height: 45px;
-      font-size: 15px;
+      height: 43px;
+      font-size: 14px;
 
       .p-button-icon-right {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
   }
@@ -359,7 +365,7 @@
   }
 
   .home-description {
-    margin-top: 70px;
+    margin-top: 40px;
     .home-title {
       transform: translateX(-20px);
     }
@@ -368,8 +374,8 @@
     }
 
     .p-button {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: 35px;
+      padding-right: 35px;
     }
 
     .home-small-image {
@@ -394,18 +400,18 @@
       opacity: 1;
     }
 
-    .button {
-      opacity: 0;
-      transform: translateY(50px);
-      transition:
-        transform 0.6s ease-out,
-        opacity 0.6s ease-out;
-    }
+    // .button {
+    //   opacity: 0;
+    //   transform: translateY(50px);
+    //   transition:
+    //     transform 0.6s ease-out,
+    //     opacity 0.6s ease-out;
+    // }
 
-    .button.moved {
-      opacity: 1;
-      transform: translateY(0px);
-    }
+    // .button.moved {
+    //   opacity: 1;
+    //   transform: translateY(0px);
+    // }
   }
 }
 .home-dark {
@@ -426,7 +432,7 @@
 
   .home-description {
     margin-top: 0px;
-    margin-top: 50px;
+    margin-top: 45px;
     .home-title {
       transform: translateY(-30px);
     }
@@ -443,8 +449,8 @@
     }
 
     .p-button {
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: 35px;
+      padding-right: 35px;
       font-size: 14px;
 
       .p-button-icon-right {
@@ -480,7 +486,7 @@
 
   .home-description {
     padding-left: 0px;
-    margin-top: 60px;
+    margin-top: 40px;
     .home-title {
       transform: translateY(-20px);
     }
@@ -489,8 +495,8 @@
     }
 
     .p-button {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
       font-size: 13px;
       height: 40px;
 

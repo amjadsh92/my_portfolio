@@ -129,6 +129,16 @@
 }
 
 @media screen and (max-width: 960px) {
+
+  .about-light, .about-dark{
+    background: linear-gradient(
+    180deg,
+    var(--gray-400) 0.35%,
+    #f4f4f4 0.35%,
+    #f4f4f4
+  );
+  }
+
   .avatar {
     display: none;
   }
@@ -176,6 +186,16 @@
 }
 
 @media screen and (max-width: 750px) {
+    .about-light {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: linear-gradient(
+    180deg,
+    var(--gray-400) 0.3%,
+    #f4f4f4 0.3%,
+    #f4f4f4
+  );
+  }
   .skill {
     width: 100px;
     height: 80px;
@@ -189,6 +209,12 @@
   .about-light {
     padding-left: 30px;
     padding-right: 30px;
+    background: linear-gradient(
+    180deg,
+    var(--gray-400) 0.3%,
+    #f4f4f4 0.3%,
+    #f4f4f4
+  );
   }
 
   .midavatar {
@@ -220,6 +246,17 @@
 }
 
 @media screen and (max-width: 400px) {
+
+   .about-light {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: linear-gradient(
+    180deg,
+    var(--gray-400) 0.2%,
+    #f4f4f4 0.2%,
+    #f4f4f4
+  );
+  }
   .text .text-title {
     font-size: 1.8rem;
     width: 85px;
