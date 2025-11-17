@@ -154,17 +154,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  //   transform: translateY(50px);
-  //   opacity: 0;
-  //   transition:
-  //     transform 0.6s ease-out,
-  //     opacity 0.6s ease-out;
+  
    }
 
-  // .button-section.moved {
-  //   transform: translateX(0px);
-  //   opacity: 1;
-  // }
+  
   .home-name {
     color: rgb(59, 130, 246);
   }
@@ -289,30 +282,16 @@
     .button-section {
       margin-top: 40px;
       gap: 40px;
-      // transform: translateY(0px);
-      // opacity: 1;
+      
     }
 
-    // .button {
-    //   opacity: 0;
-    //   transform: translateX(-50px);
-    //   transition:
-    //     transform 0.6s ease-out,
-    //     opacity 0.6s ease-out;
-    // }
-
-    // .button.moved {
-    //   opacity: 1;
-    //   transform: translateX(0px);
-    // }
+    
   }
 
   .home-dark {
     .home-description {
       .home-small-image {
         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-        // height: 250px;
-        // width: 205px;
         height: 260px;
         width: 212px;
       }
@@ -341,10 +320,7 @@
       width: 200px;
     }
 
-    // .button-section {
-    //   transform: translateY(0px);
-    //   opacity: 1;
-    // }
+    
 
     .p-button {
       height: 43px;
@@ -400,18 +376,7 @@
       opacity: 1;
     }
 
-    // .button {
-    //   opacity: 0;
-    //   transform: translateY(50px);
-    //   transition:
-    //     transform 0.6s ease-out,
-    //     opacity 0.6s ease-out;
-    // }
-
-    // .button.moved {
-    //   opacity: 1;
-    //   transform: translateY(0px);
-    // }
+    
   }
 }
 .home-dark {
