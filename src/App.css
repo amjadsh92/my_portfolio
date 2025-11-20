@@ -1,3 +1,20 @@
 body{
     margin:0px;
 }
+
+
+.home {
+  scroll-margin-top: 70px; 
+}
+
+.about {
+  scroll-margin-top: 70px; 
+}
+
+.projects {
+  scroll-margin-top: 70px; 
+}
+
+.contact {
+  scroll-margin-top: 70px; 
+}
