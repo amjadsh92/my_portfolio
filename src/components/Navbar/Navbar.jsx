@@ -1,13 +1,15 @@
 /* eslint-disable */
 import { Menubar } from "primereact/menubar";
 import "./Navbar.scss";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import { PrimeReactContext } from "primereact/api";
 import contrastIcon from "../../assets/images/contrast.png";
 
 function Navbar({ isDarkMode, setIsDarkMode, refs }) {
   const { homeRef, aboutRef, projectsRef, contactRef } = refs;
   const { changeTheme } = useContext(PrimeReactContext);
+  
+  const timeoutRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState("home");
   
@@ -35,7 +37,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
             );
           
 
-             if (current ) {
+             if (current) {
               
               setActiveSection(current.id);
               
@@ -72,9 +74,19 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
 
           
           setAutomaticHighlightDisabled(true) 
-          homeRef.current.scrollIntoView({ behavior: "smooth" })
-          setActiveSection("home")
-          setTimeout(() => setAutomaticHighlightDisabled(false), 1200) 
+         
+          if (timeoutRef.current) {
+              clearTimeout(timeoutRef.current);
+          }
+
+          homeRef.current.scrollIntoView({ behavior: "smooth" });
+          setActiveSection("home");
+
+          
+          timeoutRef.current = setTimeout(() => {
+              setAutomaticHighlightDisabled(false);
+              timeoutRef.current = null; 
+          }, 1200);
           
           
         }
@@ -89,9 +101,19 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
       command: () => { 
         
         setAutomaticHighlightDisabled(true) 
-        aboutRef.current.scrollIntoView({ behavior: "smooth" })
-        setActiveSection("about")
-        setTimeout(() => setAutomaticHighlightDisabled(false), 1200) 
+        
+          if (timeoutRef.current) {
+              clearTimeout(timeoutRef.current);
+          }
+
+          aboutRef.current.scrollIntoView({ behavior: "smooth" });
+          setActiveSection("about");
+
+          
+          timeoutRef.current = setTimeout(() => {
+              setAutomaticHighlightDisabled(false);
+              timeoutRef.current = null; 
+          }, 1200);
           
           }
           
@@ -109,9 +131,19 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
           
           setAutomaticHighlightDisabled(true) 
           
-          projectsRef.current.scrollIntoView({ behavior: "smooth" })
-          setActiveSection("projects")
-          setTimeout(() => setAutomaticHighlightDisabled(false), 1200) 
+          
+          if (timeoutRef.current) {
+              clearTimeout(timeoutRef.current);
+          }
+
+          projectsRef.current.scrollIntoView({ behavior: "smooth" });
+          setActiveSection("projects");
+
+         
+          timeoutRef.current = setTimeout(() => {
+              setAutomaticHighlightDisabled(false);
+              timeoutRef.current = null; 
+          }, 1200);
           
           
           
@@ -127,10 +159,19 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
        
           setAutomaticHighlightDisabled(true) 
           
-          contactRef.current.scrollIntoView({ behavior: "smooth" })
-          setActiveSection("contact")
-          setTimeout(() => setAutomaticHighlightDisabled(false), 1200) 
-         
+          
+          if (timeoutRef.current) {
+              clearTimeout(timeoutRef.current);
+          }
+
+          contactRef.current.scrollIntoView({ behavior: "smooth" });
+          setActiveSection("contact");
+
+          
+          timeoutRef.current = setTimeout(() => {
+              setAutomaticHighlightDisabled(false);
+              timeoutRef.current = null; 
+          }, 1200);
           
         
           
