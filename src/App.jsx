@@ -84,7 +84,7 @@ function App() {
       />
 
       <div ref={homeRef}>
-        <Home isDarkMode={isDarkMode} />
+        <Home isDarkMode={isDarkMode} projectsRef ={projectsRef} />
       </div>
 
       <div ref={aboutRef}>
