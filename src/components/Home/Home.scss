@@ -1,3 +1,513 @@
+// @font-face {
+//   font-family: "montserrat";
+//   src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
+//     format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "DotMatrix";
+//   src: url("../../assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "cabin";
+//   src: url("../../assets/fonts/Cabin-VariableFont_wdth,wght.ttf")
+//     format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "nexa";
+//   src: url("../../assets/fonts/Nexa-Heavy.ttf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// .home-image {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-content: center;
+// }
+
+// .home-developer {
+//   background-size: contain;
+//   height: 340px;
+//   width: 340px;
+//   align-content: center;
+//   background-repeat: no-repeat;
+//   transform: translateY(-50px);
+//   opacity: 0;
+//   transition:
+//     transform 0.6s ease-out,
+//     opacity 0.6s ease-out;
+// }
+
+// .home-developer.moved {
+//   opacity: 1;
+//   transform: translateY(0px);
+// }
+
+// .home-content {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 0px;
+// }
+
+// .home-description {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+//   padding-left: 0px;
+//   align-items: center;
+
+//   .home-title {
+//     color: var(--surface-600);
+//     font-size: 3.2rem;
+//     font-weight: 700;
+//     font-family: "nexa", sans-serif;
+//     text-align: center;
+//     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+//     line-height: 1.2;
+//     transform: translateX(-50px);
+//     opacity: 0;
+//     transition:
+//       transform 1s ease-out,
+//       opacity 0.6s ease-out;
+//   }
+
+//   .home-title.moved {
+//     transform: translateX(0px);
+//     opacity: 1;
+//   }
+
+//   .home-subtitle {
+//     font-size: 3.2rem;
+//     padding-top: 15px;
+//     font-family: "nexa";
+//     color: var(--surface-600);
+//     text-align: center;
+//     font-weight: bolder;
+//     line-height: 1.2;
+//     width: 82%;
+//     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+//     transform: translateX(50px);
+//     opacity: 0;
+//     transition:
+//       transform 1s ease-out,
+//       opacity 0.6s ease-out;
+//   }
+
+//   .home-subtitle.moved {
+//     transform: translateX(0px);
+//     opacity: 1;
+//   }
+
+//   .home-paragraph {
+//     font-size: 1.4rem;
+//     font-family: "montserrat";
+//     color: black;
+//     text-align: center;
+//     width: 80%;
+//     padding-top: 20px;
+//     padding-bottom: 10px;
+//     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+//     opacity: 0;
+
+//     transition: opacity 1.2s ease-out;
+//     .react {
+//       color: rgb(59, 130, 246);
+
+//       font-style: italic;
+//       font-weight: bolder;
+//     }
+
+//     .express {
+//       color: rgb(59, 130, 246);
+
+//       font-style: italic;
+//       font-weight: bolder;
+//     }
+//   }
+
+//   .home-paragraph.moved {
+//     opacity: 1;
+//   }
+//   .home-small-image {
+//     display: none;
+//     background-image: url("../../assets/images/home-developer6.png");
+//     height: 270px;
+//     width: 270px;
+//   }
+
+//   .home-mid-image {
+//     display: none;
+//   }
+
+//   .button-section {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+  
+//    }
+
+  
+//   .home-name {
+//     color: rgb(59, 130, 246);
+//   }
+
+//   .p-button {
+//     background-color: rgb(59, 130, 246);
+//     color: white;
+//     border: none;
+//     background: rgb(59, 130, 246);
+//     margin: 20px;
+//     margin-top: 70px;
+//     padding-left: 40px;
+//     padding-right: 40px;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+//     height: 50px;
+//   }
+
+//   .p-button-label {
+//     padding: 0px;
+//   }
+
+//   .p-button:not(:disabled):hover {
+//     background: rgb(35, 119, 255);
+//     color: #ffffff;
+//   }
+// }
+
+// .home-light {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-image: url("../../assets/images/home-light.jpg");
+//   background-size: cover;
+//   min-height: 677px !important;
+//   height: 75vh;
+
+//   .home-image {
+//     .home-developer {
+//       background-image: url("../../assets/images/home-developer9.png");
+//     }
+//   }
+// }
+
+// .home-dark {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-image: url("../../assets/images/home-dark1.png");
+//   background-size: cover;
+//   min-height: 677px !important;
+//   height: 60vh;
+//   .home-description {
+//     .home-title {
+//       color: var(--surface-600);
+//     }
+
+//     .home-subtitle {
+//       color: var(--surface-600);
+//     }
+
+//     .home-paragraph {
+//       color: var(--surface-900);
+//     }
+
+//     .p-button {
+//       color: #ffffff;
+//       background: rgb(59, 130, 246);
+//       .p-button-icon {
+//         color: #ffffff;
+//       }
+//     }
+//   }
+
+//   .home-image {
+//     .home-developer {
+//       background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
+//       height: 348px;
+//       width: 343.5px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 960px) {
+//   .home-light,
+//   .home-dark {
+//     min-height: unset !important;
+//     height: 727px;
+//   }
+//   .home-developer {
+//     display: none;
+//   }
+
+//   .home-description {
+//     margin-top: 0px;
+//     margin-bottom: 50px;
+//     .home-small-image {
+//       display: block;
+//       background-image: url("../../assets/images/home-developer9.png");
+//       height: 255px;
+//       width: 210px;
+//       transform: translateX(50px);
+//       opacity: 0;
+//       transition:
+//         transform 0.6s ease-out,
+//         opacity 0.6s ease-out;
+//       background-size: cover;
+//     }
+//     .home-small-image.moved {
+//       transform: translateX(0px);
+//       opacity: 1;
+//     }
+
+//     .p-button {
+//       margin-top: 30px;
+//       font-size:14px;
+//       height:43px;
+//       padding-left:30px;
+//       padding-right:30px;
+//     }
+
+//     .button-section {
+//       margin-top: 40px;
+//       gap: 40px;
+      
+//     }
+
+    
+//   }
+
+//   .home-dark {
+//     .home-description {
+//       .home-small-image {
+//         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
+//         height: 260px;
+//         width: 212px;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 750px) {
+//   .home-description {
+//     margin-top: 0px;
+//     .home-paragraph {
+//       font-size: 1.3rem;
+//     }
+
+//     .home-title {
+//       font-size: 2.8rem;
+//     }
+
+//     .home-subtitle {
+//       font-size: 2.8rem;
+//       width: 75%;
+//     }
+
+//     .home-small-image {
+//       height: 245px;
+//       width: 200px;
+//     }
+
+    
+
+//     .p-button {
+//       height: 43px;
+//       font-size: 14px;
+
+//       .p-button-icon-right {
+//         font-size: 14px;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 615px) {
+//   .home-light,
+//   .home-dark {
+//     height: 930px;
+//     align-items: unset;
+//   }
+
+//   .home-description {
+//     margin-top: 40px;
+//     .home-title {
+//       transform: translateX(-20px);
+//     }
+//     .home-subtitle {
+//       transform: translateX(20px);
+//     }
+
+//     .p-button {
+//       padding-left: 35px;
+//       padding-right: 35px;
+//     }
+
+//     .home-small-image {
+//       display: none;
+//     }
+
+//     .home-mid-image {
+//       display: block;
+//       background-image: url("../../assets/images/home-developer9.png");
+//       height: 245px;
+//       width: 200px;
+//       transform: translateX(20px);
+//       opacity: 0;
+//       margin-top: 50px;
+//       background-size: cover;
+//       transition:
+//         transform 0.6s ease-out,
+//         opacity 0.6s ease-out;
+//     }
+//     .home-mid-image.moved {
+//       transform: translateX(0px);
+//       opacity: 1;
+//     }
+
+    
+//   }
+// }
+// .home-dark {
+//   .home-description {
+//     .home-mid-image {
+//       background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
+//       height: 250px;
+//       width: 205px;
+//     }
+//   }
+// }
+// @media screen and (max-width: 500px) {
+//   .home-light,
+//   .home-dark {
+//     height: 850px;
+//     align-items: unset;
+//   }
+
+//   .home-description {
+//     margin-top: 0px;
+//     margin-top: 45px;
+//     .home-title {
+//       transform: translateY(-30px);
+//     }
+//     .home-subtitle {
+//       transform: translateY(30px);
+//     }
+
+//     .home-subtitle.moved {
+//       transform: translateY(0px);
+//     }
+
+//     .home-subtitle.moved {
+//       transform: translateY(0px);
+//     }
+
+//     .p-button {
+//       padding-left: 35px;
+//       padding-right: 35px;
+//       font-size: 14px;
+
+//       .p-button-icon-right {
+//         font-size: 14px;
+//       }
+//     }
+
+//     .home-title {
+//       font-size: 2.4rem;
+//     }
+
+//     .home-subtitle {
+//       font-size: 2.4rem;
+//     }
+
+//     .home-paragraph {
+//       font-size: 1.2rem;
+//       width: 90%;
+//     }
+
+//     .home-mid-image {
+//       height: 245px;
+//       width: 200px;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 400px) {
+//   .home-light,
+//   .home-dark {
+//     height: 750px;
+//   }
+
+//   .home-description {
+//     padding-left: 0px;
+//     margin-top: 40px;
+//     .home-title {
+//       transform: translateY(-20px);
+//     }
+//     .home-subtitle {
+//       transform: translateY(20px);
+//     }
+
+//     .p-button {
+//       padding-left: 20px;
+//       padding-right: 20px;
+//       font-size: 13px;
+//       height: 40px;
+
+//       .p-button-icon-right {
+//         font-size: 13px;
+//       }
+//     }
+
+//     .home-title {
+//       font-size: 1.8rem;
+//     }
+
+//     .home-subtitle {
+//       font-size: 1.8rem;
+//       padding-top: 15px;
+//     }
+
+//     .home-paragraph {
+//       font-size: 1rem;
+//       width: 85%;
+//     }
+
+//     .home-mid-image {
+//       height: 220px;
+//       width: 160px;
+//       background-repeat: no-repeat;
+//       background-size: contain;
+//     }
+//     .button-section {
+//       margin-top: 0px;
+//       gap: 0px;
+//     }
+//   }
+
+//   .home-dark {
+//     .home-description {
+//       .home-mid-image {
+//         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
+//         height: 225px;
+//         width: 165px;
+//       }
+//     }
+//   }
+// }
+
+
 @font-face {
   font-family: "montserrat";
   src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
@@ -37,11 +547,11 @@
 
 .home-developer {
   background-size: contain;
-  height: 340px;
-  width: 340px;
+  height: 21.25rem; 
+  width: 21.25rem; 
   align-content: center;
   background-repeat: no-repeat;
-  transform: translateY(-50px);
+  transform: translateY(-3.125rem); 
   opacity: 0;
   transition:
     transform 0.6s ease-out,
@@ -50,21 +560,21 @@
 
 .home-developer.moved {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(0rem);
 }
 
 .home-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0px;
+  gap: 0rem; 
 }
 
 .home-description {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-left: 0px;
+  gap: 0.625rem; 
+  padding-left: 0rem; 
   align-items: center;
 
   .home-title {
@@ -73,9 +583,9 @@
     font-weight: 700;
     font-family: "nexa", sans-serif;
     text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3); 
     line-height: 1.2;
-    transform: translateX(-50px);
+    transform: translateX(-3.125rem); 
     opacity: 0;
     transition:
       transform 1s ease-out,
@@ -83,21 +593,21 @@
   }
 
   .home-title.moved {
-    transform: translateX(0px);
+    transform: translateX(0rem);
     opacity: 1;
   }
 
   .home-subtitle {
     font-size: 3.2rem;
-    padding-top: 15px;
+    padding-top: 0.9375rem; 
     font-family: "nexa";
     color: var(--surface-600);
     text-align: center;
     font-weight: bolder;
     line-height: 1.2;
     width: 82%;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    transform: translateX(50px);
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3); 
+    transform: translateX(3.125rem); 
     opacity: 0;
     transition:
       transform 1s ease-out,
@@ -105,7 +615,7 @@
   }
 
   .home-subtitle.moved {
-    transform: translateX(0px);
+    transform: translateX(0rem);
     opacity: 1;
   }
 
@@ -115,22 +625,20 @@
     color: black;
     text-align: center;
     width: 80%;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+    padding-top: 1.25rem; 
+    padding-bottom: 0.625rem; 
+    text-shadow: 0rem 0rem 0.0625rem rgba(0, 0, 0, 0.3); 
     opacity: 0;
 
     transition: opacity 1.2s ease-out;
     .react {
       color: rgb(59, 130, 246);
-
       font-style: italic;
       font-weight: bolder;
     }
 
     .express {
       color: rgb(59, 130, 246);
-
       font-style: italic;
       font-weight: bolder;
     }
@@ -139,11 +647,12 @@
   .home-paragraph.moved {
     opacity: 1;
   }
+
   .home-small-image {
     display: none;
     background-image: url("../../assets/images/home-developer6.png");
-    height: 270px;
-    width: 270px;
+    height: 16.875rem; 
+    width: 16.875rem; 
   }
 
   .home-mid-image {
@@ -154,10 +663,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
-   }
+  }
 
-  
   .home-name {
     color: rgb(59, 130, 246);
   }
@@ -167,17 +674,17 @@
     color: white;
     border: none;
     background: rgb(59, 130, 246);
-    margin: 20px;
-    margin-top: 70px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    height: 50px;
+    margin: 1.25rem; 
+    margin-top: 4.375rem; 
+    padding-left: 2.5rem; 
+    padding-right: 2.5rem; 
+    padding-top: 0.9375rem; 
+    padding-bottom: 0.9375rem; 
+    height: 3.125rem; 
   }
 
   .p-button-label {
-    padding: 0px;
+    padding: 0rem;
   }
 
   .p-button:not(:disabled):hover {
@@ -192,8 +699,8 @@
   align-items: center;
   background-image: url("../../assets/images/home-light.jpg");
   background-size: cover;
-  min-height: 677px !important;
-  height: 60vh;
+  min-height: 42.3125rem !important; 
+  height: 75vh;
 
   .home-image {
     .home-developer {
@@ -208,8 +715,9 @@
   align-items: center;
   background-image: url("../../assets/images/home-dark1.png");
   background-size: cover;
-  min-height: 677px !important;
+  min-height: 42.3125rem !important; 
   height: 60vh;
+
   .home-description {
     .home-title {
       color: var(--surface-600);
@@ -226,6 +734,7 @@
     .p-button {
       color: #ffffff;
       background: rgb(59, 130, 246);
+
       .p-button-icon {
         color: #ffffff;
       }
@@ -235,65 +744,65 @@
   .home-image {
     .home-developer {
       background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-      height: 348px;
-      width: 343.5px;
+      height: 21.75rem; 
+      width: 21.46875rem; 
     }
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) { 
   .home-light,
   .home-dark {
     min-height: unset !important;
-    height: 727px;
+    height: 45.4375rem; 
   }
+
   .home-developer {
     display: none;
   }
 
   .home-description {
-    margin-top: 0px;
-    margin-bottom: 50px;
+    margin-top: 0rem;
+    margin-bottom: 3.125rem; 
+
     .home-small-image {
       display: block;
       background-image: url("../../assets/images/home-developer9.png");
-      height: 255px;
-      width: 210px;
-      transform: translateX(50px);
+      height: 15.9375rem; 
+      width: 13.125rem; 
+      transform: translateX(3.125rem);
       opacity: 0;
       transition:
         transform 0.6s ease-out,
         opacity 0.6s ease-out;
       background-size: cover;
     }
+
     .home-small-image.moved {
-      transform: translateX(0px);
+      transform: translateX(0rem);
       opacity: 1;
     }
 
     .p-button {
-      margin-top: 30px;
-      font-size:14px;
-      height:43px;
-      padding-left:30px;
-      padding-right:30px;
+      margin-top: 1.875rem; 
+      font-size: 0.875rem; 
+      height: 2.6875rem; 
+      padding-left: 1.875rem;
+      padding-right: 1.875rem; 
     }
 
     .button-section {
-      margin-top: 40px;
-      gap: 40px;
-      
+      margin-top: 2.5rem; 
+      gap: 2.5rem; 
     }
-
-    
   }
 
   .home-dark {
     .home-description {
       .home-small-image {
         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-        height: 260px;
-        width: 212px;
+        height: 16.25rem; 
+        width: 13.25rem; 
       }
     }
   }
@@ -301,7 +810,8 @@
 
 @media screen and (max-width: 750px) {
   .home-description {
-    margin-top: 0px;
+    margin-top: 0rem;
+
     .home-paragraph {
       font-size: 1.3rem;
     }
@@ -316,42 +826,42 @@
     }
 
     .home-small-image {
-      height: 245px;
-      width: 200px;
+      height: 15.3125rem; 
+      width: 12.5rem; 
     }
 
-    
-
     .p-button {
-      height: 43px;
-      font-size: 14px;
+      height: 2.6875rem; 
+      font-size: 0.875rem;
 
       .p-button-icon-right {
-        font-size: 14px;
+        font-size: 0.875rem; 
       }
     }
   }
 }
 
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 615px) { 
   .home-light,
   .home-dark {
-    height: 930px;
+    height: 58.125rem; 
     align-items: unset;
   }
 
   .home-description {
-    margin-top: 40px;
+    margin-top: 2.5rem; 
+
     .home-title {
-      transform: translateX(-20px);
+      transform: translateX(-1.25rem); 
     }
+
     .home-subtitle {
-      transform: translateX(20px);
+      transform: translateX(1.25rem); 
     }
 
     .p-button {
-      padding-left: 35px;
-      padding-right: 35px;
+      padding-left: 2.1875rem; 
+      padding-right: 2.1875rem; 
     }
 
     .home-small-image {
@@ -361,65 +871,63 @@
     .home-mid-image {
       display: block;
       background-image: url("../../assets/images/home-developer9.png");
-      height: 245px;
-      width: 200px;
-      transform: translateX(20px);
+      height: 15.3125rem; 
+      width: 12.5rem; 
+      transform: translateX(1.25rem); 
       opacity: 0;
-      margin-top: 50px;
+      margin-top: 3.125rem; 
       background-size: cover;
       transition:
         transform 0.6s ease-out,
         opacity 0.6s ease-out;
     }
+
     .home-mid-image.moved {
-      transform: translateX(0px);
+      transform: translateX(0rem);
       opacity: 1;
     }
-
-    
   }
 }
+
 .home-dark {
   .home-description {
     .home-mid-image {
       background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-      height: 250px;
-      width: 205px;
+      height: 15.625rem; 
+      width: 12.8125rem; 
     }
   }
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 500px) { 
   .home-light,
   .home-dark {
-    height: 850px;
+    height: 53.125rem; 
     align-items: unset;
   }
 
   .home-description {
-    margin-top: 0px;
-    margin-top: 45px;
+    margin-top: 2.8125rem; 
+
     .home-title {
-      transform: translateY(-30px);
+      transform: translateY(-1.875rem); 
     }
+
     .home-subtitle {
-      transform: translateY(30px);
+      transform: translateY(1.875rem); 
     }
 
     .home-subtitle.moved {
-      transform: translateY(0px);
-    }
-
-    .home-subtitle.moved {
-      transform: translateY(0px);
+      transform: translateY(0rem);
     }
 
     .p-button {
-      padding-left: 35px;
-      padding-right: 35px;
-      font-size: 14px;
+      padding-left: 2.1875rem; 
+      padding-right: 2.1875rem; 
+      font-size: 0.875rem; 
 
       .p-button-icon-right {
-        font-size: 14px;
+        font-size: 0.875rem; 
       }
     }
 
@@ -437,8 +945,8 @@
     }
 
     .home-mid-image {
-      height: 245px;
-      width: 200px;
+      height: 15.3125rem; 
+      width: 12.5rem; 
     }
   }
 }
@@ -446,27 +954,29 @@
 @media screen and (max-width: 400px) {
   .home-light,
   .home-dark {
-    height: 750px;
+    height: 46.875rem; 
   }
 
   .home-description {
-    padding-left: 0px;
-    margin-top: 40px;
+    padding-left: 0rem;
+    margin-top: 2.5rem; 
+
     .home-title {
-      transform: translateY(-20px);
+      transform: translateY(-1.25rem); 
     }
+
     .home-subtitle {
-      transform: translateY(20px);
+      transform: translateY(1.25rem); 
     }
 
     .p-button {
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 13px;
-      height: 40px;
+      padding-left: 1.25rem; 
+      padding-right: 1.25rem; 
+      font-size: 0.8125rem; 
+      height: 2.5rem; 
 
       .p-button-icon-right {
-        font-size: 13px;
+        font-size: 0.8125rem; 
       }
     }
 
@@ -476,7 +986,7 @@
 
     .home-subtitle {
       font-size: 1.8rem;
-      padding-top: 15px;
+      padding-top: 0.9375rem; 
     }
 
     .home-paragraph {
@@ -485,14 +995,15 @@
     }
 
     .home-mid-image {
-      height: 220px;
-      width: 160px;
+      height: 13.75rem; 
+      width: 10rem; 
       background-repeat: no-repeat;
       background-size: contain;
     }
+
     .button-section {
-      margin-top: 0px;
-      gap: 0px;
+      margin-top: 0rem;
+      gap: 0rem;
     }
   }
 
@@ -500,8 +1011,8 @@
     .home-description {
       .home-mid-image {
         background-image: url("../../assets/images/amjad-portfolio-image-Blue-glow1.png");
-        height: 225px;
-        width: 165px;
+        height: 14.0625rem; 
+        width: 10.3125rem; 
       }
     }
   }

@@ -1,3 +1,237 @@
+// @font-face {
+//   font-family: "DotMatrix";
+//   src: url("../../assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// .navbar {
+//   position: sticky;
+//   top: 0;
+//   z-index: 1000;
+// }
+
+// .p-menubar-light{
+
+//     background:white !important;
+//     box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2) !important;
+
+//   }
+
+// .navbar {
+//   .p-menuitem-icon {
+//     pointer-events: none;
+//   }
+//   .navbar-name {
+//     font-family: "Dotmatrix" !important;
+//     font-size: 19px;
+//     padding-left: 10px;
+//   }
+
+//   .navbar-leftside {
+//     display: flex;
+//     gap: 15px;
+//     align-items: center;
+//   }
+
+//   .lightmode-text {
+//     display: none;
+//     color: #4b5563 !important;
+//     font-size: 15px;
+//   }
+
+//   .darkmode-text {
+//     display: none;
+//     color: rgba(255, 255, 255, 0.87) !important;
+//     font-size: 15px;
+//   }
+
+//   .lightmode-icon {
+//     color: #6b7280;
+//   }
+//   .darkmode-icon {
+//     color: rgba(255, 255, 255, 0.6);
+//   }
+
+//   .lightmode-icon:hover {
+//     color: #23262b;
+//   }
+
+//   .darkmode-icon:hover {
+//     color: rgba(255, 255, 255, 1);
+//   }
+
+//   .lightmode-block {
+//     display: flex;
+//     justify-content: left;
+//     align-items: center;
+//     gap: 0.5rem;
+//   }
+
+//   .menuitem-clicked {
+//     border-radius: 6px;
+//     background: rgb(59 130 246) !important;
+//     color: #fff;
+
+//     .p-menuitem-text,
+//     .p-menuitem-icon {
+//       color: white;
+//     }
+//   }
+
+//   .p-menubar {
+//     justify-content: space-between;
+//     border: none;
+//     border-radius: 0px;
+//     padding: 1rem 0.5rem;
+//     // background:white;
+//     // box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+//   }
+
+  
+
+//   .p-menubar > ul > li:not(:last-child) .p-menuitem-content {
+//     background: transparent !important;
+//   }
+
+//   .p-menubar > ul > li:not(:last-child) .p-menuitem-content:hover {
+//     background: rgb(59, 130, 246, 0.9) !important ;
+//     color: #fff;
+
+//     .p-menuitem-text,
+//     .p-menuitem-icon {
+//       color: white !important;
+//     }
+//   }
+
+//   .p-menubar > ul > li:last-child .p-menuitem-content {
+//     background: transparent !important;
+//   }
+
+//   .p-menuitem-content .p-menuitem-link {
+//     padding: 0.75rem 0.75rem;
+//     font-size: 15px;
+//   }
+
+//   .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+//     top: 100%;
+//     z-index: 1;
+//   }
+
+//   .p-menubar > ul > li {
+//     margin-right: 20px;
+//   }
+
+//   .p-menubar > ul > li:last-child {
+//     margin-right: 0px !important;
+//   }
+
+//   .theme-toggle-btn {
+//     color: #6b7280;
+//     transition: color 0.3s ease;
+//     background: transparent;
+//     border: none;
+//     padding: 0.675rem 0.75rem;
+//     cursor: pointer;
+
+//     &:hover {
+//       color: #23262b !important;
+//       transition: color 0.3s ease;
+//     }
+
+//     i {
+//       font-size: 17px;
+//     }
+//   }
+// }
+
+// .navbar-light{
+
+//     .p-menubar {
+//     justify-content: space-between;
+//     border: none;
+//     border-radius: 0px;
+//     padding: 1rem 0.5rem;
+//     background:white;
+//     box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+//   }
+
+
+// }
+
+// @media screen and (max-width: 960px) {
+//   .navbar {
+//     .lightmode-text {
+//       display: block;
+//     }
+//     .darkmode-text {
+//       display: block;
+//     }
+//     .p-menubar .p-menubar-root-list {
+//       right: 10px !important;
+//       width: 180px !important;
+//       left: auto;
+//     }
+
+//     .p-menubar .p-menubar-button {
+//       height: 40px;
+//       width:40px;
+//     }
+
+//     .p-menubar > ul > li {
+//       margin-right: 0px;
+//     }
+
+//     .p-menubar > ul > li:last-child {
+//       margin-right: 0px;
+//     }
+
+//     .p-icon {
+//       width: 2rem;
+//       height: 1.2rem;
+//     }
+//     .theme-toggle-btn {
+//       color: #4b5563;
+//       background: transparent;
+//       border: none;
+//       padding: 0.675rem 0.75rem;
+
+//       width: 100%;
+//       cursor: pointer;
+
+//       &:hover {
+//         background: rgb(59, 130, 246, 0.9);
+//         color: #fff;
+//         .lightmode-icon,
+//         .lightmode-text,
+//         .darkmode-icon,
+//         .darkmode-text {
+//           color: white !important;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+// @media screen and (max-width: 400px) {
+//  .navbar{
+  
+//   .navbar-name{
+//     display:none;
+
+//   }
+//   .p-menubar{
+//     padding-left:17px;
+//   }
+
+//  }  
+
+
+// }
+
+
+
 @font-face {
   font-family: "DotMatrix";
   src: url("../../assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
@@ -11,44 +245,44 @@
   z-index: 1000;
 }
 
-.p-menubar-light{
-
-    background:white !important;
-    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2) !important;
-
-  }
+.p-menubar-light {
+  background: white !important;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2) !important;
+}
 
 .navbar {
   .p-menuitem-icon {
     pointer-events: none;
   }
+
   .navbar-name {
     font-family: "Dotmatrix" !important;
-    font-size: 19px;
-    padding-left: 10px;
+    font-size: 1.1875rem; 
+    padding-left: 0.625rem; 
   }
 
   .navbar-leftside {
     display: flex;
-    gap: 15px;
+    gap: 0.9375rem; 
     align-items: center;
   }
 
   .lightmode-text {
     display: none;
     color: #4b5563 !important;
-    font-size: 15px;
+    font-size: 0.9375rem; 
   }
 
   .darkmode-text {
     display: none;
     color: rgba(255, 255, 255, 0.87) !important;
-    font-size: 15px;
+    font-size: 0.9375rem; 
   }
 
   .lightmode-icon {
     color: #6b7280;
   }
+
   .darkmode-icon {
     color: rgba(255, 255, 255, 0.6);
   }
@@ -69,7 +303,7 @@
   }
 
   .menuitem-clicked {
-    border-radius: 6px;
+    border-radius: 0.375rem; 
     background: rgb(59 130 246) !important;
     color: #fff;
 
@@ -82,20 +316,16 @@
   .p-menubar {
     justify-content: space-between;
     border: none;
-    border-radius: 0px;
+    border-radius: 0rem;
     padding: 1rem 0.5rem;
-    // background:white;
-    // box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
   }
-
-  
 
   .p-menubar > ul > li:not(:last-child) .p-menuitem-content {
     background: transparent !important;
   }
 
   .p-menubar > ul > li:not(:last-child) .p-menuitem-content:hover {
-    background: rgb(59, 130, 246, 0.9) !important ;
+    background: rgb(59, 130, 246, 0.9) !important;
     color: #fff;
 
     .p-menuitem-text,
@@ -110,7 +340,7 @@
 
   .p-menuitem-content .p-menuitem-link {
     padding: 0.75rem 0.75rem;
-    font-size: 15px;
+    font-size: 0.9375rem; 
   }
 
   .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
@@ -119,11 +349,11 @@
   }
 
   .p-menubar > ul > li {
-    margin-right: 20px;
+    margin-right: 1.25rem; 
   }
 
   .p-menubar > ul > li:last-child {
-    margin-right: 0px !important;
+    margin-right: 0rem !important;
   }
 
   .theme-toggle-btn {
@@ -140,26 +370,23 @@
     }
 
     i {
-      font-size: 17px;
+      font-size: 1.0625rem; 
     }
   }
 }
 
-.navbar-light{
-
-    .p-menubar {
+.navbar-light {
+  .p-menubar {
     justify-content: space-between;
     border: none;
-    border-radius: 0px;
+    border-radius: 0rem;
     padding: 1rem 0.5rem;
-    background:white;
+    background: white;
     box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.2);
   }
-
-
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 60rem) { 
   .navbar {
     .lightmode-text {
       display: block;
@@ -167,41 +394,43 @@
     .darkmode-text {
       display: block;
     }
+
     .p-menubar .p-menubar-root-list {
-      right: 10px !important;
-      width: 180px !important;
+      right: 0.625rem !important; 
+      width: 11.25rem !important; 
       left: auto;
     }
 
     .p-menubar .p-menubar-button {
-      height: 40px;
-      width:40px;
+      height: 2.5rem; 
+      width: 2.5rem;  
     }
 
     .p-menubar > ul > li {
-      margin-right: 0px;
+      margin-right: 0rem;
     }
 
     .p-menubar > ul > li:last-child {
-      margin-right: 0px;
+      margin-right: 0rem;
     }
 
     .p-icon {
       width: 2rem;
       height: 1.2rem;
     }
+
     .theme-toggle-btn {
       color: #4b5563;
       background: transparent;
       border: none;
       padding: 0.675rem 0.75rem;
-
       width: 100%;
       cursor: pointer;
 
       &:hover {
         background: rgb(59, 130, 246, 0.9);
         color: #fff;
+
         .lightmode-icon,
         .lightmode-text,
         .darkmode-icon,
@@ -213,19 +442,14 @@
   }
 }
 
+@media screen and (max-width: 25rem) { 
+  .navbar {
+    .navbar-name {
+      display: none;
+    }
 
-@media screen and (max-width: 400px) {
- .navbar{
-  
-  .navbar-name{
-    display:none;
-
+    .p-menubar {
+      padding-left: 1.0625rem; 
+    }
   }
-  .p-menubar{
-    padding-left:17px;
-  }
-
- }  
-
-
 }
