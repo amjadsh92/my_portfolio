@@ -16,13 +16,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
 
   const [automaticHighlightDisabled, setAutomaticHighlightDisabled] = useState(false)
 
-  useEffect(()=>{
-    isDarkMode ? changeTheme(
-        "lara-light-indigo" , "lara-dark-indigo",
-        "theme-link"
-      ) : ""
-  },[])
-
+  
   
   useEffect(() => {
 
@@ -207,10 +201,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
           setIsDarkMode((prev) => !prev);
           localStorage.setItem("isDarkMode", !isDarkMode);
 
-  //         setIsDarkMode((prev) => {
-  //          localStorage.setItem("isDarkMode", !prev);
-  //          return !prev;
-  // });
+
         };
 
         return (

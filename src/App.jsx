@@ -28,15 +28,9 @@ function App() {
        setIsDarkMode(isDark);
 
 
-      //  changeTheme(
-      //   isDarkMode ? "lara-light-indigo" : "lara-dark-indigo",
-      //   isDarkMode ? "lara-dark-indigo" : "lara-light-indigo",
-      //   "theme-link"
-      // );
-
-      // const themeLink = document.getElementById("theme-link");
+     
       
-      isDark ? changeTheme("lara-light-indigo","lara-dark-indigo",  "theme-link") : ""
+      isDark ? changeTheme("lara-light-indigo","lara-dark-indigo", "theme-link") : ""
 
        
     }

@@ -1,10 +1,85 @@
-.project{
-    
+.projects-light {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
   align-items: center;
-  
-  background-color: #bbf6fe; 
+  gap: 50px;
+  background-color: #ffffff;
   min-height: 677px !important;
   height: 75vh;
+}
+
+.projects-title {
+  .title {
+    font-family: "Fira Sans";
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    display: inline-block;
+    border-bottom: 0.3125rem solid rgba(59, 130, 246, 0.85);
+    color: #4b5563;
+    width: 9.2rem;
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
+  .project-name {
+    font-family: "Fira Sans";
+    font-size: 1.8rem;
+    margin-top: 0rem;
+    display: inline-block;
+    border-bottom: 0.25rem solid rgba(59, 130, 246, 0.85);
+    color: #4b5563;
+    text-align: left;
+    margin-bottom: 1.25rem;
+    margin-right: auto;
+  }
+
+  .project-description-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 2rem 4rem;
+  }
+
+  .project-image img {
+    
+
+    
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    width: 400px;
+    
+  }
+
+  .project-description {
+    
+    color: #6b747b;
+    line-height: 1.6;
+    width: 60vh;
+    margin-top: -20px;
+    margin-left: -40px;
+    padding-left: 6rem;
+    padding-right: 2rem;
+    border: 1px solid black;
+  }
+}
+
+
+
+
+.project-description {
+  position: relative;
+  z-index: 1;   
+}
+
+.project-image {
+  position: relative;
+  z-index: 2;  
 }

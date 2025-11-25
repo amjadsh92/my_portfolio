@@ -2,7 +2,7 @@
 import "./About.scss";
 import { motion } from "motion/react"
 
-// Logos
+
 import htmlLogo from "../../assets/images/html2.png";
 import javascriptLogo from "../../assets/images/javascript.png";
 import cssLogo from "../../assets/images/css.png";
