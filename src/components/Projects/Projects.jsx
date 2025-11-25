@@ -1,6 +1,12 @@
 /* eslint-disable */
 import "./Projects.scss";
 import shortUrlImg from "../../assets/images/urlshortener-image.png";
+import reactLogo from "../../assets/images/react.png";
+import expressLogo from "../../assets/images/express.png";
+import scssLogo from "../../assets/images/scss.png";
+import postgreLogo from "../../assets/images/postgre3.png";
+import prismaLogo from "../../assets/images/prismaORM.png";
+import primeReactLogo from "../../assets/images/primereact.png";
 
 function Projects({ isDarkMode }) {
  
@@ -17,11 +23,63 @@ function Projects({ isDarkMode }) {
        <div className="project-description">
         <div className="project-name">URL Shortener</div>
         <br/><br/>
-        <p className="description-text">Family owned online business designed for one of my clients to sell CBD products in the Amsterdam market. The website provides an appealing and user-friendly interface for customers who seek the benefits of CBD products.<br/><br/>
+        {/* <p className="description-text">Full Stack React app that transforms a long URL into a custom or auto-generated short URLs<br/><br/>
 
-It ensures that purchasing legalized CBD products is just a click away, catering to customers in both Japan and Amsterdam.<br/><br/>
+        Features: <br/><br/>
+        ability to create auto-generated <br />
+        ability to create custom short URLs (for registered users)<br />
+        Session-based authentication <br />
+        Fully responsive <br />
 
-With a focus on aesthetics and usability, the website offers an engaging experience for users, making it easy for them to find and purchase the products they need.</p>
+
+<br/><br/>
+
+</p> */}
+
+<p className="description-text">
+  Full Stack React app that transforms a long URL into a custom or auto-generated short URL.
+</p>
+
+<span className="features">Features:</span><br />
+
+<ul className="features-list">
+  <li>Ability to create auto-generated short URLs</li>
+  <li>Ability to create custom short URLs (for registered users)</li>
+  <li>Session-based authentication</li>
+  <li>Fully responsive</li>
+</ul>
+
+<span className="Tech">Tech used:</span><br />
+
+<div className="techs">
+  <div className="tech">
+    <img src={reactLogo} className="tech-image" />
+    <p className="tech-title">React</p>
+  </div>
+  <div className="tech">
+    <img src={expressLogo} className="tech-image" />
+    <p className="tech-title">ExpressJS</p>
+  </div>
+  <div className="tech">
+    <img src={scssLogo} className="tech-image" />
+    <p className="tech-title">SCSS</p>
+  </div>
+  <div className="tech">
+    <img src={postgreLogo} className="tech-image" />
+    <p className="tech-title">Postgres</p>
+  </div>
+  <div className="tech">
+    <img src={prismaLogo} className="tech-image" />
+    <p className="tech-title">Prisma</p>
+  </div>
+  <div className="tech">
+    <img src={primeReactLogo} className="tech-image" />
+    <p className="tech-title">primeReact</p>
+  </div>
+  
+
+   
+</div>
 
 
  
