@@ -4,9 +4,10 @@
 
   align-items: center;
   gap: 50px;
-  background-color: #ffffff;
+  // background-color: #ffffff;
+  background-color:#f9fafb;
   min-height: 677px !important;
-  height: 75vh;
+  // height: 75vh;
 }
 
 .projects-title {
@@ -33,11 +34,12 @@
     font-size: 1.8rem;
     margin-top: 0rem;
     display: inline-block;
-    border-bottom: 0.25rem solid rgba(59, 130, 246, 0.85);
+    // border-bottom: 0.25rem solid rgba(59, 130, 246, 0.85);
     color: #4b5563;
     text-align: left;
     margin-bottom: 1.25rem;
     margin-right: auto;
+    margin-top:20px;
   }
 
   .project-description-image {
@@ -67,7 +69,14 @@
     margin-left: -40px;
     padding-left: 6rem;
     padding-right: 2rem;
-    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #d0e1fd3b;
+    min-height:520px;
+    border: 3px solid rgba(208, 225, 253);
+  }
+
+  .description-text{
+    margin-top:-20px;
   }
 }
 
