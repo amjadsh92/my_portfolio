@@ -7,6 +7,7 @@ import scssLogo from "../../assets/images/scss.png";
 import postgreLogo from "../../assets/images/postgre3.png";
 import prismaLogo from "../../assets/images/prismaORM.png";
 import primeReactLogo from "../../assets/images/primereact.png";
+import { Image } from "primereact/image";
 
 function Projects({ isDarkMode }) {
  
@@ -19,7 +20,7 @@ function Projects({ isDarkMode }) {
        <div className="projects-container">
        
        <div className="project-description-image">
-       <div className="project-image"><img src= {shortUrlImg} className="shortURL-image" /> </div>
+       <div className="project-image"><img  className="shortURL-image" /> </div>
        <div className="project-description">
         <div className="project-name">URL Shortener</div>
         <br/><br/>
