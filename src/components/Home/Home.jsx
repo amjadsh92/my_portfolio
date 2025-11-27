@@ -8,6 +8,7 @@ import { Image } from "primereact/image";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 
+
 function Home({ isDarkMode, projectsRef }) {
   const isTablet = window.innerWidth < 960 && window.innerWidth > 615;
   const isMobile = window.innerWidth < 615;

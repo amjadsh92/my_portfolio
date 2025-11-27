@@ -80,6 +80,12 @@
   }
 
   .project-description {
+
+    --pd-left: 6rem;   /* your current padding */
+    --pd-right: 2rem;  /* your current padding */
+
+     padding-left: var(--pd-left);
+     padding-right: var(--pd-right);
     
     color: #6b747b;
     line-height: 1.6;
@@ -87,8 +93,8 @@
     flex:1 1 60vh;
     margin-top: -20px;
     margin-left: -40px;
-    padding-left: 6rem;
-    padding-right: 2rem;
+    padding-left: var(--pd-left);
+    padding-right: var(--pd-right);
     border-radius: 5px;
     background-color: #d0e1fd3b;
     // min-height:520px;
@@ -100,6 +106,68 @@
   .description-text{
     margin-top:-20px;
   }
+
+
+
+   .p-button {
+    // background-color: rgb(59, 130, 246);
+    // color: white;
+    // border: none;
+    // background: rgb(59, 130, 246);
+    // margin: 1.25rem; 
+    // margin-top: 4.375rem; 
+    // padding-left: 2.5rem; 
+    // padding-right: 2.5rem; 
+    // padding-top: 0.9375rem; 
+    // padding-bottom: 0.9375rem; 
+    // height: 3.125rem; 
+
+    // background-color: rgb(59, 130, 246);
+    // color: white;
+    // border: none;
+    // background: rgb(59, 130, 246);
+    // margin: 1.25rem;
+    // /* margin-top: 4.375rem; */
+    // padding-left: 2.5rem;
+    // padding-right: 2.5rem;
+    // padding-top: 0.9375rem;
+    // padding-bottom: 0.9375rem;
+    // height: 2.75rem;
+
+    // background-color: rgb(59, 130, 246);
+    // color: white;
+    // border: none;
+    // background: rgb(59, 130, 246);
+    // margin: 1.25rem;
+    // /* margin-top: 4.375rem; */
+    // padding-left: 8rem;
+    // padding-right: 8rem;
+    // padding-top: 0.9375rem;
+    // padding-bottom: 0.9375rem;
+    // height: 2.75rem;
+
+
+    background-color: rgb(59, 130, 246);
+    color: white;
+    border: none;
+    background: rgb(59, 130, 246);
+    margin: 1.25rem;
+    /* margin-top: 4.375rem; */
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    height: 2.75rem;
+    font-size: 0.9rem;
+    border-radius:20px;
+    // background:rgb(101 150 232);
+  }
+
+
+   .p-button-icon-right {
+        font-size: 0.9rem; 
+      }
+
 }
 
 
@@ -129,7 +197,14 @@
 
 .features{
   color:#4b5563;
+  font-weight: 700;
 }
+
+.Tech{
+  color:#4b5563;
+  font-weight: 700;
+}
+
 
 
 .techs {
@@ -147,11 +222,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    // gap: 3.25rem;
+    // // /* padding-left: 3.75rem; */
+    // // /* padding-right: 3.75rem; */
+    // margin-top: 3.25rem;
+    // // /* margin-bottom: 6.25rem;
     gap: 3.25rem;
-    // /* padding-left: 3.75rem; */
-    // /* padding-right: 3.75rem; */
-    margin-top: 3.25rem;
-    // /* margin-bottom: 6.25rem;
+    row-gap: 1.5rem;
+    margin-top: 2.3rem;
+    margin-bottom: 2.3rem;
   
 }
 
@@ -205,7 +284,79 @@
   }
 }
 
+.demo{
 
+    // width: 3rem;
+    // padding: 0.75rem 0;
+    // margin-left: 6rem;
+    // background-color: rgb(59, 130, 246);
+    // border: none;
+
+    width: 3rem; 
+    /* height: 3rem; */
+    /* padding: 0.75rem 0; */
+    margin-left: 1rem;
+    /* background-color: rgb(59, 130, 246); */
+    border: none;
+    font-size: 2rem;
+    color:#78abff;
+}
+
+.github{
+
+    // width: 3rem;
+    // padding: 0.75rem 0;
+    // margin-left: 6rem;
+    // background-color: rgb(59, 130, 246);
+    // border: none;
+    font-size: 2rem;
+    /* padding: 0.75rem 0; */
+    margin-left: 6rem;
+    /* background-color: rgb(59, 130, 246); */
+    border: none;
+   
+
+}
+
+
+// .p-button.p-button-icon-only {
+//     width: 3rem;
+//     padding: 0.75rem 0;
+//     margin-left: 6rem;
+// }
+
+// .readMore{
+//   // display:flex;
+//   // gap:1.25rem;
+//   // margin-bottom:2.5rem;
+//   //  margin-left: calc(-1 * var(--pd-left));
+//   // margin-right: calc(-1 * var(--pd-right));
+
+
+//     display: flex; 
+//     justify-content: center;
+//     align-items: center;
+   
+//     margin-left: calc(-1 * var(--pd-left));
+//     margin-right: calc(-1 * var(--pd-right));
+
+    
+  
+//     // padding-top: 3rem;
+//     // padding-bottom: 3rem;
+//     // background-color: rgb(116 142 185 / 30%);
+// }
+
+
+.readMore {
+    display: flex
+;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
 @media screen and (max-width: 1200px) { 
 
   .techs {
@@ -215,7 +366,8 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin-top: 3.25rem;
+    row-gap: 1.5rem;
+    margin-top: 2.3rem;
 }
 
 .tech {

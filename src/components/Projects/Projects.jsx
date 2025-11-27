@@ -8,6 +8,7 @@ import postgreLogo from "../../assets/images/postgre3.png";
 import prismaLogo from "../../assets/images/prismaORM.png";
 import primeReactLogo from "../../assets/images/primereact.png";
 import { Image } from "primereact/image";
+import { Button } from 'primereact/button';
 
 function Projects({ isDarkMode }) {
  
@@ -20,7 +21,7 @@ function Projects({ isDarkMode }) {
        <div className="projects-container">
        
        <div className="project-description-image">
-       <div className="project-image"><img  className="shortURL-image" /> </div>
+       <div className="project-image"><Image  className="shortURL-image" /> </div>
        <div className="project-description">
         <div className="project-name">URL Shortener</div>
         <br/><br/>
@@ -75,11 +76,35 @@ function Projects({ isDarkMode }) {
   </div>
   <div className="tech">
     <img src={primeReactLogo} className="tech-image" />
-    <p className="tech-title">primeReact</p>
+    <p className="tech-title">PrimeReact</p>
   </div>
-  
 
    
+</div>
+{/* <span className="Tech"> More Details:</span><br /> */}
+<div className="readMore">
+{/* <i className="pi pi-github github" ></i>
+<i className="pi pi-external-link demo" ></i> */}
+ {/* <Button icon="pi pi-github" className="github"  />  */}
+ {/* <i className="pi pi-github github" ></i> */}
+ {/* <Button icon="pi pi-github" className="github"  />
+ <Button icon="pi pi-external-link" className="demo" />  */}
+  {/* <i className="pi pi-github github" ></i>
+  <i className="pi pi-external-link demo" ></i> */}
+  <Button
+        
+        label="Show Demo"
+        icon="pi pi-external-link"
+        iconPos="right"
+        
+      />
+   {/* <Button
+        
+        label="Show source code"
+        icon="pi pi-github"
+        iconPos="right"
+        
+      />     */}
 </div>
 
 
