@@ -23,20 +23,9 @@ function Projects({ isDarkMode }) {
        <div className="project-description-image">
        <div className="project-image"><Image  className="shortURL-image" /> </div>
        <div className="project-description">
-        <div className="project-name">URL Shortener</div>
+        <div className="project-name"><span className="projectNumber">1.{'  '}</span>URL Shortener</div>
         <br/><br/>
-        {/* <p className="description-text">Full Stack React app that transforms a long URL into a custom or auto-generated short URLs<br/><br/>
-
-        Features: <br/><br/>
-        ability to create auto-generated <br />
-        ability to create custom short URLs (for registered users)<br />
-        Session-based authentication <br />
-        Fully responsive <br />
-
-
-<br/><br/>
-
-</p> */}
+       
 
 <p className="description-text">
   Full Stack React app that transforms a long URL into a custom or auto-generated short URL.
@@ -93,18 +82,20 @@ function Projects({ isDarkMode }) {
   <i className="pi pi-external-link demo" ></i> */}
   <Button
         
-        label="Show Demo"
+        label="Show demo"
         icon="pi pi-external-link"
         iconPos="right"
+        className="demo"
         
       />
-   {/* <Button
+   <Button
         
-        label="Show source code"
+        label="Read more"
         icon="pi pi-github"
         iconPos="right"
+        className="demo"
         
-      />     */}
+      />    
 </div>
 
 

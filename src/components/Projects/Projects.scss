@@ -12,13 +12,11 @@
 .projects-light {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   gap: 50px;
-  // background-color: #ffffff;
   background-color:#f9fafb;
   min-height: 677px !important;
-  // height: 75vh;
+ 
 }
 
 .projects-title {
@@ -45,13 +43,16 @@
     font-size: 1.8rem;
     margin-top: 0rem;
     display: inline-block;
-    // border-bottom: 0.25rem solid rgba(59, 130, 246, 0.85);
     color: #4b5563;
     text-align: left;
     margin-bottom: 1.25rem;
     margin-right: auto;
     margin-top:40px;
-    border-bottom:3px solid rgb(59, 130, 246);
+    // border-bottom:3px solid rgb(59, 130, 246);
+    .projectNumber{
+      font-style: normal;
+      margin-right: 10px;
+    }
   }
 
   .project-description-image {
@@ -68,28 +69,23 @@
   object-fit: cover;
   border-radius: 10px;
   display: block;
-  // width: 444px;
-  // height:524.362px;
   width:470px;
   height:550px;
-  // width:30vw;
-  // aspect-ratio: 0.84673119726;
   
-  //  height:85vh;
     
   }
 
   .project-description {
 
-    --pd-left: 6rem;   /* your current padding */
-    --pd-right: 2rem;  /* your current padding */
+    --pd-left: 6rem;  
+    --pd-right: 2rem;  
 
      padding-left: var(--pd-left);
      padding-right: var(--pd-right);
     
     color: #6b747b;
     line-height: 1.6;
-    // width: 60vw;
+  
     flex:1 1 60vh;
     margin-top: -20px;
     margin-left: -40px;
@@ -110,62 +106,45 @@
 
 
    .p-button {
-    // background-color: rgb(59, 130, 246);
-    // color: white;
-    // border: none;
-    // background: rgb(59, 130, 246);
-    // margin: 1.25rem; 
-    // margin-top: 4.375rem; 
-    // padding-left: 2.5rem; 
-    // padding-right: 2.5rem; 
-    // padding-top: 0.9375rem; 
-    // padding-bottom: 0.9375rem; 
-    // height: 3.125rem; 
+    
+
 
     // background-color: rgb(59, 130, 246);
     // color: white;
     // border: none;
     // background: rgb(59, 130, 246);
     // margin: 1.25rem;
-    // /* margin-top: 4.375rem; */
-    // padding-left: 2.5rem;
-    // padding-right: 2.5rem;
-    // padding-top: 0.9375rem;
-    // padding-bottom: 0.9375rem;
-    // height: 2.75rem;
-
-    // background-color: rgb(59, 130, 246);
-    // color: white;
-    // border: none;
-    // background: rgb(59, 130, 246);
-    // margin: 1.25rem;
-    // /* margin-top: 4.375rem; */
+    
     // padding-left: 8rem;
     // padding-right: 8rem;
     // padding-top: 0.9375rem;
     // padding-bottom: 0.9375rem;
     // height: 2.75rem;
-
-
-    background-color: rgb(59, 130, 246);
-    color: white;
-    border: none;
-    background: rgb(59, 130, 246);
-    margin: 1.25rem;
-    /* margin-top: 4.375rem; */
-    padding-left: 8rem;
-    padding-right: 8rem;
-    padding-top: 0.9375rem;
-    padding-bottom: 0.9375rem;
-    height: 2.75rem;
-    font-size: 0.9rem;
-    border-radius:20px;
-    // background:rgb(101 150 232);
+    // font-size: 0.9rem;
+    // border-radius:20px;
+    // background-color: rgb(59, 130, 246);
+        color: white;
+        border: none;
+        // background: rgb(59, 130, 246);
+        background:rgba(59, 130, 246, 0.9);
+        padding-top: 0.9375rem;
+        padding-bottom: 0.9375rem;
+        /* margin: 1.25rem; */
+        /* padding-left: 4rem; */
+        /* padding-right: 4rem; */
+        /* padding-top: 0.9375rem; */
+        /* padding-bottom: 0.9375rem; */
+        height: 2.75rem;
+        font-size: 0.9rem;
+        border-radius: 20px;
+        flex: 1 1;
+        
+    
   }
 
 
    .p-button-icon-right {
-        font-size: 0.9rem; 
+        font-size: 1rem; 
       }
 
 }
@@ -208,25 +187,13 @@
 
 
 .techs {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: center;
-  // gap: 1.25rem;
-  // padding-left: 3.75rem;
-  // padding-right: 3.75rem;
-  // margin-top: 1.25rem;
-  // margin-bottom: 6.25rem;
+  
   display: flex
 ;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    // gap: 3.25rem;
-    // // /* padding-left: 3.75rem; */
-    // // /* padding-right: 3.75rem; */
-    // margin-top: 3.25rem;
-    // // /* margin-bottom: 6.25rem;
+    
     gap: 3.25rem;
     row-gap: 1.5rem;
     margin-top: 2.3rem;
@@ -235,46 +202,28 @@
 }
 
 .tech {
-  // display: flex;
-  // flex-direction: column;
-  // width: 7.5rem;
-  // height: 6.25rem;
-  // justify-content: center;
-  // align-items: center;
-  // display: flex;
-  //   flex-direction: column;
-  //   width: 2.55rem;
-  //   height: 2.6rem;
-  //   justify-content: center;
-  //   align-items: center;
+  
 
     display: flex;
     flex-direction: column;
     width: 2.55rem;
-    // height: rem;
+    
     justify-content: center;
     align-items: center;
 }
 
 .tech {
   .tech-image {
-    // background-size: cover;
-    // height: 2.55rem;
-    // width: 2.571875rem;
+    
     background-size: cover;
     height: 2.3rem;
     width: 2.3rem;
 
-    // background-size: cover;
-    // height: 2.55rem;
-    // width: 2.571875rem;
+  
   }
 
   .tech-title {
-    // font-family: "montserrat";
-    // color: var(--bluegray-600);
-    // font-weight: bold;
-    // margin-bottom: 0rem;
+    
 
     font-family: "montserrat";
     color: var(--bluegray-600);
@@ -284,80 +233,104 @@
   }
 }
 
-.demo{
+// .demo{
 
-    // width: 3rem;
-    // padding: 0.75rem 0;
-    // margin-left: 6rem;
-    // background-color: rgb(59, 130, 246);
-    // border: none;
+    
+   
+//     flex:1 1;
+//     border: none;
+//     font-size: 2rem;
+   
+// }
 
-    width: 3rem; 
-    /* height: 3rem; */
-    /* padding: 0.75rem 0; */
-    margin-left: 1rem;
-    /* background-color: rgb(59, 130, 246); */
-    border: none;
-    font-size: 2rem;
-    color:#78abff;
+.demo {
+  // padding: 0.75rem 2.5rem;   /* reasonable */
+  // font-size: 1rem;
+  // border-radius: 20px;
+  // flex: 1 1 auto;            /* buttons grow/shrink */
+  // max-width: 300px;          /* prevent looking too large */
+  // text-align: center;
+  // flex: 1;
+  // min-width: 200px;
+  // max-width: 280px;
+    
+    font-size: 1rem;
+    border-radius: 20px;
+    flex: 1 1 auto;
+   
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+  
 }
+
+
 
 .github{
 
-    // width: 3rem;
-    // padding: 0.75rem 0;
-    // margin-left: 6rem;
-    // background-color: rgb(59, 130, 246);
-    // border: none;
+   
     font-size: 2rem;
-    /* padding: 0.75rem 0; */
+   
     margin-left: 6rem;
-    /* background-color: rgb(59, 130, 246); */
+  
     border: none;
    
 
 }
 
 
-// .p-button.p-button-icon-only {
-//     width: 3rem;
-//     padding: 0.75rem 0;
-//     margin-left: 6rem;
-// }
 
-// .readMore{
-//   // display:flex;
-//   // gap:1.25rem;
-//   // margin-bottom:2.5rem;
-//   //  margin-left: calc(-1 * var(--pd-left));
-//   // margin-right: calc(-1 * var(--pd-right));
-
-
-//     display: flex; 
-//     justify-content: center;
-//     align-items: center;
-   
-//     margin-left: calc(-1 * var(--pd-left));
-//     margin-right: calc(-1 * var(--pd-right));
-
-    
+// .readMore {
   
-//     // padding-top: 3rem;
-//     // padding-bottom: 3rem;
-//     // background-color: rgb(116 142 185 / 30%);
-// }
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+   
 
+// }
 
 .readMore {
-    display: flex
-;
-    flex-direction:column;
+  // display: flex;
+  // flex-wrap: wrap;   /* <-- allows wrapping */
+  // gap: 1.5rem;       /* consistent spacing */
+  // margin-top: 2rem;
+  // justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    row-gap:1rem;
+    margin-top: 3rem;
     justify-content: center;
-    align-items: center;
-   
-
+    margin-bottom: 3rem;
 }
 @media screen and (max-width: 1200px) { 
+
+.project-description{
+  //  .p-button {
+    
+
+
+  //   background-color: rgb(59, 130, 246);
+  //   color: white;
+  //   border: none;
+  //   background: rgb(59, 130, 246);
+  //   margin: 1.25rem;
+    
+  //   padding-left: 4rem;
+  //   padding-right: 4rem;
+  //   padding-top: 0.9375rem;
+  //   padding-bottom: 0.9375rem;
+  //   height: 2.75rem;
+  //   font-size: 0.8rem;
+  //   border-radius:20px;
+  //   flex:1 1;
+  // }
+
+
+  //  .p-button-icon-right {
+  //       font-size: 0.9rem; 
+  //     }
+    }    
 
   .techs {
     display: flex
