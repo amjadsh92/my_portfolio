@@ -7,6 +7,7 @@ import scssLogo from "../../assets/images/scss.png";
 import postgreLogo from "../../assets/images/postgre3.png";
 import prismaLogo from "../../assets/images/prismaORM.png";
 import primeReactLogo from "../../assets/images/primereact.png";
+import passportJSLogo from "../../assets/images/passportLogo.png"
 import { Image } from "primereact/image";
 import { Button } from 'primereact/button';
 
@@ -66,6 +67,10 @@ function Projects({ isDarkMode }) {
   <div className="tech">
     <img src={primeReactLogo} className="tech-image" />
     <p className="tech-title">PrimeReact</p>
+  </div>
+    <div className="tech">
+    <img src={passportJSLogo} className="tech-image" />
+    <p className="tech-title">Passport.js</p>
   </div>
 
    
