@@ -82,7 +82,7 @@
 
   .project-description {
 
-    --pd-left: 6rem;  
+    --pd-left: 4.7rem;  
     --pd-right: 2rem;  
 
      padding-left: var(--pd-left);
@@ -176,11 +176,13 @@
 .features{
   color:#4b5563;
   font-weight: 700;
+  margin-top:30px;
 }
 
 .Tech{
   color:#4b5563;
   font-weight: 700;
+  margin-top:30px;
 }
 
 
@@ -195,7 +197,7 @@
     
     gap: 3.25rem;
     row-gap: 1.5rem;
-    margin-top: 2.3rem;
+    margin-top: 1.8rem;
     margin-bottom: 2.3rem;
   
 }
@@ -351,7 +353,7 @@
     align-items: center;
     gap: 3rem;
     row-gap: 1.5rem;
-    margin-top: 2.3rem;
+    margin-top: 1.8rem;
 }
 
 .tech {
