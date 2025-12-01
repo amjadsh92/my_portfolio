@@ -37,6 +37,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  width:100%;
 
   .project-name {
     font-family: "Fira Sans";
@@ -48,7 +49,7 @@
     margin-bottom: 1.25rem;
     margin-right: auto;
     margin-top:40px;
-    // border-bottom:3px solid rgb(59, 130, 246);
+    border-bottom: 3px solid rgb(59, 130, 246);
     .projectNumber{
       font-style: normal;
       margin-right: 10px;
@@ -56,21 +57,25 @@
   }
 
   .project-description-image {
+    
     display: flex;
-    align-items: flex-start;
-    justify-content: left;
+    align-items: stretch;
+    justify-content: stretch;
     padding: 2rem 4rem;
+
   }
 
   .project-image .shortURL-image {
     
-  background-image:url("../../assets/images/urlshortener-image.png");
+  background-image:url("../../assets/images/UrlShortener-image12.png");
   background-size: cover;  
   object-fit: cover;
   border-radius: 10px;
   display: block;
-  width:470px;
-  height:550px;
+  background-position: center top;
+  // width:800px;
+  // height:550px;
+  height: 95%;
   
     
   }
@@ -93,10 +98,8 @@
     padding-right: var(--pd-right);
     border-radius: 5px;
     background-color: #d0e1fd3b;
-    // min-height:520px;
     border: 3px solid rgba(208, 225, 253);
-    // aspect-ratio: 0.98307692307;
-    // height:80vh;
+    
   }
 
   .description-text{
@@ -107,33 +110,11 @@
 
    .p-button {
     
-
-
-    // background-color: rgb(59, 130, 246);
-    // color: white;
-    // border: none;
-    // background: rgb(59, 130, 246);
-    // margin: 1.25rem;
-    
-    // padding-left: 8rem;
-    // padding-right: 8rem;
-    // padding-top: 0.9375rem;
-    // padding-bottom: 0.9375rem;
-    // height: 2.75rem;
-    // font-size: 0.9rem;
-    // border-radius:20px;
-    // background-color: rgb(59, 130, 246);
         color: white;
         border: none;
-        // background: rgb(59, 130, 246);
-        background:rgba(59, 130, 246, 0.9);
+        background:rgba(59, 130, 246, 1);
         padding-top: 0.9375rem;
         padding-bottom: 0.9375rem;
-        /* margin: 1.25rem; */
-        /* padding-left: 4rem; */
-        /* padding-right: 4rem; */
-        /* padding-top: 0.9375rem; */
-        /* padding-bottom: 0.9375rem; */
         height: 2.75rem;
         font-size: 0.9rem;
         border-radius: 20px;
@@ -142,10 +123,17 @@
     
   }
 
-
+  .demo{ 
    .p-button-icon-right {
         font-size: 1rem; 
       }
+  }  
+
+  .github{ 
+   .p-button-icon-right {
+        font-size: 1.2rem; 
+      }
+  }  
 
 }
 
@@ -160,6 +148,17 @@
 .project-image {
   position: relative;
   z-index: 2;  
+  width: 45%;
+}
+
+.Tech i{
+  vertical-align: middle;
+  margin-right:7px;
+}
+
+.features i{
+  vertical-align: middle;
+  margin-right:7px;
 }
 
 
@@ -233,26 +232,10 @@
   }
 }
 
-// .demo{
 
-    
-   
-//     flex:1 1;
-//     border: none;
-//     font-size: 2rem;
-   
-// }
 
-.demo {
-  // padding: 0.75rem 2.5rem;   /* reasonable */
-  // font-size: 1rem;
-  // border-radius: 20px;
-  // flex: 1 1 auto;            /* buttons grow/shrink */
-  // max-width: 300px;          /* prevent looking too large */
-  // text-align: center;
-  // flex: 1;
-  // min-width: 200px;
-  // max-width: 280px;
+.demo, .github {
+  
     
     font-size: 1rem;
     border-radius: 20px;
@@ -266,35 +249,24 @@
 
 
 
-.github{
+// .github{
 
    
-    font-size: 2rem;
+//     font-size: 2rem;
    
-    margin-left: 6rem;
+//     margin-left: 6rem;
   
-    border: none;
-   
-
-}
-
-
-
-// .readMore {
-  
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+//     border: none;
    
 
 // }
 
+
+
+
+
 .readMore {
-  // display: flex;
-  // flex-wrap: wrap;   /* <-- allows wrapping */
-  // gap: 1.5rem;       /* consistent spacing */
-  // margin-top: 2rem;
-  // justify-content: center;
+ 
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
@@ -303,34 +275,73 @@
     justify-content: center;
     margin-bottom: 3rem;
 }
+
+@media screen and (min-width: 2000px) {
+
+.projects-container{
+  width:65%;
+}
+
+}
+
+@media screen and (max-width: 2000px) {
+
+  .projects-container{
+.project-image .shortURL-image {
+    
+
+   
+    background-image:url("../../assets/images/UrlShortener-image25.png");
+}
+  }
+}  
+
+
+
+@media screen and (max-width: 1600px) {
+
+      .project-image {
+    
+  width: 45%;
+}
+
+
+.projects-container{
+.project-image .shortURL-image {
+    
+
+   
+    background-image:url("../../assets/images/UrlShortener-image16.png");
+    
+    width: unset;
+    height:95%;
+
+}
+}
+}
 @media screen and (max-width: 1200px) { 
 
-.project-description{
-  //  .p-button {
+.project-image {
+    
+  width: 50%;
+}
+
+
+.projects-container{
+.project-image .shortURL-image {
     
 
+   
+     background-image:url("../../assets/images/UrlShortener-image17.png");
 
-  //   background-color: rgb(59, 130, 246);
-  //   color: white;
-  //   border: none;
-  //   background: rgb(59, 130, 246);
-  //   margin: 1.25rem;
-    
-  //   padding-left: 4rem;
-  //   padding-right: 4rem;
-  //   padding-top: 0.9375rem;
-  //   padding-bottom: 0.9375rem;
-  //   height: 2.75rem;
-  //   font-size: 0.8rem;
-  //   border-radius:20px;
-  //   flex:1 1;
-  // }
+    width:unset;
+    height:95%;
+
+}
+}
 
 
-  //  .p-button-icon-right {
-  //       font-size: 0.9rem; 
-  //     }
-    }    
+  
 
   .techs {
     display: flex
@@ -413,14 +424,7 @@
     background-size: cover;
     border-radius: 10px;
     display: block;
-    // width: 400px;
-    // height:550px;
-    width: 444px;
-    height:524.362px;
-    // width:30vw;
-    // aspect-ratio: 0.84673119726;
     
-    //  height:85vh;
     
   }
 }
@@ -433,17 +437,12 @@
 
   .projects-container{
 .project-image .shortURL-image {
-    background-image:url("../../assets/images/urlShortener-image1.png");
+    background-image:url("../../assets/images/UrlShortener-image18.png");
     background-size: cover;
     object-fit: cover;
     border-radius: 10px;
     display: block;
-    // width: 400px;
-    // height:550px;
-    // width: 444px;
-    // height:524.362px;
-    width: 430px;
-    height:570px; 
+   
 }
   }
 
@@ -457,22 +456,12 @@
 .project-image .shortURL-image {
     
 
-    background-image:url("../../assets/images/urlShortener-image1.png");
+    background-image:url("../../assets/images/UrlShortener-image22.png");
     background-size: cover;
     object-fit: cover;
     border-radius: 10px;
     display: block;
-    // width: 400px;
-    // height:550px;
-    // width: 444px;
-    // height:524.362px;
-    width: 400px;
-    height:600px;
     
-    // width:30vw;
-    // aspect-ratio: 0.84673119726;
-    
-    //  height:85vh;
     
   }
 }
