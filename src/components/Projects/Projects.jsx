@@ -15,7 +15,8 @@ function Projects({ isDarkMode }) {
   return (
     <div className="projects-light">
       <div className="projects-title">
-        <div className="title">projects</div>
+        <div className="title">Projects</div>
+        <div className="subtitle">Some projects that I have accomplished so far</div>
       </div>
       <div className="projects-container">
         <div className="project-description-image">

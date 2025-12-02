@@ -6,20 +6,41 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .projects-light {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  // gap: 50px;
+  gap:30px;
   background-color: #f9fafb;
   min-height: 677px !important;
+  background: linear-gradient(180deg, var(--surface-d) 0.45%, #f9fafb 0.45%, #f9fafb); 
 }
 
 .projects-title {
+  text-align: center;
+
+  .subtitle{
+    font-family: "montserrat";
+    color: #727a85;
+    font-size: 19px;
+    font-style: italic;
+    margin-top: 20px;
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
+
+  }
   .title {
     font-family: "Fira Sans";
     font-size: 2.5rem;
-    margin-top: 4rem;
+    margin-top: 7rem;
     display: inline-block;
     border-bottom: 0.3125rem solid rgba(59, 130, 246, 0.85);
     color: #4b5563;
