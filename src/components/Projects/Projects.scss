@@ -116,6 +116,10 @@
     margin-top: -20px;
   }
 
+  .project-image-small{
+    display:none;
+  }
+
   .p-button {
     color: white;
     border: none;
@@ -389,4 +393,247 @@
       display: block;
     }
   }
+
+
+
+
 }
+
+
+
+@media screen and (max-width: 960px) {
+   .projects-container{
+   .project-description-image {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 4rem;
+  
+  }
+   
+  .project-image {
+    //  width:unset; 
+    // .shortURL-image {
+    // background-image: url("../../assets/images/UrlShortener-image12.png");
+    // background-size: cover;
+    // object-fit: cover;
+    // border-radius: 10px;
+    // display: block;
+    // background-position: center top;
+    // // width:800px;
+    // // height:550px;
+    // width:80vw;
+    // height:40vh;
+    display:none;
+    
+  }
+  
+  // .project-description {
+  //   --pd-left: 4.7rem;
+  //   --pd-right: 2rem;
+
+  //   padding-left: var(--pd-left);
+  //   padding-right: var(--pd-right);
+
+  //   color: #6b747b;
+  //   line-height: 1.6;
+
+  //   flex: 1 1 60vh;
+  //   // margin-top: -20px;
+  //   // margin-left: -40px;
+  //   padding-left: var(--pd-left);
+  //   padding-right: var(--pd-right);
+  //   border-radius: 5px;
+  //   background-color: #d0e1fd3b;
+  //   border: 3px solid rgba(208, 225, 253);
+  // }
+
+    .project-description {
+        --pd-left: 2rem;
+        --pd-right: 2rem;
+        color: #6b747b;
+        line-height: 1.6;
+        border-radius: 5px;
+        background-color: rgba(208, 225, 253, 0.231372549);
+        border: 3px solid rgb(208, 225, 253);
+        margin:0px;
+        margin-top:-40px;
+        flex:none;
+
+        .description-text{
+          margin-top: -40px;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+
+        .project-name{
+          
+          display: block;
+          width: fit-content;
+          color: #4b5563;
+          margin-bottom: 1.25rem;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 20px;
+          border:none;
+    
+        }
+
+        .project-image-small{
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+          .shortURL-image{
+            // display:block;
+            // background-image: url("../../assets/images/UrlShortener-image30.png");
+            // background-size: cover;
+            // object-fit: cover;
+            // background-position: center top;
+            // border-radius: 10px;
+            // width:100%;
+            // height:100%;
+            display: block;
+            background-image: url(/src/assets/images/UrlShortener-image30.png);
+            background-size: cover;
+            object-fit: cover;
+            background-position: center top;
+            border-radius: 10px;
+            width: 80%;
+            height: 100%;
+            
+          }
+
+        }
+    }
+  
+}
+
+}    
+
+
+@media screen and (max-width: 750px) {
+
+
+
+
+  .projects-container{
+    
+    .project-description {
+        
+       
+
+        .project-image-small{
+
+       
+          .shortURL-image{
+            
+            display: block;
+            background-image: url(/src/assets/images/UrlShortener-image31.png);
+            background-size: cover;
+            object-fit: cover;
+            background-position: center top;
+            border-radius: 10px;
+            width: 80%;
+            height: 100%;
+            
+          }
+
+        }
+    }
+  
+}
+
+
+}
+
+@media screen and (max-width: 600px) {
+    
+  .projects-title .subtitle {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+   .projects-container{
+
+    .project-description-image {
+        
+        padding: 2rem 2rem;
+    }
+    .project-description {
+        
+       
+
+        .project-image-small{
+          
+       
+          .shortURL-image{
+            
+            display: block;
+            background-image: url(/src/assets/images/UrlShortener-image31.png);
+            background-size: cover;
+            object-fit: cover;
+            background-position: center top;
+            border-radius: 10px;
+            width: 95%;
+            height: 100%;
+            
+          }
+
+        }
+    }
+  
+}
+
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+
+
+.projects-container{
+
+    .project-description-image {
+        
+        padding: 2rem 1.5rem;
+    }
+
+
+
+   
+    .project-description {
+        
+       
+
+        .project-image-small{
+          
+       
+          .shortURL-image{
+            
+            display: block;
+            background-image: url(/src/assets/images/UrlShortener-image31.png);
+            background-size: cover;
+            object-fit: cover;
+            background-position: center top;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            
+          }
+
+        }      
+      }
+    }
+
+  }

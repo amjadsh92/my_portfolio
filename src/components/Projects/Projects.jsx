@@ -25,7 +25,7 @@ function Projects({ isDarkMode }) {
           </div>
           <div className="project-description">
             <div className="project-name">
-              {/* <span className="projectNumber">1.{'  '}</span> */}
+              <span className="projectNumber">1.{'  '}</span>
               URL Shortener
             </div>
             <br />
@@ -35,6 +35,10 @@ function Projects({ isDarkMode }) {
               Full-Stack React app that transforms a long URL into a custom or
               auto-generated short URL.
             </p>
+
+            <div className="project-image-small">
+            <Image className="shortURL-image" />{" "}
+            </div>
 
             <div className="features">
               <i className="pi pi-list"></i> Features:
