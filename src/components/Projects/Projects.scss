@@ -637,3 +637,72 @@
     }
 
   }
+
+
+  @media screen and (max-width: 400px) {
+
+
+  .projects-title .title {
+   
+    font-size: 28.8px;
+    width:unset;
+   
+}
+
+.projects-title .subtitle {
+   
+    font-size: 17px;
+    
+}
+
+.projects-container .project-name {
+   
+    font-size: 1.4rem;
+}
+
+
+.projects-container .project-description .description-text {
+       
+        font-size: 15px;
+  }
+
+  .features-list {
+    
+    font-size: 15px;
+}
+
+.tech .tech-image {
+       
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+
+.tech .tech-title {
+    
+    font-size: 11px;
+}   
+
+.projects-container .p-button {
+    
+    height: 2.5rem;
+    font-size: 0.85rem;
+    
+}
+
+.projects-container .demo .p-button-icon-right {
+    font-size: 0.95rem;
+}
+
+.projects-container .github .p-button-icon-right {
+    font-size: 1.15rem;
+}
+
+
+.projects-container .project-description .project-image-small .shortURL-image {
+        
+        background-image: url(/src/assets/images/UrlShortener-image34.png);
+        
+    }
+
+
+  }  
