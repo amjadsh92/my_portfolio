@@ -22,7 +22,13 @@
   gap:30px;
   background-color: #f9fafb;
   min-height: 677px !important;
-  background: linear-gradient(180deg, var(--surface-d) 0.45%, #f9fafb 0.45%, #f9fafb); 
+  // background: linear-gradient(180deg, var(--surface-d) 0.45%, #f9fafb 0.45%, #f9fafb); 
+  background: linear-gradient(
+  180deg,
+  var(--surface-d) 5px,
+  #f9fafb 5px,
+  #f9fafb 100%
+);
 }
 
 .projects-title {
@@ -40,7 +46,7 @@
   .title {
     font-family: "Fira Sans";
     font-size: 2.5rem;
-    margin-top: 7rem;
+    margin-top: 6.25rem;
     display: inline-block;
     border-bottom: 0.3125rem solid rgba(59, 130, 246, 0.85);
     color: #4b5563;
@@ -80,7 +86,7 @@
     padding: 2rem 4rem;
   }
 
-  .project-image .shortURL-image {
+  .project-image .ShortURL-image1 {
     background-image: url("../../assets/images/UrlShortener-image12.png");
     background-size: cover;
     object-fit: cover;
@@ -265,7 +271,7 @@
 
 @media screen and (max-width: 2000px) {
   .projects-container {
-    .project-image .shortURL-image {
+    .project-image .ShortURL-image1 {
       background-image: url("../../assets/images/UrlShortener-image25.png");
     }
   }
@@ -277,7 +283,7 @@
   }
 
   .projects-container {
-    .project-image .shortURL-image {
+    .project-image .ShortURL-image1 {
       background-image: url("../../assets/images/UrlShortener-image16.png");
 
       width: unset;
@@ -291,7 +297,7 @@
   }
 
   .projects-container {
-    .project-image .shortURL-image {
+    .project-image .ShortURL-image1 {
       background-image: url("../../assets/images/UrlShortener-image17.png");
 
       width: unset;
@@ -362,7 +368,7 @@
   }
 
   .projects-container {
-    .project-image .shortURL-image {
+    .project-image .ShortURL-image1 {
       object-fit: cover;
       background-size: cover;
       border-radius: 10px;
@@ -373,7 +379,7 @@
 
 @media screen and (max-width: 1050px) {
   .projects-container {
-    .project-image .shortURL-image {
+    .project-image .ShortURL-image1 {
       background-image: url("../../assets/images/UrlShortener-image18.png");
       background-size: cover;
       object-fit: cover;
@@ -385,7 +391,7 @@
 
 @media screen and (max-width: 1000px) {
   .projects-container {
-    .project-image .shortURL-image {
+    .project-image .ShortURL-image1 {
       background-image: url("../../assets/images/UrlShortener-image22.png");
       background-size: cover;
       object-fit: cover;
@@ -492,7 +498,7 @@
         height: 500px;
         margin-top: 60px;
         margin-bottom: 60px;
-          .shortURL-image{
+          .ShortURL-image1{
             // display:block;
             // background-image: url("../../assets/images/UrlShortener-image30.png");
             // background-size: cover;
@@ -534,7 +540,7 @@
         .project-image-small{
 
        
-          .shortURL-image{
+          .ShortURL-image1{
             
             display: block;
             background-image: url(/src/assets/images/UrlShortener-image31.png);
@@ -575,7 +581,7 @@
         .project-image-small{
           
        
-          .shortURL-image{
+          .ShortURL-image1{
             
             display: block;
             background-image: url(/src/assets/images/UrlShortener-image31.png);
@@ -619,7 +625,7 @@
         .project-image-small{
           
        
-          .shortURL-image{
+          .ShortURL-image1{
             
             display: block;
             background-image: url(/src/assets/images/UrlShortener-image31.png);
@@ -698,7 +704,7 @@
 }
 
 
-.projects-container .project-description .project-image-small .shortURL-image {
+.projects-container .project-description .project-image-small .ShortURL-image1 {
         
         background-image: url(/src/assets/images/UrlShortener-image34.png);
         
