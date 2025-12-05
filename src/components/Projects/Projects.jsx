@@ -10,6 +10,7 @@ import primeReactLogo from "../../assets/images/primereact.png";
 import passportJSLogo from "../../assets/images/passportLogo.png";
 import regexLogo from "../../assets/images/regexImage.png";
 import cssLogo from "../../assets/images/css.png";
+import bootstrapLogo from "../../assets/images/bootstrapLogo.png";
 import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
@@ -42,7 +43,7 @@ function Projects({ isDarkMode }) {
 
     {id:"2",
      title:"Calculator",
-     description:`A responsive, beginner-friendly calculator app capable of handling arithmetic and multiplication operations, created as part of my web development learning journey.`,
+     description:`A responsive, basic calculator app capable of handling arithmetic and multiplication operations, created as part of my web development learning journey.`,
      features:["Handles arithmetic and multiplications operations",
                "Handles special cases",
                "Fully responsive design across all devices",
@@ -56,7 +57,28 @@ function Projects({ isDarkMode }) {
     ],
     imageAtLeft:false         
 
+    },
+
+    {id:"3",
+     title:"Drum Machine",
+     description:`A responsive drum machine app that allows users to play beats, created to strengthen my web development skills.`,
+     features:["Switch between two different sound sets.",
+               "Adjustable volume control for all sounds.",
+               "Play beats using either the keyboard or mouse.",
+               "Displays the name of the sound currently triggered.",
+               "Fully responsive design for all screen sizes"
+               
+              ],
+     techs: [{logo:reactLogo, name:"React"},
+             {logo:bootstrapLogo, name:"bootstrap"},
+             
+          
+            
+    ],
+    imageAtLeft:true       
+
     }
+
   ] 
 
 

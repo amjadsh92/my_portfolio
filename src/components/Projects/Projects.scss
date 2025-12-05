@@ -94,7 +94,7 @@
   }
 
   .project-image{ 
-    .ShortURL-image1,.ShortURL-image2 {
+    .ShortURL-image1,.ShortURL-image2,.ShortURL-image3 {
    
     background-size: cover;
     object-fit: cover;
@@ -113,6 +113,10 @@
     }
     .ShortURL-image2{
        background-image: url("../../assets/images/MyCalculater-image3.png");
+    }
+
+    .ShortURL-image3{
+       background-image: url("../../assets/images/drumMachine-image6.png");
     }
   }
 
@@ -553,7 +557,7 @@
         height: 500px;
         margin-top: 60px;
         margin-bottom: 60px;
-          .ShortURL-image1,.ShortURL-image2{
+          .ShortURL-image1,.ShortURL-image2,.ShortURL-image3{
             // display:block;
             // background-image: url("../../assets/images/UrlShortener-image30.png");
             // background-size: cover;
@@ -585,6 +589,10 @@
                     
              background-image: url(src/assets/images/MyCalculater-image3.png);
          } 
+
+         .ShortURL-image3{
+             background-image: url("../../assets/images/drumMachine-image6.png");
+    }
 
         }
     }
@@ -667,6 +675,11 @@
 
           }
 
+           .ShortURL-image3{
+             width: 95%;
+
+          }
+
         }
     }
   
@@ -715,6 +728,10 @@
              width: 100%;
 
           }
+
+          .ShortURL-image3{
+             width: 100%;
+          } 
         }      
       }
     }
@@ -814,6 +831,12 @@
    .ShortURL-image2 {
         
         background-image: url("../../assets/images/MyCalculator-image6.png");
+        
+    }
+
+    .ShortURL-image3 {
+        
+        background-image: url("../../assets/images/drumMachine-image7.png");
         
     }
 
