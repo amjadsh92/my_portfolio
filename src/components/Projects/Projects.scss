@@ -60,6 +60,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  gap:100px;
   width: 100%;
 
   .project-name {
@@ -79,15 +80,22 @@
     }
   }
 
-  .project-description-image {
+  .project-description-image, .project-description-image-reverse {
     display: flex;
     align-items: stretch;
     justify-content: stretch;
     padding: 2rem 4rem;
   }
 
-  .project-image .ShortURL-image1 {
-    background-image: url("../../assets/images/UrlShortener-image12.png");
+  .project-description-image-reverse {
+
+  flex-direction:row-reverse;
+
+  }
+
+  .project-image{ 
+    .ShortURL-image1,.ShortURL-image2 {
+   
     background-size: cover;
     object-fit: cover;
     border-radius: 10px;
@@ -96,26 +104,63 @@
     // width:800px;
     // height:550px;
     height: 95%;
+    }
+
+    .ShortURL-image1{
+
+       background-image: url("../../assets/images/UrlShortener-image12.png");
+
+    }
+    .ShortURL-image2{
+       background-image: url("../../assets/images/MyCalculater-image3.png");
+    }
   }
 
-  .project-description {
-    --pd-left: 4.7rem;
-    --pd-right: 2rem;
+  .project-description,.project-description-left {
+    // --pd-left: 4.7rem;
+    // --pd-right: 2rem;
 
-    padding-left: var(--pd-left);
-    padding-right: var(--pd-right);
+    // padding-left: var(--pd-left);
+    // padding-right: var(--pd-right);
 
-    color: #6b747b;
+     color: #6b747b;
     line-height: 1.6;
 
     flex: 1 1 60vh;
     margin-top: -20px;
-    margin-left: -40px;
-    padding-left: var(--pd-left);
-    padding-right: var(--pd-right);
+    // margin-left: -40px;
+    // padding-left: var(--pd-left);
+    // padding-right: var(--pd-right);
     border-radius: 5px;
     background-color: #d0e1fd3b;
     border: 3px solid rgba(208, 225, 253);
+  }
+
+  .project-description{
+
+    --pd-left: 4.7rem;
+    --pd-right: 2rem;
+    padding-left: var(--pd-left);
+    padding-right: var(--pd-right);
+    margin-top: -20px;
+    margin-left: -40px;
+    padding-left: var(--pd-left);
+    padding-right: var(--pd-right);
+    
+
+  }
+
+
+  .project-description-left{
+
+    --pd-left: 2rem;
+    --pd-right: 4.7rem;
+    padding-left: var(--pd-left);
+    padding-right: var(--pd-right);
+    margin-top: -20px;
+    margin-right:-40px;
+    padding-left: var(--pd-left);
+    padding-right: var(--pd-right);
   }
 
   .description-text {
@@ -151,7 +196,7 @@
   }
 }
 
-.project-description {
+.project-description,.project-description-left {
   position: relative;
   z-index: 1;
 }
@@ -297,12 +342,19 @@
   }
 
   .projects-container {
-    .project-image .ShortURL-image1 {
+    .project-image{
+
+       
+       
+      .ShortURL-image1 {
+       width: unset;
+       height: 95%; 
       background-image: url("../../assets/images/UrlShortener-image17.png");
 
-      width: unset;
-      height: 95%;
-    }
+      }
+
+
+    } 
   }
 
   .techs {
@@ -339,10 +391,13 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .projects-container .project-description {
+  .projects-container {
+
+     .project-description,.project-description-left {
     height: unset;
   }
 
+  }
   .techs {
     display: flex;
     flex-wrap: wrap;
@@ -409,7 +464,7 @@
 
 @media screen and (max-width: 960px) {
    .projects-container{
-   .project-description-image {
+   .project-description-image, .project-description-image-reverse {
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -455,7 +510,7 @@
   //   border: 3px solid rgba(208, 225, 253);
   // }
 
-    .project-description {
+    .project-description,.project-description-left {
         --pd-left: 2rem;
         --pd-right: 2rem;
         color: #6b747b;
@@ -466,7 +521,7 @@
         margin:0px;
         margin-top:-40px;
         flex:none;
-
+        width:100%;
         .description-text{
           margin-top: -40px;
           margin-bottom: 40px;
@@ -498,7 +553,7 @@
         height: 500px;
         margin-top: 60px;
         margin-bottom: 60px;
-          .ShortURL-image1{
+          .ShortURL-image1,.ShortURL-image2{
             // display:block;
             // background-image: url("../../assets/images/UrlShortener-image30.png");
             // background-size: cover;
@@ -508,7 +563,7 @@
             // width:100%;
             // height:100%;
             display: block;
-            background-image: url(/src/assets/images/UrlShortener-image30.png);
+            // background-image: url(/src/assets/images/UrlShortener-image30.png);
             background-size: cover;
             object-fit: cover;
             background-position: center top;
@@ -517,6 +572,19 @@
             height: 100%;
             
           }
+
+          .ShortURL-image1{
+            
+            
+            background-image: url(/src/assets/images/UrlShortener-image30.png);
+
+          }
+
+         .ShortURL-image2{
+            
+                    
+             background-image: url(src/assets/images/MyCalculater-image3.png);
+         } 
 
         }
     }
@@ -533,7 +601,7 @@
 
   .projects-container{
     
-    .project-description {
+    .project-description,.project-description-left {
         
        
 
@@ -570,11 +638,11 @@
   } 
    .projects-container{
 
-    .project-description-image {
+    .project-description-image, .project-description-image-reverse  {
         
         padding: 2rem 2rem;
     }
-    .project-description {
+    .project-description,.project-description-left {
         
        
 
@@ -594,6 +662,11 @@
             
           }
 
+           .ShortURL-image2{
+             width: 95%;
+
+          }
+
         }
     }
   
@@ -610,7 +683,7 @@
 
 .projects-container{
 
-    .project-description-image {
+    .project-description-image,.project-description-image-reverse {
         
         padding: 2rem 1.5rem;
     }
@@ -618,7 +691,7 @@
 
 
    
-    .project-description {
+    .project-description,.project-description-left {
         
        
 
@@ -637,7 +710,11 @@
             height: 100%;
             
           }
+         
+           .ShortURL-image2{
+             width: 100%;
 
+          }
         }      
       }
     }
@@ -647,6 +724,13 @@
 
   @media screen and (max-width: 400px) {
 
+    .projects-container{
+
+    .project-description-image, .project-description-image-reverse  {
+        
+        padding: 2rem 1rem;
+    }
+  }   
 
   .projects-title .title {
    
@@ -667,10 +751,17 @@
 }
 
 
-.projects-container .project-description .description-text {
+.projects-container{
+
+ .project-description,.project-description-left {
+ 
+ .description-text {
        
         font-size: 15px;
   }
+
+ } 
+} 
 
   .features-list {
     
@@ -704,11 +795,39 @@
 }
 
 
-.projects-container .project-description .project-image-small .ShortURL-image1 {
+.projects-container{
+
+   
+
+ .project-description,.project-description-left {
+    --pd-left: 1rem;
+    --pd-right: 1rem;
+ 
+ .project-image-small{
+
+   .ShortURL-image1 {
         
         background-image: url(/src/assets/images/UrlShortener-image34.png);
         
     }
 
+   .ShortURL-image2 {
+        
+        background-image: url("../../assets/images/MyCalculator-image6.png");
+        
+    }
+
+
+   
+      
+ 
+
+ } 
+
+   
+
 
   }  
+
+  }
+ } 

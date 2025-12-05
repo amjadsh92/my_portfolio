@@ -8,6 +8,8 @@ import postgreLogo from "../../assets/images/postgre3.png";
 import prismaLogo from "../../assets/images/prismaORM.png";
 import primeReactLogo from "../../assets/images/primereact.png";
 import passportJSLogo from "../../assets/images/passportLogo.png";
+import regexLogo from "../../assets/images/regexImage.png";
+import cssLogo from "../../assets/images/css.png";
 import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
@@ -32,29 +34,27 @@ function Projects({ isDarkMode }) {
             {logo:primeReactLogo, name:"PrimeReact"},
             {logo:passportJSLogo, name:"Passport.js"}
             
-    ]         
+    ],
+    imageAtLeft: true         
 
     },
+,
 
-    {id:"1",
-     title:"URL Shortener",
-     description:`Full-Stack React app that transforms a long URL 
-     into a custom or auto-generated short URL.`,
-     features:["Creates randomly generated short URLs",
-               "Creates custom short URLs (available for registered users)",
-               "Session-based authentication system",
+    {id:"2",
+     title:"Calculator",
+     description:`A responsive, beginner-friendly calculator app capable of handling arithmetic and multiplication operations, created as part of my web development learning journey.`,
+     features:["Handles arithmetic and multiplications operations",
+               "Handles special cases",
                "Fully responsive design across all devices",
-               " Personal dashboard where users can view and manage their saved short URLs"
+               
               ],
      techs: [{logo:reactLogo, name:"React"},
-            {logo:expressLogo, name:"ExpressJS"},
-            {logo:scssLogo, name:"SCSS"},
-            {logo:postgreLogo, name:"Postgres"},
-            {logo:prismaLogo, name:"Prisma"},
-            {logo:primeReactLogo, name:"PrimeReact"},
-            {logo:passportJSLogo, name:"Passport.js"}
+             {logo:cssLogo, name:"CSS"},
+             {logo:regexLogo, name:"Regex"}
+          
             
-    ]         
+    ],
+    imageAtLeft:false         
 
     }
   ] 
@@ -69,7 +69,7 @@ function Projects({ isDarkMode }) {
         <div className="subtitle">Some projects that I have accomplished so far</div>
       </div>
       <div className="projects-container">
-        { projects.map((project) => <Project id={project.id} title={project.title} description={project.description} features={project.features} techs={project.techs} />  )}
+        { projects.map((project) => <Project id={project.id} title={project.title} description={project.description} features={project.features} techs={project.techs} imageAtLeft={project.imageAtLeft} />  )}
         {/* <div className="project-description-image">
           <div className="project-image">
             <Image className="shortURL-image" />{" "}
@@ -166,16 +166,16 @@ function Projects({ isDarkMode }) {
 export default Projects;
 
 
-function Project({id,title, description, features,techs}){
+function Project({id,title, description, features,techs,imageAtLeft}){
 
   return(
 
 
-     <div className="project-description-image">
+     <div className={`${imageAtLeft ? "project-description-image" : "project-description-image-reverse" }`}>
           <div className="project-image">
             <Image className={`ShortURL-image${id}`} />{" "}
           </div>
-          <div className="project-description">
+          <div className={`${imageAtLeft ? "project-description" : "project-description-left"}`}>
             <div className="project-name">
               <span className="projectNumber">{id}.{'  '}</span>
               {title}
