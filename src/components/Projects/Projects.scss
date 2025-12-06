@@ -94,7 +94,7 @@
   }
 
   .project-image{ 
-    .ShortURL-image1,.ShortURL-image2,.ShortURL-image3 {
+    .ShortURL-image1,.ShortURL-image2,.ShortURL-image3,.ShortURL-image4,.ShortURL-image5, .ShortURL-image6 {
    
     background-size: cover;
     object-fit: cover;
@@ -117,6 +117,18 @@
 
     .ShortURL-image3{
        background-image: url("../../assets/images/drumMachine-image6.png");
+    }
+
+     .ShortURL-image4{
+       background-image: url("../../assets/images/markdown-image1.png");
+    }
+
+    .ShortURL-image5{
+       background-image: url("../../assets/images/timer-image1.png");
+    }
+
+    .ShortURL-image6{
+       background-image: url("../../assets/images/quoteGenerator-image1.png");
     }
   }
 
@@ -357,6 +369,21 @@
 
       }
 
+      .ShortURL-image4 {
+       width: unset;
+       height: 95%; 
+       background-image: url("../../assets/images/markdown-image2.png");
+
+      }
+
+       .ShortURL-image6 {
+       width: unset;
+       height: 95%; 
+       background-image: url("../../assets/images/quoteGenerator-image2.png");
+
+      }
+
+
 
     } 
   }
@@ -432,6 +459,27 @@
       background-size: cover;
       border-radius: 10px;
       display: block;
+    }
+
+     .project-image .ShortURL-image4 {
+      object-fit: cover;
+      background-size: cover;
+      border-radius: 10px;
+      display: block;
+      background-image: url("../../assets/images/markdown-image3.png");
+
+      
+    }
+
+
+    .project-image .ShortURL-image5 {
+      object-fit: cover;
+      background-size: cover;
+      border-radius: 10px;
+      display: block;
+      background-image: url("../../assets/images/timer-image6.png");
+
+      
     }
   }
 }
@@ -535,7 +583,8 @@
         .project-name{
           
           display: block;
-          width: fit-content;
+          width: 98%;
+          text-align:center;
           color: #4b5563;
           margin-bottom: 1.25rem;
           margin-right: auto;
@@ -557,7 +606,7 @@
         height: 500px;
         margin-top: 60px;
         margin-bottom: 60px;
-          .ShortURL-image1,.ShortURL-image2,.ShortURL-image3{
+          .ShortURL-image1,.ShortURL-image2,.ShortURL-image3, .ShortURL-image4, .ShortURL-image5{
             // display:block;
             // background-image: url("../../assets/images/UrlShortener-image30.png");
             // background-size: cover;
@@ -594,6 +643,16 @@
              background-image: url("../../assets/images/drumMachine-image6.png");
     }
 
+      .ShortURL-image4{
+       background-image: url("../../assets/images/markdown-image1.png");
+    }
+
+    .ShortURL-image5{
+       background-image: url("../../assets/images/timer-image1.png");
+    }
+
+       
+
         }
     }
   
@@ -627,7 +686,12 @@
             width: 80%;
             height: 100%;
             
+          
           }
+          
+           .ShortURL-image4{
+             background-image: url("../../assets/images/markdown-image3.png");
+           }
 
         }
     }
@@ -679,6 +743,13 @@
              width: 95%;
 
           }
+          .ShortURL-image4{
+             width:95%
+           }
+
+         .ShortURL-image5{
+             width:95%
+           }  
 
         }
     }
@@ -732,6 +803,16 @@
           .ShortURL-image3{
              width: 100%;
           } 
+
+          .ShortURL-image4{
+             width:100%
+           }
+
+          .ShortURL-image5{
+             width:100%;
+             background-image: url("../../assets/images/timer-image6.png");
+
+           } 
         }      
       }
     }

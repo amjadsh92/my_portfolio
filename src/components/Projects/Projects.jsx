@@ -77,6 +77,66 @@ function Projects({ isDarkMode }) {
     ],
     imageAtLeft:true       
 
+    },
+
+
+    {id:"4",
+     title:"Markdown Previewer",
+     description:`A responsive Markdown previewer that converts Markdown code into formatted content, with support for advanced and special-case syntax.`,
+     features:["Conversion of Markdown input into formatted preview.",
+               "Supports standard Markdown elements such as headings, lists, links, images, and code blocks.",
+               "Handles special-case Markdown syntax for more complex formatting.",
+               "Clean and responsive interface optimized for all screen sizes."
+             
+               
+              ],
+     techs: [{logo:reactLogo, name:"React"},
+             {logo:bootstrapLogo, name:"bootstrap"},
+             {logo:regexLogo, name:"Regex"}       
+          
+            
+    ],
+    imageAtLeft: false       
+
+    },
+     {id:"5",
+     title:"Session & Break Timer",
+     description:`A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
+     features:["Adjustable session length and break length.",
+               "Automatically alternates between session and break phases.",
+               "Emits a five-beep alarm when switching phases to prepare the user in advance.",
+               "Responsive accros all devices."
+             
+               
+              ],
+     techs: [{logo:reactLogo, name:"React"},
+             {logo:cssLogo, name:"CSS"},
+                  
+          
+            
+    ],
+    imageAtLeft: true       
+
+    },
+
+    {id:"6",
+     title:"Quote Generator",
+     description:`A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
+     features:["Adjustable session length and break length.",
+               "Automatically alternates between session and break phases.",
+               "Emits a five-beep alarm when switching phases to prepare the user in advance.",
+               "Responsive accros all devices."
+             
+               
+              ],
+     techs: [{logo:reactLogo, name:"React"},
+             {logo:cssLogo, name:"CSS"},
+                  
+          
+            
+    ],
+    imageAtLeft: false      
+
     }
 
   ] 
