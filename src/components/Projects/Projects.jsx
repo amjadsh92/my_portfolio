@@ -173,6 +173,24 @@ function Projects({ isDarkMode }) {
     },
   ];
 
+
+  // const showMore = () => {
+
+  //   for(let i=0;i<=2; i++){
+  //     if(visible.length < projects.length){
+  //       setVisible([...visible, true])
+  //     }
+  //   }
+
+  // }
+
+  const showMore = () => {
+  setVisible(prev => [
+    ...prev,
+    ...new Array(2).fill(true).slice(0, projects.length - prev.length)
+  ]);
+};
+
   return (
     <div className="projects-light">
       <div className="projects-title">
@@ -196,6 +214,7 @@ function Projects({ isDarkMode }) {
         ))
         
         }
+        <button onClick={showMore}>See more!</button>
       </div>
     </div>
   );
