@@ -11,352 +11,261 @@ import passportJSLogo from "../../assets/images/passportLogo.png";
 import regexLogo from "../../assets/images/regexImage.png";
 import cssLogo from "../../assets/images/css.png";
 import bootstrapLogo from "../../assets/images/bootstrapLogo.png";
+import htmlLogo from "../../assets/images/html2.png";
+import javascriptLogo from "../../assets/images/javascript.png";
+import { useEffect, useState, useRef } from "react";
 import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
 function Projects({ isDarkMode }) {
 
+  const [visible, setVisible] = useState([true,true])
+
   const projects = [
-    {id:"1",
-     title:"URL Shortener",
-     description:`Full-Stack React app that transforms a long URL 
+    {
+      id: "1",
+      title: "URL Shortener",
+      description: `Full-Stack React app that transforms a long URL 
      into a custom or auto-generated short URL.`,
-     features:["Creates randomly generated short URLs",
-               "Creates custom short URLs (available for registered users)",
-               "Session-based authentication system",
-               "Fully responsive design across all devices",
-               " Personal dashboard where users can view and manage their saved short URLs"
-              ],
-     techs: [{logo:reactLogo, name:"React"},
-            {logo:expressLogo, name:"ExpressJS"},
-            {logo:scssLogo, name:"SCSS"},
-            {logo:postgreLogo, name:"Postgres"},
-            {logo:prismaLogo, name:"Prisma"},
-            {logo:primeReactLogo, name:"PrimeReact"},
-            {logo:passportJSLogo, name:"Passport.js"}
-            
-    ],
-    imageAtLeft: true         
-
+      features: [
+        "Creates randomly generated short URLs",
+        "Creates custom short URLs (available for registered users)",
+        "Session-based authentication system",
+        "Fully responsive design across all devices",
+        " Personal dashboard where users can view and manage their saved short URLs",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: expressLogo, name: "ExpressJS" },
+        { logo: scssLogo, name: "SCSS" },
+        { logo: postgreLogo, name: "Postgres" },
+        { logo: prismaLogo, name: "Prisma" },
+        { logo: primeReactLogo, name: "PrimeReact" },
+        { logo: passportJSLogo, name: "Passport.js" },
+      ],
+      imageAtLeft: true,
     },
-,
-
-    {id:"2",
-     title:"Calculator",
-     description:`A responsive, basic calculator app capable of handling arithmetic and multiplication operations, created as part of my web development learning journey.`,
-     features:["Handles arithmetic and multiplications operations",
-               "Handles special cases",
-               "Fully responsive design across all devices",
-               
-              ],
-     techs: [{logo:reactLogo, name:"React"},
-             {logo:cssLogo, name:"CSS"},
-             {logo:regexLogo, name:"Regex"}
-          
-            
-    ],
-    imageAtLeft:false         
-
+    
+    {
+      id: "2",
+      title: "Calculator",
+      description: `A responsive, basic calculator app capable of handling arithmetic and multiplication operations, created as part of my web development learning journey.`,
+      features: [
+        "Handles arithmetic and multiplications operations",
+        "Handles special cases",
+        "Fully responsive design across all devices",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: cssLogo, name: "CSS" },
+        { logo: regexLogo, name: "Regex" },
+      ],
+      imageAtLeft: false,
     },
 
-    {id:"3",
-     title:"Drum Machine",
-     description:`A responsive drum machine app that allows users to play beats, created to strengthen my web development skills.`,
-     features:["Switch between two different sound sets.",
-               "Adjustable volume control for all sounds.",
-               "Play beats using either the keyboard or mouse.",
-               "Displays the name of the sound currently triggered.",
-               "Fully responsive design for all screen sizes"
-               
-              ],
-     techs: [{logo:reactLogo, name:"React"},
-             {logo:bootstrapLogo, name:"bootstrap"},
-             
-          
-            
-    ],
-    imageAtLeft:true       
-
+    {
+      id: "3",
+      title: "Drum Machine",
+      description: `A responsive drum machine app that allows users to play beats, created to strengthen my web development skills.`,
+      features: [
+        "Switch between two different sound sets.",
+        "Adjustable volume control for all sounds.",
+        "Play beats using either the keyboard or mouse.",
+        "Displays the name of the sound currently triggered.",
+        "Fully responsive design for all screen sizes",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: bootstrapLogo, name: "bootstrap" },
+      ],
+      imageAtLeft: true,
     },
 
-
-    {id:"4",
-     title:"Markdown Previewer",
-     description:`A responsive Markdown previewer that converts Markdown code into formatted content, with support for advanced and special-case syntax.`,
-     features:["Conversion of Markdown input into formatted preview.",
-               "Supports standard Markdown elements such as headings, lists, links, images, and code blocks.",
-               "Handles special-case Markdown syntax for more complex formatting.",
-               "Clean and responsive interface optimized for all screen sizes."
-             
-               
-              ],
-     techs: [{logo:reactLogo, name:"React"},
-             {logo:bootstrapLogo, name:"bootstrap"},
-             {logo:regexLogo, name:"Regex"}       
-          
-            
-    ],
-    imageAtLeft: false       
-
+    {
+      id: "4",
+      title: "Markdown Previewer",
+      description: `A responsive Markdown previewer that converts Markdown code into formatted content, with support for advanced and special-case syntax.`,
+      features: [
+        "Conversion of Markdown input into formatted preview.",
+        "Supports standard Markdown elements such as headings, lists, links, images, and code blocks.",
+        "Handles special-case Markdown syntax for more complex formatting.",
+        "Clean and responsive interface optimized for all screen sizes.",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: bootstrapLogo, name: "bootstrap" },
+        { logo: regexLogo, name: "Regex" },
+      ],
+      imageAtLeft: false,
     },
-     {id:"5",
-     title:"Session & Break Timer",
-     description:`A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
-     features:["Adjustable session length and break length.",
-               "Automatically alternates between session and break phases.",
-               "Emits a five-beep alarm when switching phases to prepare the user in advance.",
-               "Responsive accros all devices."
-             
-               
-              ],
-     techs: [{logo:reactLogo, name:"React"},
-             {logo:cssLogo, name:"CSS"},
-                  
-          
-            
-    ],
-    imageAtLeft: true       
-
+    {
+      id: "5",
+      title: "Session & Break Timer",
+      description: `A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
+      features: [
+        "Adjustable session length and break length.",
+        "Automatically alternates between session and break phases.",
+        "Emits a five-beep alarm when switching phases to prepare the user in advance.",
+        "Responsive accros all devices.",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: cssLogo, name: "CSS" },
+      ],
+      imageAtLeft: true,
     },
 
-    {id:"6",
-     title:"Quote Generator",
-     description:`A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
-     features:["Adjustable session length and break length.",
-               "Automatically alternates between session and break phases.",
-               "Emits a five-beep alarm when switching phases to prepare the user in advance.",
-               "Responsive accros all devices."
-             
-               
-              ],
-     techs: [{logo:reactLogo, name:"React"},
-             {logo:cssLogo, name:"CSS"},
-                  
-          
-            
-    ],
-    imageAtLeft: false      
+    {
+      id: "6",
+      title: "Quote Generator",
+      description: `A dynamic quote generator that displays random inspirational quotes at the click of a button`,
+      features: [
+        "Generates a new random quote on demand.",
+        "Displays both the quote text and its author.",
+        "Smooth transitions for a good user experience.",
+        "Share quotes directly to Tumblr or X.",
+        "Responsive accros all devices.",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: bootstrapLogo, name: "bootstrap" },
+      ],
+      imageAtLeft: false,
+    },
 
-    }
-
-  ] 
-
-
- 
+    {
+      id: "7",
+      title: "Pokemon Search",
+      description: `A Pokémon search app that lets users look up any Pokémon by name or ID, instantly displaying its image, type, and full set of stats`,
+      features: [
+        "Search Pokémon by name or ID.",
+        "Displays Pokémon image, name, and elemental type (Fire, Electric, Water, etc.).",
+        "Shows complete stat details including attack, defense, speed, and more.",
+        "Responsive accros all devices.",
+      ],
+      techs: [
+        { logo: javascriptLogo, name: "Javascript" },
+        { logo: cssLogo, name: "CSS" },
+        { logo: htmlLogo, name: "HTML" },
+      ],
+      imageAtLeft: true,
+    },
+    {
+      id: "8",
+      title: "Exercise Tracker",
+      description: `A full-stack app where you can add users, log their exercises, and view a complete history of their activity. The app provides an organized user dashboard with CRUD functionality for managing users and their activity.`,
+      features: [
+        "Add new users with unique IDs.",
+        "Log detailed exercise entries (name, duration, date, etc.) for each user.",
+        "View a user’s full exercise history on their dedicated page.",
+        "Delete users and automatically remove their associated data.",
+        "Home page displays all users in a clean, sortable table.",
+        "Responsive UI for smooth use on all devices.",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: expressLogo, name: "ExpressJS" },
+        { logo: primeReactLogo, name: "PrimeReact" },
+        { logo: postgreLogo, name: "Postgres" },
+        { logo: scssLogo, name: "SCSS" },
+      ],
+      imageAtLeft: false,
+    },
+  ];
 
   return (
     <div className="projects-light">
       <div className="projects-title">
         <div className="title">Projects</div>
-        <div className="subtitle">Some projects that I have accomplished so far</div>
+        <div className="subtitle">
+          Some projects that I have accomplished so far
+        </div>
       </div>
       <div className="projects-container">
-        { projects.map((project) => <Project id={project.id} title={project.title} description={project.description} features={project.features} techs={project.techs} imageAtLeft={project.imageAtLeft} />  )}
-        {/* <div className="project-description-image">
-          <div className="project-image">
-            <Image className="shortURL-image" />{" "}
-          </div>
-          <div className="project-description">
-            <div className="project-name">
-              <span className="projectNumber">1.{'  '}</span>
-              URL Shortener
-            </div>
-            <br />
-            <br />
-
-            <p className="description-text">
-              Full-Stack React app that transforms a long URL into a custom or
-              auto-generated short URL.
-            </p>
-
-            <div className="project-image-small">
-            <Image className="shortURL-image" />{" "}
-            </div>
-
-            <div className="features">
-              <i className="pi pi-list"></i> Features:
-            </div>
-
-            <ul className="features-list">
-              <li>Creates randomly generated short URLs</li>
-              <li>
-                Creates custom short URLs (available for registered users)
-              </li>
-              <li>Session-based authentication system</li>
-              <li>Fully responsive design across all devices</li>
-              <li>
-                Personal dashboard where users can view and manage their saved
-                short URLs
-              </li>
-            </ul>
-
-            <div className="Tech">
-              <i className="pi pi-cog"></i>Tech used:
-            </div>
-
-            <div className="techs">
-              <div className="tech">
-                <img src={reactLogo} className="tech-image" />
-                <p className="tech-title">React</p>
-              </div>
-              <div className="tech">
-                <img src={expressLogo} className="tech-image" />
-                <p className="tech-title">ExpressJS</p>
-              </div>
-              <div className="tech">
-                <img src={scssLogo} className="tech-image" />
-                <p className="tech-title">SCSS</p>
-              </div>
-              <div className="tech">
-                <img src={postgreLogo} className="tech-image" />
-                <p className="tech-title">Postgres</p>
-              </div>
-              <div className="tech">
-                <img src={prismaLogo} className="tech-image" />
-                <p className="tech-title">Prisma</p>
-              </div>
-              <div className="tech">
-                <img src={primeReactLogo} className="tech-image" />
-                <p className="tech-title">PrimeReact</p>
-              </div>
-              <div className="tech">
-                <img src={passportJSLogo} className="tech-image" />
-                <p className="tech-title">Passport.js</p>
-              </div>
-            </div>
-
-            <div className="readMore">
-              <Button
-                label="Show demo"
-                icon="pi pi-external-link"
-                iconPos="right"
-                className="demo"
-              />
-              <Button
-                label="Read more"
-                icon="pi pi-github"
-                iconPos="right"
-                className="github"
-              />
-            </div>
-          </div>
-        </div> */}
+        {projects.map((project, index) => (
+          <Project
+            key={index}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            features={project.features}
+            techs={project.techs}
+            imageAtLeft={project.imageAtLeft}
+            isVisible={visible[index]}
+          />
+        ))
+        
+        }
       </div>
     </div>
   );
 }
 export default Projects;
 
+function Project({ id, title, description, features, techs, imageAtLeft, isVisible }) {
+  return (
+    <div
+      className={`${imageAtLeft ? `${ !isVisible ? "d-none project-description-image" : "project-description-image"}` : `${ !isVisible ? "d-none project-description-image-reverse" : "project-description-image-reverse"}`}`}
+    >
+      <div className="project-image">
+        <Image className={`ShortURL-image${id}`} />{" "}
+      </div>
+      <div
+        className={`${imageAtLeft ? "project-description" : "project-description-left"}`}
+      >
+        <div className="project-name">
+          <span className="projectNumber">
+            {id}.{"  "}
+          </span>
+          {title}
+        </div>
+        <br />
+        <br />
 
-function Project({id,title, description, features,techs,imageAtLeft}){
+        <p className="description-text">{description}</p>
 
-  return(
-
-
-     <div className={`${imageAtLeft ? "project-description-image" : "project-description-image-reverse" }`}>
-          <div className="project-image">
-            <Image className={`ShortURL-image${id}`} />{" "}
-          </div>
-          <div className={`${imageAtLeft ? "project-description" : "project-description-left"}`}>
-            <div className="project-name">
-              <span className="projectNumber">{id}.{'  '}</span>
-              {title}
-            </div>
-            <br />
-            <br />
-
-            <p className="description-text">
-              {description}
-            </p>
-
-            <div className="project-image-small">
-            <Image className={`ShortURL-image${id}`} />{" "}
-            </div>
-
-            <div className="features">
-              <i className="pi pi-list"></i> Features:
-            </div>
-
-            <ul className="features-list">
-              {/* <li>Creates randomly generated short URLs</li>
-              <li>
-                Creates custom short URLs (available for registered users)
-              </li>
-              <li>Session-based authentication system</li>
-              <li>Fully responsive design across all devices</li>
-              <li>
-                Personal dashboard where users can view and manage their saved
-                short URLs
-              </li> */}
-              {features.map((feature) => (<li>{feature} </li>))}
-            </ul>
-
-            <div className="Tech">
-              <i className="pi pi-cog"></i>Tech used:
-            </div>
-
-            <div className="techs">
-              {/* <div className="tech">
-                <img src={reactLogo} className="tech-image" />
-                <p className="tech-title">React</p>
-              </div>
-              <div className="tech">
-                <img src={expressLogo} className="tech-image" />
-                <p className="tech-title">ExpressJS</p>
-              </div>
-              <div className="tech">
-                <img src={scssLogo} className="tech-image" />
-                <p className="tech-title">SCSS</p>
-              </div>
-              <div className="tech">
-                <img src={postgreLogo} className="tech-image" />
-                <p className="tech-title">Postgres</p>
-              </div>
-              <div className="tech">
-                <img src={prismaLogo} className="tech-image" />
-                <p className="tech-title">Prisma</p>
-              </div>
-              <div className="tech">
-                <img src={primeReactLogo} className="tech-image" />
-                <p className="tech-title">PrimeReact</p>
-              </div>
-              <div className="tech">
-                <img src={passportJSLogo} className="tech-image" />
-                <p className="tech-title">Passport.js</p>
-              </div> */}
-             {techs.map((tech) => 
-             
-              
-                (<div className="tech">
-                <img src={tech.logo} className="tech-image" />
-                <p className="tech-title">{tech.name}</p>
-              </div>)
-              
-            )}
-
-            </div> 
-
-            <div className="readMore">
-              <Button
-                label="Show demo"
-                icon="pi pi-external-link"
-                iconPos="right"
-                className="demo"
-              />
-              <Button
-                label="Read more"
-                icon="pi pi-github"
-                iconPos="right"
-                className="github"
-              />
-            </div>
-          </div>
+        <div className="project-image-small">
+          <Image className={`ShortURL-image${id}`} />{" "}
         </div>
 
+        <div className="features">
+          <i className="pi pi-list"></i> Features:
+        </div>
 
+        <ul className="features-list">
+          {features.map((feature, index) => (
+            <li key={index}>{feature} </li>
+          ))}
+        </ul>
 
+        <div className="Tech">
+          <i className="pi pi-cog"></i>Tech used:
+        </div>
 
-  )
+        <div className="techs">
+          {techs.map((tech,index) => (
+            <div className="tech" key={index}>
+              <img src={tech.logo} className="tech-image" />
+              <p className="tech-title">{tech.name}</p>
+            </div>
+          ))}
+        </div>
 
-
+        <div className="readMore">
+          <Button
+            label="Show demo"
+            icon="pi pi-external-link"
+            iconPos="right"
+            className="demo"
+          />
+          <Button
+            label="Read more"
+            icon="pi pi-github"
+            iconPos="right"
+            className="github"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -56,6 +56,10 @@
   }
 }
 
+.d-none{
+  display:none !important;
+}
+
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -94,7 +98,7 @@
   }
 
   .project-image{ 
-    .ShortURL-image1,.ShortURL-image2,.ShortURL-image3,.ShortURL-image4,.ShortURL-image5, .ShortURL-image6 {
+    .ShortURL-image1,.ShortURL-image2,.ShortURL-image3,.ShortURL-image4,.ShortURL-image5, .ShortURL-image6, .ShortURL-image7, .ShortURL-image8 {
    
     background-size: cover;
     object-fit: cover;
@@ -128,7 +132,15 @@
     }
 
     .ShortURL-image6{
-       background-image: url("../../assets/images/quoteGenerator-image1.png");
+       background-image: url("../../assets/images/quoteGenerator-image7.png");
+    }
+
+    .ShortURL-image7{
+       background-image: url("../../assets/images/pokemonSearch-image3.png");
+    }
+
+    .ShortURL-image8{
+       background-image: url("../../assets/images/exerciseTracker-image7.png");
     }
   }
 
@@ -379,7 +391,7 @@
        .ShortURL-image6 {
        width: unset;
        height: 95%; 
-       background-image: url("../../assets/images/quoteGenerator-image2.png");
+       background-image: url("../../assets/images/quoteGenerator-image5.png");
 
       }
 
@@ -606,7 +618,7 @@
         height: 500px;
         margin-top: 60px;
         margin-bottom: 60px;
-          .ShortURL-image1,.ShortURL-image2,.ShortURL-image3, .ShortURL-image4, .ShortURL-image5{
+          .ShortURL-image1,.ShortURL-image2,.ShortURL-image3, .ShortURL-image4, .ShortURL-image5, .ShortURL-image6,.ShortURL-image7,.ShortURL-image8{
             // display:block;
             // background-image: url("../../assets/images/UrlShortener-image30.png");
             // background-size: cover;
@@ -650,6 +662,21 @@
     .ShortURL-image5{
        background-image: url("../../assets/images/timer-image1.png");
     }
+
+    
+
+    .ShortURL-image6{
+       background-image: url("../../assets/images/quoteGenerator-image7.png");
+    }
+
+    .ShortURL-image7{
+       background-image: url("../../assets/images/pokemonSearch-image3.png");
+    }
+
+    .ShortURL-image8{
+       background-image: url("../../assets/images/exerciseTracker-image7.png");
+    }
+    
 
        
 
@@ -750,6 +777,19 @@
          .ShortURL-image5{
              width:95%
            }  
+         .ShortURL-image6{
+             background-image: url("../../assets/images/quoteGenerator-image8.png");
+             width:95%;
+           }  
+
+         .ShortURL-image7{
+             
+             width:95%;
+           }    
+         .ShortURL-image8{
+             
+             width:95%;
+           }    
 
         }
     }
@@ -813,6 +853,20 @@
              background-image: url("../../assets/images/timer-image6.png");
 
            } 
+
+          .ShortURL-image6{ 
+             width:100%;
+          }
+
+          .ShortURL-image7{
+             
+             width:100%;
+           }   
+
+          .ShortURL-image8{
+             
+             width:100%;
+           }    
         }      
       }
     }
