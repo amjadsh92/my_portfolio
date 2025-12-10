@@ -60,12 +60,26 @@
   display:none !important;
 }
 
+.button{
+
+    .p-button {
+      margin-top: 1.875rem; 
+      font-size: 0.875rem; 
+      height: 2.6875rem; 
+      padding-left: 1.875rem;
+      padding-right: 1.875rem; 
+    }
+
+
+}
+
 .projects-container {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
   gap:100px;
   width: 100%;
+  margin-bottom:100px;
 
   .project-name {
     font-family: "Fira Sans";
@@ -89,6 +103,20 @@
     align-items: stretch;
     justify-content: stretch;
     padding: 2rem 4rem;
+
+    .p-button {
+    color: white;
+    border: none;
+    background: rgba(59, 130, 246, 1);
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    height: 2.75rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    flex: 1 1;
+  }
+
+
   }
 
   .project-description-image-reverse {
@@ -199,17 +227,78 @@
     display:none;
   }
 
-  .p-button {
+  // .p-button {
+  //   color: white;
+  //   border: none;
+  //   background: rgba(59, 130, 246, 1);
+  //   padding-top: 0.9375rem;
+  //   padding-bottom: 0.9375rem;
+  //   height: 2.75rem;
+  //   font-size: 0.9rem;
+  //   border-radius: 20px;
+  //   flex: 1 1;
+  // }
+
+
+  .button.p-button {
     color: white;
     border: none;
-    background: rgba(59, 130, 246, 1);
+    background: rgb(59, 130, 246);
+    margin: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2rem;
+    margin-bottom: 6rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     padding-top: 0.9375rem;
+    border-radius: 10px;
     padding-bottom: 0.9375rem;
-    height: 2.75rem;
-    font-size: 0.9rem;
-    border-radius: 20px;
-    flex: 1 1;
+    height: 3.125rem;
+    width: 17%;
+    }
+
+
+  .seeMore{
+    margin:auto;
+    margin-top:-70px;
+    //  .p-button{
+     
+    //  border-color: rgb(59, 130, 246) !important;
+    //  color: rgb(59, 130, 246) !important;
+    //  }
+
+    .p-button {
+    border-color: rgb(59, 130, 246) !important;
+    color: rgb(59, 130, 246) !important;
+    // font-size:25px;
+    font-size: 19px;
+    border-radius: 10px;
+    border: 2px solid;
+    // Focus styles
+    &:focus,
+    &:focus-visible {
+      box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.4) !important;
+      border-color: rgb(59, 130, 246) !important;
+    }
   }
+
+//   .dark-secondary {
+//   background-color: #111 !important;
+//   border-color: #111 !important;
+//   color: white !important;
+
+//   &:hover {
+//     background-color: #000 !important;
+//     border-color: #000 !important;
+//   }
+
+//   &:focus,
+//   &:focus-visible {
+//     box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.2) !important;
+//   }
+// }
+  } 
 
   .demo {
     .p-button-icon-right {

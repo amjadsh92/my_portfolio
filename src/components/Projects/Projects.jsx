@@ -214,7 +214,20 @@ function Projects({ isDarkMode }) {
         ))
         
         }
-        <button onClick={showMore}>See more!</button>
+        { !(projects.length === visible.length) && 
+      //   <Button
+      //   className="button"
+      //   label="See more"
+      //   icon="pi pi-arrow-down"
+      //   iconPos="right"
+      //   onClick={showMore}
+      //   text
+      // 
+      <div className="seeMore">
+      <Button  label="Show more projects" severity="info" text icon="pi pi-arrow-down" iconPos="right" onClick={showMore} />
+      {/* <Button label="See more" severity="help" raised /> */}
+      </div>
+      }
       </div>
     </div>
   );
