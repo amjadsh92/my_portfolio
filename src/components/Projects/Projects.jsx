@@ -304,29 +304,145 @@ export default Projects;
 // }
 
 
+// function Project({ id, title, description, features, techs, imageAtLeft, isVisible }) {
+//   const ref = useRef(null);
+
+  
+//   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  
+//   const descDistance = 200; 
+//   const descDuration = 0.7; 
+//   const imageDelay = descDuration + 0.15; 
+
+  
+//   const descriptionInitial = imageAtLeft
+//     ? { opacity: 0, x: -descDistance } 
+//     : { opacity: 0, x: descDistance }; 
+
+//   const descriptionAnimate = inView ? { opacity: 1, x: 0 } : descriptionInitial;
+
+  
+//   const imageInitial = { opacity: 0, scale: 0.97 };
+//   const imageAnimate = inView ? { opacity: 1, scale: 1 } : imageInitial;
+
+  
+//   const containerClass = imageAtLeft
+//     ? !isVisible
+//       ? "d-none project-description-image"
+//       : "project-description-image"
+//     : !isVisible
+//     ? "d-none project-description-image-reverse"
+//     : "project-description-image-reverse";
+
+//   return (
+//     <div ref={ref} className={containerClass}>
+      
+//       <motion.div
+//         className="project-image"
+//         initial={imageInitial}
+//         animate={imageAnimate}
+//         transition={{ duration: 0.6, delay: imageDelay, ease: "easeOut" }}
+//         aria-hidden={!inView} 
+//         style={{ pointerEvents: inView ? "auto" : "none" }}
+//       >
+//         <Image className={`ShortURL-image${id}`} />
+//       </motion.div>
+
+      
+//       <motion.div
+//         className={imageAtLeft ? "project-description" : "project-description-left"}
+//         initial={descriptionInitial}
+//         animate={descriptionAnimate}
+//         transition={{ duration: descDuration, ease: "easeOut" }}
+//       >
+//         <div className="project-name">
+//           <span className="projectNumber">{id}.{"  "}</span>
+//           {title}
+//         </div>
+//         <br />
+//         <br />
+
+//         <p className="description-text">{description}</p>
+
+//         <div className="project-image-small">
+//           <Image className={`ShortURL-image${id}`} />
+//         </div>
+
+//         <div className="features">
+//           <i className="pi pi-list"></i> Features:
+//         </div>
+
+//         <ul className="features-list">
+//           {features.map((feature, idx) => (
+//             <li key={idx}>{feature}</li>
+//           ))}
+//         </ul>
+
+//         <div className="Tech">
+//           <i className="pi pi-cog"></i>Tech used:
+//         </div>
+
+//         <div className="techs">
+//           {techs.map((tech, index) => (
+//             <div className="tech" key={index}>
+//               <img src={tech.logo} className="tech-image" alt={tech.name} />
+//               <p className="tech-title">{tech.name}</p>
+//             </div>
+//           ))}
+//         </div>
+
+//         <div className="readMore">
+//           <Button label="Show demo" icon="pi pi-external-link" iconPos="right" className="demo" />
+//           <Button label="Read more" icon="pi pi-github" iconPos="right" className="github" />
+//         </div>
+//       </motion.div>
+//     </div>
+//   );
+// }
+
+
 function Project({ id, title, description, features, techs, imageAtLeft, isVisible }) {
   const ref = useRef(null);
-
-  // triggers when the element enters the viewport, runs only once
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
-  // animation settings
-  const descDistance = 200; // px to slide from
-  const descDuration = 0.7; // seconds
-  const imageDelay = descDuration +0.15; // start image after description finishes a bit
+  const isSmallScreen = typeof window !== "undefined" && window.innerWidth <= 960;
 
-  // description initial: slide FROM left if image is left, otherwise FROM right
-  const descriptionInitial = imageAtLeft
-    ? { opacity: 0, x: -descDistance } // from left -> to x:0
-    : { opacity: 0, x: descDistance }; // from right -> to x:0
+  
+  const descDistance = 200; 
+  const descDuration = 0.7;
+  const imageDelay = descDuration + 0.15;
 
-  const descriptionAnimate = inView ? { opacity: 1, x: 0 } : descriptionInitial;
+  
+  const descriptionInitial = isSmallScreen
+    ? { opacity: 0 } 
+    : imageAtLeft
+      ? { opacity: 0, x: -descDistance } 
+      : { opacity: 0, x: descDistance }; 
 
-  // image stays hidden until description animation completes
-  const imageInitial = { opacity: 0, scale: 0.97 };
-  const imageAnimate = inView ? { opacity: 1, scale: 1 } : imageInitial;
+  const descriptionAnimate = { opacity: 1, x: 0 };
 
-  // If the project is not marked visible, render with d-none to keep your layout logic
+  const descriptionTransition = {
+    duration: isSmallScreen ? 1.5 : descDuration,
+    ease: "easeOut",
+  };
+
+  
+  const imageInitial = isSmallScreen
+    ? { opacity: 0 } 
+    : { opacity: 0, scale: 0.97 };
+
+  const imageAnimate = isSmallScreen
+    ? { opacity: 1 } 
+    : { opacity: 1, scale: 1 };
+
+  const imageTransition = {
+    duration: 0.6,
+    delay: isSmallScreen ? 0 : imageDelay,
+    ease: "easeOut",
+  };
+
+  
   const containerClass = imageAtLeft
     ? !isVisible
       ? "d-none project-description-image"
@@ -337,34 +453,35 @@ function Project({ id, title, description, features, techs, imageAtLeft, isVisib
 
   return (
     <div ref={ref} className={containerClass}>
-      {/* IMAGE: placed visually left or right via your CSS layout */}
+      
+      
       <motion.div
         className="project-image"
         initial={imageInitial}
-        animate={imageAnimate}
-        transition={{ duration: 0.6, delay: imageDelay, ease: "easeOut" }}
-        aria-hidden={!inView} // hide from assistive tech until visible
+        animate={inView ? imageAnimate : imageInitial}
+        transition={imageTransition}
+        aria-hidden={!inView}
         style={{ pointerEvents: inView ? "auto" : "none" }}
       >
         <Image className={`ShortURL-image${id}`} />
       </motion.div>
 
-      {/* DESCRIPTION: slides in from the side (left or right depending on imageAtLeft) */}
+     
       <motion.div
         className={imageAtLeft ? "project-description" : "project-description-left"}
         initial={descriptionInitial}
-        animate={descriptionAnimate}
-        transition={{ duration: descDuration, ease: "easeOut" }}
+        animate={inView ? descriptionAnimate : descriptionInitial}
+        transition={descriptionTransition}
       >
         <div className="project-name">
           <span className="projectNumber">{id}.{"  "}</span>
           {title}
         </div>
-        <br />
-        <br />
+
+        <br /><br />
 
         <p className="description-text">{description}</p>
-
+        
         <div className="project-image-small">
           <Image className={`ShortURL-image${id}`} />
         </div>
@@ -400,5 +517,4 @@ function Project({ id, title, description, features, techs, imageAtLeft, isVisib
     </div>
   );
 }
-
 
