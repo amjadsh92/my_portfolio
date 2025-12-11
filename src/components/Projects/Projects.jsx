@@ -20,7 +20,7 @@ import { Button } from "primereact/button";
 
 function Projects({ isDarkMode }) {
 
-  const [visible, setVisible] = useState([true,true])
+  const [visible, setVisible] = useState([true,true,true,true])
 
   const projects = [
     {
@@ -188,7 +188,7 @@ function Projects({ isDarkMode }) {
   const showMore = () => {
   setVisible(prev => [
     ...prev,
-    ...new Array(2).fill(true).slice(0, projects.length - prev.length)
+    ...new Array(4).fill(true).slice(0, projects.length - prev.length)
   ]);
 };
 

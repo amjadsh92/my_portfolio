@@ -690,7 +690,8 @@
           margin-bottom: 1.25rem;
           margin-right: auto;
           margin-left: auto;
-          margin-top: 20px;
+          // margin-top: 20px;
+          margin-top:2.5rem;
           border:none;
     
         }
@@ -783,6 +784,17 @@
 
 
   .projects-container{
+
+    .seeMore{
+    
+    .p-button {
+    
+    font-size: 17px;
+   
+  }
+
+
+  } 
     
     .project-description,.project-description-left {
         
@@ -819,6 +831,8 @@
 
 @media screen and (max-width: 600px) {
     
+  
+
   .projects-title .subtitle {
     width: 60%;
     margin-left: auto;
@@ -896,6 +910,17 @@
 
 .projects-container{
 
+  .seeMore{
+    
+    .p-button {
+    
+    font-size: 16px;
+   
+  }
+
+
+  } 
+
     .project-description-image,.project-description-image-reverse {
         
         padding: 2rem 1.5rem;
@@ -967,6 +992,17 @@
 
     .projects-container{
 
+        .seeMore{
+    
+    .p-button {
+    
+    font-size: 15px;
+   
+  }
+
+
+  } 
+
     .project-description-image, .project-description-image-reverse  {
         
         padding: 2rem 1rem;
@@ -986,9 +1022,10 @@
     
 }
 
-.projects-container .project-name {
+.projects-container .project-description .project-name {
    
     font-size: 1.4rem;
+    margin-top:20px;
 }
 
 
