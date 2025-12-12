@@ -47,7 +47,7 @@ function About({ isDarkMode }) {
   };
 
   return (
-    <div className="about-light">
+    <div id="about" className="about-light">
       <div className="header">
         <div className="avatar">
           <div className="avatar-border">

@@ -193,7 +193,7 @@ function Projects({ isDarkMode }) {
 };
 
   return (
-    <div className="projects-light">
+    <div  className="projects-light">
       <div className="projects-title">
         <div className="title">Projects</div>
         <div className="subtitle">

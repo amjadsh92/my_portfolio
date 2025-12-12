@@ -6,7 +6,7 @@ function Contact({ isDarkMode }) {
  
 
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       </div>)
 }
 export default Contact

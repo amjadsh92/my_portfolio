@@ -35,7 +35,7 @@ function Home({ isDarkMode, projectsRef }) {
   }, []);
 
   return (
-    <div className={`${isDarkMode ? "home-dark" : "home-light"} `}>
+    <div id="home" className={`${isDarkMode ? "home-dark" : "home-light"} `}>
       <div className="home-description">
         <div className={`home-title ${isMoved ? "moved" : ""}`}>
           Hello, I am <span className="home-name">Amjad</span>.{" "}

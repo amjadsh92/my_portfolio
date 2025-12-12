@@ -46,18 +46,18 @@ function App() {
         refs={refs}
       />
 
-      <div ref={homeRef} className="home">
+      <div id="home" ref={homeRef} className="home">
         <Home isDarkMode={isDarkMode} projectsRef ={projectsRef} />
       </div>
 
-      <div ref={aboutRef} className="about">
+      <div id="about" ref={aboutRef} className="about">
         <About isDarkMode={isDarkMode} />
       </div>
 
-      <div ref={projectsRef} className="projects" >
+      <div id="projects" ref={projectsRef} className="projects" >
         <Projects isDarkMode={isDarkMode} />
       </div>
-       <div ref={contactRef} className="contact" >
+       <div id="contact" ref={contactRef} className="contact" >
         <Contact isDarkMode={isDarkMode} className="contact" />
       </div>
     </>
