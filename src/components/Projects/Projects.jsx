@@ -19,8 +19,7 @@ import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
 function Projects({ isDarkMode }) {
-
-  const [visible, setVisible] = useState([true,true,true,true])
+  const [visible, setVisible] = useState([true, true, true, true]);
 
   const projects = [
     {
@@ -46,7 +45,7 @@ function Projects({ isDarkMode }) {
       ],
       imageAtLeft: true,
     },
-    
+
     {
       id: "2",
       title: "Calculator",
@@ -174,26 +173,15 @@ function Projects({ isDarkMode }) {
     },
   ];
 
-
-  // const showMore = () => {
-
-  //   for(let i=0;i<=2; i++){
-  //     if(visible.length < projects.length){
-  //       setVisible([...visible, true])
-  //     }
-  //   }
-
-  // }
-
   const showMore = () => {
-  setVisible(prev => [
-    ...prev,
-    ...new Array(4).fill(true).slice(0, projects.length - prev.length)
-  ]);
-};
+    setVisible((prev) => [
+      ...prev,
+      ...new Array(4).fill(true).slice(0, projects.length - prev.length),
+    ]);
+  };
 
   return (
-    <div  className="projects-light">
+    <div className="projects-light">
       <div className="projects-title">
         <div className="title">Projects</div>
         <div className="subtitle">
@@ -212,213 +200,49 @@ function Projects({ isDarkMode }) {
             imageAtLeft={project.imageAtLeft}
             isVisible={visible[index]}
           />
-        ))
-        
-        }
-        { !(projects.length === visible.length) && 
-      //   <Button
-      //   className="button"
-      //   label="See more"
-      //   icon="pi pi-arrow-down"
-      //   iconPos="right"
-      //   onClick={showMore}
-      //   text
-      // 
-      <div className="seeMore">
-      <Button  label="Show more projects" severity="info" text icon="pi pi-arrow-down" iconPos="right" onClick={showMore} />
-      {/* <Button label="See more" severity="help" raised /> */}
-      </div>
-      }
+        ))}
+        {!(projects.length === visible.length) && (
+          <div className="seeMore">
+            <Button
+              label="Show more projects"
+              severity="info"
+              text
+              icon="pi pi-arrow-down"
+              iconPos="right"
+              onClick={showMore}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
 }
 export default Projects;
 
-// function Project({ id, title, description, features, techs, imageAtLeft, isVisible }) {
-//   return (
-//     <div
-//       className={`${imageAtLeft ? `${ !isVisible ? "d-none project-description-image" : "project-description-image"}` : `${ !isVisible ? "d-none project-description-image-reverse" : "project-description-image-reverse"}`}`}
-//     >
-//       <div className="project-image">
-//         <Image className={`ShortURL-image${id}`} />{" "}
-//       </div>
-//       <div
-//         className={`${imageAtLeft ? "project-description" : "project-description-left"}`}
-//       >
-//         <div className="project-name">
-//           <span className="projectNumber">
-//             {id}.{"  "}
-//           </span>
-//           {title}
-//         </div>
-//         <br />
-//         <br />
-
-//         <p className="description-text">{description}</p>
-
-//         <div className="project-image-small">
-//           <Image className={`ShortURL-image${id}`} />{" "}
-//         </div>
-
-//         <div className="features">
-//           <i className="pi pi-list"></i> Features:
-//         </div>
-
-//         <ul className="features-list">
-//           {features.map((feature, index) => (
-//             <li key={index}>{feature} </li>
-//           ))}
-//         </ul>
-
-//         <div className="Tech">
-//           <i className="pi pi-cog"></i>Tech used:
-//         </div>
-
-//         <div className="techs">
-//           {techs.map((tech,index) => (
-//             <div className="tech" key={index}>
-//               <img src={tech.logo} className="tech-image" />
-//               <p className="tech-title">{tech.name}</p>
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className="readMore">
-//           <Button
-//             label="Show demo"
-//             icon="pi pi-external-link"
-//             iconPos="right"
-//             className="demo"
-//           />
-//           <Button
-//             label="Read more"
-//             icon="pi pi-github"
-//             iconPos="right"
-//             className="github"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-// function Project({ id, title, description, features, techs, imageAtLeft, isVisible }) {
-//   const ref = useRef(null);
-
-  
-//   const inView = useInView(ref, { once: true, margin: "-100px" });
-
-  
-//   const descDistance = 200; 
-//   const descDuration = 0.7; 
-//   const imageDelay = descDuration + 0.15; 
-
-  
-//   const descriptionInitial = imageAtLeft
-//     ? { opacity: 0, x: -descDistance } 
-//     : { opacity: 0, x: descDistance }; 
-
-//   const descriptionAnimate = inView ? { opacity: 1, x: 0 } : descriptionInitial;
-
-  
-//   const imageInitial = { opacity: 0, scale: 0.97 };
-//   const imageAnimate = inView ? { opacity: 1, scale: 1 } : imageInitial;
-
-  
-//   const containerClass = imageAtLeft
-//     ? !isVisible
-//       ? "d-none project-description-image"
-//       : "project-description-image"
-//     : !isVisible
-//     ? "d-none project-description-image-reverse"
-//     : "project-description-image-reverse";
-
-//   return (
-//     <div ref={ref} className={containerClass}>
-      
-//       <motion.div
-//         className="project-image"
-//         initial={imageInitial}
-//         animate={imageAnimate}
-//         transition={{ duration: 0.6, delay: imageDelay, ease: "easeOut" }}
-//         aria-hidden={!inView} 
-//         style={{ pointerEvents: inView ? "auto" : "none" }}
-//       >
-//         <Image className={`ShortURL-image${id}`} />
-//       </motion.div>
-
-      
-//       <motion.div
-//         className={imageAtLeft ? "project-description" : "project-description-left"}
-//         initial={descriptionInitial}
-//         animate={descriptionAnimate}
-//         transition={{ duration: descDuration, ease: "easeOut" }}
-//       >
-//         <div className="project-name">
-//           <span className="projectNumber">{id}.{"  "}</span>
-//           {title}
-//         </div>
-//         <br />
-//         <br />
-
-//         <p className="description-text">{description}</p>
-
-//         <div className="project-image-small">
-//           <Image className={`ShortURL-image${id}`} />
-//         </div>
-
-//         <div className="features">
-//           <i className="pi pi-list"></i> Features:
-//         </div>
-
-//         <ul className="features-list">
-//           {features.map((feature, idx) => (
-//             <li key={idx}>{feature}</li>
-//           ))}
-//         </ul>
-
-//         <div className="Tech">
-//           <i className="pi pi-cog"></i>Tech used:
-//         </div>
-
-//         <div className="techs">
-//           {techs.map((tech, index) => (
-//             <div className="tech" key={index}>
-//               <img src={tech.logo} className="tech-image" alt={tech.name} />
-//               <p className="tech-title">{tech.name}</p>
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className="readMore">
-//           <Button label="Show demo" icon="pi pi-external-link" iconPos="right" className="demo" />
-//           <Button label="Read more" icon="pi pi-github" iconPos="right" className="github" />
-//         </div>
-//       </motion.div>
-//     </div>
-//   );
-// }
-
-
-function Project({ id, title, description, features, techs, imageAtLeft, isVisible }) {
+function Project({
+  id,
+  title,
+  description,
+  features,
+  techs,
+  imageAtLeft,
+  isVisible,
+}) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
-  const isSmallScreen = typeof window !== "undefined" && window.innerWidth <= 960;
+  const isSmallScreen =
+    typeof window !== "undefined" && window.innerWidth <= 960;
 
-  
-  const descDistance = 200; 
-  const descDuration = 0.7;
-  const imageDelay = descDuration + 0.15;
+  const descDistance = 200;
+  const descDuration = 0.5;
+  const imageDelay = descDuration;
 
-  
   const descriptionInitial = isSmallScreen
-    ? { opacity: 0 } 
+    ? { opacity: 0 }
     : imageAtLeft
-      ? { opacity: 0, x: -descDistance } 
-      : { opacity: 0, x: descDistance }; 
+      ? { opacity: 0, x: -descDistance }
+      : { opacity: 0, x: descDistance };
 
   const descriptionAnimate = { opacity: 1, x: 0 };
 
@@ -427,13 +251,12 @@ function Project({ id, title, description, features, techs, imageAtLeft, isVisib
     ease: "easeOut",
   };
 
-  
   const imageInitial = isSmallScreen
-    ? { opacity: 0 } 
+    ? { opacity: 0 }
     : { opacity: 0, scale: 0.97 };
 
   const imageAnimate = isSmallScreen
-    ? { opacity: 1 } 
+    ? { opacity: 1 }
     : { opacity: 1, scale: 1 };
 
   const imageTransition = {
@@ -442,19 +265,16 @@ function Project({ id, title, description, features, techs, imageAtLeft, isVisib
     ease: "easeOut",
   };
 
-  
   const containerClass = imageAtLeft
     ? !isVisible
       ? "d-none project-description-image"
       : "project-description-image"
     : !isVisible
-    ? "d-none project-description-image-reverse"
-    : "project-description-image-reverse";
+      ? "d-none project-description-image-reverse"
+      : "project-description-image-reverse";
 
   return (
     <div ref={ref} className={containerClass}>
-      
-      
       <motion.div
         className="project-image"
         initial={imageInitial}
@@ -463,27 +283,31 @@ function Project({ id, title, description, features, techs, imageAtLeft, isVisib
         aria-hidden={!inView}
         style={{ pointerEvents: inView ? "auto" : "none" }}
       >
-        <Image className={`ShortURL-image${id}`} />
+        <Image className={`image${id}`} />
       </motion.div>
 
-     
       <motion.div
-        className={imageAtLeft ? "project-description" : "project-description-left"}
+        className={
+          imageAtLeft ? "project-description" : "project-description-left"
+        }
         initial={descriptionInitial}
         animate={inView ? descriptionAnimate : descriptionInitial}
         transition={descriptionTransition}
       >
         <div className="project-name">
-          <span className="projectNumber">{id}.{"  "}</span>
+          <span className="projectNumber">
+            {id}.{"  "}
+          </span>
           {title}
         </div>
 
-        <br /><br />
+        <br />
+        <br />
 
         <p className="description-text">{description}</p>
-        
+
         <div className="project-image-small">
-          <Image className={`ShortURL-image${id}`} />
+          <Image className={`image${id}`} />
         </div>
 
         <div className="features">
@@ -510,11 +334,20 @@ function Project({ id, title, description, features, techs, imageAtLeft, isVisib
         </div>
 
         <div className="readMore">
-          <Button label="Show demo" icon="pi pi-external-link" iconPos="right" className="demo" />
-          <Button label="Read more" icon="pi pi-github" iconPos="right" className="github" />
+          <Button
+            label="Show demo"
+            icon="pi pi-external-link"
+            iconPos="right"
+            className="demo"
+          />
+          <Button
+            label="Read more"
+            icon="pi pi-github"
+            iconPos="right"
+            className="github"
+          />
         </div>
       </motion.div>
     </div>
   );
 }
-
