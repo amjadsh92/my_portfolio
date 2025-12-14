@@ -15,7 +15,7 @@
   font-style: normal;
 }
 
-.about-light {
+.about-light,.about-dark {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,17 +23,57 @@
   background-size: cover;
   padding-left: 3.75rem;
   padding-right: 3.75rem;
-  background-color: #f4f4f4;
+  // background-color: #f4f4f4;
   gap: 3.125rem;
   min-height: 56.25rem !important;
   // height: 75vh;
+  // background: linear-gradient(
+  //   180deg,
+  //   var(--gray-400) 5px,
+  //   #f4f4f4 5px,
+  //   #f4f4f4 100%
+  // );
+}
+
+.about-light{
+
   background: linear-gradient(
     180deg,
     var(--gray-400) 5px,
     #f4f4f4 5px,
     #f4f4f4 100%
   );
+
 }
+
+.about-dark{
+
+background:  linear-gradient(180deg, #495363 5px, #25292f 5px, #25292f 100%);
+
+.text{
+
+  .text-title{
+    color:rgba(255, 255, 255, 0.87);
+  }
+
+  .text-description{
+    color:var(--blue-100);
+  }
+}
+
+.skills{
+
+  .skill{
+
+    .skill-title{
+      color:var(--surface-500);
+    }
+  }
+}
+
+}
+
+
 
 .avatar-border {
   width: 16.25rem;
@@ -144,6 +184,24 @@
     );
   }
 
+  .about-light{
+
+    background: linear-gradient(
+      180deg,
+      var(--gray-400) 5px,
+      #f4f4f4 5px,
+      #f4f4f4
+    );
+
+  }
+
+  .about-dark{
+
+
+     background:linear-gradient(180deg, #495363 5px, #25292f 5px, #25292f 100%);
+
+  }
+
   .avatar {
     display: none;
   }
@@ -193,15 +251,15 @@
 }
 
 @media screen and (max-width: 750px) {
-  .about-light {
+  .about-light,.about-dark {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
-    background: linear-gradient(
-      180deg,
-      var(--gray-400) 0.3%,
-      #f4f4f4 0.3%,
-      #f4f4f4
-    );
+    // background: linear-gradient(
+    //   180deg,
+    //   var(--gray-400) 0.3%,
+    //   #f4f4f4 0.3%,
+    //   #f4f4f4
+    // );
   }
 
   .skill {
@@ -215,15 +273,15 @@
 }
 
 @media screen and (max-width: 500px) {
-  .about-light {
+  .about-light,.about-dark {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
-    background: linear-gradient(
-      180deg,
-      var(--gray-400) 0.3%,
-      #f4f4f4 0.3%,
-      #f4f4f4
-    );
+    // background: linear-gradient(
+    //   180deg,
+    //   var(--gray-400) 0.3%,
+    //   #f4f4f4 0.3%,
+    //   #f4f4f4
+    // );
   }
 
   .midavatar {
@@ -256,15 +314,15 @@
 }
 
 @media screen and (max-width: 400px) {
-  .about-light {
+  .about-light,.about-dark {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
-    background: linear-gradient(
-      180deg,
-      var(--gray-400) 0.2%,
-      #f4f4f4 0.2%,
-      #f4f4f4
-    );
+    // background: linear-gradient(
+    //   180deg,
+    //   var(--gray-400) 0.2%,
+    //   #f4f4f4 0.2%,
+    //   #f4f4f4
+    // );
   }
 
   .text .text-title {

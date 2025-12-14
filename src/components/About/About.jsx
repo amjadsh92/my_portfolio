@@ -1,8 +1,6 @@
 /* eslint-disable */
 import "./About.scss";
 import { motion } from "motion/react"
-
-
 import htmlLogo from "../../assets/images/html2.png";
 import javascriptLogo from "../../assets/images/javascript.png";
 import cssLogo from "../../assets/images/css.png";
@@ -11,9 +9,10 @@ import expressLogo from "../../assets/images/express.png";
 import scssLogo from "../../assets/images/scss.png";
 import gitLogo from "../../assets/images/git.png";
 import postgreLogo from "../../assets/images/postgre3.png";
-import prismaLogo from "../../assets/images/prismaORM.png";
+// import postgreLogo from "../../assets/images/PostgreLogo.eps";
+import prismaLogo from "../../assets/images/prismaLogo1.png";
 import primeReactLogo from "../../assets/images/primereact.png";
-import passportJSLogo from "../../assets/images/passportLogo.png"
+import passportJSLogo from "../../assets/images/passportJSLogo1.png"
 
 function About({ isDarkMode }) {
   const skills = [
@@ -47,7 +46,7 @@ function About({ isDarkMode }) {
   };
 
   return (
-    <div id="about" className="about-light">
+    <div  className={isDarkMode ? "about-dark" : "about-light"}>
       <div className="header">
         <div className="avatar">
           <div className="avatar-border">
