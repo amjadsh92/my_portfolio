@@ -9,9 +9,9 @@ import postgreLogo from "../../assets/images/postgre3.png";
 import prismaLogo from "../../assets/images/prismaLogo1.png";
 import primeReactLogo from "../../assets/images/primereact.png";
 import passportJSLogo from "../../assets/images/passportJSLogo1.png";
-import regexLogo from "../../assets/images/regexImage.png";
+import regexLogo from "../../assets/images/regexLogo.png";
 import cssLogo from "../../assets/images/css.png";
-import bootstrapLogo from "../../assets/images/bootstrapLogo.png";
+import bootstrapLogo from "../../assets/images/bootstrapLogo4.png";
 import htmlLogo from "../../assets/images/html2.png";
 import javascriptLogo from "../../assets/images/javascript.png";
 import { useEffect, useState, useRef } from "react";
@@ -182,7 +182,7 @@ function Projects({ isDarkMode }) {
   };
 
   return (
-    <div className="projects-light">
+    <div className={isDarkMode ? "projects-dark": "projects-light"}>
       <div className="projects-title">
         <div className="title">Projects</div>
         <div className="subtitle">
@@ -202,7 +202,20 @@ function Projects({ isDarkMode }) {
             isVisible={visible[index]}
           />
         ))}
-        {!(projects.length === visible.length) && (
+        {/* {!(projects.length === visible.length) && (
+          <div className="seeMore">
+            <Button
+              label="Show more projects"
+              severity="info"
+              text
+              icon="pi pi-arrow-down"
+              iconPos="right"
+              onClick={showMore}
+            />
+          </div>
+        )} */}
+      </div>
+      {!(projects.length === visible.length) && (
           <div className="seeMore">
             <Button
               label="Show more projects"
@@ -214,7 +227,6 @@ function Projects({ isDarkMode }) {
             />
           </div>
         )}
-      </div>
     </div>
   );
 }
