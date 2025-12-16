@@ -16,12 +16,25 @@ import htmlLogo from "../../assets/images/html2.png";
 import javascriptLogo from "../../assets/images/javascript.png";
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { animate } from "motion";
 import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
 function Projects({ isDarkMode }) {
   const [visible, setVisible] = useState([true, true, true, true]);
+  const ref1 = useRef(null)
+  const ref2 = useRef(null)
+  const ref3 = useRef(null)
+  const ref4 = useRef(null)
+  const ref5 = useRef(null)
+  const ref6 = useRef(null)
+  const ref7 = useRef(null)
+  const ref8 = useRef(null)
+  
+  
 
+  const ref = [ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8]
+  const [projectNumber, setProjectNumber] = useState(4)
   const projects = [
     {
       id: "1",
@@ -171,14 +184,63 @@ function Projects({ isDarkMode }) {
         { logo: scssLogo, name: "SCSS" },
       ],
       imageAtLeft: false,
-    },
+    }
+
+     
   ];
 
-  const showMore = () => {
+  
+
+//   const motionScrollDown = (distance = 100, duration = 0.8) => {
+//   const start = window.scrollY;
+
+//   animate(0, 1, {
+//     duration,
+//     ease: "easeOut",
+//     onUpdate: (latest) => {
+//       window.scrollTo(0, start + distance * latest);
+//     },
+//   });
+// };
+
+  const  showMore = async () => {
+ 
+    
+    // window.scrollBy({
+    //   top: 250,
+    //   left: 0,
+    //   behavior: "smooth",
+    // });
+
+//     const motionScrollDown = (distance = 100, duration = 0.8) => {
+//   const start = window.scrollY;
+
+//   animate(0, 1, {
+//     duration,
+//     ease: "easeOut",
+//     onUpdate: (latest) => {
+//       window.scrollTo(0, start + distance * latest);
+//     },
+//   });
+// };
+
+    // motionScrollDown(200, 1)
+
+    
+
     setVisible((prev) => [
       ...prev,
       ...new Array(4).fill(true).slice(0, projects.length - prev.length),
     ]);
+    setProjectNumber((prev) => prev + 4)
+    setTimeout(() => {
+      ref[projectNumber].current.scrollIntoView({behavior:"smooth"})
+      
+  
+  })
+    
+
+    
   };
 
   return (
@@ -193,6 +255,7 @@ function Projects({ isDarkMode }) {
         {projects.map((project, index) => (
           <Project
             key={index}
+            ref={ref[index]}
             id={project.id}
             title={project.title}
             description={project.description}
@@ -234,6 +297,7 @@ export default Projects;
 
 function Project({
   id,
+  ref,
   title,
   description,
   features,
@@ -241,7 +305,7 @@ function Project({
   imageAtLeft,
   isVisible,
 }) {
-  const ref = useRef(null);
+  // const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   const isSmallScreen =

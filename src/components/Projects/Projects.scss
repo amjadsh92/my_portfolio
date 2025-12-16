@@ -66,7 +66,7 @@
 
  .projects-container{
   .project-description,.project-description-left{
-     color: #e3ebf9;
+     color: #e3ebf9bf;;
     // background-color: rgb(55 60 69);
     background-color: rgb(63 72 87);
     border: 3px solid var(--blue-400);
@@ -87,7 +87,7 @@
 .features-list {
     
     // color: #b3b3b3;
-    color:#e3ebf9
+    color:#e3ebf9bf;
 }
 
 .Tech {
@@ -161,6 +161,7 @@
 
   .project-description-image,
   .project-description-image-reverse {
+    scroll-margin-top: 70px; 
     display: flex;
     align-items: stretch;
     justify-content: stretch;
