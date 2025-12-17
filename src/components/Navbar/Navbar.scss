@@ -269,30 +269,38 @@
 
   .lightmode-text {
     display: none;
-    color: #4b5563 !important;
+    // color: #4b5563 !important;
+     color: rgba(255, 255, 255, 0.87) !important;
     font-size: 0.9375rem; 
+    margin-top: -0.82px;
   }
 
   .darkmode-text {
     display: none;
-    color: rgba(255, 255, 255, 0.87) !important;
+    color: #4b5563 !important;
+    // color: rgba(255, 255, 255, 0.87) !important;
     font-size: 0.9375rem; 
+    margin-top: -0.82px;
   }
 
   .lightmode-icon {
-    color: #6b7280;
+    // color: #6b7280;
+     color: rgba(255, 255, 255, 0.6);
   }
 
   .darkmode-icon {
-    color: rgba(255, 255, 255, 0.6);
+    color: #6b7280;
+    // color: rgba(255, 255, 255, 0.6);
   }
 
   .lightmode-icon:hover {
-    color: #23262b;
+    // color: #23262b;
+    color: rgba(255, 255, 255, 1);
   }
 
   .darkmode-icon:hover {
-    color: rgba(255, 255, 255, 1);
+    // color: rgba(255, 255, 255, 1);
+    color: #23262b;
   }
 
   .lightmode-block {

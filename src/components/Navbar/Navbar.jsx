@@ -289,12 +289,12 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
           >
             <div className="lightmode-block">
               <i
-                className={`${isDarkMode ? "darkmode-icon pi pi-moon" : "lightmode-icon pi pi-sun"}`}
+                className={`${isDarkMode ? "lightmode-icon pi pi-sun" : "darkmode-icon pi pi-moon"}`}
               />{" "}
               <span
-                className={`${isDarkMode ? "darkmode-text" : "lightmode-text"}`}
+                className={`${isDarkMode ?  "lightmode-text" : "darkmode-text"}`}
               >
-                {isDarkMode ? "Dark mode" : "Light mode"}
+                {isDarkMode ? "Light mode" : "Dark mode"}
               </span>
             </div>
           </button>
