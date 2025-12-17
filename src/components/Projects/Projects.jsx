@@ -21,6 +21,24 @@ import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
 function Projects({ isDarkMode }) {
+
+  function useIsSmallScreen(breakpoint = 960) {
+  const [isSmall, setIsSmall] = useState(
+    typeof window !== "undefined" && window.innerWidth <= breakpoint
+  );
+
+  useEffect(() => {
+    const onResize = () => {
+      const nextIsSmall = window.innerWidth <= breakpoint;
+      setIsSmall(prev => (prev !== nextIsSmall ? nextIsSmall : prev));
+    };
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [breakpoint]);
+
+  return isSmall;
+}
   const [visible, setVisible] = useState([true, true, true, true]);
   const ref1 = useRef(null)
   const ref2 = useRef(null)
@@ -263,6 +281,7 @@ function Projects({ isDarkMode }) {
             techs={project.techs}
             imageAtLeft={project.imageAtLeft}
             isVisible={visible[index]}
+            useIsSmallScreen={useIsSmallScreen}
           />
         ))}
         {/* {!(projects.length === visible.length) && (
@@ -304,12 +323,51 @@ function Project({
   techs,
   imageAtLeft,
   isVisible,
+  useIsSmallScreen
 }) {
   // const ref = useRef(null);
+
+// function useIsSmallScreen(breakpoint = 960) {
+//   const [isSmall, setIsSmall] = useState(
+//     typeof window !== "undefined" && window.innerWidth <= breakpoint
+//   );
+
+//   // const onResize = () => {
+//   //     setIsSmall(window.innerWidth <= breakpoint);
+//   //   };
+
+// //   useEffect(() => {
+    
+
+// //     window.addEventListener("resize", onResize);
+// //     return () => window.removeEventListener("resize", onResize);
+// //   }, [breakpoint]);
+
+// //   return isSmall;
+// // }
+
+//   useEffect(() => {
+//     const onResize = () => {
+//       const nextIsSmall = window.innerWidth <= breakpoint;
+
+//       // 🔑 only update when value actually changes
+//       setIsSmall(prev => (prev !== nextIsSmall ? nextIsSmall : prev));
+//     };
+
+//     window.addEventListener("resize", onResize);
+//     return () => window.removeEventListener("resize", onResize);
+//   }, [breakpoint]);
+
+//   return isSmall;
+// }
+
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
-  const isSmallScreen =
-    typeof window !== "undefined" && window.innerWidth <= 960;
+  // const isSmallScreen =
+  //   typeof window !== "undefined" && window.innerWidth <= 960;
+
+
+  const isSmallScreen = useIsSmallScreen(960);
 
   const descDistance = 200;
   const descDuration = 0.5;
@@ -353,6 +411,7 @@ function Project({
   return (
     <div ref={ref} className={containerClass}>
       <motion.div
+        key={isSmallScreen ? "mobile" : "desktop"}
         className="project-image"
         initial={imageInitial}
         animate={inView ? imageAnimate : imageInitial}
