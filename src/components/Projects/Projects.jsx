@@ -208,7 +208,7 @@ function Projects({ isDarkMode }) {
   ];
 
   
-
+const isSmallScreen = useIsSmallScreen(960);
 //   const motionScrollDown = (distance = 100, duration = 0.8) => {
 //   const start = window.scrollY;
 
@@ -272,7 +272,7 @@ function Projects({ isDarkMode }) {
       <div className="projects-container">
         {projects.map((project, index) => (
           <Project
-            key={index}
+            key={isSmallScreen ? `small${index}` : index}
             ref={ref[index]}
             id={project.id}
             title={project.title}
@@ -281,7 +281,7 @@ function Projects({ isDarkMode }) {
             techs={project.techs}
             imageAtLeft={project.imageAtLeft}
             isVisible={visible[index]}
-            useIsSmallScreen={useIsSmallScreen}
+            isSmallScreen={isSmallScreen}
           />
         ))}
         {/* {!(projects.length === visible.length) && (
@@ -323,7 +323,7 @@ function Project({
   techs,
   imageAtLeft,
   isVisible,
-  useIsSmallScreen
+  isSmallScreen
 }) {
   // const ref = useRef(null);
 
@@ -367,7 +367,7 @@ function Project({
   //   typeof window !== "undefined" && window.innerWidth <= 960;
 
 
-  const isSmallScreen = useIsSmallScreen(960);
+  // const isSmallScreen = useIsSmallScreen(960);
 
   const descDistance = 200;
   const descDuration = 0.5;
