@@ -11,27 +11,19 @@ import { useInView } from "motion/react";
 
 function Home({ isDarkMode, projectsRef }) {
   const isTablet = window.innerWidth < 960 && window.innerWidth > 615;
-  const isMobile = window.innerWidth < 615;
   const [isMoved, setIsMoved] = useState(false);
   const [paragraphIsMoved, setParagraphIsMoved] = useState(false);
-  const [buttonSectionMoved, setButtonSectionMoved] = useState(false);
-  const [buttonMoved, setButtonMoved] = useState(false);
   const [smallImageMoved, setSmallImageMoved] = useState(false);
   const [midImageMoved, setMidImageMoved] = useState(false);
-  const [imageMoved, setImageMoved] = useState(false);
+  
   
   useEffect(() => {
     setIsMoved(true);
     setTimeout(() => setParagraphIsMoved(true), 500);
-
-    setTimeout(() => setButtonSectionMoved(true), 800);
-
-    setTimeout(() => setButtonMoved(true), 800);
-
     setTimeout(() => setSmallImageMoved(true), 800);
     setTimeout(() => setMidImageMoved(true), 800);
 
-    setImageMoved(true);
+    
   }, []);
 
   return (
@@ -54,9 +46,10 @@ function Home({ isDarkMode, projectsRef }) {
           className={`home-mid-image  ${midImageMoved ? "moved" : ""}`}
         ></div>
 
-        <div className={`button-section ${buttonSectionMoved ? "moved" : ""}`}>
+        
+         <div className={`button-section`}>
           <MyButton
-            buttonMoved={buttonMoved}
+            
             isTablet={isTablet}
             projectsRef={projectsRef}
           />
@@ -65,9 +58,21 @@ function Home({ isDarkMode, projectsRef }) {
           ></div>
         </div>
       </div>
+      <motion.div
+             
+        initial={{ opacity: 0, x:  0, y: -30 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{
+          duration: !isTablet ? 1.2 : 0.8,
+          ease: "easeOut",
+          delay: 1,
+        }} 
+       >
       <div className="home-image">
-        <Image className={`home-developer ${imageMoved ? "moved" : ""}`} />
+       
+        <Image className={`home-developer`} />
       </div>
+     </motion.div>  
     </div>
   );
 }
@@ -104,10 +109,10 @@ function MyButton({ isTablet, projectsRef }) {
       initial={{ opacity: 0, x: isTablet ? -30 : 0, y: isTablet ? 0 : 30 }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
       transition={{
-        duration: 0.8,
+        duration: !isTablet ? 1.2 : 0.8,
         ease: "easeOut",
 
-        delay: appearedImmediately ? 0.6 : 0,
+        delay: appearedImmediately ? (!isTablet ? 1 : 0.6) : 0,
       }}
     >
       <Button

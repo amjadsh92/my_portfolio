@@ -284,18 +284,7 @@ const isSmallScreen = useIsSmallScreen(960);
             isSmallScreen={isSmallScreen}
           />
         ))}
-        {/* {!(projects.length === visible.length) && (
-          <div className="seeMore">
-            <Button
-              label="Show more projects"
-              severity="info"
-              text
-              icon="pi pi-arrow-down"
-              iconPos="right"
-              onClick={showMore}
-            />
-          </div>
-        )} */}
+        
       </div>
       {!(projects.length === visible.length) && (
           <div className="seeMore">
@@ -325,49 +314,11 @@ function Project({
   isVisible,
   isSmallScreen
 }) {
-  // const ref = useRef(null);
-
-// function useIsSmallScreen(breakpoint = 960) {
-//   const [isSmall, setIsSmall] = useState(
-//     typeof window !== "undefined" && window.innerWidth <= breakpoint
-//   );
-
-//   // const onResize = () => {
-//   //     setIsSmall(window.innerWidth <= breakpoint);
-//   //   };
-
-// //   useEffect(() => {
-    
-
-// //     window.addEventListener("resize", onResize);
-// //     return () => window.removeEventListener("resize", onResize);
-// //   }, [breakpoint]);
-
-// //   return isSmall;
-// // }
-
-//   useEffect(() => {
-//     const onResize = () => {
-//       const nextIsSmall = window.innerWidth <= breakpoint;
-
-//       // 🔑 only update when value actually changes
-//       setIsSmall(prev => (prev !== nextIsSmall ? nextIsSmall : prev));
-//     };
-
-//     window.addEventListener("resize", onResize);
-//     return () => window.removeEventListener("resize", onResize);
-//   }, [breakpoint]);
-
-//   return isSmall;
-// }
+ 
 
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
-  // const isSmallScreen =
-  //   typeof window !== "undefined" && window.innerWidth <= 960;
-
-
-  // const isSmallScreen = useIsSmallScreen(960);
+  
 
   const descDistance = 200;
   const descDuration = 0.5;
