@@ -49,7 +49,7 @@ function Home({ isDarkMode, projectsRef }) {
 
         
          <div className={`button-section`}>
-          <MyButtongit 
+          <MyButton
             isMobile={isMobile}
             isTablet={isTablet}
             projectsRef={projectsRef}
