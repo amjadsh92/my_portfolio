@@ -1,9 +1,13 @@
 /* eslint-disable */
 import "./contact.scss";
+import React, { useState } from "react";
+import { InputText } from "primereact/inputtext";
+import { FloatLabel } from "primereact/floatlabel";
 
 
 function Contact({ isDarkMode }) {
  
+   const [name, setName] = useState('');
 
   return (
     <div  className="contact">
@@ -24,8 +28,12 @@ function Contact({ isDarkMode }) {
       </div >
 
       <div className="contact-form">
-
-
+        
+           <FloatLabel className="username">
+                <InputText id="username" value={name} onChange={(e) => setName(e.target.value)} />
+                <label > Username </label>
+          </FloatLabel>
+ 
       </div>
 
       </div>)
