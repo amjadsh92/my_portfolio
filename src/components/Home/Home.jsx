@@ -11,6 +11,7 @@ import { useInView } from "motion/react";
 
 function Home({ isDarkMode, projectsRef }) {
   const isTablet = window.innerWidth < 960 && window.innerWidth > 615;
+  const isMobile = window.innerWidth < 615
   const [isMoved, setIsMoved] = useState(false);
   const [paragraphIsMoved, setParagraphIsMoved] = useState(false);
   const [smallImageMoved, setSmallImageMoved] = useState(false);
@@ -48,8 +49,8 @@ function Home({ isDarkMode, projectsRef }) {
 
         
          <div className={`button-section`}>
-          <MyButton
-            
+          <MyButtongit 
+            isMobile={isMobile}
             isTablet={isTablet}
             projectsRef={projectsRef}
           />
@@ -63,7 +64,7 @@ function Home({ isDarkMode, projectsRef }) {
         initial={{ opacity: 0, x:  0, y: -30 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{
-          duration: !isTablet ? 1.2 : 0.8,
+          duration: !(isTablet || isMobile) ? 1.2 : 0.8,
           ease: "easeOut",
           delay: 1,
         }} 
@@ -79,7 +80,7 @@ function Home({ isDarkMode, projectsRef }) {
 
 export default Home;
 
-function MyButton({ isTablet, projectsRef }) {
+function MyButton({ isTablet, isMobile, projectsRef }) {
   const PrimeReact = useContext(PrimeReactContext);
   PrimeReact.ripple = true;
 
@@ -109,10 +110,10 @@ function MyButton({ isTablet, projectsRef }) {
       initial={{ opacity: 0, x: isTablet ? -30 : 0, y: isTablet ? 0 : 30 }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
       transition={{
-        duration: !isTablet ? 1.2 : 0.8,
+        duration: !(isTablet || isMobile) ? 1.2 : 0.8,
         ease: "easeOut",
 
-        delay: appearedImmediately ? (!isTablet ? 1 : 0.6) : 0,
+        delay: appearedImmediately ? (!(isTablet || isMobile) ? 1 : 0.6) : 0,
       }}
     >
       <Button
