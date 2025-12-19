@@ -1,10 +1,74 @@
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 .contact{
     
   display: flex;
-  justify-content: center;
+  flex-direction:column;
+  // justify-content: center;
   align-items: center;
   
-  background-color: #bbf6fe; 
+  
+background: linear-gradient(180deg, #dde1e9 5px, rgb(233 233 233) 5px, rgb(233 233 233) 100%);
+
   min-height: 677px !important;
-  height: 75vh;
+  // height: 75vh;
+}
+
+
+.contact-title{
+
+   font-family: "Fira Sans";
+   font-size: 2.5rem;
+   margin-top: 6.25rem;
+   display: inline-block;
+   border-bottom: 0.3125rem solid rgba(59, 130, 246, 0.85);
+   color: #4b5563;
+  //  width: 9.2rem;
+   text-align: left;
+   margin-bottom: 1.25rem;
+}
+
+.contact-subtitle {
+    font-family: "montserrat";
+    color: #49596e;
+    font-size: 23px;
+    font-style: italic;
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.contact-text {
+    margin-top: 40px;
+    text-align: center;
+    font-family: "montserrat";
+    color: #6b747b;
+    line-height: 1.5rem;
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
+    font-size: 1.0625rem;
+    width: 60%;
+}
+
+.contact-form {
+    width: 70%;
+    height: 350px;
+    border: solid 1px black;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    border-radius: 20px;
 }

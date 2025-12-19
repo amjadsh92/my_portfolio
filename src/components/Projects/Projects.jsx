@@ -316,7 +316,7 @@ function Project({
 }) {
  
 
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: `${isSmallScreen ? "-200px" : "-400px"}` });
 
   
 
