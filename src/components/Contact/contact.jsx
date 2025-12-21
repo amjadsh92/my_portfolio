@@ -99,19 +99,23 @@ function Contact({ isDarkMode }) {
                 <InputText id="name" value={form.name} onChange={(e) => handleChange("name", e.target.value)} />
                 <label htmlFor="name" > Name </label>
           </FloatLabel>
-          {errors.name && <small>{errors.name}</small>}
+          
 
            <FloatLabel className="email">
                 <InputText id="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} />
                 <label htmlFor="email" > Email </label>
           </FloatLabel>
-           {errors.name && <small>{errors.email}</small>}
+           
 
           <FloatLabel className="message">
           <InputTextarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} rows={5} cols={30} />
           <label htmlFor="message">Your Message</label>
          </FloatLabel>
-          {errors.name && <small>{errors.message}</small>}
+         <div className="error-block">
+          {errors.name && <small className="error">*{' '}{errors.name}</small>}
+          {errors.email && <small className="error">*{' '}{errors.email}</small>}
+          {errors.message && <small className="error">*{' '}{errors.message}</small>}
+          </div>
          <Button
           className="contact-submit"
           label="Submit"

@@ -113,6 +113,24 @@ background-color: #dcdcdc57;
   border:1px solid #609af8;
   width:25%;
   
-}  
+} 
+
+.error-block{
+  display:flex;
+  flex-direction:column;
+  justify-content:left;
+  margin-top:20px;
+  margin-bottom:20px;
+  width:80%;
+}
+
+.error{
+
+  text-align:left;
+  margin-top:10px;
+  color:red;
+  
+
+}
 }
 
