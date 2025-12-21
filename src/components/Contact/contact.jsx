@@ -24,7 +24,7 @@ function Contact({ isDarkMode }) {
 
   const [errors, setErrors] = useState({});
 
-
+  const [redZone, setRedZone] = useState({name:false, email:false, message:false})
    
 
  const contactSchema = yup.object().shape({
@@ -55,6 +55,7 @@ function Contact({ isDarkMode }) {
   const handleChange = (field, value) => {
     setForm((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => ({ ...prev, [field]: null }));
+    setRedZone((prev) => ({ ...prev, [field]: false }) )
   };
 
   const handleSubmit = async () => {
@@ -67,10 +68,14 @@ function Contact({ isDarkMode }) {
 
     } catch (validationError) {
       const newErrors = {};
+      const red = {}
       validationError.inner.forEach((err) => {
         newErrors[err.path] = err.message;
+        red[err.path]=true
+
       });
       setErrors(newErrors);
+      setRedZone((prev) => ({...prev,...red}))
     }
   };
 
@@ -95,19 +100,19 @@ function Contact({ isDarkMode }) {
         Let's get in touch!
         </div>
         
-           <FloatLabel className="name">
+           <FloatLabel className={`name ${redZone.name ? "name-error" : "" }`}>
                 <InputText id="name" value={form.name} onChange={(e) => handleChange("name", e.target.value)} />
                 <label htmlFor="name" > Name </label>
           </FloatLabel>
           
 
-           <FloatLabel className="email">
+           <FloatLabel className={`email ${redZone.email ? "email-error" : "" }`}>
                 <InputText id="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} />
                 <label htmlFor="email" > Email </label>
           </FloatLabel>
            
 
-          <FloatLabel className="message">
+          <FloatLabel className={`message ${redZone.message ? "message-error" : "" }`}>
           <InputTextarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} rows={5} cols={30} />
           <label htmlFor="message">Your Message</label>
          </FloatLabel>

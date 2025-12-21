@@ -101,6 +101,15 @@ background-color: #dcdcdc57;
 
      }
 
+   .name-error,.email-error,.message-error{
+    
+    .p-component{
+      border: 1px solid red;
+    
+    }
+
+   }  
+
 
   .contact-submit.p-button{
   margin-top:30px;
@@ -129,8 +138,8 @@ background-color: #dcdcdc57;
   text-align:left;
   margin-top:10px;
   color:red;
-  
+  }
 
-}
+
 }
 
