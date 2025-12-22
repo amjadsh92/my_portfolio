@@ -24,19 +24,29 @@ function Contact({ isDarkMode }) {
 
   const [errors, setErrors] = useState({});
 
-  const [redZone, setRedZone] = useState({name:false, email:false, message:false})
+  // const [redZone, setRedZone] = useState({name:false, email:false, message:false})
    
 
  const contactSchema = yup.object().shape({
   name: yup
     .string()
+    .trim()
     .required("Name is required")
-    .min(2, "Name must be at least 2 characters")
+    .test(
+    "min-if-not-empty",
+    "Name must be at least 10 characters",
+    (value) => {
+      if (!value) return true; // required handles empty
+      return value.length >= 2;
+    }
+  )
+    // .min(2, "Name must be at least 2 characters")
     .max(50, "Name must be at most 50 characters")
     .matches(noHtmlRegex, "Name must not contain HTML or script characters"),
 
   email: yup
     .string()
+    .trim()
     .required("Email is required")
     .email("Please enter a valid email address")
     .max(100, "Email is too long")
@@ -44,18 +54,43 @@ function Contact({ isDarkMode }) {
 
   message: yup
     .string()
+    .trim()
     .required("Message is required")
-    .min(10, "Message must be at least 10 characters")
+     .test(
+    "min-if-not-empty",
+    "Name must be at least 10 characters",
+    (value) => {
+      if (!value) return true; // required handles empty
+      return value.length >= 10;
+    }
+  )
+    // .min(10, "Message must be at least 10 characters")
     .max(1000, "Message must be at most 1000 characters")
     .matches(noHtmlRegex, "Message must not contain HTML or script characters"),
 });
 
 
+const validateField = async (field, value) => {
+    try {
+      await contactSchema.validateAt(field, {
+        ...form,
+        [field]: value,
+      });
+
+      setErrors((prev) => ({ ...prev, [field]: null }));
+    } catch (err) {
+      setErrors((prev) => ({ ...prev, [field]: err.message }));
+    }
+  };
+
+
 
   const handleChange = (field, value) => {
+    // setForm((prev) => ({ ...prev, [field]: value }));
+    // setErrors((prev) => ({ ...prev, [field]: null }));
+    // setRedZone((prev) => ({ ...prev, [field]: false }) )
     setForm((prev) => ({ ...prev, [field]: value }));
-    setErrors((prev) => ({ ...prev, [field]: null }));
-    setRedZone((prev) => ({ ...prev, [field]: false }) )
+    validateField(field, value);
   };
 
   const handleSubmit = async () => {
@@ -68,14 +103,14 @@ function Contact({ isDarkMode }) {
 
     } catch (validationError) {
       const newErrors = {};
-      const red = {}
+      // const red = {}
       validationError.inner.forEach((err) => {
         newErrors[err.path] = err.message;
-        red[err.path]=true
+        // red[err.path]=true
 
       });
       setErrors(newErrors);
-      setRedZone((prev) => ({...prev,...red}))
+      // setRedZone((prev) => ({...prev,...red}))
     }
   };
 
@@ -99,28 +134,32 @@ function Contact({ isDarkMode }) {
 
         Let's get in touch!
         </div>
-        
-           <FloatLabel className={`name ${redZone.name ? "name-error" : "" }`}>
+         <div className="name-block">     
+           <FloatLabel className={`name ${errors.name ? "name-error" : "" }`}>
                 <InputText id="name" value={form.name} onChange={(e) => handleChange("name", e.target.value)} />
                 <label htmlFor="name" > Name </label>
           </FloatLabel>
-          
-
-           <FloatLabel className={`email ${redZone.email ? "email-error" : "" }`}>
+          {errors.name && <small className="error">{errors.name}</small>}
+        </div>  
+          <div className="email-block">
+           <FloatLabel className={`email ${errors.email ? "email-error" : "" }`}>
                 <InputText id="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} />
                 <label htmlFor="email" > Email </label>
           </FloatLabel>
-           
-
-          <FloatLabel className={`message ${redZone.message ? "message-error" : "" }`}>
+          {errors.email && <small className="error">{errors.email}</small>}
+          </div>
+          <div className="message-block">
+          <FloatLabel className={`message ${errors.message ? "message-error" : "" }`}>
           <InputTextarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} rows={5} cols={30} />
           <label htmlFor="message">Your Message</label>
          </FloatLabel>
-         <div className="error-block">
-          {errors.name && <small className="error">*{' '}{errors.name}</small>}
-          {errors.email && <small className="error">*{' '}{errors.email}</small>}
-          {errors.message && <small className="error">*{' '}{errors.message}</small>}
-          </div>
+         {errors.message && <small className="error">{errors.message}</small>}
+         </div>
+         {/* <div className="error-block"> */}
+          {/* {errors.name && <small className="error">*{' '}{errors.name}</small>}
+          {errors.email && <small className="error">*{' '}{errors.email}</small>} */}
+          
+          {/* </div> */}
          <Button
           className="contact-submit"
           label="Submit"
