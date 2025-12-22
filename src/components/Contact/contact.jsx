@@ -150,7 +150,7 @@ const validateField = async (field, value) => {
           </div>
           <div className="message-block">
           <FloatLabel className={`message ${errors.message ? "message-error" : "" }`}>
-          <InputTextarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} rows={5} cols={30} />
+          <InputTextarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} rows={8} cols={30} />
           <label htmlFor="message">Your Message</label>
          </FloatLabel>
          {errors.message && <small className="error">{errors.message}</small>}
