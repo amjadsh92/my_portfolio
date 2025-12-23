@@ -103,6 +103,13 @@ background-color: #dcdcdc57;
 
      }
 
+    .message{
+
+      .p-inputtextarea {
+  resize: vertical;
+}
+    } 
+
    .name-error,.email-error,.message-error{
     
     .p-component{

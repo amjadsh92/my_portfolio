@@ -41,7 +41,11 @@ function Contact({ isDarkMode }) {
     }
   )
     // .min(2, "Name must be at least 2 characters")
-    .max(50, "Name must be at most 50 characters")
+    .max(40, "Name must be at most 50 characters")
+    .matches(
+      /^[a-zA-Z\s'-]+$/,
+      "Name can only contain letters and spaces"
+    )
     .matches(noHtmlRegex, "Name must not contain HTML or script characters"),
 
   email: yup
@@ -151,7 +155,7 @@ const validateField = async (field, value) => {
           <div className="message-block">
           <FloatLabel className={`message ${errors.message ? "message-error" : "" }`}>
           <InputTextarea id="message" value={form.message} onChange={(e) => handleChange("message", e.target.value)} rows={8} cols={30} />
-          <label htmlFor="message">Your Message</label>
+          <label htmlFor="message">Your message</label>
          </FloatLabel>
          {errors.message && <small className="error">{errors.message}</small>}
          </div>
