@@ -24,6 +24,8 @@ function Contact({ isDarkMode }) {
 
   const [errors, setErrors] = useState({});
 
+  const [buttonPressed, setButtonPressed] = useState(false)
+
   // const [redZone, setRedZone] = useState({name:false, email:false, message:false})
    
 
@@ -94,13 +96,14 @@ const validateField = async (field, value) => {
     // setErrors((prev) => ({ ...prev, [field]: null }));
     // setRedZone((prev) => ({ ...prev, [field]: false }) )
     setForm((prev) => ({ ...prev, [field]: value }));
-    validateField(field, value);
+    buttonPressed ? validateField(field, value) : "";
   };
 
   const handleSubmit = async () => {
     try {
       await contactSchema.validate(form, { abortEarly: false });
       setErrors({});
+      setButtonPressed(true)
 
      
       console.log("Form submitted:", form);
@@ -114,6 +117,7 @@ const validateField = async (field, value) => {
 
       });
       setErrors(newErrors);
+      setButtonPressed(true)
       // setRedZone((prev) => ({...prev,...red}))
     }
   };
