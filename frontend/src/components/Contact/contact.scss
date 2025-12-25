@@ -88,20 +88,20 @@ background-color: #dcdcdc57;
     .name, .email, .message{
       // width:80%;
       width:100%;
-      // margin-top:30px;
+      margin-top:15px;
       .p-inputtext{
         width:100%
       }
     }
 
-    .name{
-      margin-top:30px;
-    }
+    // .name{
+    //   margin-top:30px;
+    // }
 
-     .email, .message{
-      margin-top:25px;
+    //  .email, .message{
+    //   margin-top:25px;
 
-     }
+    //  }
 
     .message{
 
@@ -158,10 +158,11 @@ background-color: #dcdcdc57;
 .error{
   position:absolute;
   // width:80%;
-  top:0%;
+  top:-11px;
   right:0%;
   text-align:left;
   margin-top:10px;
+  margin-bottom:15px;
   color:red;
   font-size:11px;
   }

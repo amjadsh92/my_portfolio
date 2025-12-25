@@ -46,7 +46,9 @@ function Contact({ isDarkMode }) {
     .max(40, "Name must be at most 50 characters")
     .matches(
       /^[a-zA-Z\s'-]+$/,
-      "Name can only contain letters and spaces"
+      {message: "Name can only contain letters and spaces",
+       excludeEmptyString: true
+      } 
     )
     .matches(noHtmlRegex, "Name must not contain HTML or script characters"),
 
