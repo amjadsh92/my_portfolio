@@ -107,8 +107,24 @@ const validateField = async (field, value) => {
       setErrors({});
       setButtonPressed(true)
 
+      const response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (!response.ok) {
+      console.log("error occured")
+    }
+
+    console.log("Email sent successfully");
+
+    setForm({ name: "", email: "", message: "" });
+
      
-      console.log("Form submitted:", form);
+      // console.log("Form submitted:", form);
 
     } catch (validationError) {
       const newErrors = {};
