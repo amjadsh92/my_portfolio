@@ -5,6 +5,7 @@ import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
+import { Dialog } from 'primereact/dialog';
 import * as yup from "yup";
 
 function Contact({ isDarkMode }) {
@@ -23,8 +24,11 @@ function Contact({ isDarkMode }) {
   });
 
   const [errors, setErrors] = useState({});
-
   const [buttonPressed, setButtonPressed] = useState(false)
+  const [dialog, setDialog] = useState({
+    visible: false,
+    message: "",
+  });
 
   // const [redZone, setRedZone] = useState({name:false, email:false, message:false})
    
@@ -106,22 +110,23 @@ const validateField = async (field, value) => {
       await contactSchema.validate(form, { abortEarly: false });
       setErrors({});
       setButtonPressed(true)
+      setDialog({visible:true, message:"Are you sure you want to send this message to Amjad?"})
 
-      const response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
+    //   const response = await fetch("http://localhost:5000/contact", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(form),
+    // });
 
-    if (!response.ok) {
-      console.log("error occured")
-    }
+    // if (!response.ok) {
+    //   console.log("error occured")
+    // }
 
-    console.log("Email sent successfully");
+    // console.log("Email sent successfully");
 
-    setForm({ name: "", email: "", message: "" });
+    // setForm({ name: "", email: "", message: "" });
 
      
       // console.log("Form submitted:", form);
@@ -192,9 +197,122 @@ const validateField = async (field, value) => {
           severity="info"
           onClick={handleSubmit}
           />
+
+          < LoginResultModal dialog={dialog} setDialog={setDialog} form={form} setForm={setForm} />
  
       </div>
 
       </div>)
 }
+
+
+
+function LoginResultModal({ dialog, setDialog, form, setForm }) {
+ 
+    const [isLoading, setIsLoading] = useState(false) 
+    const [messageSent, setMessageSent] = useState(false)
+    const [errorOcuured, setErrorOccured] = useState(false)
+
+    async function  sendMessage(){
+      try{
+      setIsLoading(true)
+      // setTimeout(setMessageSent(false))
+      const response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (!response.ok) {
+      console.log("error occured")
+       setIsLoading(false)
+       setDialog({...dialog,message:"An error has occured. Try again."})
+       setMessageSent(true) 
+       setErrorOccured(true)
+       
+       
+    }
+     
+    setIsLoading(false)
+    setDialog({...dialog,message:"Your message has been sent successfully to Amjad."})
+    setMessageSent(true)
+    console.log("Email sent successfully");
+   
+    setForm({ name: "", email: "", message: "" });
+
+     
+      // console.log("Form submitted:", form);
+    }catch(error){
+    setIsLoading(false)
+    setDialog({...dialog,message:"The server is down. Try again later."})
+    setMessageSent(true)
+    setErrorOccured(true)
+
+    }  
+  }
+
+  return (
+    <Dialog
+      header={`${messageSent ? ( `${errorOcuured ? "Failed :(" : "Success!"}`) : "Send message?"}`}
+      visible={dialog.visible}
+      className="dialog-login"
+      onHide={() => {
+           
+        setDialog({ ...dialog, visible: false })
+        setMessageSent(false)
+        setErrorOccured(false)
+      
+      }}
+      footer={
+        <div>
+          <Button
+            label="Ok"
+            icon={`pi pi-check`}
+            // onClick={() => setDialog({ ...dialog, visible: false })}
+            onClick={() => {
+              setDialog({ ...dialog, visible: false })
+              setErrorOccured(false)
+              setTimeout(() => setMessageSent(false),500)
+            } }
+            autoFocus
+            visible={messageSent ? true : false}
+           
+          />
+          <Button
+            label="Yes"
+            icon={`pi ${isLoading ? "pi-spin pi-spinner" : "pi-check"}`}
+            // onClick={() => setDialog({ ...dialog, visible: false })}
+             onClick={sendMessage}
+            autoFocus
+            visible={messageSent ? false : true}
+          />
+          <Button
+            label="No"
+            icon="pi pi-times"
+            onClick={() => {
+              setDialog({ ...dialog, visible: false })
+              setErrorOccured(false)
+              setMessageSent(false)
+            }}
+            autoFocus
+            visible={messageSent ? false : true}
+          />
+        </div>
+      }
+    >
+      <DialogContent message={dialog.message} />
+    </Dialog>
+  );
+}
+
+function DialogContent({ message }) {
+  return (
+    <>
+      <div className="dialogContent-login">{message}</div>
+    </>
+  );
+}
+
 export default Contact
