@@ -7,6 +7,12 @@ import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
 import { Dialog } from 'primereact/dialog';
 import * as yup from "yup";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import {faCircleXmark} from '@fortawesome/free-solid-svg-icons';
+import {faPaperPlane}  from '@fortawesome/free-solid-svg-icons';
+
 
 function Contact({ isDarkMode }) {
 
@@ -31,7 +37,16 @@ function Contact({ isDarkMode }) {
   });
 
   // const [redZone, setRedZone] = useState({name:false, email:false, message:false})
-   
+
+ const sendButton = 
+   <div className="send-button">
+    
+        <FontAwesomeIcon icon={faPaperPlane} className="sendButtonIcon" />
+        <span>Send</span>
+      
+    
+
+   </div>
 
  const contactSchema = yup.object().shape({
   name: yup
@@ -40,7 +55,7 @@ function Contact({ isDarkMode }) {
     .required("Name is required")
     .test(
     "min-if-not-empty",
-    "Name must be at least 10 characters",
+    "Name must be at least 2 characters",
     (value) => {
       if (!value) return true; // required handles empty
       return value.length >= 2;
@@ -70,7 +85,7 @@ function Contact({ isDarkMode }) {
     .required("Message is required")
      .test(
     "min-if-not-empty",
-    "Name must be at least 10 characters",
+    "Message must be at least 10 characters",
     (value) => {
       if (!value) return true; // required handles empty
       return value.length >= 10;
@@ -193,7 +208,8 @@ const validateField = async (field, value) => {
           {/* </div> */}
          <Button
           className="contact-submit"
-          label="Submit"
+          // label="Send"
+          label={sendButton}
           severity="info"
           onClick={handleSubmit}
           />
@@ -213,6 +229,35 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
     const [messageSent, setMessageSent] = useState(false)
     const [errorOcuured, setErrorOccured] = useState(false)
 
+     const dialogHeader = (
+  <div className="dialog-header">
+    {messageSent && !errorOcuured && (
+      <>
+        {/* <FontAwesomeIcon className="fa-solid fa-circle-check success-icon" /> */}
+        {/* <FontAwesomeIcon icon={byPrefixAndName.fas['circle-check']} /> */}
+        <FontAwesomeIcon icon={faCircleCheck} className="circleCheck" />
+        <span>Success</span>
+      </>
+    )}
+
+    {messageSent && errorOcuured && (
+      <>
+        {/* <FontAwesomeIcon className="fa-solid fa-circle-xmark error-icon" /> */}
+        <FontAwesomeIcon icon={faCircleXmark} className="xMark" />
+        <span>Failed</span>
+      </>
+    )}
+
+    {!messageSent && (
+      <>
+        {/* <FontAwesomeIcon className="fa-solid fa-paper-plane question-icon" /> */}
+        <FontAwesomeIcon icon={faPaperPlane} className="paperPlane" />
+        <span>Send message?</span>
+      </>
+    )}
+  </div>
+);
+
     async function  sendMessage(){
       try{
       setIsLoading(true)
@@ -225,6 +270,8 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
       body: JSON.stringify(form),
     });
 
+    console.log(response)
+
     if (!response.ok) {
       console.log("error occured")
        setIsLoading(false)
@@ -235,6 +282,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
        
     }
      
+    if(response.ok){
     setIsLoading(false)
     setDialog({...dialog,message:"Your message has been sent successfully to Amjad."})
     setMessageSent(true)
@@ -242,7 +290,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
    
     setForm({ name: "", email: "", message: "" });
 
-     
+    } 
       // console.log("Form submitted:", form);
     }catch(error){
     setIsLoading(false)
@@ -255,25 +303,27 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
 
   return (
     <Dialog
-      header={`${messageSent ? ( `${errorOcuured ? "Failed :(" : "Success!"}`) : "Send message?"}`}
+      // header={`${messageSent ? ( `${errorOcuured ? "Failed :(" : "Success!"}`) : "Send message?"}`}
+      header={dialogHeader}
       visible={dialog.visible}
       className="dialog-login"
       onHide={() => {
            
         setDialog({ ...dialog, visible: false })
-        setMessageSent(false)
-        setErrorOccured(false)
+        setTimeout(() => setMessageSent(false), 500)
+        setTimeout(() => setErrorOccured(false), 500)
+        
       
       }}
       footer={
         <div>
           <Button
-            label="Ok"
+            label="OK"
             icon={`pi pi-check`}
             // onClick={() => setDialog({ ...dialog, visible: false })}
             onClick={() => {
               setDialog({ ...dialog, visible: false })
-              setErrorOccured(false)
+              setTimeout(()=> setErrorOccured(false),500)
               setTimeout(() => setMessageSent(false),500)
             } }
             autoFocus
@@ -292,9 +342,9 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
             label="No"
             icon="pi pi-times"
             onClick={() => {
-              setDialog({ ...dialog, visible: false })
-              setErrorOccured(false)
-              setMessageSent(false)
+             setDialog({ ...dialog, visible: false })
+             setTimeout(()=> setErrorOccured(false), 500)
+             setTimeout(() => setMessageSent(false), 500)
             }}
             autoFocus
             visible={messageSent ? false : true}

@@ -60,12 +60,13 @@ background-color: #dcdcdc57;
 
 .contact-text {
     margin-top: 20px;
+    font-size: 19px;
     text-align: center;
     font-family: "montserrat";
     color: #6b747b;
     line-height: 1.5rem;
     text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
-    font-size: 1.0625rem;
+    // font-size: 1.0625rem;
     width: 60%;
 }
 
@@ -85,6 +86,11 @@ background-color: #dcdcdc57;
     align-items: center;
     padding:30px;
 
+    .sendButtonIcon{
+      margin-right:10px;
+      font-size:14px;
+    }
+
     .name, .email, .message{
       // width:80%;
       width:100%;
@@ -92,6 +98,12 @@ background-color: #dcdcdc57;
       .p-inputtext{
         width:100%
       }
+
+      .p-inputtext:enabled:focus {
+    
+    box-shadow: 0 0 0 0.2rem var(--blue-100) !important;
+    
+}
     }
 
     // .name{
@@ -136,8 +148,16 @@ background-color: #dcdcdc57;
   border:1px solid #609af8;
   width:25%;
   margin-top: 25px;
+
+  .p-button-info:enabled:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--blue-400), 0 1px 2px 0 rgb(0, 0, 0) !important;
+}
   
 } 
+
+.contact-submit.p-button.p-button-info:enabled:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--blue-400), 0 1px 2px 0 rgb(0, 0, 0) !important;
+}
 
 .name-block,.email-block,.message-block{
   // margin-bottom:30px
@@ -168,6 +188,8 @@ background-color: #dcdcdc57;
   }
 
 
+
+
 }
 
 .dialog-login{
@@ -179,5 +201,27 @@ background-color: #dcdcdc57;
     min-width:94.825px;
   }
 
+  .circleCheck{
+    color: green;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+   .xMark{
+    color: red;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .paperPlane{
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--bluegray-700)
+  }
+
+
 }
+
+
+
 
