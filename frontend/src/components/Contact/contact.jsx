@@ -1,6 +1,6 @@
 /* eslint-disable */
 import "./contact.scss";
-import React, { useState } from "react";
+import React, { useState,useRef, useEffect } from "react";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import { InputTextarea } from "primereact/inputtextarea";
@@ -8,7 +8,6 @@ import { Button } from "primereact/button";
 import { Dialog } from 'primereact/dialog';
 import * as yup from "yup";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import {faCircleXmark} from '@fortawesome/free-solid-svg-icons';
 import {faPaperPlane}  from '@fortawesome/free-solid-svg-icons';
@@ -16,12 +15,9 @@ import {faPaperPlane}  from '@fortawesome/free-solid-svg-icons';
 
 function Contact({ isDarkMode }) {
 
-   
-  //  const [name, setName] = useState('');
-  //  const [email, setEmail] = useState('');
-  //  const [message, setMessage] = useState('')
-
-  const noHtmlRegex = /^[^<>]*$/;
+ 
+ 
+ const noHtmlRegex = /^[^<>]*$/;
 
   const [form, setForm] = useState({
     name: "",
@@ -36,7 +32,31 @@ function Contact({ isDarkMode }) {
     message: "",
   });
 
-  // const [redZone, setRedZone] = useState({name:false, email:false, message:false})
+
+
+
+  
+  const isFirstRender = useRef(true);
+
+  
+  useEffect(() => {
+    const savedForm = localStorage.getItem("contactForm");
+    if (savedForm) {
+      setForm(JSON.parse(savedForm));
+    }
+  }, []);
+
+  
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    localStorage.setItem("contactForm", JSON.stringify(form));
+  }, [form]);
+
+
+ 
 
  const sendButton = 
    <div className="send-button">
@@ -57,11 +77,11 @@ function Contact({ isDarkMode }) {
     "min-if-not-empty",
     "Name must be at least 2 characters",
     (value) => {
-      if (!value) return true; // required handles empty
+      if (!value) return true; 
       return value.length >= 2;
     }
   )
-    // .min(2, "Name must be at least 2 characters")
+   
     .max(40, "Name must be at most 50 characters")
     .matches(
       /^[a-zA-Z\s'-]+$/,
@@ -87,11 +107,11 @@ function Contact({ isDarkMode }) {
     "min-if-not-empty",
     "Message must be at least 10 characters",
     (value) => {
-      if (!value) return true; // required handles empty
+      if (!value) return true; 
       return value.length >= 10;
     }
   )
-    // .min(10, "Message must be at least 10 characters")
+    
     .max(1000, "Message must be at most 1000 characters")
     .matches(noHtmlRegex, "Message must not contain HTML or script characters"),
 });
@@ -113,9 +133,7 @@ const validateField = async (field, value) => {
 
 
   const handleChange = (field, value) => {
-    // setForm((prev) => ({ ...prev, [field]: value }));
-    // setErrors((prev) => ({ ...prev, [field]: null }));
-    // setRedZone((prev) => ({ ...prev, [field]: false }) )
+    
     setForm((prev) => ({ ...prev, [field]: value }));
     buttonPressed ? validateField(field, value) : "";
   };
@@ -127,36 +145,19 @@ const validateField = async (field, value) => {
       setButtonPressed(true)
       setDialog({visible:true, message:"Are you sure you want to send this message to Amjad?"})
 
-    //   const response = await fetch("http://localhost:5000/contact", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(form),
-    // });
-
-    // if (!response.ok) {
-    //   console.log("error occured")
-    // }
-
-    // console.log("Email sent successfully");
-
-    // setForm({ name: "", email: "", message: "" });
-
-     
-      // console.log("Form submitted:", form);
+    
 
     } catch (validationError) {
       const newErrors = {};
-      // const red = {}
+      
       validationError.inner.forEach((err) => {
         newErrors[err.path] = err.message;
-        // red[err.path]=true
+        
 
       });
       setErrors(newErrors);
       setButtonPressed(true)
-      // setRedZone((prev) => ({...prev,...red}))
+      
     }
   };
 
@@ -201,14 +202,10 @@ const validateField = async (field, value) => {
          </FloatLabel>
          {errors.message && <small className="error">{errors.message}</small>}
          </div>
-         {/* <div className="error-block"> */}
-          {/* {errors.name && <small className="error">*{' '}{errors.name}</small>}
-          {errors.email && <small className="error">*{' '}{errors.email}</small>} */}
-          
-          {/* </div> */}
+        
          <Button
           className="contact-submit"
-          // label="Send"
+          
           label={sendButton}
           severity="info"
           onClick={handleSubmit}
@@ -233,8 +230,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
   <div className="dialog-header">
     {messageSent && !errorOcuured && (
       <>
-        {/* <FontAwesomeIcon className="fa-solid fa-circle-check success-icon" /> */}
-        {/* <FontAwesomeIcon icon={byPrefixAndName.fas['circle-check']} /> */}
+       
         <FontAwesomeIcon icon={faCircleCheck} className="circleCheck" />
         <span>Success</span>
       </>
@@ -242,7 +238,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
 
     {messageSent && errorOcuured && (
       <>
-        {/* <FontAwesomeIcon className="fa-solid fa-circle-xmark error-icon" /> */}
+       
         <FontAwesomeIcon icon={faCircleXmark} className="xMark" />
         <span>Failed</span>
       </>
@@ -250,7 +246,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
 
     {!messageSent && (
       <>
-        {/* <FontAwesomeIcon className="fa-solid fa-paper-plane question-icon" /> */}
+       
         <FontAwesomeIcon icon={faPaperPlane} className="paperPlane" />
         <span>Send message?</span>
       </>
@@ -261,7 +257,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
     async function  sendMessage(){
       try{
       setIsLoading(true)
-      // setTimeout(setMessageSent(false))
+      
       const response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
@@ -289,9 +285,10 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
     console.log("Email sent successfully");
    
     setForm({ name: "", email: "", message: "" });
+    localStorage.removeItem("contactForm");
 
     } 
-      // console.log("Form submitted:", form);
+    
     }catch(error){
     setIsLoading(false)
     setDialog({...dialog,message:"The server is down. Try again later."})
@@ -303,7 +300,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
 
   return (
     <Dialog
-      // header={`${messageSent ? ( `${errorOcuured ? "Failed :(" : "Success!"}`) : "Send message?"}`}
+      
       header={dialogHeader}
       visible={dialog.visible}
       className="dialog-login"
@@ -320,7 +317,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
           <Button
             label="OK"
             icon={`pi pi-check`}
-            // onClick={() => setDialog({ ...dialog, visible: false })}
+            
             onClick={() => {
               setDialog({ ...dialog, visible: false })
               setTimeout(()=> setErrorOccured(false),500)
@@ -333,7 +330,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
           <Button
             label="Yes"
             icon={`pi ${isLoading ? "pi-spin pi-spinner" : "pi-check"}`}
-            // onClick={() => setDialog({ ...dialog, visible: false })}
+            
              onClick={sendMessage}
             autoFocus
             visible={messageSent ? false : true}
