@@ -104,6 +104,10 @@ background-color: #dcdcdc57;
     box-shadow: 0 0 0 0.2rem var(--blue-100) !important;
     
 }
+
+.p-inputtext:enabled:hover {
+    border-color: var(--blue-400);
+}
     }
 
     // .name{
@@ -126,12 +130,21 @@ background-color: #dcdcdc57;
     
     .p-component{
       border: 1px solid red;
+      border-color:red;
     
     }
 
     .p-inputtext:enabled:focus {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
+  border-color:red !important;
+}
+
+ .p-inputtext:enabled:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color:red !important;
+
 }
 
    }  
@@ -201,6 +214,10 @@ background-color: #dcdcdc57;
     min-width:94.825px;
   }
 
+  .p-button:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--blue-400), 0 1px 2px 0 rgb(0, 0, 0) !important;
+}
+
   .circleCheck{
     color: green;
     margin-right: 10px;
@@ -215,7 +232,7 @@ background-color: #dcdcdc57;
 
   .paperPlane{
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 16px;
     color: var(--bluegray-700)
   }
 
@@ -223,5 +240,212 @@ background-color: #dcdcdc57;
 }
 
 
+@media screen and (max-width: 960px) {
+
+  .contact-form {
+    
+    width: 90%;
+
+    
+}
+}
 
 
+@media screen and (max-width: 650px) {
+
+  .contact-form {
+    
+    
+
+    .contact-submit.p-button{
+   
+   
+    width:50%;
+   
+  }
+
+  .name-block,.email-block,.message-block{
+  
+  
+  width:100%;
+}
+}
+}
+
+
+@media screen and (max-width: 500px) {
+
+.contact-form{
+
+  padding-left:15px;
+  padding-right:15px;
+
+  .form-title {
+    font-family: "Fira Sans";
+    color: #609af8;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 400;
+    width: 90%;
+    text-align: center;
+    
+}
+
+ .p-button{
+    font-size:0.9rem;
+  }
+
+
+  .sendButtonIcon {
+   
+    font-size: 13px;
+}
+} 
+
+.dialog-login{
+    min-width:unset !important;
+    width:90%;
+  }  
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+  .contact{
+    .contact-title{
+
+      font-size: 28.8px;
+
+    }
+
+    .contact-text{
+      font-size:17px;
+    }
+  }
+
+  .contact-form .p-inputtext {
+    height: 2.5rem;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  
+ .contact-form .p-inputtextarea.p-inputtext {
+    height:12rem;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+  
+
+  .contact-form .form-title{
+
+    font-size:20px;
+  }
+
+  .contact-form {
+    .name-block,.email-block,.message-block{
+
+
+      .p-float-label {
+      margin-top: 1.25rem;
+    }
+
+    .p-float-label label {
+      font-size: 0.75rem;
+    }
+
+    .p-float-label:has(input:focus) label, .p-float-label:has(input.p-filled) label, .p-float-label:has(input:-webkit-autofill) label, .p-float-label:has(textarea:focus) label, .p-float-label:has(textarea.p-filled) label, .p-float-label:has(.p-inputwrapper-focus) label, .p-float-label:has(.p-inputwrapper-filled) label {
+    top: -.55rem;
+    font-size: 11px;
+}
+
+    }
+ 
+    .name-block,.email-block{   
+ .error {
+    position: absolute;
+    top: unset;
+    bottom:-30px;
+    font-size: 9.5px;
+    right:4px;
+}
+ }
+
+  .message-block{
+    .error{
+      bottom:-25px !important;
+      position: absolute;
+      top: unset;
+      // bottom:-30px;
+      font-size: 9.5px;
+      right:4px;
+    }
+  
+}
+
+.contact-submit.p-button {
+        height:37px;
+    }
+
+    }
+
+
+      
+
+
+.dialog-login .p-dialog-content {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.dialog-login .p-dialog-header {
+  padding: 1.2rem 1rem;
+  font-size: 1rem;
+}
+
+.dialog-login .p-dialog-footer {
+  padding: 1.5rem 1rem;
+}
+
+.p-dialog .p-dialog-header .p-dialog-title {
+   
+    font-size: 1.15rem;
+}
+
+.dialog-login .paperPlane {
+  
+    font-size: 15px;
+
+  
+  }
+
+ .dialog-login{
+  .p-button {
+   
+    font-size: 0.9rem;
+    height: 38px;
+    min-width: 90px;
+}
+
+.p-button .p-button-icon-left {
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+  .circleCheck{
+    
+    font-size: 17px;
+  }
+
+   .xMark{
+    
+    font-size: 17px;
+  }
+ } 
+
+
+}
