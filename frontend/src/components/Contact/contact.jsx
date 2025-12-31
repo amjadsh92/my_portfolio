@@ -190,7 +190,7 @@ const validateField = async (field, value) => {
         </div>  
           <div className="email-block">
            <FloatLabel className={`email ${errors.email ? "email-error" : "" }`}>
-                <InputText id="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} />
+                <InputText  id="email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} />
                 <label htmlFor="email" > Email </label>
           </FloatLabel>
           {errors.email && <small className="error">{errors.email}</small>}
@@ -332,7 +332,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
             icon={`pi ${isLoading ? "pi-spin pi-spinner" : "pi-check"}`}
             
              onClick={sendMessage}
-            autoFocus
+            
             visible={messageSent ? false : true}
           />
           <Button
