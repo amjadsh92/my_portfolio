@@ -175,10 +175,10 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
 
   return () => observer.disconnect();
 }, [
-  homeRef,
-  aboutRef,
-  projectsRef,
-  contactRef,
+  // homeRef,
+  // aboutRef,
+  // projectsRef,
+  // contactRef,
   automaticHighlightDisabled,
 ]);
 

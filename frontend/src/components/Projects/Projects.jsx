@@ -224,25 +224,6 @@ const isSmallScreen = useIsSmallScreen(960);
   const  showMore = async () => {
  
     
-    // window.scrollBy({
-    //   top: 250,
-    //   left: 0,
-    //   behavior: "smooth",
-    // });
-
-//     const motionScrollDown = (distance = 100, duration = 0.8) => {
-//   const start = window.scrollY;
-
-//   animate(0, 1, {
-//     duration,
-//     ease: "easeOut",
-//     onUpdate: (latest) => {
-//       window.scrollTo(0, start + distance * latest);
-//     },
-//   });
-// };
-
-    // motionScrollDown(200, 1)
 
     
 
