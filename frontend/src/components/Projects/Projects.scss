@@ -164,7 +164,7 @@
     scroll-margin-top: 70px; 
     display: flex;
     align-items: stretch;
-    justify-content: stretch;
+    // justify-content: stretch;
     padding: 2rem 4rem;
   }
 
@@ -227,7 +227,10 @@
     color: #6b747b;
     line-height: 1.6;
 
-    flex: 1 1 60vh;
+    // flex: 1 1 60vh;
+
+    flex:1 1;
+    
     margin-top: -20px;
     border-radius: 5px;
     background-color: #d0e1fd3b;

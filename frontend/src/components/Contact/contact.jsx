@@ -163,7 +163,7 @@ const validateField = async (field, value) => {
 
 
   return (
-    <div  className="contact">
+    <div  className={`${isDarkMode ? "contact-dark" : "contact-light"}`}>
       <div className="contact-title">
           Contact
       </div>
@@ -211,7 +211,7 @@ const validateField = async (field, value) => {
           onClick={handleSubmit}
           />
 
-          < LoginResultModal dialog={dialog} setDialog={setDialog} form={form} setForm={setForm} />
+          < ContactModal dialog={dialog} setDialog={setDialog} form={form} setForm={setForm} />
  
       </div>
 
@@ -220,7 +220,7 @@ const validateField = async (field, value) => {
 
 
 
-function LoginResultModal({ dialog, setDialog, form, setForm }) {
+function ContactModal({ dialog, setDialog, form, setForm }) {
  
     const [isLoading, setIsLoading] = useState(false) 
     const [messageSent, setMessageSent] = useState(false)
@@ -266,10 +266,10 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
       body: JSON.stringify(form),
     });
 
-    console.log(response)
+    
 
     if (!response.ok) {
-      console.log("error occured")
+      
        setIsLoading(false)
        setDialog({...dialog,message:"An error has occured. Try again."})
        setMessageSent(true) 
@@ -280,9 +280,9 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
      
     if(response.ok){
     setIsLoading(false)
-    setDialog({...dialog,message:"Your message has been sent successfully to Amjad."})
+    setDialog({...dialog,message:"Your message has been sent to Amjad."})
     setMessageSent(true)
-    console.log("Email sent successfully");
+    
    
     setForm({ name: "", email: "", message: "" });
     localStorage.removeItem("contactForm");
@@ -303,7 +303,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
       
       header={dialogHeader}
       visible={dialog.visible}
-      className="dialog-login"
+      className="confirmation-dialog"
       onHide={() => {
            
         setDialog({ ...dialog, visible: false })
@@ -357,7 +357,7 @@ function LoginResultModal({ dialog, setDialog, form, setForm }) {
 function DialogContent({ message }) {
   return (
     <>
-      <div className="dialogContent-login">{message}</div>
+      <div>{message}</div>
     </>
   );
 }
