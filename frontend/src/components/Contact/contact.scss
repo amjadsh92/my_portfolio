@@ -36,7 +36,15 @@
 
 .contact-dark{
 
-  background-color: rgb(28 35 46);
+  // background-color: rgb(28 35 46);
+  // background: linear-gradient(
+  //   180deg,
+  //   var(--surface-d) 5px,
+  //   rgb(28 35 46) 5px,
+  //   rgb(28 35 46) 100%
+  // );
+
+  background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(28, 35, 46) 5px, rgb(28, 35, 46) 100%);
 
   .contact-title {
     
@@ -76,15 +84,16 @@
     
        box-shadow: 0 0 0 0.1rem #3b82f6 !important;
     }
-
+.name,.email,.message{
     .p-inputtext:enabled:hover {
     border-color: #3b82f6;
  }
+}
 
  .p-button.p-button-info, .p-button-group.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button, .p-fileupload-choose.p-button-info {
     color: var(--surface-900);
-    background: #38bdf8;
-    border: 1px solid #38bdf8;
+    background: #3366b9;
+    border: 1px solid #3366b9;
 }
 
 .contact-submit.p-button {
@@ -149,10 +158,37 @@
 
 
 
+
+
+
+
     
 }
+
+
+
 }
 
+
+.confirmation-dialog.confirmation-dialog-dark {
+
+.p-button {
+    background: #165bcc !important;
+    border: 1px solid #165bcc !important;
+    color: #ffffffdb !important;
+    min-width: 94.825px;
+}
+
+.paperPlane {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #ffffffc4;
+}
+
+.p-button:focus {
+    box-shadow: 0 0 0 2px #223f6d, 0 0 0 4px var(--blue-400), 0 1px 2px 0 var(--blue-400) !important;
+}
+}
 
 
 

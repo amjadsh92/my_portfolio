@@ -211,7 +211,7 @@ const validateField = async (field, value) => {
           onClick={handleSubmit}
           />
 
-          < ContactModal dialog={dialog} setDialog={setDialog} form={form} setForm={setForm} />
+          < ContactModal dialog={dialog} setDialog={setDialog} form={form} setForm={setForm} isDarkMode={isDarkMode} />
  
       </div>
 
@@ -220,7 +220,7 @@ const validateField = async (field, value) => {
 
 
 
-function ContactModal({ dialog, setDialog, form, setForm }) {
+function ContactModal({ dialog, setDialog, form, setForm, isDarkMode }) {
  
     const [isLoading, setIsLoading] = useState(false) 
     const [messageSent, setMessageSent] = useState(false)
@@ -303,7 +303,7 @@ function ContactModal({ dialog, setDialog, form, setForm }) {
       
       header={dialogHeader}
       visible={dialog.visible}
-      className="confirmation-dialog"
+      className={`confirmation-dialog ${isDarkMode ? "confirmation-dialog-dark" :""}`}
       onHide={() => {
            
         setDialog({ ...dialog, visible: false })
