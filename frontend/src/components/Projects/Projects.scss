@@ -19,6 +19,7 @@
   align-items: center;
   gap: 30px;
   background-color: #f9fafb;
+  // background-image: url("../../assets/images/polka-dot.svg") !important;
   min-height: 677px !important;
   // background: linear-gradient(
   //   180deg,
@@ -28,16 +29,41 @@
   // );
 }
 
-.projects-light{
+// .projects-light{
 
-  background: linear-gradient(
-    180deg,
-    var(--surface-d) 5px,
-    #f9fafb 5px,
-    #f9fafb 100%
-  );
+//   background: linear-gradient(
+//     180deg,
+//     var(--surface-d) 5px,
+//     #f9fafb 5px,
+//     #f9fafb 100%
+//   );
 
+// }
+.projects-light {
+  // background-image:
+  //   url("../../assets/images/polka-dot.svg"),
+  //   linear-gradient(
+  //     180deg,
+  //     var(--surface-d) 5px,
+  //     #f9fafb 5px,
+  //     #f9fafb 100%
+  //   );
+
+  // background-repeat: repeat, no-repeat;
+  // background-size: auto, cover;
+
+  background:
+    
+    linear-gradient(
+      180deg,
+      var(--surface-d) 5px,
+      #f9fafb 5px,
+      #f9fafb 100%
+    );
+
+ 
 }
+
 
 .projects-dark{
 
@@ -233,7 +259,9 @@
     
     margin-top: -20px;
     border-radius: 5px;
-    background-color: #d0e1fd3b;
+    // background-color: #d0e1fd3b;
+    background-color:#f1f5fe;
+    //  background-color: #d0e1fd;
     border: 3px solid rgba(208, 225, 253);
 
     .project-name {
@@ -421,6 +449,7 @@
     font-size: 19px;
     border-radius: 10px;
     border: 2px solid;
+    // background-color: #f9fafb;
 
     &:focus,
     &:focus-visible {

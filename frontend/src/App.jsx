@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import { useRef, useState, useEffect, useContext } from "react";
 import Contact from "./components/Contact/contact";
+import Footer from "./components/Footer/footer";
 import { PrimeReactContext } from "primereact/api";
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
        <div id="contact" ref={contactRef} className="contact" >
         <Contact isDarkMode={isDarkMode} className="contact" />
       </div>
+      <Footer />
     </>
   );
 }

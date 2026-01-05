@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DotMatrix";
+  src: url("../../assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.footer{
+    display:flex;
+    // flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100px;
+    background-color:#e5e7eb;
+    // padding-top:20px;
+    // gap:10px;
+
+}
+
+.footer-text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+    gap:10px;
+}
+
+.footer-rights{
+
+    display:flex;
+    justify-content: center;
+    // font-family:"montserrat";
+    font-family: sans-serif;
+    color: var(--gray-700);
+    
+
+}
+
+.footer-follow{
+
+      font-family: sans-serif;
+    color: var(--gray-700);
+}
+
+// .footer-name{
+//     font-family: "Dotmatrix" !important;
+// }
+
+.github,.linkedin{
+    vertical-align: bottom;
+}
