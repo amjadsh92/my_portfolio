@@ -24,12 +24,18 @@
 }
 
 .contact-light{
-
+  
+  // background: linear-gradient(
+  //   180deg,
+  //   var(--surface-d) 5px,
+  //   #dcdcdc57 5px,
+  //   #dcdcdc57 100%
+  // );
   background: linear-gradient(
     180deg,
     var(--surface-d) 5px,
-    #dcdcdc57 5px,
-    #dcdcdc57 100%
+    #f3f3f3 5px,
+    #f3f3f3 100%
   );
 
 }
