@@ -50,7 +50,9 @@
   //   rgb(28 35 46) 100%
   // );
 
-  background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(28, 35, 46) 5px, rgb(28, 35, 46) 100%);
+  // background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(28, 35, 46) 5px, rgb(28, 35, 46) 100%);
+  // background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(42, 50, 61) 5px, rgb(42, 50, 61) 100%);
+  background: linear-gradient(180deg, #2e3440 5px, rgb(42, 50, 61) 5px, rgb(42, 50, 61) 100%);
 
   .contact-title {
     
@@ -374,7 +376,19 @@
 }
 
 @media screen and (max-width: 650px) {
-  .contact-form {
+  // .contact-form {
+  //   .contact-submit.p-button {
+  //     width: 50%;
+  //   }
+
+  //   .name-block,
+  //   .email-block,
+  //   .message-block {
+  //     width: 100%;
+  //   }
+  // }
+ .contact-dark,.contact-light{
+    .contact-form {
     .contact-submit.p-button {
       width: 50%;
     }
@@ -385,8 +399,9 @@
       width: 100%;
     }
   }
-}
 
+}
+}
 @media screen and (max-width: 500px) {
   .contact-form {
     padding-left: 15px;
