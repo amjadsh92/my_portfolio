@@ -61,7 +61,7 @@ function App() {
        <div id="contact" ref={contactRef} className="contact" >
         <Contact isDarkMode={isDarkMode} className="contact" />
       </div>
-      <Footer />
+      <Footer isDarkMode={isDarkMode} />
     </>
   );
 }
