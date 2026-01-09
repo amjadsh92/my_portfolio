@@ -26,7 +26,7 @@ function About({ isDarkMode }) {
     { logo: postgreLogo, title: "POSTGRES" },
     { logo: prismaLogo, title: "PRISMA" },
     { logo: primeReactLogo, title: "PRIME REACT" },
-    { logo: passportJSLogo, title: "Passport.js" }
+    { logo: passportJSLogo, title: "PASSPORT.JS" }
   ];
 
   
@@ -86,7 +86,7 @@ function About({ isDarkMode }) {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, margin: "-300px"}}
+        viewport={{ once: true, margin: "-100px"}}
       >
         {skills.map((skill, i) => (
           <motion.div className="skill" key={i} variants={itemVariants}>

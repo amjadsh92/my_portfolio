@@ -251,6 +251,13 @@
 }
 
 .navbar {
+
+  .p-link:focus-visible {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #5d98fcd4 !important;
+}
+
   .p-menuitem-icon {
     pointer-events: none;
   }
@@ -413,6 +420,11 @@
     .p-menubar .p-menubar-button {
       height: 2.5rem; 
       width: 2.5rem;  
+    }
+    .p-menubar .p-menubar-button:focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: 0 0 0 0.2rem rgb(93 152 252 / 63%);
     }
 
     .p-menubar > ul > li {
