@@ -7,12 +7,16 @@ import 'primereact/resources/primereact.css';
 // import 'primereact/resources/themes/lara-light-indigo/theme.css';
 // import 'primereact/resources/themes/lara-dark-indigo/theme.css';
 
+import BootLoader from './BootLoader.jsx';
+
 import 'primeicons/primeicons.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <BootLoader>
      <PrimeReactProvider>
     <App />
     </PrimeReactProvider>
+   </BootLoader>   
   </StrictMode>,
 )

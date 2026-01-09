@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/themes/lara-dark-indigo/theme.css"/>
-    <link id="theme-link" rel="stylesheet" href="/themes/lara-light-indigo/theme.css"/>
+    <!-- <link id="theme-link" rel="stylesheet" href="/themes/lara-light-indigo/theme.css"/>  -->
+    <link id="theme-link" rel="stylesheet" />
+    <script>
+      (function () {
+        // const isDark = JSON.parse(localStorage.getItem("isDarkMode"));
+        // const themeLink = document.getElementById("theme-link");
+
+        const storedTheme = localStorage.getItem("isDarkMode");
+        const isDark = storedTheme === "true"; 
+        const themeLink = document.getElementById("theme-link");
+        themeLink.href = isDark
+          ? "/themes/lara-dark-indigo/theme.css"
+          : "/themes/lara-light-indigo/theme.css";
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my_portfolio</title>
   </head>

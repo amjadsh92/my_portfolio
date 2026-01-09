@@ -20,3 +20,10 @@ body{
 .contact {
   scroll-margin-top: 70px; 
 }
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

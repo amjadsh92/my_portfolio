@@ -699,8 +699,10 @@
   align-items: center;
   background-image: url("../../assets/images/home-light.jpg");
   background-size: cover;
-  min-height: 42.3125rem !important; 
-  height: 75vh;
+  // min-height: 42.3125rem !important; 
+  // height: 75vh;
+  height:100vh;
+  
 
   .home-image {
     .home-developer {
@@ -715,8 +717,9 @@
   align-items: center;
   background-image: url("../../assets/images/home-dark1.png");
   background-size: cover;
-  min-height: 42.3125rem !important; 
-  height: 60vh;
+  // min-height: 42.3125rem !important; 
+  // height: 60vh;
+  height:100vh;
 
   .home-description {
     .home-title {
@@ -749,6 +752,16 @@
     }
   }
 }
+
+
+// @media screen and (min-width: 2000px) {
+
+//   .home-light,.home-dark{
+//     height:75vh;
+//   }
+
+// }
+
 
 @media screen and (max-width: 960px) { 
   .home-light,

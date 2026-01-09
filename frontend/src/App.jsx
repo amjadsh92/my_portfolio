@@ -10,7 +10,11 @@ import Footer from "./components/Footer/footer";
 import { PrimeReactContext } from "primereact/api";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+  const stored = localStorage.getItem("isDarkMode");
+  return stored ? JSON.parse(stored) : false;
+});
   
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -20,24 +24,35 @@ function App() {
   const refs = { homeRef, aboutRef, projectsRef, contactRef };
   const { changeTheme } = useContext(PrimeReactContext);
 
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("isDarkMode");
-    if (storedTheme !== null) {
+  // useEffect(() => {
+  //   const storedTheme = localStorage.getItem("isDarkMode");
+  //   if (storedTheme !== null) {
 
-      const isDark =  JSON.parse(storedTheme)
+  //     const isDark =  JSON.parse(storedTheme)
       
-       setIsDarkMode(isDark);
+  //      setIsDarkMode(isDark);
 
 
      
       
-      isDark ? changeTheme("lara-light-indigo","lara-dark-indigo", "theme-link") : ""
+  //     isDark ? changeTheme("lara-light-indigo","lara-dark-indigo", "theme-link") : ""
 
        
-    }
+  //   }
 
     
-  }, []);
+  // }, []);
+
+
+  useEffect(() => {
+  changeTheme(
+    isDarkMode ? "lara-light-indigo" : "lara-dark-indigo",
+    isDarkMode ? "lara-dark-indigo" : "lara-light-indigo",
+    "theme-link"
+  );
+
+  localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
+}, []);
 
   return (
     <>
