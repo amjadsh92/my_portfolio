@@ -592,7 +592,7 @@
     transform: translateX(-3.125rem); 
     opacity: 0;
     transition:
-      transform 1s ease-out,
+      transform 2s ease-out,
       opacity 0.6s ease-out;
   }
 
@@ -614,7 +614,7 @@
     transform: translateX(3.125rem); 
     opacity: 0;
     transition:
-      transform 1s ease-out,
+      transform 2s ease-out,
       opacity 0.6s ease-out;
   }
 
@@ -634,7 +634,7 @@
     text-shadow: 0rem 0rem 0.0625rem rgba(0, 0, 0, 0.3); 
     opacity: 0;
 
-    transition: opacity 1.2s ease-out;
+    transition: opacity 3.2s ease-out;
     .react {
       color: rgb(59, 130, 246);
       font-style: italic;
@@ -781,6 +781,22 @@
   .home-description {
     margin-top: 0rem;
     margin-bottom: 3.125rem; 
+
+    .home-title{
+      transition:
+      transform 1s ease-out,
+      opacity 0.6s ease-out;
+    }
+
+    .home-subtitle{
+      transition:
+      transform 1s ease-out,
+      opacity 0.6s ease-out;
+    }
+
+    .home-paragraph{
+       transition: opacity 2s ease-out;
+    }
 
     .home-small-image {
       display: block;

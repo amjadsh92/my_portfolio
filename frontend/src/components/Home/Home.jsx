@@ -20,9 +20,9 @@ function Home({ isDarkMode, projectsRef }) {
   
   useEffect(() => {
     setIsMoved(true);
-    setTimeout(() => setParagraphIsMoved(true), 500);
-    setTimeout(() => setSmallImageMoved(true), 800);
-    setTimeout(() => setMidImageMoved(true), 800);
+    setTimeout(() => setParagraphIsMoved(true), 1000);
+    setTimeout(() => setSmallImageMoved(true), 1800);
+    setTimeout(() => setMidImageMoved(true), 1800);
 
     
   }, []);
@@ -64,9 +64,9 @@ function Home({ isDarkMode, projectsRef }) {
         initial={{ opacity: 0, x:  0, y: -30 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{
-          duration: !(isTablet || isMobile) ? 1.2 : 0.8,
+          duration: !(isTablet || isMobile) ? 1.6 : 0.8,
           ease: "easeOut",
-          delay: 1,
+          delay: 2,
         }} 
        >
       <div className="home-image">
@@ -107,13 +107,13 @@ function MyButton({ isTablet, isMobile, projectsRef }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, x: isTablet ? -30 : 0, y: isTablet ? 0 : 30 }}
+      initial={{ opacity: 0, x: isTablet ? -30 : 0, y: isTablet ? 0 : 40 }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
       transition={{
-        duration: !(isTablet || isMobile) ? 1.2 : 0.8,
+        duration: !(isTablet || isMobile) ? 1.6 : 0.8,
         ease: "easeOut",
 
-        delay: appearedImmediately ? (!(isTablet || isMobile) ? 1 : 0.6) : 0,
+        delay: appearedImmediately ? (!(isTablet || isMobile) ? 2 : 1.45) : 0,
       }}
     >
       <Button
