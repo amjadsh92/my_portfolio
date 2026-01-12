@@ -51,15 +51,15 @@ useEffect(() => {
   // }, []);
 
 
-  useEffect(() => {
-  changeTheme(
-    isDarkMode ? "lara-light-indigo" : "lara-dark-indigo",
-    isDarkMode ? "lara-dark-indigo" : "lara-light-indigo",
-    "theme-link"
-  );
+//   useEffect(() => {
+//   changeTheme(
+//     isDarkMode ? "lara-light-indigo" : "lara-dark-indigo",
+//     isDarkMode ? "lara-dark-indigo" : "lara-light-indigo",
+//     "theme-link"
+//   );
 
-  localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
-}, []);
+//   localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
+// }, []);
 
   return (
     <>

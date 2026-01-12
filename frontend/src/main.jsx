@@ -158,7 +158,7 @@ async function boot() {
       document.fonts.ready,
       preloadThemesWithFetch(),
       // loadStylesheet("base-theme", "/themes/lara-dark-indigo/theme.css" ),
-      loadStylesheet("base-theme-light", "/themes/lara-light-indigo/theme.css" ),
+      loadStylesheet("base-theme-light", `${isDark ? "/themes/lara-dark-indigo/theme.css" : "/themes/lara-light-indigo/theme.css"}` ),
       loadStylesheet("theme-link", themeHref),
     ]);
   } catch (err) {
