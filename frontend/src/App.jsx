@@ -15,6 +15,13 @@ function App() {
   const stored = localStorage.getItem("isDarkMode");
   return stored ? JSON.parse(stored) : false;
 });
+
+useEffect(() => {
+  // App is now fully mounted
+  requestAnimationFrame(() => {
+    setTimeout(() => document.getElementById("boot-loader")?.remove(),500);
+  });
+}, []);
   
   const homeRef = useRef(null);
   const aboutRef = useRef(null);

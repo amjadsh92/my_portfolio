@@ -3,10 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/themes/lara-dark-indigo/theme.css"/>
+    <!-- <link
+      rel="preload"
+      href="/src/assets/fonts/Montserrat-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/DotMatrix-BoldItalic.otf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/Cabin-VariableFont_wdth,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/Nexa-Heavy.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/Montserrat-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    /> -->
+    <!-- <link rel="stylesheet" href="/themes/lara-dark-indigo/theme.css"/> -->
     <!-- <link id="theme-link" rel="stylesheet" href="/themes/lara-light-indigo/theme.css"/>  -->
-    <link id="theme-link" rel="stylesheet" />
-    <script>
+    <!-- <link id="theme-link" rel="stylesheet" /> -->
+
+    <link
+  rel="preload"
+  href="/themes/lara-dark-indigo/theme.css"
+  as="style"
+/>
+<link
+  rel="preload"
+  href="/themes/lara-light-indigo/theme.css"
+  as="style"
+/>
+
+ <!-- <link
+  rel="preload"
+  href="/themes/lara-dark-indigo/fonts/InterVariable.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+
+<link
+  rel="preload"
+  href="/themes/lara-light-indigo/fonts/InterVariable.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/> -->
+
+    
+    <!-- <link rel="stylesheet" id="base-theme" /> -->
+    <link rel="stylesheet" id="base-theme-light" /> 
+    <link rel="stylesheet" id="theme-link" />
+
+    <!-- <script>
       (function () {
         // const isDark = JSON.parse(localStorage.getItem("isDarkMode"));
         // const themeLink = document.getElementById("theme-link");
@@ -18,12 +86,50 @@
           ? "/themes/lara-dark-indigo/theme.css"
           : "/themes/lara-light-indigo/theme.css";
       })();
-    </script>
+    </script> -->
+
+     <style>
+      #boot-loader {
+        position: fixed;
+        inset: 0;
+        background: #0f172a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #334155;
+        border-top: 4px solid #60a5fa;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 12px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my_portfolio</title>
   </head>
   <body>
-    <div id="root"></div>
+
+    <div id="boot-loader">
+      <div class="spinner"></div>
+      <p>Loading assets…</p>
+    </div>
+    <div id="root" hidden></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
