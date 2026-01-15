@@ -3,7 +3,9 @@ import { Menubar } from "primereact/menubar";
 import "./Navbar.scss";
 import { useState, useEffect, useContext, useRef } from "react";
 import { PrimeReactContext } from "primereact/api";
-import contrastIcon from "../../assets/images/contrast.png";
+// import contrastIcon from "../../assets/images/contrast.png";
+import contrastIcon from "../../assets/images/arrow.png";
+
 
 function Navbar({ isDarkMode, setIsDarkMode, refs }) {
   const { homeRef, aboutRef, projectsRef, contactRef } = refs;
@@ -306,12 +308,15 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
   const navbarName = (
     <div className="navbar-leftside">
       <span className="navbar-name">Amjad Sharafeddine</span>
-      <img
+      {/* <div className="navbar-avatar-background"> */}
+      {/* <img
         className="navbar-avatar"
         src={contrastIcon}
-        width="30"
-        height="30"
-      />
+        // width="30"
+        // height="30"
+      /> */}
+      <span className={`${isDarkMode ? "navbar-icon-dark" : "navbar-icon"} `}>{"</>"}</span>
+      {/* </div> */}
     </div>
   );
 

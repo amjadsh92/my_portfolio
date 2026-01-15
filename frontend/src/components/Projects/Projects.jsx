@@ -14,6 +14,7 @@ import cssLogo from "../../assets/images/css.png";
 import bootstrapLogo from "../../assets/images/bootstrapLogo4.png";
 import htmlLogo from "../../assets/images/html2.png";
 import javascriptLogo from "../../assets/images/javascript.png";
+import motionLogo from "../../assets/images/motionLogo.png"
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { animate } from "motion";
@@ -48,10 +49,11 @@ function Projects({ isDarkMode }) {
   const ref6 = useRef(null)
   const ref7 = useRef(null)
   const ref8 = useRef(null)
+  const ref9 = useRef(null)
   
   
 
-  const ref = [ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8]
+  const ref = [ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9]
   const [projectNumber, setProjectNumber] = useState(4)
   const projects = [
     {
@@ -77,113 +79,31 @@ function Projects({ isDarkMode }) {
       ],
       imageAtLeft: true,
     },
-
+    
     {
       id: "2",
-      title: "Calculator",
-      description: `A responsive, basic calculator app capable of handling arithmetic and multiplication operations, created as part of my web development learning journey.`,
+      title: "My Portfolio",
+      description: `Full-Stack responsive portfolio showcasing my major projects and skills in web development.`,
       features: [
-        "Handles arithmetic and multiplications operations",
-        "Handles special cases",
-        "Fully responsive design across all devices",
+        "Dark and light mode support",
+        "Smooth animations with a modern, clean design",
+        "Contact form with direct email delivery",
+        "Fully responsive across all devices",
+        
       ],
       techs: [
         { logo: reactLogo, name: "React" },
-        { logo: cssLogo, name: "CSS" },
-        { logo: regexLogo, name: "Regex" },
+        { logo: expressLogo, name: "ExpressJS" },
+        { logo: scssLogo, name: "SCSS" },
+        { logo: primeReactLogo, name: "PrimeReact" },
+        { logo: motionLogo, name: "motion.dev" }
+        
       ],
       imageAtLeft: false,
     },
 
-    {
+     {
       id: "3",
-      title: "Drum Machine",
-      description: `A responsive drum machine app that allows users to play beats, created to strengthen my web development skills.`,
-      features: [
-        "Switch between two different sound sets.",
-        "Adjustable volume control for all sounds.",
-        "Play beats using either the keyboard or mouse.",
-        "Displays the name of the sound currently triggered.",
-        "Fully responsive design for all screen sizes",
-      ],
-      techs: [
-        { logo: reactLogo, name: "React" },
-        { logo: bootstrapLogo, name: "bootstrap" },
-      ],
-      imageAtLeft: true,
-    },
-
-    {
-      id: "4",
-      title: "Markdown Previewer",
-      description: `A responsive Markdown previewer that converts Markdown code into formatted content, with support for advanced and special-case syntax.`,
-      features: [
-        "Conversion of Markdown input into formatted preview.",
-        "Supports standard Markdown elements such as headings, lists, links, images, and code blocks.",
-        "Handles special-case Markdown syntax for more complex formatting.",
-        "Clean and responsive interface optimized for all screen sizes.",
-      ],
-      techs: [
-        { logo: reactLogo, name: "React" },
-        { logo: bootstrapLogo, name: "bootstrap" },
-        { logo: regexLogo, name: "Regex" },
-      ],
-      imageAtLeft: false,
-    },
-    {
-      id: "5",
-      title: "Session & Break Timer",
-      description: `A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
-      features: [
-        "Adjustable session length and break length.",
-        "Automatically alternates between session and break phases.",
-        "Emits a five-beep alarm when switching phases to prepare the user in advance.",
-        "Responsive accros all devices.",
-      ],
-      techs: [
-        { logo: reactLogo, name: "React" },
-        { logo: cssLogo, name: "CSS" },
-      ],
-      imageAtLeft: true,
-    },
-
-    {
-      id: "6",
-      title: "Quote Generator",
-      description: `A dynamic quote generator that displays random inspirational quotes at the click of a button`,
-      features: [
-        "Generates a new random quote on demand.",
-        "Displays both the quote text and its author.",
-        "Smooth transitions for a good user experience.",
-        "Share quotes directly to Tumblr or X.",
-        "Responsive accros all devices.",
-      ],
-      techs: [
-        { logo: reactLogo, name: "React" },
-        { logo: bootstrapLogo, name: "bootstrap" },
-      ],
-      imageAtLeft: false,
-    },
-
-    {
-      id: "7",
-      title: "Pokemon Search",
-      description: `A Pokémon search app that lets users look up any Pokémon by name or ID, instantly displaying its image, type, and full set of stats`,
-      features: [
-        "Search Pokémon by name or ID.",
-        "Displays Pokémon image, name, and elemental type (Fire, Electric, Water, etc.).",
-        "Shows complete stat details including attack, defense, speed, and more.",
-        "Responsive accros all devices.",
-      ],
-      techs: [
-        { logo: javascriptLogo, name: "Javascript" },
-        { logo: cssLogo, name: "CSS" },
-        { logo: htmlLogo, name: "HTML" },
-      ],
-      imageAtLeft: true,
-    },
-    {
-      id: "8",
       title: "Exercise Tracker",
       description: `A full-stack app where you can add users, log their exercises, and view a complete history of their activity. The app provides an organized user dashboard with CRUD functionality for managing users and their activity.`,
       features: [
@@ -201,8 +121,115 @@ function Projects({ isDarkMode }) {
         { logo: postgreLogo, name: "Postgres" },
         { logo: scssLogo, name: "SCSS" },
       ],
+      imageAtLeft: true,
+    },
+
+
+    {
+      id: "4",
+      title: "Calculator",
+      description: `A responsive, basic calculator app capable of handling arithmetic and multiplication operations, created as part of my web development learning journey.`,
+      features: [
+        "Handles arithmetic and multiplications operations",
+        "Handles special cases",
+        "Fully responsive design across all devices",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: cssLogo, name: "CSS" },
+        { logo: regexLogo, name: "Regex" },
+      ],
       imageAtLeft: false,
-    }
+    },
+
+    {
+      id: "5",
+      title: "Drum Machine",
+      description: `A responsive drum machine app that allows users to play beats, created to strengthen my web development skills.`,
+      features: [
+        "Switch between two different sound sets.",
+        "Adjustable volume control for all sounds.",
+        "Play beats using either the keyboard or mouse.",
+        "Displays the name of the sound currently triggered.",
+        "Fully responsive design for all screen sizes",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: bootstrapLogo, name: "bootstrap" },
+      ],
+      imageAtLeft: true,
+    },
+
+    {
+      id: "6",
+      title: "Markdown Previewer",
+      description: `A responsive Markdown previewer that converts Markdown code into formatted content, with support for advanced and special-case syntax.`,
+      features: [
+        "Conversion of Markdown input into formatted preview.",
+        "Supports standard Markdown elements such as headings, lists, links, images, and code blocks.",
+        "Handles special-case Markdown syntax for more complex formatting.",
+        "Clean and responsive interface optimized for all screen sizes.",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: bootstrapLogo, name: "bootstrap" },
+        { logo: regexLogo, name: "Regex" },
+      ],
+      imageAtLeft: false,
+    },
+    {
+      id: "7",
+      title: "Session & Break Timer",
+      description: `A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
+      features: [
+        "Adjustable session length and break length.",
+        "Automatically alternates between session and break phases.",
+        "Emits a five-beep alarm when switching phases to prepare the user in advance.",
+        "Responsive accros all devices.",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: cssLogo, name: "CSS" },
+      ],
+      imageAtLeft: true,
+    },
+
+    {
+      id: "8",
+      title: "Quote Generator",
+      description: `A dynamic quote generator that displays random inspirational quotes at the click of a button`,
+      features: [
+        "Generates a new random quote on demand.",
+        "Displays both the quote text and its author.",
+        "Smooth transitions for a good user experience.",
+        "Share quotes directly to Tumblr or X.",
+        "Responsive accros all devices.",
+      ],
+      techs: [
+        { logo: reactLogo, name: "React" },
+        { logo: bootstrapLogo, name: "bootstrap" },
+      ],
+      imageAtLeft: false,
+    },
+
+    {
+      id: "9",
+      title: "Pokemon Search",
+      description: `A Pokémon search app that lets users look up any Pokémon by name or ID, instantly displaying its image, type, and full set of stats`,
+      features: [
+        "Search Pokémon by name or ID.",
+        "Displays Pokémon image, name, and elemental type (Fire, Electric, Water, etc.).",
+        "Shows complete stat details including attack, defense, speed, and more.",
+        "Responsive accros all devices.",
+      ],
+      techs: [
+        { logo: javascriptLogo, name: "Javascript" },
+        { logo: cssLogo, name: "CSS" },
+        { logo: htmlLogo, name: "HTML" },
+      ],
+      imageAtLeft: true,
+    },
+   
 
      
   ];

@@ -133,9 +133,13 @@
 
 .project-image{
 
-  .image1,.image2,.image3,.image4,.image5,.image6,.image8{
+  .image1,.image2,.image3,.image4,.image5,.image6,.image8,.image9{
      box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.5);
   }
+
+  .image2 {
+      background-image: url("../../assets/images/portfolio15.png");
+    }
 }
 
 
@@ -206,7 +210,8 @@
     .image5,
     .image6,
     .image7,
-    .image8 {
+    .image8,
+    .image9 {
       background-size: cover;
       object-fit: cover;
       border-radius: 10px;
@@ -220,30 +225,33 @@
       background-image: url("../../assets/images/UrlShortener-image12.png");
     }
     .image2 {
+      background-image: url("../../assets/images/portfolio11.png");
+    }
+    .image4 {
       background-image: url("../../assets/images/MyCalculater-image3.png");
     }
 
-    .image3 {
+    .image5 {
       background-image: url("../../assets/images/drumMachine-image6.png");
     }
 
-    .image4 {
+    .image6 {
       background-image: url("../../assets/images/markdown-image1.png");
     }
 
-    .image5 {
+    .image7 {
       background-image: url("../../assets/images/timer-image1.png");
     }
 
-    .image6 {
+    .image8 {
       background-image: url("../../assets/images/quoteGenerator-image7.png");
     }
 
-    .image7 {
+    .image9 {
       background-image: url("../../assets/images/pokemonSearch-image3.png");
     }
 
-    .image8 {
+    .image3 {
       background-image: url("../../assets/images/exerciseTracker-image7.png");
     }
   }
@@ -494,13 +502,13 @@
         background-image: url("../../assets/images/UrlShortener-image17.png");
       }
 
-      .image4 {
+      .image6 {
         width: unset;
         height: 95%;
         background-image: url("../../assets/images/markdown-image2.png");
       }
 
-      .image6 {
+      .image8 {
         width: unset;
         height: 95%;
         background-image: url("../../assets/images/quoteGenerator-image5.png");
@@ -578,11 +586,11 @@
     }
 
     .project-image {
-      .image4 {
+      .image6 {
         background-image: url("../../assets/images/markdown-image3.png");
       }
 
-      .image5 {
+      .image7 {
         background-image: url("../../assets/images/timer-image6.png");
       }
     }
@@ -602,6 +610,21 @@
     .project-image .image1 {
       background-image: url("../../assets/images/UrlShortener-image22.png");
     }
+
+     .project-image .image2 {
+      background-image: url("../../assets/images/portfolio12.png");
+    }
+  }
+  .projects-dark{
+
+    .projects-container {
+    
+
+     .project-image .image2 {
+      background-image: url("../../assets/images/portfolio16.png");
+    }
+  }
+
   }
 }
 
@@ -670,7 +693,8 @@
         .image5,
         .image6,
         .image7,
-        .image8 {
+        .image8,
+        .image9{
           display: block;
 
           background-size: cover;
@@ -684,37 +708,52 @@
         .image1 {
           background-image: url(/src/assets/images/UrlShortener-image30.png);
         }
-
         .image2 {
-          background-image: url(src/assets/images/MyCalculater-image3.png);
-        }
-
-        .image3 {
-          background-image: url("../../assets/images/drumMachine-image6.png");
+          background-image: url(/src/assets/images/portfolio13.png);
         }
 
         .image4 {
-          background-image: url("../../assets/images/markdown-image1.png");
+          background-image: url(src/assets/images/MyCalculater-image3.png);
         }
 
         .image5 {
-          background-image: url("../../assets/images/timer-image1.png");
+          background-image: url("../../assets/images/drumMachine-image6.png");
         }
 
         .image6 {
-          background-image: url("../../assets/images/quoteGenerator-image7.png");
+          background-image: url("../../assets/images/markdown-image1.png");
         }
 
         .image7 {
-          background-image: url("../../assets/images/pokemonSearch-image3.png");
+          background-image: url("../../assets/images/timer-image1.png");
         }
 
         .image8 {
+          background-image: url("../../assets/images/quoteGenerator-image7.png");
+        }
+
+        .image9 {
+          background-image: url("../../assets/images/pokemonSearch-image3.png");
+        }
+
+        .image3 {
           background-image: url("../../assets/images/exerciseTracker-image7.png");
         }
       }
     }
   }
+.projects-dark{
+  .projects-container{
+    .project-description,
+    .project-description-left{
+    .project-image-small{
+     .image2{
+       background-image: url(/src/assets/images/portfolio14.png);
+     } 
+    }
+  }
+}
+} 
 
   .seeMore {
       margin-top: -70px;
@@ -748,7 +787,7 @@
           width: 80%;
         }
 
-        .image4 {
+        .image6 {
           background-image: url("../../assets/images/markdown-image3.png");
         }
       }
@@ -761,6 +800,38 @@
       }
     }
 }
+
+@media screen and (max-width: 700px) {
+
+.projects-dark{  
+  .projects-container{
+    .project-description,
+    .project-description-left{
+    .project-image-small{
+     .image2{
+       background-image: url(/src/assets/images/portfolio15.png);
+     } 
+    }
+  }
+  }
+}
+
+  .projects-container{
+    .project-description,
+    .project-description-left{
+    .project-image-small{
+     .image2{
+       background-image: url(/src/assets/images/portfolio11.png);
+     } 
+    }
+  }
+  }
+
+
+
+
+}
+
 
 @media screen and (max-width: 600px) {
   .projects-title .subtitle {
@@ -782,13 +853,11 @@
           width: 95%;
         }
 
-        .image2 {
-          width: 95%;
+        .image2{
+
+          width:95%;
         }
 
-        .image3 {
-          width: 95%;
-        }
         .image4 {
           width: 95%;
         }
@@ -797,7 +866,6 @@
           width: 95%;
         }
         .image6 {
-          background-image: url("../../assets/images/quoteGenerator-image8.png");
           width: 95%;
         }
 
@@ -805,6 +873,14 @@
           width: 95%;
         }
         .image8 {
+          background-image: url("../../assets/images/quoteGenerator-image8.png");
+          width: 95%;
+        }
+
+        .image9 {
+          width: 95%;
+        }
+        .image3 {
           width: 95%;
         }
       }
@@ -834,12 +910,8 @@
           width: 100%;
         }
 
-        .image2 {
-          width: 100%;
-        }
-
-        .image3 {
-          width: 100%;
+        .image2{
+          width:100%;
         }
 
         .image4 {
@@ -848,7 +920,6 @@
 
         .image5 {
           width: 100%;
-          background-image: url("../../assets/images/timer-image6.png");
         }
 
         .image6 {
@@ -857,9 +928,18 @@
 
         .image7 {
           width: 100%;
+          background-image: url("../../assets/images/timer-image6.png");
         }
 
         .image8 {
+          width: 100%;
+        }
+
+        .image9 {
+          width: 100%;
+        }
+
+        .image3 {
           width: 100%;
         }
       }
@@ -915,13 +995,18 @@
       .project-image-small {
         .image1 {
           background-image: url(/src/assets/images/UrlShortener-image34.png);
+
         }
 
-        .image2 {
+        .image2{
+          background-image: url("../../assets/images/portfolio18.png");
+        }
+
+        .image4 {
           background-image: url("../../assets/images/MyCalculator-image6.png");
         }
 
-        .image3 {
+        .image5 {
           background-image: url("../../assets/images/drumMachine-image7.png");
         }
       }
@@ -959,4 +1044,16 @@
       }
     }
   }
+.projects-dark{
+ .projects-container{
+    .project-description,
+    .project-description-left{
+    .project-image-small{
+     .image2{
+       background-image: url("../../src/assets/images/portfolio17.png");
+     } 
+    }
+  }
+  }
+}  
 }

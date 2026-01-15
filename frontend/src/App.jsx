@@ -19,7 +19,10 @@ function App() {
 useEffect(() => {
   // App is now fully mounted
   requestAnimationFrame(() => {
-    setTimeout(() => document.getElementById("boot-loader")?.remove(),500);
+    setTimeout(() => {
+      document.getElementById("boot-loader")?.remove()
+      document.documentElement.classList.remove("lock-scroll");
+    },500);
   });
 }, []);
   
