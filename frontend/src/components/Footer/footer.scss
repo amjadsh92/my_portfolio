@@ -44,7 +44,8 @@ background-color:#111827;
     color:#607597f7;
 }
 .github,.linkedin{
-    color:#546e90;
+    // color:#546e90;
+    color:var(--bluegray-300);
 }
 
 }
@@ -70,7 +71,7 @@ background-color:#111827;
 .footer-follow{
 
       font-family: sans-serif;
-    color: var(--gray-700);
+    color: var(--gray-700) ;
 }
 
 // .footer-name{
@@ -79,6 +80,7 @@ background-color:#111827;
 
 .github,.linkedin{
     vertical-align: bottom;
+    color: var(--gray-700) ;
 }
 
 @media screen and (max-width: 500px) {

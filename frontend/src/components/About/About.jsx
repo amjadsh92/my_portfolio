@@ -13,6 +13,7 @@ import postgreLogo from "../../assets/images/postgre3.png";
 import prismaLogo from "../../assets/images/prismaLogo1.png";
 import primeReactLogo from "../../assets/images/primereact.png";
 import passportJSLogo from "../../assets/images/passportJSLogo1.png"
+import motionLogo from "../../assets/images/motionLogo.png"
 
 function About({ isDarkMode }) {
   const skills = [
@@ -26,7 +27,8 @@ function About({ isDarkMode }) {
     { logo: postgreLogo, title: "POSTGRES" },
     { logo: prismaLogo, title: "PRISMA" },
     { logo: primeReactLogo, title: "PRIME REACT" },
-    { logo: passportJSLogo, title: "PASSPORT.JS" }
+    { logo: passportJSLogo, title: "PASSPORT.JS" },
+    { logo:motionLogo, title:"MOTION.DEV"}
   ];
 
   

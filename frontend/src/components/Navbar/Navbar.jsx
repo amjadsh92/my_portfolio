@@ -315,7 +315,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
         // width="30"
         // height="30"
       /> */}
-      <span className={`${isDarkMode ? "navbar-icon-dark" : "navbar-icon"} `}>{"</>"}</span>
+      <span className={`${isDarkMode ? "navbar-icon-dark" : "navbar-icon"}`}>&lt;<span className="slash">/</span>&gt;</span>
       {/* </div> */}
     </div>
   );

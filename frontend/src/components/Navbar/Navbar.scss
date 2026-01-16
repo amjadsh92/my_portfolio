@@ -321,13 +321,15 @@
 .navbar-icon{
     font-size: 18px;
     font-family: "Fira Sans";
-    color: #5c677dc7;
+    // color: #5c677dc7;
+    color: var(--orange-400);
 }  
 
 .navbar-icon-dark{
     font-size: 18px;
     font-family: "Fira Sans";
-    color: #dadee3cf;
+    // color: #dadee3cf;
+    color: var(--orange-400);
 }  
 
 
