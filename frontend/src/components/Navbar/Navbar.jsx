@@ -18,84 +18,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
   const [automaticHighlightDisabled, setAutomaticHighlightDisabled] =
     useState(false);
 
-  // const [visibleSections, setVisibleSections] = useState([]);
-
-  // useEffect(() => {
-  //   function getVisibleHeight(element) {
-  //     if (!element) return 0;
-
-  //     const rect = element.getBoundingClientRect();
-
-  //     const visibleTop = Math.max(rect.top, 0);
-  //     const visibleBottom = Math.min(rect.bottom, window.innerHeight);
-
-  //     const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-
-  //     return visibleHeight;
-  //   }
-
-  //   const sections = [
-  //     { id: "home", ref: homeRef },
-  //     { id: "about", ref: aboutRef },
-  //     { id: "projects", ref: projectsRef },
-  //     { id: "contact", ref: contactRef },
-  //   ];
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       if (!automaticHighlightDisabled) {
-  //         const updated = new Set();
-
-  //         entries.forEach((entry) => {
-  //           const id = entry.target.id;
-
-  //           if (entry.isIntersecting) {
-  //             updated.add(id);
-  //           } else {
-  //             updated.delete(id);
-  //           }
-  //         });
-
-  //         setVisibleSections(Array.from(updated));
-
-  //         const heights = visibleSections.map((id) => {
-  //           const element = document.getElementById(id);
-  //           return {
-  //             id,
-
-  //             height: getVisibleHeight(element),
-  //           };
-  //         });
-
-  //         console.log(heights);
-
-  //         const tallest = heights.reduce((max, item) =>
-  //           item.height > max.height ? item : max
-  //         );
-
-  //         console.log(tallest);
-
-  //         setActiveSection(tallest.id);
-  //       }
-  //     },
-  //     {
-  //       threshold: 0,
-  //     }
-  //   );
-
-  //   sections.forEach((s) => {
-  //     if (s.ref.current) observer.observe(s.ref.current);
-  //   });
-
-  //   return () => observer.disconnect();
-  // }, [
-  //   homeRef,
-  //   aboutRef,
-  //   projectsRef,
-  //   contactRef,
-  //   visibleSections,
-  //   automaticHighlightDisabled,
-  // ]);
+ 
 
   useEffect(() => {
   function getVisibleHeight(element) {
@@ -113,41 +36,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
     { id: "contact", ref: contactRef },
   ];
 
-  // const observer = new IntersectionObserver(
-  //   (entries) => {
-  //     console.log(entries)
-  //     if (!automaticHighlightDisabled) {
-  //       const updated = new Set();
-
-  //       entries.forEach((entry) => {
-  //         const id = entry.target.id;
-  //         if (entry.isIntersecting) {
-  //           console.log(id)
-  //           updated.add(id);
-  //         }
-          
-          
-  //         else updated.delete(id);
-  //       });
-
-  //       const updatedArray = Array.from(updated);
-  //       setVisibleSections(updatedArray);
-
-  //       const heights = updatedArray.map((id) => {
-  //         const element = document.getElementById(id);
-  //         return { id, height: getVisibleHeight(element) };
-  //       });
-
-  //       if (heights.length > 0) {
-  //         const tallest = heights.reduce((max, item) =>
-  //           item.height > max.height ? item : max
-  //         );
-  //         setActiveSection(tallest.id);
-  //       }
-  //     }
-  //   },
-  //   // { threshold: 0 }
-  // );
+ 
 
  const observer = new IntersectionObserver(
   () => {
@@ -159,7 +48,6 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
         }))
         .filter(s => s.height > 0);
 
-      // setVisibleSections(currentlyVisible.map(s => s.id));
 
       if (currentlyVisible.length > 0) {
         const tallest = currentlyVisible.reduce((max, item) =>

@@ -1,19 +1,12 @@
 /* eslint-disable */
 
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { PrimeReactProvider } from 'primereact/api';
-import 'primereact/resources/primereact.css';
-// import 'primereact/resources/themes/lara-light-indigo/theme.css';
-// import 'primereact/resources/themes/lara-dark-indigo/theme.css';
-
-import BootLoader from './BootLoader.jsx';
-
-import 'primeicons/primeicons.css';
-
-
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { PrimeReactProvider } from "primereact/api";
+import "primereact/resources/primereact.css";
+import "primeicons/primeicons.css";
 
 function preloadImages(srcList) {
   return Promise.all(
@@ -33,58 +26,18 @@ async function preloadFonts() {
   const fonts = [
     new FontFace(
       "Montserrat",
-      "url(/src/assets/fonts/Montserrat-VariableFont_wght.ttf)",
-    //    {
-    // weight: "100 900",
-    // style: "normal",
-    //   }
+      "url(/src/assets/fonts/Montserrat-VariableFont_wght.ttf)"
     ),
-     new FontFace(
-       "DotMatrix",
-       "url(/src/assets/fonts/DotMatrix-BoldItalic.otf)",
-  //      {
-  //   weight: "100 900",
-  //   style: "normal",
-  // } 
+    new FontFace(
+      "DotMatrix",
+      "url(/src/assets/fonts/DotMatrix-BoldItalic.otf)"
     ),
-     new FontFace(
+    new FontFace(
       "cabin",
-      "url(/src/assets/fonts/Cabin-VariableFont_wdth,wght.ttf)",
-  //      {
-  //   weight: "100 900",
-  //   style: "normal",
-  // }
+      "url(/src/assets/fonts/Cabin-VariableFont_wdth,wght.ttf)"
     ),
-     new FontFace(
-      "nexa",
-      "url(/src/assets/fonts/Nexa-Heavy.ttf)",
-  //      {
-  //   weight: "100 900",
-  //   style: "normal",
-  // }
-    ),
-     new FontFace(
-      "Fira Sans",
-      "url(/src/assets/fonts/FiraSans-Bold.ttf)",
-    //    {
-    // weight: "100 900",
-    // style: "normal",
-    //   }
-    ),
-
-
-    //  new FontFace(
-    //   "Inter var",
-    //   "url(/themes/lara-light-indigo/fonts/InterVariable.woff2)",
-   
-    // ),
-    // new FontFace(
-    //   "Inter var",
-    //   "url(/themes/lara-dark-indigo/fonts/InterVariable.woff2)",
-   
-    // )
-
-    
+    new FontFace("nexa", "url(/src/assets/fonts/Nexa-Heavy.ttf)"),
+    new FontFace("Fira Sans", "url(/src/assets/fonts/FiraSans-Bold.ttf)"),
   ];
   await Promise.all(
     fonts.map((font) =>
@@ -108,7 +61,6 @@ function loadStylesheet(id, href) {
   });
 }
 
-
 async function fetchAndCache(url) {
   const res = await fetch(url, { cache: "force-cache" });
   if (!res.ok) {
@@ -116,14 +68,11 @@ async function fetchAndCache(url) {
   }
 }
 
-
 async function preloadThemesWithFetch() {
   const assets = [
-    // Theme CSS
+    
     "/themes/lara-dark-indigo/theme.css",
     "/themes/lara-light-indigo/theme.css",
-
-    // Theme fonts
     "/themes/lara-dark-indigo/fonts/InterVariable.woff2",
     "/themes/lara-light-indigo/fonts/InterVariable.woff2",
   ];
@@ -133,17 +82,18 @@ async function preloadThemesWithFetch() {
 
 
 
-
-/* -----------------------------
-   BOOT FUNCTION
---------------------------------*/
-
 async function boot() {
   const images = [
-    '/src/assets/images/home-dark1.png', "/src/assets/images/amjad-portfolio-image-Blue-glow1.png","/src/assets/images/test.jpeg", "/src/assets/images/UrlShortener-image18.png", "/src/assets/images/MyCalculater-image3.png","/src/assets/images/drumMachine-image6.png", "/src/assets/images/markdown-image3.png","/src/assets/images/home-light.jpg","/src/assets/images/home-developer9.png"
-   
+    "/src/assets/images/home-dark1.png",
+    "/src/assets/images/amjad-portfolio-image-Blue-glow1.png",
+    "/src/assets/images/test.jpeg",
+    "/src/assets/images/UrlShortener-image18.png",
+    "/src/assets/images/MyCalculater-image3.png",
+    "/src/assets/images/drumMachine-image6.png",
+    "/src/assets/images/markdown-image3.png",
+    "/src/assets/images/home-light.jpg",
+    "/src/assets/images/home-developer9.png",
   ];
-
 
   const isDark = localStorage.getItem("isDarkMode") === "true";
 
@@ -157,8 +107,11 @@ async function boot() {
       preloadFonts(),
       document.fonts.ready,
       preloadThemesWithFetch(),
-      // loadStylesheet("base-theme", "/themes/lara-dark-indigo/theme.css" ),
-      loadStylesheet("base-theme-light", `${isDark ? "/themes/lara-dark-indigo/theme.css" : "/themes/lara-light-indigo/theme.css"}` ),
+
+      loadStylesheet(
+        "base-theme-light",
+        `${isDark ? "/themes/lara-dark-indigo/theme.css" : "/themes/lara-light-indigo/theme.css"}`
+      ),
       loadStylesheet("theme-link", themeHref),
     ]);
   } catch (err) {
@@ -166,31 +119,8 @@ async function boot() {
   }
 }
 
-/* -----------------------------
-   START APPLICATION
---------------------------------*/
-
 const rootEl = document.getElementById("root");
 const loaderEl = document.getElementById("boot-loader");
-
-// boot().then(() => {
-//   // Remove loader
-//   loaderEl?.remove();
-
-//   // Show React root
-//   rootEl.hidden = false;
-
-//   // Mount React
-//   createRoot(rootEl).render(
-//     <StrictMode>
-//       <PrimeReactProvider>
-//         <App />
-//       </PrimeReactProvider>
-//     </StrictMode>
-//   );
-// });
-
-
 
 boot().then(async () => {
   const root = document.getElementById("root");
@@ -206,17 +136,3 @@ boot().then(async () => {
     </StrictMode>
   );
 });
-
-
-
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-    
-//      <PrimeReactProvider>
-//       <BootLoader>
-//     <App />
-//     </BootLoader> 
-//     </PrimeReactProvider>
-     
-//   </StrictMode>,
-// )

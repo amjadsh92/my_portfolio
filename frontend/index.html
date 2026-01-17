@@ -3,44 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <!-- <link
-      rel="preload"
-      href="/src/assets/fonts/Montserrat-VariableFont_wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/src/assets/fonts/DotMatrix-BoldItalic.otf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/src/assets/fonts/Cabin-VariableFont_wdth,wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/src/assets/fonts/Nexa-Heavy.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/src/assets/fonts/Montserrat-VariableFont_wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    /> -->
-    <!-- <link rel="stylesheet" href="/themes/lara-dark-indigo/theme.css"/> -->
-    <!-- <link id="theme-link" rel="stylesheet" href="/themes/lara-light-indigo/theme.css"/>  -->
-    <!-- <link id="theme-link" rel="stylesheet" /> -->
+   
 
     <link
   rel="preload"
@@ -53,41 +16,13 @@
   as="style"
 />
 
- <!-- <link
-  rel="preload"
-  href="/themes/lara-dark-indigo/fonts/InterVariable.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/>
-
-<link
-  rel="preload"
-  href="/themes/lara-light-indigo/fonts/InterVariable.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/> -->
 
     
-    <!-- <link rel="stylesheet" id="base-theme" /> -->
+   
     <link rel="stylesheet" id="base-theme-light" /> 
     <link rel="stylesheet" id="theme-link" />
 
-    <!-- <script>
-      (function () {
-        // const isDark = JSON.parse(localStorage.getItem("isDarkMode"));
-        // const themeLink = document.getElementById("theme-link");
-
-        const storedTheme = localStorage.getItem("isDarkMode");
-        const isDark = storedTheme === "true"; 
-        const themeLink = document.getElementById("theme-link");
-        themeLink.href = isDark
-          ? "/themes/lara-dark-indigo/theme.css"
-          : "/themes/lara-light-indigo/theme.css";
-      })();
-    </script> -->
-
+   
 
     <script>
   (function () {
@@ -99,19 +34,7 @@
   document.documentElement.classList.add("lock-scroll");
 </script>
      <style>
-      /* #boot-loader {
-        position: fixed;
-        inset: 0;
-        background: #0f172a;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", sans-serif;
-      } */
+      
 html.lock-scroll,
 html.lock-scroll body {
   overflow: hidden;
@@ -126,17 +49,15 @@ html.lock-scroll body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif; */
+  
 }
 
-/* Light theme */
 html[data-theme="light"] {
   --boot-bg: #f8fafc;
   --boot-text: #0f172a;
 }
 
-/* Dark theme */
+
 html[data-theme="dark"] {
   --boot-bg: #0f172a;
   --boot-text: #ffffff;
