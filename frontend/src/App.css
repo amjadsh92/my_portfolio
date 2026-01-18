@@ -1,5 +1,3 @@
-
-
 body{
     margin:0px;
 }
@@ -20,6 +18,24 @@ body{
 .contact {
   scroll-margin-top: 70px; 
 }
+
+
+
+@media screen and (min-width: 1650px) {
+   html{
+    font-size: 20px !important;
+  }
+   
+}
+
+@media screen and (min-width: 2000px) {
+  html{
+    font-size: 24px !important;
+  }
+   
+}
+
+
 
 
 @keyframes spin {

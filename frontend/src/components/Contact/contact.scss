@@ -1,567 +1,3 @@
-// @font-face {
-//   font-family: "Fira Sans";
-//   src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "montserrat";
-//   src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
-//     format("opentype");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// .contact-light,.contact-dark {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-  
-
-//   min-height: 677px !important;
-//   width: 100%;
-// }
-
-// .contact-light{
-  
-//   // background: linear-gradient(
-//   //   180deg,
-//   //   var(--surface-d) 5px,
-//   //   #dcdcdc57 5px,
-//   //   #dcdcdc57 100%
-//   // );
-//   background: linear-gradient(
-//     180deg,
-//     var(--surface-d) 5px,
-//     #f3f3f3 5px,
-//     #f3f3f3 100%
-//   );
-
-// }
-
-// .contact-dark{
-
-//   // background-color: rgb(28 35 46);
-//   // background: linear-gradient(
-//   //   180deg,
-//   //   var(--surface-d) 5px,
-//   //   rgb(28 35 46) 5px,
-//   //   rgb(28 35 46) 100%
-//   // );
-
-//   // background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(28, 35, 46) 5px, rgb(28, 35, 46) 100%);
-//   // background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(42, 50, 61) 5px, rgb(42, 50, 61) 100%);
-//   background: linear-gradient(180deg, #2e3440 5px, rgb(42, 50, 61) 5px, rgb(42, 50, 61) 100%);
-
-//   .contact-title {
-    
-    
-//     color: var(--surface-600);
-    
-
-// }
-
-// .contact-text {
-    
-//     color: #95a0b1;
-    
-// }
-
-
-// .contact-form {
-   
-//     border: 1.7px solid #36578d;
-//     background-color: #3c4554e3;
-
-//     .form-title {
-//     color: var(--blue-500);
-//     }
-    
-//     .p-inputtext {
-   
-//     color: rgba(255, 255, 255, 0.87);
-//     background: #495167;
-    
-//     border: 1px solid #56637d;
-//     }
-
-
-
-//     .name .p-inputtext:enabled:focus, .email .p-inputtext:enabled:focus, .message .p-inputtext:enabled:focus {
-    
-//        box-shadow: 0 0 0 0.1rem #3b82f6 !important;
-//     }
-// .name,.email,.message{
-//     .p-inputtext:enabled:hover {
-//     border-color: #3b82f6;
-//  }
-// }
-
-//  .p-button.p-button-info, .p-button-group.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button, .p-fileupload-choose.p-button-info {
-//     color: var(--surface-900);
-//     background: #3366b9;
-//     border: 1px solid #3366b9;
-// }
-
-// .contact-submit.p-button {
-//     border: 1px solid #3366b9;
-//     background-color: #3366b9;
-//     width: 25%;
-//     margin-top: 25px;
-// }
-
-// .p-button.p-button-info, .p-button-group.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button, .p-fileupload-choose.p-button-info {
-//     color: #ffffffcc;
-//     background: #3366b9;
-//     border: 1px solid #3366b9;
-// }
-
-// .p-button.p-button-info:not(:disabled):hover, .p-button-group.p-button-info > .p-button:not(:disabled):hover, .p-splitbutton.p-button-info > .p-button:not(:disabled):hover, .p-fileupload-choose.p-button-info:not(:disabled):hover {
-//     background: #3366b9;
-//     color: #ffffffcc;
-    
-// }
-
-// .p-button.p-button-info:not(:disabled):active, .p-button-group.p-button-info > .p-button:not(:disabled):active, .p-splitbutton.p-button-info > .p-button:not(:disabled):active, .p-fileupload-choose.p-button-info:not(:disabled):active {
-//     color: #ffffffcc;
-    
-// }
-
-// .contact-submit.p-button.p-button-info:enabled:focus {
-//     box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px #609af8, 0 1px 2px 0 rgba(0, 0, 0, 0) !important;
-// }
-
-
-// .name.name-error .p-component, .email.email-error .p-component, .message.message-error .p-component {
-//     border: 1px solid #ff5d53;
-//     border-color: #ff5d53;
-// }
-
-// .error {
-//     position: absolute;
-//     top: -11px;
-//     right: 0%;
-//     text-align: left;
-//     margin-top: 10px;
-//     margin-bottom: 15px;
-//     color: #ff5d53;
-//     font-size: 11px;
-// }
-
-
-
-// .name.name-error .p-inputtext:enabled:hover, .email.email-error .p-inputtext:enabled:hover, .message.message-error .p-inputtext:enabled:hover {
-//     outline: none !important;
-//     box-shadow: none !important;
-//     border-color: #ff5d53 !important;
-// }
-
-
-// .name.name-error .p-inputtext:enabled:focus, .email.email-error .p-inputtext:enabled:focus, .message.message-error .p-inputtext:enabled:focus {
-//     outline: none !important;
-//     box-shadow: none !important;
-//     border-color: #ff5d53 !important;
-// }
-
-
-
-
-
-
-
-    
-// }
-
-
-
-// }
-
-
-// .confirmation-dialog.confirmation-dialog-dark {
-
-// .p-button {
-//     background: #165bcc !important;
-//     border: 1px solid #165bcc !important;
-//     color: #ffffffdb !important;
-//     min-width: 94.825px;
-// }
-
-// .paperPlane {
-//     margin-right: 10px;
-//     font-size: 16px;
-//     color: #ffffffc4;
-// }
-
-// .p-button:focus {
-//     box-shadow: 0 0 0 2px #223f6d, 0 0 0 4px var(--blue-400), 0 1px 2px 0 var(--blue-400) !important;
-// }
-// }
-
-
-
-// .contact-title {
-//   font-family: "Fira Sans";
-//   font-size: 2.5rem;
-//   margin-top: 6.25rem;
-//   display: inline-block;
-//   border-bottom: 0.3125rem solid rgba(59, 130, 246, 0.85);
-//   color: #4b5563;
-//   text-align: left;
-//   margin-bottom: 1.25rem;
-// }
-
-// .form-title {
-//   font-family: "Fira Sans";
-//   color: #609af8;
-//   font-size: 27px;
-//   font-style: italic;
-//   font-weight: 400;
-// }
-
-// .contact-text {
-//   margin-top: 20px;
-//   font-size: 19px;
-//   text-align: center;
-//   font-family: "montserrat";
-//   color: #6b747b;
-//   line-height: 1.5rem;
-//   text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
-//   // font-size: 1.0625rem;
-//   width: 60%;
-// }
-
-// .contact-form {
-//   display: flex;
-//   flex-direction: column;
-//   width: 70%;
-//   gap: 15px;
-//   border: solid 1px var(--bluegray-200);
-//   margin-top: 60px;
-//   margin-bottom: 110px;
-//   border-radius: 20px;
-//   background-color: var(--surface-b);
-//   align-items: center;
-//   padding: 30px;
-
-//   .sendButtonIcon {
-//     margin-right: 10px;
-//     font-size: 14px;
-//   }
-
-//   .name,
-//   .email,
-//   .message {
-//     width: 100%;
-//     margin-top: 15px;
-//     .p-inputtext {
-//       width: 100%;
-//     }
-
-//     .p-inputtext:enabled:focus {
-//       box-shadow: 0 0 0 0.2rem var(--blue-100) !important;
-//     }
-
-//     .p-inputtext:enabled:hover {
-//       border-color: var(--blue-400);
-//     }
-//   }
-
-//   .message {
-//     .p-inputtextarea {
-//       resize: vertical;
-//       min-height: 212px;
-//     }
-//   }
-
-//   .name-error,
-//   .email-error,
-//   .message-error {
-//     .p-component {
-//       border: 1px solid red;
-//       border-color: red;
-//     }
-
-//     .p-inputtext:enabled:focus {
-//       outline: none !important;
-//       box-shadow: none !important;
-//       border-color: red !important;
-//     }
-
-//     .p-inputtext:enabled:hover {
-//       outline: none !important;
-//       box-shadow: none !important;
-//       border-color: red !important;
-//     }
-//   }
-
-//   .contact-submit.p-button {
-//     background: #609af8;
-//     border: 1px solid #609af8;
-//     width: 25%;
-//     margin-top: 25px;
-
-//     .p-button-info:enabled:focus {
-//       box-shadow:
-//         0 0 0 2px #ffffff,
-//         0 0 0 4px var(--blue-400),
-//         0 1px 2px 0 rgb(0, 0, 0) !important;
-//     }
-//   }
-
-//   .contact-submit.p-button.p-button-info:enabled:focus {
-//     box-shadow:
-//       0 0 0 2px #ffffff,
-//       0 0 0 4px var(--blue-400),
-//       0 1px 2px 0 rgb(0, 0, 0) !important;
-//   }
-
-//   .name-block,
-//   .email-block,
-//   .message-block {
-//     position: relative;
-//     width: 80%;
-//   }
-
-//   .error {
-//     position: absolute;
-//     top: -11px;
-//     right: 0%;
-//     text-align: left;
-//     margin-top: 10px;
-//     margin-bottom: 15px;
-//     color: red;
-//     font-size: 11px;
-//   }
-// }
-
-// .confirmation-dialog {
-//   min-width: 460.425px !important;
-//   .p-button {
-//     background: rgb(59 130 246) !important;
-//     border: 1px solid rgb(59 130 246) !important;
-//     min-width: 94.825px;
-//   }
-
-//   .p-button:focus {
-//     box-shadow:
-//       0 0 0 2px #ffffff,
-//       0 0 0 4px var(--blue-400),
-//       0 1px 2px 0 rgb(0, 0, 0) !important;
-//   }
-
-//   .circleCheck {
-//     color: green;
-//     margin-right: 10px;
-//     font-size: 20px;
-//   }
-
-//   .xMark {
-//     color: red;
-//     margin-right: 10px;
-//     font-size: 20px;
-//   }
-
-//   .paperPlane {
-//     margin-right: 10px;
-//     font-size: 16px;
-//     color: var(--bluegray-700);
-//   }
-// }
-
-// @media screen and (min-width: 2000px) {
-
-//   .contact-form{
-//     width:50%;
-//   }
-
-// }  
-
-// @media screen and (max-width: 960px) {
-//   .contact-form {
-//     width: 90%;
-//   }
-// }
-
-// @media screen and (max-width: 650px) {
-//   // .contact-form {
-//   //   .contact-submit.p-button {
-//   //     width: 50%;
-//   //   }
-
-//   //   .name-block,
-//   //   .email-block,
-//   //   .message-block {
-//   //     width: 100%;
-//   //   }
-//   // }
-//  .contact-dark,.contact-light{
-//     .contact-form {
-//     .contact-submit.p-button {
-//       width: 50%;
-//     }
-
-//     .name-block,
-//     .email-block,
-//     .message-block {
-//       width: 100%;
-//     }
-//   }
-
-// }
-// }
-// @media screen and (max-width: 500px) {
-//   .contact-form {
-//     padding-left: 15px;
-//     padding-right: 15px;
-
-//     .form-title {
-//       font-family: "Fira Sans";
-//       color: #609af8;
-//       font-size: 23px;
-//       font-style: italic;
-//       font-weight: 400;
-//       width: 90%;
-//       text-align: center;
-//     }
-
-//     .p-button {
-//       font-size: 0.9rem;
-//     }
-
-//     .sendButtonIcon {
-//       font-size: 13px;
-//     }
-//   }
-
-//   .confirmation-dialog {
-//     min-width: unset !important;
-//     width: 90%;
-//   }
-// }
-
-// @media screen and (max-width: 400px) {
-//   .contact {
-//     .contact-title {
-//       font-size: 28.8px;
-//     }
-
-//     .contact-text {
-//       font-size: 17px;
-//     }
-//   }
-
-//   .contact-form .p-inputtext {
-//     height: 2.5rem;
-//     font-size: 0.875rem;
-//     padding: 0.5rem;
-//   }
-
-//   .contact-form .p-inputtextarea.p-inputtext {
-//     height: 12rem;
-//     font-size: 0.875rem;
-//     padding: 0.5rem;
-//   }
-
-//   .contact-form .form-title {
-//     font-size: 20px;
-//   }
-
-//   .contact-form {
-//     .name-block,
-//     .email-block,
-//     .message-block {
-//       .p-float-label {
-//         margin-top: 1.25rem;
-//       }
-
-//       .p-float-label label {
-//         font-size: 0.75rem;
-//       }
-
-//       .p-float-label:has(input:focus) label,
-//       .p-float-label:has(input.p-filled) label,
-//       .p-float-label:has(input:-webkit-autofill) label,
-//       .p-float-label:has(textarea:focus) label,
-//       .p-float-label:has(textarea.p-filled) label,
-//       .p-float-label:has(.p-inputwrapper-focus) label,
-//       .p-float-label:has(.p-inputwrapper-filled) label {
-//         top: -0.55rem;
-//         font-size: 11px;
-//       }
-//     }
-
-//     .name-block,
-//     .email-block {
-//       .error {
-//         position: absolute;
-//         top: unset;
-//         bottom: -30px;
-//         font-size: 9.5px;
-//         right: 4px;
-//       }
-//     }
-
-//     .message-block {
-//       .error {
-//         bottom: -25px !important;
-//         position: absolute;
-//         top: unset;
-//         font-size: 9.5px;
-//         right: 4px;
-//       }
-//     }
-
-//     .contact-submit.p-button {
-//       height: 37px;
-//     }
-//   }
-
-//   .confirmation-dialog .p-dialog-content {
-//     padding: 1rem;
-//     font-size: 0.9rem;
-//   }
-
-//   .confirmation-dialog .p-dialog-header {
-//     padding: 1.2rem 1rem;
-//     font-size: 1rem;
-//   }
-
-//   .confirmation-dialog .p-dialog-footer {
-//     padding: 1.5rem 1rem;
-//   }
-
-//   .p-dialog .p-dialog-header .p-dialog-title {
-//     font-size: 1.15rem;
-//   }
-
-//   .confirmation-dialog .paperPlane {
-//     font-size: 15px;
-//   }
-
-//   .confirmation-dialog {
-//     .p-button {
-//       font-size: 0.9rem;
-//       height: 38px;
-//       min-width: 90px;
-//     }
-
-//     .p-button .p-button-icon-left {
-//       margin-right: 5px;
-//       font-size: 13px;
-//     }
-
-//     .circleCheck {
-//       font-size: 17px;
-//     }
-
-//     .xMark {
-//       font-size: 17px;
-//     }
-//   }
-// }
-
-
 
 @font-face {
   font-family: "Fira Sans";
@@ -584,19 +20,14 @@
   align-items: center;
   
 
-  // min-height: 677px !important;
+  
   min-height: 42.3125rem !important;
   width: 100%;
 }
 
 .contact-light{
   
-  // background: linear-gradient(
-  //   180deg,
-  //   var(--surface-d) 5px,
-  //   #dcdcdc57 5px,
-  //   #dcdcdc57 100%
-  // );
+  
   background: linear-gradient(
     180deg,
     var(--surface-d) 0.3125rem,
@@ -608,16 +39,9 @@
 
 .contact-dark{
 
-  // background-color: rgb(28 35 46);
-  // background: linear-gradient(
-  //   180deg,
-  //   var(--surface-d) 5px,
-  //   rgb(28 35 46) 5px,
-  //   rgb(28 35 46) 100%
-  // );
+  
 
-  // background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(28, 35, 46) 5px, rgb(28, 35, 46) 100%);
-  // background: linear-gradient(180deg, var(--bluegray-900) 5px, rgb(42, 50, 61) 5px, rgb(42, 50, 61) 100%);
+  
   background: linear-gradient(180deg, #2e3440 0.3125rem, rgb(42, 50, 61) 0.3125rem, rgb(42, 50, 61) 100%);
 
   .contact-title {
@@ -707,16 +131,15 @@
 
 .error {
     position: absolute;
-    // top: -11px;
+  
     top: -0.6875rem; 
     right: 0%;
     text-align: left;
-    // margin-top: 10px;
-    // margin-bottom: 15px;
+    
     margin-top: 0.625rem; 
     margin-bottom: 0.9375rem; 
     color: #ff5d53;
-    // font-size: 11px;
+    
     font-size: 0.6875rem;
 }
 
@@ -751,41 +174,25 @@
 
 .confirmation-dialog.confirmation-dialog-dark {
 
-// .p-button {
-//     background: #165bcc !important;
-//     border: 1px solid #165bcc !important;
-//     color: #ffffffdb !important;
-//     min-width: 94.825px;
-// }
-
-// .paperPlane {
-//     margin-right: 10px;
-//     font-size: 16px;
-//     color: #ffffffc4;
-// }
-
-// .p-button:focus {
-//     box-shadow: 0 0 0 2px #223f6d, 0 0 0 4px var(--blue-400), 0 1px 2px 0 var(--blue-400) !important;
-// }
 
 .p-button {
   background: #165bcc !important;
-  border: 0.0625rem solid #165bcc !important; /* 1px */
+  border: 0.0625rem solid #165bcc !important; 
   color: #ffffffdb !important;
-  min-width: 5.9266rem; /* 94.825px */
+  min-width: 5.9266rem;
 }
 
 .paperPlane {
-  margin-right: 0.625rem; /* 10px */
-  font-size: 1rem; /* 16px */
+  margin-right: 0.625rem; 
+  font-size: 1rem; 
   color: #ffffffc4;
 }
 
 .p-button:focus {
   box-shadow:
-    0 0 0 0.125rem #223f6d,       /* 2px */
-    0 0 0 0.25rem var(--blue-400), /* 4px */
-    0 0.0625rem 0.125rem 0 var(--blue-400) !important; /* 1px 2px */
+    0 0 0 0.125rem #223f6d,     
+    0 0 0 0.25rem var(--blue-400), 
+    0 0.0625rem 0.125rem 0 var(--blue-400) !important; 
 }
 
 }
@@ -812,8 +219,7 @@
 }
 
 .contact-text {
-  // margin-top: 20px;
-  // font-size: 19px;
+  
   margin-top: 1.25rem; 
   font-size: 1.1875rem; 
   text-align: center;
@@ -821,7 +227,7 @@
   color: #6b747b;
   line-height: 1.5rem;
   text-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.1);
-  // font-size: 1.0625rem;
+  
   width: 60%;
 }
 
@@ -839,8 +245,7 @@
   padding: 1.875rem;           
 
   .sendButtonIcon {
-    // margin-right: 10px;
-    // font-size: 14px;
+    
      margin-right: 0.625rem;    
     font-size: 0.875rem;       
   }
@@ -891,60 +296,6 @@
     }
   }
 
-//   .contact-submit.p-button {
-//     background: #609af8;
-//     border: 1px solid #609af8;
-//     width: 25%;
-//     margin-top: 25px;
-
-//     .p-button-info:enabled:focus {
-//       box-shadow:
-//         0 0 0 2px #ffffff,
-//         0 0 0 4px var(--blue-400),
-//         0 1px 2px 0 rgb(0, 0, 0) !important;
-//     }
-//   }
-
-//   .contact-submit.p-button.p-button-info:enabled:focus {
-//     box-shadow:
-//       0 0 0 2px #ffffff,
-//       0 0 0 4px var(--blue-400),
-//       0 1px 2px 0 rgb(0, 0, 0) !important;
-//   }
-
-//   .name-block,
-//   .email-block,
-//   .message-block {
-//     position: relative;
-//     width: 80%;
-//   }
-
-//   .error {
-//     position: absolute;
-//     top: -11px;
-//     right: 0%;
-//     text-align: left;
-//     margin-top: 10px;
-//     margin-bottom: 15px;
-//     color: red;
-//     font-size: 11px;
-//   }
-// }
-
-// .confirmation-dialog {
-//   min-width: 460.425px !important;
-//   .p-button {
-//     background: rgb(59 130 246) !important;
-//     border: 1px solid rgb(59 130 246) !important;
-//     min-width: 94.825px;
-//   }
-
-//   .p-button:focus {
-//     box-shadow:
-//       0 0 0 2px #ffffff,
-//       0 0 0 4px var(--blue-400),
-//       0 1px 2px 0 rgb(0, 0, 0) !important;
-//   }
 
 .contact-submit.p-button {
   background: #609af8;
@@ -1004,38 +355,22 @@
   }
 
 
-  // .circleCheck {
-  //   color: green;
-  //   margin-right: 10px;
-  //   font-size: 20px;
-  // }
-
-  // .xMark {
-  //   color: red;
-  //   margin-right: 10px;
-  //   font-size: 20px;
-  // }
-
-  // .paperPlane {
-  //   margin-right: 10px;
-  //   font-size: 16px;
-  //   color: var(--bluegray-700);
-  // }
+  
   .circleCheck {
   color: green;
-  margin-right: 0.625rem; /* 10px */
-  font-size: 1.25rem;    /* 20px */
+  margin-right: 0.625rem; 
+  font-size: 1.25rem;  
 }
 
 .xMark {
   color: red;
-  margin-right: 0.625rem; /* 10px */
-  font-size: 1.25rem;    /* 20px */
+  margin-right: 0.625rem; 
+  font-size: 1.25rem;   
 }
 
 .paperPlane {
-  margin-right: 0.625rem; /* 10px */
-  font-size: 1rem;        /* 16px */
+  margin-right: 0.625rem; 
+  font-size: 1rem;        
   color: var(--bluegray-700);
 }
 
@@ -1044,7 +379,7 @@
 @media screen and (min-width: 2000px) {
 
   .contact-form{
-    width:50%;
+    width:60%;
   }
 
 }  
@@ -1056,17 +391,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  // .contact-form {
-  //   .contact-submit.p-button {
-  //     width: 50%;
-  //   }
-
-  //   .name-block,
-  //   .email-block,
-  //   .message-block {
-  //     width: 100%;
-  //   }
-  // }
+  
  .contact-dark,.contact-light{
     .contact-form {
     .contact-submit.p-button {
@@ -1083,33 +408,7 @@
 }
 }
 @media screen and (max-width: 500px) {
-  // .contact-form {
-  //   padding-left: 15px;
-  //   padding-right: 15px;
-
-  //   .form-title {
-  //     font-family: "Fira Sans";
-  //     color: #609af8;
-  //     font-size: 23px;
-  //     font-style: italic;
-  //     font-weight: 400;
-  //     width: 90%;
-  //     text-align: center;
-  //   }
-
-  //   .p-button {
-  //     font-size: 0.9rem;
-  //   }
-
-  //   .sendButtonIcon {
-  //     font-size: 13px;
-  //   }
-  // }
-
-  // .confirmation-dialog {
-  //   min-width: unset !important;
-  //   width: 90%;
-  // }
+  
 
   .contact-form {
   padding-left: 0.9375rem;   
@@ -1141,124 +440,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  // .contact {
-  //   .contact-title {
-  //     font-size: 28.8px;
-  //   }
-
-  //   .contact-text {
-  //     font-size: 17px;
-  //   }
-  // }
-
-  // .contact-form .p-inputtext {
-  //   height: 2.5rem;
-  //   font-size: 0.875rem;
-  //   padding: 0.5rem;
-  // }
-
-  // .contact-form .p-inputtextarea.p-inputtext {
-  //   height: 12rem;
-  //   font-size: 0.875rem;
-  //   padding: 0.5rem;
-  // }
-
-  // .contact-form .form-title {
-  //   font-size: 20px;
-  // }
-
-  // .contact-form {
-  //   .name-block,
-  //   .email-block,
-  //   .message-block {
-  //     .p-float-label {
-  //       margin-top: 1.25rem;
-  //     }
-
-  //     .p-float-label label {
-  //       font-size: 0.75rem;
-  //     }
-
-  //     .p-float-label:has(input:focus) label,
-  //     .p-float-label:has(input.p-filled) label,
-  //     .p-float-label:has(input:-webkit-autofill) label,
-  //     .p-float-label:has(textarea:focus) label,
-  //     .p-float-label:has(textarea.p-filled) label,
-  //     .p-float-label:has(.p-inputwrapper-focus) label,
-  //     .p-float-label:has(.p-inputwrapper-filled) label {
-  //       top: -0.55rem;
-  //       font-size: 11px;
-  //     }
-  //   }
-
-  //   .name-block,
-  //   .email-block {
-  //     .error {
-  //       position: absolute;
-  //       top: unset;
-  //       bottom: -30px;
-  //       font-size: 9.5px;
-  //       right: 4px;
-  //     }
-  //   }
-
-  //   .message-block {
-  //     .error {
-  //       bottom: -25px !important;
-  //       position: absolute;
-  //       top: unset;
-  //       font-size: 9.5px;
-  //       right: 4px;
-  //     }
-  //   }
-
-  //   .contact-submit.p-button {
-  //     height: 37px;
-  //   }
-  // }
-
-  // .confirmation-dialog .p-dialog-content {
-  //   padding: 1rem;
-  //   font-size: 0.9rem;
-  // }
-
-  // .confirmation-dialog .p-dialog-header {
-  //   padding: 1.2rem 1rem;
-  //   font-size: 1rem;
-  // }
-
-  // .confirmation-dialog .p-dialog-footer {
-  //   padding: 1.5rem 1rem;
-  // }
-
-  // .p-dialog .p-dialog-header .p-dialog-title {
-  //   font-size: 1.15rem;
-  // }
-
-  // .confirmation-dialog .paperPlane {
-  //   font-size: 15px;
-  // }
-
-  // .confirmation-dialog {
-  //   .p-button {
-  //     font-size: 0.9rem;
-  //     height: 38px;
-  //     min-width: 90px;
-  //   }
-
-  //   .p-button .p-button-icon-left {
-  //     margin-right: 5px;
-  //     font-size: 13px;
-  //   }
-
-  //   .circleCheck {
-  //     font-size: 17px;
-  //   }
-
-  //   .xMark {
-  //     font-size: 17px;
-  //   }
-  // }
+  
 
   .contact {
   .contact-title {
