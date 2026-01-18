@@ -4,7 +4,8 @@ import "./Navbar.scss";
 import { useState, useEffect, useContext, useRef } from "react";
 import { PrimeReactContext } from "primereact/api";
 // import contrastIcon from "../../assets/images/contrast.png";
-import contrastIcon from "../../assets/images/arrow.png";
+// import contrastIcon from "../../assets/images/arrow.png";
+import contrastIcon from "../../assets/images/try.png";
 
 
 function Navbar({ isDarkMode, setIsDarkMode, refs }) {
@@ -65,10 +66,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
 
   return () => observer.disconnect();
 }, [
-  // homeRef,
-  // aboutRef,
-  // projectsRef,
-  // contactRef,
+  
   automaticHighlightDisabled,
 ]);
 
@@ -197,13 +195,13 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
     <div className="navbar-leftside">
       <span className="navbar-name">Amjad Sharafeddine</span>
       {/* <div className="navbar-avatar-background"> */}
-      {/* <img
+      <img
         className="navbar-avatar"
         src={contrastIcon}
         // width="30"
         // height="30"
-      /> */}
-      <span className={`${isDarkMode ? "navbar-icon-dark" : "navbar-icon"}`}>&lt;<span className="slash">/</span>&gt;</span>
+      /> 
+      {/* <span className={`${isDarkMode ? "navbar-icon-dark" : "navbar-icon"}`}>&lt;<span className="slash">/</span>&gt;</span> */}
       {/* </div> */}
     </div>
   );
