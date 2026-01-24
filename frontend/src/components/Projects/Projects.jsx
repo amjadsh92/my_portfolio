@@ -5,7 +5,6 @@ import reactLogo from "../../assets/images/react.png";
 import expressLogo from "../../assets/images/express.png";
 import scssLogo from "../../assets/images/scss.png";
 import postgreLogo from "../../assets/images/postgre3.png";
-// import prismaLogo from "../../assets/images/prismaORM.png";
 import prismaLogo from "../../assets/images/prismaLogo1.png";
 import primeReactLogo from "../../assets/images/primereact.png";
 import passportJSLogo from "../../assets/images/passportJSLogo1.png";
@@ -14,7 +13,7 @@ import cssLogo from "../../assets/images/css.png";
 import bootstrapLogo from "../../assets/images/bootstrapLogo4.png";
 import htmlLogo from "../../assets/images/html2.png";
 import javascriptLogo from "../../assets/images/javascript.png";
-import motionLogo from "../../assets/images/motionLogo.png"
+import motionLogo from "../../assets/images/motionLogo.png";
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { animate } from "motion";
@@ -22,39 +21,36 @@ import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
 function Projects({ isDarkMode }) {
-
   function useIsSmallScreen(breakpoint = 960) {
-  const [isSmall, setIsSmall] = useState(
-    typeof window !== "undefined" && window.innerWidth <= breakpoint
-  );
+    const [isSmall, setIsSmall] = useState(
+      typeof window !== "undefined" && window.innerWidth <= breakpoint
+    );
 
-  useEffect(() => {
-    const onResize = () => {
-      const nextIsSmall = window.innerWidth <= breakpoint;
-      setIsSmall(prev => (prev !== nextIsSmall ? nextIsSmall : prev));
-    };
+    useEffect(() => {
+      const onResize = () => {
+        const nextIsSmall = window.innerWidth <= breakpoint;
+        setIsSmall((prev) => (prev !== nextIsSmall ? nextIsSmall : prev));
+      };
 
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [breakpoint]);
+      window.addEventListener("resize", onResize);
+      return () => window.removeEventListener("resize", onResize);
+    }, [breakpoint]);
 
-  return isSmall;
-}
+    return isSmall;
+  }
   const [visible, setVisible] = useState([true, true, true, true]);
-  const ref1 = useRef(null)
-  const ref2 = useRef(null)
-  const ref3 = useRef(null)
-  const ref4 = useRef(null)
-  const ref5 = useRef(null)
-  const ref6 = useRef(null)
-  const ref7 = useRef(null)
-  const ref8 = useRef(null)
-  const ref9 = useRef(null)
-  
-  
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const ref5 = useRef(null);
+  const ref6 = useRef(null);
+  const ref7 = useRef(null);
+  const ref8 = useRef(null);
+  const ref9 = useRef(null);
 
-  const ref = [ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9]
-  const [projectNumber, setProjectNumber] = useState(4)
+  const ref = [ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9];
+  const [projectNumber, setProjectNumber] = useState(4);
   const projects = [
     {
       id: "1",
@@ -78,8 +74,10 @@ function Projects({ isDarkMode }) {
         { logo: passportJSLogo, name: "Passport.js" },
       ],
       imageAtLeft: true,
+      showDemoHref:"https://shorturl.amjadsh.com",
+      readMoreHref:"https://github.com/amjadsh92/url_shortener_project.git"
     },
-    
+
     {
       id: "2",
       title: "My Portfolio",
@@ -89,30 +87,30 @@ function Projects({ isDarkMode }) {
         "Smooth animations with a modern, clean design",
         "Contact form with direct email delivery",
         "Fully responsive across all devices",
-        
       ],
       techs: [
         { logo: reactLogo, name: "React" },
         { logo: expressLogo, name: "ExpressJS" },
         { logo: scssLogo, name: "SCSS" },
         { logo: primeReactLogo, name: "PrimeReact" },
-        { logo: motionLogo, name: "motion.dev" }
-        
+        { logo: motionLogo, name: "motion.dev" },
       ],
       imageAtLeft: false,
+      showDemoHref:"https://shorturl.amjadsh.com",
+      readMoreHref:"https://github.com/amjadsh92/my_portfolio.git"
     },
 
-     {
+    {
       id: "3",
       title: "Exercise Tracker",
       description: `A full-stack app where you can add users, log their exercises, and view a complete history of their activity. The app provides an organized user dashboard with CRUD functionality for managing users and their activity.`,
       features: [
-        "Add new users with unique IDs.",
-        "Log detailed exercise entries (name, duration, date, etc.) for each user.",
-        "View a user’s full exercise history on their dedicated page.",
-        "Delete users and automatically remove their associated data.",
-        "Home page displays all users in a clean, sortable table.",
-        "Responsive UI for smooth use on all devices.",
+        "Add new users with unique IDs",
+        "Log detailed exercise entries (name, duration, date, etc.) for each user",
+        "View a user’s full exercise history on their dedicated page",
+        "Delete users and automatically remove their associated data",
+        "Home page displays all users in a clean, sortable table",
+        "Responsive UI for smooth use on all devices",
       ],
       techs: [
         { logo: reactLogo, name: "React" },
@@ -122,8 +120,9 @@ function Projects({ isDarkMode }) {
         { logo: scssLogo, name: "SCSS" },
       ],
       imageAtLeft: true,
+      showDemoHref:"https://projects.amjadsh.com/exercise-tracker/",
+      readMoreHref:"https://github.com/amjadsh92/exerciseTracker.git"
     },
-
 
     {
       id: "4",
@@ -140,6 +139,8 @@ function Projects({ isDarkMode }) {
         { logo: regexLogo, name: "Regex" },
       ],
       imageAtLeft: false,
+      showDemoHref:"https://projects.amjadsh.com/calculator/",
+      readMoreHref:"https://github.com/amjadsh92/My-calculater.git"
     },
 
     {
@@ -147,10 +148,10 @@ function Projects({ isDarkMode }) {
       title: "Drum Machine",
       description: `A responsive drum machine app that allows users to play beats, created to strengthen my web development skills.`,
       features: [
-        "Switch between two different sound sets.",
-        "Adjustable volume control for all sounds.",
-        "Play beats using either the keyboard or mouse.",
-        "Displays the name of the sound currently triggered.",
+        "Switch between two different sound sets",
+        "Adjustable volume control for all sounds",
+        "Play beats using either the keyboard or mouse",
+        "Displays the name of the sound currently triggered",
         "Fully responsive design for all screen sizes",
       ],
       techs: [
@@ -158,6 +159,8 @@ function Projects({ isDarkMode }) {
         { logo: bootstrapLogo, name: "bootstrap" },
       ],
       imageAtLeft: true,
+      showDemoHref:"https://projects.amjadsh.com/drum-machine/",
+      readMoreHref:"https://github.com/amjadsh92/Drum-Machine.git"
     },
 
     {
@@ -165,10 +168,10 @@ function Projects({ isDarkMode }) {
       title: "Markdown Previewer",
       description: `A responsive Markdown previewer that converts Markdown code into formatted content, with support for advanced and special-case syntax.`,
       features: [
-        "Conversion of Markdown input into formatted preview.",
-        "Supports standard Markdown elements such as headings, lists, links, images, and code blocks.",
-        "Handles special-case Markdown syntax for more complex formatting.",
-        "Clean and responsive interface optimized for all screen sizes.",
+        "Conversion of Markdown input into formatted preview",
+        "Supports standard Markdown elements such as headings, lists, links, images, and code blocks",
+        "Handles special-case Markdown syntax for more complex formatting",
+        "Clean and responsive interface optimized for all screen sizes",
       ],
       techs: [
         { logo: reactLogo, name: "React" },
@@ -176,22 +179,26 @@ function Projects({ isDarkMode }) {
         { logo: regexLogo, name: "Regex" },
       ],
       imageAtLeft: false,
+      showDemoHref:"https://projects.amjadsh.com/markdown-editor/",
+      readMoreHref:"https://github.com/amjadsh92/MarkdownPreviewer.git"
     },
     {
       id: "7",
       title: "Session & Break Timer",
       description: `A customizable session–break timer that lets users set their own work and rest durations, automatically alternating between phases with visual and audio cues for better time management.`,
       features: [
-        "Adjustable session length and break length.",
-        "Automatically alternates between session and break phases.",
-        "Emits a five-beep alarm when switching phases to prepare the user in advance.",
-        "Responsive accros all devices.",
+        "Adjustable session length and break length",
+        "Automatically alternates between session and break phases",
+        "Emits a five-beep alarm when switching phases to prepare the user in advance",
+        "Responsive accros all devices",
       ],
       techs: [
         { logo: reactLogo, name: "React" },
         { logo: cssLogo, name: "CSS" },
       ],
       imageAtLeft: true,
+      showDemoHref:"https://projects.amjadsh.com/session-break-timer/",
+      readMoreHref:"https://github.com/amjadsh92/My-clock.git"
     },
 
     {
@@ -199,17 +206,19 @@ function Projects({ isDarkMode }) {
       title: "Quote Generator",
       description: `A dynamic quote generator that displays random inspirational quotes at the click of a button`,
       features: [
-        "Generates a new random quote on demand.",
-        "Displays both the quote text and its author.",
-        "Smooth transitions for a good user experience.",
-        "Share quotes directly to Tumblr or X.",
-        "Responsive accros all devices.",
+        "Generates a new random quote on demand",
+        "Displays both the quote text and its author",
+        "Smooth transitions for a good user experience",
+        "Share quotes directly to Tumblr or X",
+        "Responsive accros all devices",
       ],
       techs: [
         { logo: reactLogo, name: "React" },
         { logo: bootstrapLogo, name: "bootstrap" },
       ],
       imageAtLeft: false,
+      showDemoHref:"https://projects.amjadsh.com/quote-generator/",
+      readMoreHref:"https://github.com/amjadsh92/quoteProject.git"
     },
 
     {
@@ -217,10 +226,10 @@ function Projects({ isDarkMode }) {
       title: "Pokemon Search",
       description: `A Pokémon search app that lets users look up any Pokémon by name or ID, instantly displaying its image, type, and full set of stats`,
       features: [
-        "Search Pokémon by name or ID.",
-        "Displays Pokémon image, name, and elemental type (Fire, Electric, Water, etc.).",
-        "Shows complete stat details including attack, defense, speed, and more.",
-        "Responsive accros all devices.",
+        "Search Pokémon by name or ID",
+        "Displays Pokémon image, name, and elemental type (Fire, Electric, Water, etc.)",
+        "Shows complete stat details including attack, defense, speed, and more",
+        "Responsive accros all devices",
       ],
       techs: [
         { logo: javascriptLogo, name: "Javascript" },
@@ -228,49 +237,26 @@ function Projects({ isDarkMode }) {
         { logo: htmlLogo, name: "HTML" },
       ],
       imageAtLeft: true,
+      showDemoHref:"https://projects.amjadsh.com/pokemon-search/",
+      readMoreHref:"https://github.com/amjadsh92/pokemonSearch.git"
     },
-   
-
-     
   ];
 
-  
-const isSmallScreen = useIsSmallScreen(960);
-//   const motionScrollDown = (distance = 100, duration = 0.8) => {
-//   const start = window.scrollY;
+  const isSmallScreen = useIsSmallScreen(960);
 
-//   animate(0, 1, {
-//     duration,
-//     ease: "easeOut",
-//     onUpdate: (latest) => {
-//       window.scrollTo(0, start + distance * latest);
-//     },
-//   });
-// };
-
-  const  showMore = async () => {
- 
-    
-
-    
-
+  const showMore = async () => {
     setVisible((prev) => [
       ...prev,
       ...new Array(4).fill(true).slice(0, projects.length - prev.length),
     ]);
-    setProjectNumber((prev) => prev + 4)
+    setProjectNumber((prev) => prev + 4);
     setTimeout(() => {
-      ref[projectNumber].current.scrollIntoView({behavior:"smooth"})
-      
-  
-  })
-    
-
-    
+      ref[projectNumber].current.scrollIntoView({ behavior: "smooth" });
+    });
   };
 
   return (
-    <div className={isDarkMode ? "projects-dark": "projects-light"}>
+    <div className={isDarkMode ? "projects-dark" : "projects-light"}>
       <div className="projects-title">
         <div className="title">Projects</div>
         <div className="subtitle">
@@ -290,22 +276,23 @@ const isSmallScreen = useIsSmallScreen(960);
             imageAtLeft={project.imageAtLeft}
             isVisible={visible[index]}
             isSmallScreen={isSmallScreen}
+            showDemoHref={project.showDemoHref}
+            readMoreHref={project.readMoreHref}
           />
         ))}
-        
       </div>
       {!(projects.length === visible.length) && (
-          <div className="seeMore">
-            <Button
-              label="Show more projects"
-              severity="info"
-              text
-              icon="pi pi-arrow-down"
-              iconPos="right"
-              onClick={showMore}
-            />
-          </div>
-        )}
+        <div className="seeMore">
+          <Button
+            label="Show more projects"
+            severity="info"
+            text
+            icon="pi pi-arrow-down"
+            iconPos="right"
+            onClick={showMore}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -320,13 +307,14 @@ function Project({
   techs,
   imageAtLeft,
   isVisible,
-  isSmallScreen
+  isSmallScreen,
+  showDemoHref,
+  readMoreHref
 }) {
- 
-
-  const inView = useInView(ref, { once: true, margin: `${isSmallScreen ? "-200px" : "-200px"}` });
-
-  
+  const inView = useInView(ref, {
+    once: true,
+    margin: `${isSmallScreen ? "-200px" : "-200px"}`,
+  });
 
   const descDistance = 200;
   const descDuration = 0.5;
@@ -434,12 +422,21 @@ function Project({
             icon="pi pi-external-link"
             iconPos="right"
             className="demo"
+            as="a"
+            onClick={() => window.open(showDemoHref, "_blank", "noopener,noreferrer")}
+
           />
           <Button
             label="Read more"
             icon="pi pi-github"
             iconPos="right"
             className="github"
+            as="a"
+            href={readMoreHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => window.open(readMoreHref, "_blank", "noopener,noreferrer")}
+
           />
         </div>
       </motion.div>
