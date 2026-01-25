@@ -1,19 +1,18 @@
 /* eslint-disable */
 import "./About.scss";
 import { motion } from "motion/react"
-import htmlLogo from "../../assets/images/html2.png";
-import javascriptLogo from "../../assets/images/javascript.png";
-import cssLogo from "../../assets/images/css.png";
-import reactLogo from "../../assets/images/react.png";
-import expressLogo from "../../assets/images/express.png";
-import scssLogo from "../../assets/images/scss.png";
-import gitLogo from "../../assets/images/git.png";
-import postgreLogo from "../../assets/images/postgre3.png";
-// import postgreLogo from "../../assets/images/PostgreLogo.eps";
-import prismaLogo from "../../assets/images/prismaLogo1.png";
-import primeReactLogo from "../../assets/images/primereact.png";
-import passportJSLogo from "../../assets/images/passportJSLogo1.png"
-import motionLogo from "../../assets/images/motionLogo.png"
+import htmlLogo from "/custom_assets/images/html2.png";
+import javascriptLogo from "/custom_assets/images/javascript.png";
+import cssLogo from "/custom_assets/images/css.png";
+import reactLogo from "/custom_assets/images/react.png";
+import expressLogo from "/custom_assets/images/express.png";
+import scssLogo from "/custom_assets/images/scss.png";
+import gitLogo from "/custom_assets/images/git.png";
+import postgreLogo from "/custom_assets/images/postgre3.png";
+import prismaLogo from "/custom_assets/images/prismaLogo1.png";
+import primeReactLogo from "/custom_assets/images/primereact.png";
+import passportJSLogo from "/custom_assets/images/passportJSLogo1.png"
+import motionLogo from "/custom_assets/images/motionLogo.png"
 
 function About({ isDarkMode }) {
   const skills = [

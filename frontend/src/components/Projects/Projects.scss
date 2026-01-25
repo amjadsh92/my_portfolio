@@ -1,6 +1,6 @@
 @font-face {
   font-family: "montserrat";
-  src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
+  src: url("/custom_assets/fonts/Montserrat-VariableFont_wght.ttf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Fira Sans";
-  src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
+  src: url("/custom_assets/fonts/FiraSans-Bold.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -100,7 +100,7 @@
       }
 
       .image2 {
-        background-image: url("../../assets/images/portfolio15.png");
+        background-image: url("/custom_assets/images/portfolio15.png");
       }
     }
   }
@@ -183,37 +183,37 @@
     }
 
     .image1 {
-      background-image: url("../../assets/images/UrlShortener-image12.png");
+      background-image: url("/custom_assets/images/UrlShortener-image12.png");
     }
     .image2 {
-      background-image: url("../../assets/images/portfolio11.png");
+      background-image: url("/custom_assets/images/portfolio11.png");
     }
     .image4 {
-      background-image: url("../../assets/images/MyCalculater-image3.png");
+      background-image: url("/custom_assets/images/MyCalculater-image3.png");
     }
 
     .image5 {
-      background-image: url("../../assets/images/drumMachine-image6.png");
+      background-image: url("/custom_assets/images/drumMachine-image6.png");
     }
 
     .image6 {
-      background-image: url("../../assets/images/markdown-image1.png");
+      background-image: url("/custom_assets/images/markdown-image1.png");
     }
 
     .image7 {
-      background-image: url("../../assets/images/timer-image1.png");
+      background-image: url("/custom_assets/images/timer-image1.png");
     }
 
     .image8 {
-      background-image: url("../../assets/images/quoteGenerator-image7.png");
+      background-image: url("/custom_assets/images/quoteGenerator-image7.png");
     }
 
     .image9 {
-      background-image: url("../../assets/images/pokemonSearch-image3.png");
+      background-image: url("/custom_assets/images/pokemonSearch-image3.png");
     }
 
     .image3 {
-      background-image: url("../../assets/images/exerciseTracker-image7.png");
+      background-image: url("/custom_assets/images/exerciseTracker-image7.png");
     }
   }
 
@@ -456,7 +456,7 @@
 @media screen and (max-width: 2000px) {
   .projects-container {
     .project-image .image1 {
-      background-image: url("../../assets/images/UrlShortener-image25.png");
+      background-image: url("/custom_assets/images/UrlShortener-image25.png");
     }
   }
 }
@@ -464,7 +464,7 @@
 @media screen and (max-width: 1600px) {
   .projects-container {
     .project-image .image1 {
-      background-image: url("../../assets/images/UrlShortener-image16.png");
+      background-image: url("/custom_assets/images/UrlShortener-image16.png");
 
       width: unset;
       height: 95%;
@@ -479,19 +479,19 @@
       .image1 {
         width: unset;
         height: 95%;
-        background-image: url("../../assets/images/UrlShortener-image17.png");
+        background-image: url("/custom_assets/images/UrlShortener-image17.png");
       }
 
       .image6 {
         width: unset;
         height: 95%;
-        background-image: url("../../assets/images/markdown-image2.png");
+        background-image: url("/custom_assets/images/markdown-image2.png");
       }
 
       .image8 {
         width: unset;
         height: 95%;
-        background-image: url("../../assets/images/quoteGenerator-image5.png");
+        background-image: url("/custom_assets/images/quoteGenerator-image5.png");
       }
     }
 
@@ -566,11 +566,11 @@
 
     .project-image {
       .image6 {
-        background-image: url("../../assets/images/markdown-image3.png");
+        background-image: url("/custom_assets/images/markdown-image3.png");
       }
 
       .image7 {
-        background-image: url("../../assets/images/timer-image6.png");
+        background-image: url("/custom_assets/images/timer-image6.png");
       }
     }
   }
@@ -579,7 +579,7 @@
 @media screen and (max-width: 1050px) {
   .projects-container {
     .project-image .image1 {
-      background-image: url("../../assets/images/UrlShortener-image18.png");
+      background-image: url("/custom_assets/images/UrlShortener-image18.png");
     }
   }
 }
@@ -587,17 +587,17 @@
 @media screen and (max-width: 1000px) {
   .projects-container {
     .project-image .image1 {
-      background-image: url("../../assets/images/UrlShortener-image22.png");
+      background-image: url("/custom_assets/images/UrlShortener-image22.png");
     }
 
     .project-image .image2 {
-      background-image: url("../../assets/images/portfolio12.png");
+      background-image: url("/custom_assets/images/portfolio12.png");
     }
   }
   .projects-dark {
     .projects-container {
       .project-image .image2 {
-        background-image: url("../../assets/images/portfolio16.png");
+        background-image: url("/custom_assets/images/portfolio16.png");
       }
     }
   }
@@ -675,38 +675,38 @@
         }
 
         .image1 {
-          background-image: url(/src/assets/images/UrlShortener-image30.png);
+          background-image: url(/custom_assets/images/UrlShortener-image30.png);
         }
         .image2 {
-          background-image: url(/src/assets/images/portfolio13.png);
+          background-image: url(/custom_assets/images/portfolio13.png);
         }
 
         .image4 {
-          background-image: url(src/assets/images/MyCalculater-image3.png);
+          background-image: url(/custom_assets/images/MyCalculater-image3.png);
         }
 
         .image5 {
-          background-image: url("../../assets/images/drumMachine-image6.png");
+          background-image: url("/custom_assets/images/drumMachine-image6.png");
         }
 
         .image6 {
-          background-image: url("../../assets/images/markdown-image1.png");
+          background-image: url("/custom_assets/images/markdown-image1.png");
         }
 
         .image7 {
-          background-image: url("../../assets/images/timer-image1.png");
+          background-image: url("/custom_assets/images/timer-image1.png");
         }
 
         .image8 {
-          background-image: url("../../assets/images/quoteGenerator-image7.png");
+          background-image: url("/custom_assets/images/quoteGenerator-image7.png");
         }
 
         .image9 {
-          background-image: url("../../assets/images/pokemonSearch-image3.png");
+          background-image: url("/custom_assets/images/pokemonSearch-image3.png");
         }
 
         .image3 {
-          background-image: url("../../assets/images/exerciseTracker-image7.png");
+          background-image: url("/custom_assets/images/exerciseTracker-image7.png");
         }
       }
     }
@@ -717,7 +717,7 @@
       .project-description-left {
         .project-image-small {
           .image2 {
-            background-image: url(/src/assets/images/portfolio14.png);
+            background-image: url(/custom_assets/images/portfolio14.png);
           }
         }
       }
@@ -747,13 +747,13 @@
     .project-description-left {
       .project-image-small {
         .image1 {
-          background-image: url(/src/assets/images/UrlShortener-image31.png);
+          background-image: url(/custom_assets/images/UrlShortener-image31.png);
 
           width: 80%;
         }
 
         .image6 {
-          background-image: url("../../assets/images/markdown-image3.png");
+          background-image: url("/custom_assets/images/markdown-image3.png");
         }
       }
     }
@@ -774,7 +774,7 @@
       .project-description-left {
         .project-image-small {
           .image2 {
-            background-image: url(/src/assets/images/portfolio15.png);
+            background-image: url(/custom_assets/images/portfolio15.png);
           }
         }
       }
@@ -786,7 +786,7 @@
     .project-description-left {
       .project-image-small {
         .image2 {
-          background-image: url(/src/assets/images/portfolio11.png);
+          background-image: url(/custom_assets/images/portfolio11.png);
         }
       }
     }
@@ -808,7 +808,7 @@
     .project-description-left {
       .project-image-small {
         .image1 {
-          background-image: url(/src/assets/images/UrlShortener-image31.png);
+          background-image: url(/custom_assets/images/UrlShortener-image31.png);
 
           width: 95%;
         }
@@ -832,7 +832,7 @@
           width: 95%;
         }
         .image8 {
-          background-image: url("../../assets/images/quoteGenerator-image8.png");
+          background-image: url("/custom_assets/images/quoteGenerator-image8.png");
           width: 95%;
         }
 
@@ -858,7 +858,7 @@
     .project-description-left {
       .project-image-small {
         .image1 {
-          background-image: url(/src/assets/images/UrlShortener-image31.png);
+          background-image: url(/custom_assets/images/UrlShortener-image31.png);
 
           width: 100%;
         }
@@ -881,7 +881,7 @@
 
         .image7 {
           width: 100%;
-          background-image: url("../../assets/images/timer-image6.png");
+          background-image: url("/custom_assets/images/timer-image6.png");
         }
 
         .image8 {
@@ -948,19 +948,19 @@
 
       .project-image-small {
         .image1 {
-          background-image: url(/src/assets/images/UrlShortener-image34.png);
+          background-image: url(/custom_assets/images/UrlShortener-image34.png);
         }
 
         .image2 {
-          background-image: url("../../assets/images/portfolio18.png");
+          background-image: url("/custom_assets/images/portfolio18.png");
         }
 
         .image4 {
-          background-image: url("../../assets/images/MyCalculator-image6.png");
+          background-image: url("/custom_assets/images/MyCalculator-image6.png");
         }
 
         .image5 {
-          background-image: url("../../assets/images/drumMachine-image7.png");
+          background-image: url("/custom_assets/images/drumMachine-image7.png");
         }
       }
 
@@ -1006,7 +1006,7 @@
       .project-description-left {
         .project-image-small {
           .image2 {
-            background-image: url("../../src/assets/images/portfolio17.png");
+            background-image: url("/custom_assets/images/portfolio17.png");
           }
         }
       }

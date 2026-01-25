@@ -1,6 +1,6 @@
 @font-face {
   font-family: "montserrat";
-  src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
+  src: url("/custom_assets/fonts/Montserrat-VariableFont_wght.ttf")
     format("opentype");
   font-weight: normal;
   font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Fira Sans";
-  src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
+  src: url("/custom_assets/fonts/FiraSans-Bold.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -72,8 +72,8 @@
   height: 21.25rem;
   border-radius: 0.3125rem;
   transform: translateX(1.875rem) translateY(-1.875rem);
-  // background: url("../../assets/images/test.jpeg");
-  background: url("../../assets/images/amjad-photo.jpeg");
+  // background: url("/custom_assets/images/test.jpeg");
+  background: url("/custom_assets/images/amjad-photo.jpeg");
   background-size: cover;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }

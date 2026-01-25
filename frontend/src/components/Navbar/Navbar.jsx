@@ -3,72 +3,60 @@ import { Menubar } from "primereact/menubar";
 import "./Navbar.scss";
 import { useState, useEffect, useContext, useRef } from "react";
 import { PrimeReactContext } from "primereact/api";
-// import contrastIcon from "../../assets/images/contrast.png";
-// import contrastIcon from "../../assets/images/arrow.png";
-import contrastIcon from "../../assets/images/try.png";
-
+import contrastIcon from "/custom_assets/images/try.png";
 
 function Navbar({ isDarkMode, setIsDarkMode, refs }) {
   const { homeRef, aboutRef, projectsRef, contactRef } = refs;
   const { changeTheme } = useContext(PrimeReactContext);
 
   const timeoutRef = useRef(null);
-
   const [activeSection, setActiveSection] = useState("home");
 
   const [automaticHighlightDisabled, setAutomaticHighlightDisabled] =
     useState(false);
 
- 
-
   useEffect(() => {
-  function getVisibleHeight(element) {
-    if (!element) return 0;
-    const rect = element.getBoundingClientRect();
-    const visibleTop = Math.max(rect.top, 0);
-    const visibleBottom = Math.min(rect.bottom, window.innerHeight);
-    return Math.max(0, visibleBottom - visibleTop);
-  }
-
-  const sections = [
-    { id: "home", ref: homeRef },
-    { id: "about", ref: aboutRef },
-    { id: "projects", ref: projectsRef },
-    { id: "contact", ref: contactRef },
-  ];
-
- 
-
- const observer = new IntersectionObserver(
-  () => {
-    if (!automaticHighlightDisabled) {
-      const currentlyVisible = sections
-        .map(section => ({
-          id: section.id,
-          height: getVisibleHeight(section.ref.current)
-        }))
-        .filter(s => s.height > 0);
-
-
-      if (currentlyVisible.length > 0) {
-        const tallest = currentlyVisible.reduce((max, item) =>
-          item.height > max.height ? item : max
-        );
-
-        setActiveSection(tallest.id);
-      }
+    function getVisibleHeight(element) {
+      if (!element) return 0;
+      const rect = element.getBoundingClientRect();
+      const visibleTop = Math.max(rect.top, 0);
+      const visibleBottom = Math.min(rect.bottom, window.innerHeight);
+      return Math.max(0, visibleBottom - visibleTop);
     }
-  },
-  { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }
-);
 
-  sections.forEach((s) => s.ref.current && observer.observe(s.ref.current));
+    const sections = [
+      { id: "home", ref: homeRef },
+      { id: "about", ref: aboutRef },
+      { id: "projects", ref: projectsRef },
+      { id: "contact", ref: contactRef },
+    ];
 
-  return () => observer.disconnect();
-}, [
-  
-  automaticHighlightDisabled,
-]);
+    const observer = new IntersectionObserver(
+      () => {
+        if (!automaticHighlightDisabled) {
+          const currentlyVisible = sections
+            .map((section) => ({
+              id: section.id,
+              height: getVisibleHeight(section.ref.current),
+            }))
+            .filter((s) => s.height > 0);
+
+          if (currentlyVisible.length > 0) {
+            const tallest = currentlyVisible.reduce((max, item) =>
+              item.height > max.height ? item : max
+            );
+
+            setActiveSection(tallest.id);
+          }
+        }
+      },
+      { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }
+    );
+
+    sections.forEach((s) => s.ref.current && observer.observe(s.ref.current));
+
+    return () => observer.disconnect();
+  }, [automaticHighlightDisabled]);
 
   const items = [
     {
@@ -180,7 +168,7 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
                 className={`${isDarkMode ? "lightmode-icon pi pi-sun" : "darkmode-icon pi pi-moon"}`}
               />{" "}
               <span
-                className={`${isDarkMode ?  "lightmode-text" : "darkmode-text"}`}
+                className={`${isDarkMode ? "lightmode-text" : "darkmode-text"}`}
               >
                 {isDarkMode ? "Light mode" : "Dark mode"}
               </span>
@@ -194,15 +182,8 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
   const navbarName = (
     <div className="navbar-leftside">
       <span className="navbar-name">Amjad Sharafeddine</span>
-      {/* <div className="navbar-avatar-background"> */}
-      <img
-        className="navbar-avatar"
-        src={contrastIcon}
-        // width="30"
-        // height="30"
-      /> 
-      {/* <span className={`${isDarkMode ? "navbar-icon-dark" : "navbar-icon"}`}>&lt;<span className="slash">/</span>&gt;</span> */}
-      {/* </div> */}
+
+      <img className="navbar-avatar" src={contrastIcon} />
     </div>
   );
 

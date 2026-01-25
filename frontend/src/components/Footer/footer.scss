@@ -1,144 +1,21 @@
-// @font-face {
-//   font-family: "montserrat";
-//   src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf")
-//     format("opentype");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "Fira Sans";
-//   src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-// @font-face {
-//   font-family: "DotMatrix";
-//   src: url("../../assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-
-// .footer-light,.footer-dark{
-//     display:flex;
-//     // flex-direction:column;
-//     justify-content:center;
-//     align-items:center;
-//     width:100%;
-//     height:100px;
-    
-//     // padding-top:20px;
-//     // gap:10px;
-
-// }
-
-// .footer-light{
-// background-color:#e5e7eb;
-// }
-
-// .footer-dark{
-// background-color:#111827;
-// .footer-rights, .footer-follow{
-//     color:#607597f7;
-// }
-// .github,.linkedin{
-    
-//     color:var(--bluegray-300);
-// }
-
-// }
-// .footer-text{
-//     display:flex;
-//     flex-direction:column;
-//     align-items:center;
-//     padding:20px;
-//     gap:10px;
-// }
-
-// .footer-rights{
-
-//     display:flex;
-//     justify-content: center;
-//     font-family: sans-serif;
-//     color: var(--gray-700);
-    
-
-// }
-
-// .footer-follow{
-
-//       font-family: sans-serif;
-//     color: var(--gray-700) ;
-// }
-
-
-
-// .github,.linkedin{
-//     vertical-align: bottom;
-//     color: var(--gray-700) ;
-// }
-
-// @media screen and (max-width: 500px) {
-
-
-// .footer-rights {
-
-//     font-size:14px;
-// }
-
-// .footer-follow{
-//     font-size:14px;
-// }
-
-// .github,.linkedin{
-//     font-size:0.9rem;
-// }
-
-
-
-// }   
-
-
-// @media screen and (max-width: 400px) {
-
-
-// .footer-rights {
-
-//     font-size:12px;
-// }
-
-// .footer-follow{
-//     font-size:12px;
-// }
-
-// .github,.linkedin{
-//     font-size:0.8rem;
-// }
-
-
-
-// }   
-
-
 @font-face {
   font-family: "montserrat";
-  src: url("../../assets/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
+  src: url("/custom_assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Fira Sans";
-  src: url("../../assets/fonts/FiraSans-Bold.ttf") format("opentype");
+  src: url("/custom_assets/fonts/FiraSans-Bold.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DotMatrix";
-  src: url("../../assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
+  src: url("/custom_assets/fonts/DotMatrix-BoldItalic.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -149,9 +26,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 6.25rem; 
+  height: 6.25rem;
   /* padding-top: 1.25rem; */ /* 20px, commented out */
-  /* gap: 0.625rem; */        /* 10px, commented out */
+  /* gap: 0.625rem; */ /* 10px, commented out */
 }
 
 .footer-light {
@@ -176,8 +53,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.25rem; 
-  gap: 0.625rem;    
+  padding: 1.25rem;
+  gap: 0.625rem;
 }
 
 .footer-rights {
@@ -200,30 +77,30 @@
 
 @media screen and (max-width: 500px) {
   .footer-rights {
-    font-size: 0.875rem; 
+    font-size: 0.875rem;
   }
 
   .footer-follow {
-    font-size: 0.875rem; 
+    font-size: 0.875rem;
   }
 
   .github,
   .linkedin {
-    font-size: 0.9rem;   
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   .footer-rights {
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
   }
 
   .footer-follow {
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
   }
 
   .github,
   .linkedin {
-    font-size: 0.8rem;  
+    font-size: 0.8rem;
   }
 }

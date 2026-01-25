@@ -1,22 +1,20 @@
 /* eslint-disable */
 import "./Projects.scss";
-import shortUrlImg from "../../assets/images/urlshortener-image.png";
-import reactLogo from "../../assets/images/react.png";
-import expressLogo from "../../assets/images/express.png";
-import scssLogo from "../../assets/images/scss.png";
-import postgreLogo from "../../assets/images/postgre3.png";
-import prismaLogo from "../../assets/images/prismaLogo1.png";
-import primeReactLogo from "../../assets/images/primereact.png";
-import passportJSLogo from "../../assets/images/passportJSLogo1.png";
-import regexLogo from "../../assets/images/regexLogo.png";
-import cssLogo from "../../assets/images/css.png";
-import bootstrapLogo from "../../assets/images/bootstrapLogo4.png";
-import htmlLogo from "../../assets/images/html2.png";
-import javascriptLogo from "../../assets/images/javascript.png";
-import motionLogo from "../../assets/images/motionLogo.png";
+import reactLogo from "/custom_assets/images/react.png";
+import expressLogo from "/custom_assets/images/express.png";
+import scssLogo from "/custom_assets/images/scss.png";
+import postgreLogo from "/custom_assets/images/postgre3.png";
+import prismaLogo from "/custom_assets/images/prismaLogo1.png";
+import primeReactLogo from "/custom_assets/images/primereact.png";
+import passportJSLogo from "/custom_assets/images/passportJSLogo1.png";
+import regexLogo from "/custom_assets/images/regexLogo.png";
+import cssLogo from "/custom_assets/images/css.png";
+import bootstrapLogo from "/custom_assets/images/bootstrapLogo4.png";
+import htmlLogo from "/custom_assets/images/html2.png";
+import javascriptLogo from "/custom_assets/images/javascript.png";
+import motionLogo from "/custom_assets/images/motionLogo.png";
 import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { animate } from "motion";
 import { Image } from "primereact/image";
 import { Button } from "primereact/button";
 
@@ -74,8 +72,8 @@ function Projects({ isDarkMode }) {
         { logo: passportJSLogo, name: "Passport.js" },
       ],
       imageAtLeft: true,
-      showDemoHref:"https://shorturl.amjadsh.com",
-      readMoreHref:"https://github.com/amjadsh92/url_shortener_project.git"
+      showDemoHref: "https://shorturl.amjadsh.com",
+      readMoreHref: "https://github.com/amjadsh92/url_shortener_project.git",
     },
 
     {
@@ -96,8 +94,8 @@ function Projects({ isDarkMode }) {
         { logo: motionLogo, name: "motion.dev" },
       ],
       imageAtLeft: false,
-      showDemoHref:"https://shorturl.amjadsh.com",
-      readMoreHref:"https://github.com/amjadsh92/my_portfolio.git"
+      showDemoHref: "https://shorturl.amjadsh.com",
+      readMoreHref: "https://github.com/amjadsh92/my_portfolio.git",
     },
 
     {
@@ -120,8 +118,8 @@ function Projects({ isDarkMode }) {
         { logo: scssLogo, name: "SCSS" },
       ],
       imageAtLeft: true,
-      showDemoHref:"https://projects.amjadsh.com/exercise-tracker/",
-      readMoreHref:"https://github.com/amjadsh92/exerciseTracker.git"
+      showDemoHref: "https://projects.amjadsh.com/exercise-tracker/",
+      readMoreHref: "https://github.com/amjadsh92/exerciseTracker.git",
     },
 
     {
@@ -139,8 +137,8 @@ function Projects({ isDarkMode }) {
         { logo: regexLogo, name: "Regex" },
       ],
       imageAtLeft: false,
-      showDemoHref:"https://projects.amjadsh.com/calculator/",
-      readMoreHref:"https://github.com/amjadsh92/My-calculater.git"
+      showDemoHref: "https://projects.amjadsh.com/calculator/",
+      readMoreHref: "https://github.com/amjadsh92/My-calculater.git",
     },
 
     {
@@ -159,8 +157,8 @@ function Projects({ isDarkMode }) {
         { logo: bootstrapLogo, name: "bootstrap" },
       ],
       imageAtLeft: true,
-      showDemoHref:"https://projects.amjadsh.com/drum-machine/",
-      readMoreHref:"https://github.com/amjadsh92/Drum-Machine.git"
+      showDemoHref: "https://projects.amjadsh.com/drum-machine/",
+      readMoreHref: "https://github.com/amjadsh92/Drum-Machine.git",
     },
 
     {
@@ -179,8 +177,8 @@ function Projects({ isDarkMode }) {
         { logo: regexLogo, name: "Regex" },
       ],
       imageAtLeft: false,
-      showDemoHref:"https://projects.amjadsh.com/markdown-editor/",
-      readMoreHref:"https://github.com/amjadsh92/MarkdownPreviewer.git"
+      showDemoHref: "https://projects.amjadsh.com/markdown-editor/",
+      readMoreHref: "https://github.com/amjadsh92/MarkdownPreviewer.git",
     },
     {
       id: "7",
@@ -197,8 +195,8 @@ function Projects({ isDarkMode }) {
         { logo: cssLogo, name: "CSS" },
       ],
       imageAtLeft: true,
-      showDemoHref:"https://projects.amjadsh.com/session-break-timer/",
-      readMoreHref:"https://github.com/amjadsh92/My-clock.git"
+      showDemoHref: "https://projects.amjadsh.com/session-break-timer/",
+      readMoreHref: "https://github.com/amjadsh92/My-clock.git",
     },
 
     {
@@ -217,8 +215,8 @@ function Projects({ isDarkMode }) {
         { logo: bootstrapLogo, name: "bootstrap" },
       ],
       imageAtLeft: false,
-      showDemoHref:"https://projects.amjadsh.com/quote-generator/",
-      readMoreHref:"https://github.com/amjadsh92/quoteProject.git"
+      showDemoHref: "https://projects.amjadsh.com/quote-generator/",
+      readMoreHref: "https://github.com/amjadsh92/quoteProject.git",
     },
 
     {
@@ -237,8 +235,8 @@ function Projects({ isDarkMode }) {
         { logo: htmlLogo, name: "HTML" },
       ],
       imageAtLeft: true,
-      showDemoHref:"https://projects.amjadsh.com/pokemon-search/",
-      readMoreHref:"https://github.com/amjadsh92/pokemonSearch.git"
+      showDemoHref: "https://projects.amjadsh.com/pokemon-search/",
+      readMoreHref: "https://github.com/amjadsh92/pokemonSearch.git",
     },
   ];
 
@@ -309,7 +307,7 @@ function Project({
   isVisible,
   isSmallScreen,
   showDemoHref,
-  readMoreHref
+  readMoreHref,
 }) {
   const inView = useInView(ref, {
     once: true,
@@ -423,8 +421,9 @@ function Project({
             iconPos="right"
             className="demo"
             as="a"
-            onClick={() => window.open(showDemoHref, "_blank", "noopener,noreferrer")}
-
+            onClick={() =>
+              window.open(showDemoHref, "_blank", "noopener,noreferrer")
+            }
           />
           <Button
             label="Read more"
@@ -435,8 +434,9 @@ function Project({
             href={readMoreHref}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => window.open(readMoreHref, "_blank", "noopener,noreferrer")}
-
+            onClick={() =>
+              window.open(readMoreHref, "_blank", "noopener,noreferrer")
+            }
           />
         </div>
       </motion.div>

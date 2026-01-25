@@ -8,23 +8,19 @@ import { Image } from "primereact/image";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 
-
 function Home({ isDarkMode, projectsRef }) {
   const isTablet = window.innerWidth < 960 && window.innerWidth > 615;
-  const isMobile = window.innerWidth < 615
+  const isMobile = window.innerWidth < 615;
   const [isMoved, setIsMoved] = useState(false);
   const [paragraphIsMoved, setParagraphIsMoved] = useState(false);
   const [smallImageMoved, setSmallImageMoved] = useState(false);
   const [midImageMoved, setMidImageMoved] = useState(false);
-  
-  
+
   useEffect(() => {
     setIsMoved(true);
     setTimeout(() => setParagraphIsMoved(true), 1000);
     setTimeout(() => setSmallImageMoved(true), 1800);
     setTimeout(() => setMidImageMoved(true), 1800);
-
-    
   }, []);
 
   return (
@@ -47,8 +43,7 @@ function Home({ isDarkMode, projectsRef }) {
           className={`home-mid-image  ${midImageMoved ? "moved" : ""}`}
         ></div>
 
-        
-         <div className={`button-section`}>
+        <div className={`button-section`}>
           <MyButton
             isMobile={isMobile}
             isTablet={isTablet}
@@ -60,20 +55,18 @@ function Home({ isDarkMode, projectsRef }) {
         </div>
       </div>
       <motion.div
-             
-        initial={{ opacity: 0, x:  0, y: -30 }}
+        initial={{ opacity: 0, x: 0, y: -30 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{
           duration: !(isTablet || isMobile) ? 1.6 : 0.8,
           ease: "easeOut",
           delay: 2,
-        }} 
-       >
-      <div className="home-image">
-       
-        <Image className={`home-developer`} />
-      </div>
-     </motion.div>  
+        }}
+      >
+        <div className="home-image">
+          <Image className={`home-developer`} />
+        </div>
+      </motion.div>
     </div>
   );
 }
@@ -90,10 +83,9 @@ function MyButton({ isTablet, isMobile, projectsRef }) {
 
   const [appearedImmediately, setAppearedImmediately] = useState(false);
 
-  const scrollIntoProjects = () =>{
-
-     projectsRef.current.scrollIntoView({ behavior: "smooth" });
-  }
+  const scrollIntoProjects = () => {
+    projectsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     const rect = ref.current.getBoundingClientRect();

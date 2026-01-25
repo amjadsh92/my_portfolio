@@ -215,6 +215,8 @@ function ContactModal({ dialog, setDialog, form, setForm, isDarkMode }) {
   const [messageSent, setMessageSent] = useState(false);
   const [errorOcuured, setErrorOccured] = useState(false);
 
+  const baseURL = import.meta.env.VITE_BASE_URL;
+
   const dialogHeader = (
     <div className="dialog-header">
       {messageSent && !errorOcuured && (
@@ -244,7 +246,7 @@ function ContactModal({ dialog, setDialog, form, setForm, isDarkMode }) {
     try {
       setIsLoading(true);
 
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch(`${baseURL}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

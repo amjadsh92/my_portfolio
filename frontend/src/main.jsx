@@ -26,18 +26,18 @@ async function preloadFonts() {
   const fonts = [
     new FontFace(
       "Montserrat",
-      "url(/src/assets/fonts/Montserrat-VariableFont_wght.ttf)"
+      "url(/custom_assets/fonts/Montserrat-VariableFont_wght.ttf)"
     ),
     new FontFace(
       "DotMatrix",
-      "url(/src/assets/fonts/DotMatrix-BoldItalic.otf)"
+      "url(/custom_assets/fonts/DotMatrix-BoldItalic.otf)"
     ),
     new FontFace(
       "cabin",
-      "url(/src/assets/fonts/Cabin-VariableFont_wdth,wght.ttf)"
+      "url(/custom_assets/fonts/Cabin-VariableFont_wdth,wght.ttf)"
     ),
-    new FontFace("nexa", "url(/src/assets/fonts/Nexa-Heavy.ttf)"),
-    new FontFace("Fira Sans", "url(/src/assets/fonts/FiraSans-Bold.ttf)"),
+    new FontFace("nexa", "url(/custom_assets/fonts/Nexa-Heavy.ttf)"),
+    new FontFace("Fira Sans", "url(/custom_assets/fonts/FiraSans-Bold.ttf)"),
   ];
   await Promise.all(
     fonts.map((font) =>
@@ -84,15 +84,15 @@ async function preloadThemesWithFetch() {
 
 async function boot() {
   const images = [
-    "/src/assets/images/home-dark1.png",
-    "/src/assets/images/amjad-portfolio-image-Blue-glow1.png",
-    "/src/assets/images/test.jpeg",
-    "/src/assets/images/UrlShortener-image18.png",
-    "/src/assets/images/MyCalculater-image3.png",
-    "/src/assets/images/drumMachine-image6.png",
-    "/src/assets/images/markdown-image3.png",
-    "/src/assets/images/home-light.jpg",
-    "/src/assets/images/home-developer9.png",
+    "/custom_assets/images/home-dark1.png",
+    "/custom_assets/images/amjad-portfolio-image-Blue-glow1.png",
+    "/custom_assets/images/test.jpeg",
+    "/custom_assets/images/UrlShortener-image18.png",
+    "/custom_assets/images/MyCalculater-image3.png",
+    "/custom_assets/images/drumMachine-image6.png",
+    "/custom_assets/images/markdown-image3.png",
+    "/custom_assets/images/home-light.jpg",
+    "/custom_assets/images/home-developer9.png",
   ];
 
   const isDark = localStorage.getItem("isDarkMode") === "true";
@@ -115,12 +115,12 @@ async function boot() {
       loadStylesheet("theme-link", themeHref),
     ]);
   } catch (err) {
-    console.error("Boot error:", err);
+    console.error("preload error:", err);
   }
 }
 
-const rootEl = document.getElementById("root");
-const loaderEl = document.getElementById("boot-loader");
+// const rootEl = document.getElementById("root");
+// const loaderEl = document.getElementById("boot-loader");
 
 boot().then(async () => {
   const root = document.getElementById("root");

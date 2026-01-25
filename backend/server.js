@@ -40,12 +40,13 @@ app.post("/contact", async (req, res) => {
     });
 
     
-    res.json({name,email:process.env.RECIEVER_EMAIL,message})
+    // res.json({name,email:process.env.RECIEVER_EMAIL,message})
 
+     res.status(200).json({ success: true });
 
   }catch(error){
     console.log(error)
-    res.json({error:"An error has occured",message:process.env.RECIEVER_EMAIL})
+    res.status(500).json({error:"An error has occured"})
   }
 
 })  
