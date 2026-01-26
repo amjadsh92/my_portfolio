@@ -29,14 +29,27 @@ Nodemailer is an email sending library for Node.js.
 
 1. Clone the repository:
       ```
-      git clone https://github.com/amjadsh92/url_shortener_project.git
+      git clone https://github.com/amjadsh92/my_portfolio.git
      ```
-2.  cd to both the Backend and Frontend directories and install all dependencies using
+2.  Navigate to both the backend and frontend directories and install dependencies:
     ```
     npm install
     ```
+3. Start the frontend server:
+   ```
+   cd frontend
+   npm run dev
+   '''
+   to run the frontend server.
 
-3. You can check it in production at https://portfolio.amjadsh.com.     
+4. Start the backend server:
+   ```
+   cd backend
+   node server.js
+   ```
+   to run the backend server.    
+
+5. You can check the portfolio in production at https://portfolio.amjadsh.com.     
 
     
     
