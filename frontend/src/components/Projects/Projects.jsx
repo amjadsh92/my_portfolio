@@ -94,7 +94,7 @@ function Projects({ isDarkMode }) {
         { logo: motionLogo, name: "motion.dev" },
       ],
       imageAtLeft: false,
-      showDemoHref: "https://shorturl.amjadsh.com",
+      showDemoHref: "https://portfolio.amjadsh.com",
       readMoreHref: "https://github.com/amjadsh92/my_portfolio.git",
     },
 

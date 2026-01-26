@@ -15,6 +15,18 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
   const [automaticHighlightDisabled, setAutomaticHighlightDisabled] =
     useState(false);
 
+
+    const closeMobileMenubar = () => {
+  const button = document.querySelector(
+    ".p-menubar-button"
+  );
+
+  // Mobile hamburger button
+  if (button && window.getComputedStyle(button).display !== "none") {
+    button.click();
+  }
+};
+
   useEffect(() => {
     function getVisibleHeight(element) {
       if (!element) return 0;
@@ -143,8 +155,11 @@ function Navbar({ isDarkMode, setIsDarkMode, refs }) {
     {
       template: (item, options) => {
         const handleClick = (e) => {
+         
           e.stopPropagation();
           e.preventDefault();
+          
+          closeMobileMenubar();
 
           changeTheme(
             isDarkMode ? "lara-dark-indigo" : "lara-light-indigo",
