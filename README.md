@@ -40,6 +40,7 @@ Nodemailer is an email sending library for Node.js.
    cd frontend
    npm run dev
    '''
+
    to run the frontend server.
 
 4. Start the backend server:
