@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 
-app.post("/contact", async (req, res) => {
+app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
   
@@ -52,4 +52,4 @@ app.post("/contact", async (req, res) => {
 })  
 
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(3002, () => console.log("Server running on port 3002"));
