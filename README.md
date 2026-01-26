@@ -1,16 +1,46 @@
-# React + Vite
+# URL Shortener
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Description
 
-Currently, two official plugins are available:
+This app is my own portfolio.
+It shows my featured projects. I developed it to showcase my skills in web developemnt in general.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Tech used
 
-## React Compiler
+## Front end
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### React
+A UI library that is used to build the front end part of the app.
+### PrimeReact
+It is a React UI component library that helped in creating forms, tables, and Modals.
+### Motion
+A Fast, production-grade web animation library that builds smooth UI animations.
+### Yup
+A JavaScript schema builder for value parsing and validation. It was used in this app to validate the contact form.
 
-## Expanding the ESLint configuration
+## Back end
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Express
+This framework was used to build the back-end part of the project.
+### Nodemailer
+Nodemailer is an email sending library for Node.js.
+
+# Installation
+
+1. Clone the repository:
+      ```
+      git clone https://github.com/amjadsh92/url_shortener_project.git
+     ```
+2.  cd to both the Backend and Frontend directories and install all dependencies using
+    ```
+    npm install
+    ```
+
+3. You can check it in production at portfolio.amjadsh.com.     
+
+    
+    
+    
+    
+    
+     
