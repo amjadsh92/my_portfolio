@@ -1,4 +1,4 @@
-# URL Shortener
+# My Porfolio
 
 # Description
 
@@ -36,7 +36,7 @@ Nodemailer is an email sending library for Node.js.
     npm install
     ```
 
-3. You can check it in production at portfolio.amjadsh.com.     
+3. You can check it in production at https://portfolio.amjadsh.com.     
 
     
     
