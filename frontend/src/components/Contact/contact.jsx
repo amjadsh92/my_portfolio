@@ -141,15 +141,14 @@ function Contact({ isDarkMode }) {
 
   return (
     <div className={`${isDarkMode ? "contact-dark" : "contact-light"}`}>
-      {/* <div className="contact-title-background"> */}
+     
       <div className="contact-title">Contact</div>
 
       <div className="contact-text">
         Have a question or want to work together? Leave your details and I'll
         get back to you as soon as possible.
       </div>
-      {/* </div> */}
-      {/* <div className="form-background"> */}
+    
       <div className="contact-form">
         <div className="form-title">Let's get in touch!</div>
         <div className="name-block">
@@ -205,7 +204,7 @@ function Contact({ isDarkMode }) {
           isDarkMode={isDarkMode}
         />
       </div>
-      {/* </div> */}
+      
     </div>
   );
 }
