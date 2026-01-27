@@ -3,7 +3,7 @@
 # Description
 
 This app is my own portfolio.
-It shows my featured projects. I developed it to showcase my skills in web developemnt in general.
+It shows my featured projects. I developed it to showcase my skills in web development in general.
 
 # Tech used
 
@@ -29,7 +29,7 @@ Nodemailer is an email sending library for Node.js.
 
 1. Clone the repository:
       ```
-      git clone https://github.com/amjadsh92/my_portfolio.git
+      git clone https://github.com/amjadsh92/my-portfolio.git
      ```
 2.  Navigate to both the backend and frontend directories and install dependencies:
     ```
