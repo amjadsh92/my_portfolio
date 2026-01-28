@@ -20,6 +20,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Inter var";
+  src: url("/themes/lara-dark-indigo/fonts/InterVariable.woff2") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .footer-light,
 .footer-dark {
   display: flex;
@@ -60,12 +67,12 @@
 .footer-rights {
   display: flex;
   justify-content: center;
-  font-family: sans-serif;
+  font-family: "Inter var", sans-serif;
   color: var(--gray-700);
 }
 
 .footer-follow {
-  font-family: sans-serif;
+  font-family: "Inter var", sans-serif;
   color: var(--gray-700);
 }
 

@@ -8,6 +8,7 @@ import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/primereact.css";
 import "primeicons/primeicons.css";
 
+
 function preloadImages(srcList) {
   return Promise.all(
     srcList.map(
@@ -37,7 +38,7 @@ async function preloadFonts() {
       "url(/custom_assets/fonts/Cabin-VariableFont_wdth,wght.ttf)"
     ),
     new FontFace("nexa", "url(/custom_assets/fonts/Nexa-Heavy.ttf)"),
-    new FontFace("Fira Sans", "url(/custom_assets/fonts/FiraSans-Bold.ttf)"),
+    new FontFace("Inter var", "url(/themes/lara-dark-indigo/fonts/InterVariable.woff2)")
   ];
   await Promise.all(
     fonts.map((font) =>
@@ -70,11 +71,8 @@ async function fetchAndCache(url) {
 
 async function preloadThemesWithFetch() {
   const assets = [
-    
-    "/themes/lara-dark-indigo/theme.css",
-    "/themes/lara-light-indigo/theme.css",
     "/themes/lara-dark-indigo/fonts/InterVariable.woff2",
-    "/themes/lara-light-indigo/fonts/InterVariable.woff2",
+    // "/node_modules/primeicons/fonts/primeicons.woff2"
   ];
 
   await Promise.all(assets.map(fetchAndCache));
@@ -84,15 +82,14 @@ async function preloadThemesWithFetch() {
 
 async function boot() {
   const images = [
-    "/custom_assets/images/home-dark1.png",
-    "/custom_assets/images/amjad-portfolio-image-Blue-glow1.png",
-    "/custom_assets/images/test.jpeg",
-    "/custom_assets/images/UrlShortener-image18.png",
-    "/custom_assets/images/MyCalculater-image3.png",
-    "/custom_assets/images/drumMachine-image6.png",
-    "/custom_assets/images/markdown-image3.png",
-    "/custom_assets/images/home-light.jpg",
-    "/custom_assets/images/home-developer9.png",
+    // "/custom_assets/images/home-dark1.png",
+    // "/custom_assets/images/amjad-portfolio-image-Blue-glow1.png",
+    // "/custom_assets/images/home-light.jpg",
+    // "/custom_assets/images/home-developer9.png",
+    "/custom_assets/images/home-dark1-min.png",
+    "/custom_assets/images/amjad-portfolio-image-Blue-glow1-min.png",
+    "/custom_assets/images/home-light-min.jpg",
+    "/custom_assets/images/home-developer9-min.png",
   ];
 
   const isDark = localStorage.getItem("isDarkMode") === "true";
@@ -104,16 +101,16 @@ async function boot() {
   try {
     await Promise.all([
       preloadImages(images),
+      // preloadThemesWithFetch(),
       preloadFonts(),
-      document.fonts.ready,
-      preloadThemesWithFetch(),
+      document.fonts.ready
+    ]);
 
-      loadStylesheet(
+    await loadStylesheet(
         "base-theme-light",
         `${isDark ? "/themes/lara-dark-indigo/theme.css" : "/themes/lara-light-indigo/theme.css"}`
-      ),
-      loadStylesheet("theme-link", themeHref),
-    ]);
+    );
+    await loadStylesheet("theme-link", themeHref);
   } catch (err) {
     console.error("preload error:", err);
   }
